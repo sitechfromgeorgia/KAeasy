@@ -48,7 +48,7 @@ DeepSeek-class models actually get wrong in our copy. The full set lives in the 
 
 ## Names and numbers
 
-- ❌ ChatGPT ინტეგრაცია ✅ ChatGPT-ის ინტეგრაცია (a brand before a noun takes the genitive)
+- ❌ ChatGPT ინტეგრაცია ✅ ChatGPT-ს ინტეგრაცია (a brand before a noun takes the genitive; -i sound: -ს)
 - ❌ Oracle აპები ✅ Oracle-ის აპები (genitive)
 - ❌ PNY ვერსია ✅ PNY-ის ვერსია (genitive)
 - ❌ TPU-ები 2027-დან ✅ TPU-ები 2027 წლიდან (a year takes წელი)
