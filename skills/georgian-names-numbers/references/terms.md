@@ -31,7 +31,7 @@ Use the Georgian term in prose. The acronym may follow the first mention in pare
 | ransomware | გამომძალველი პროგრამა | |
 | malware | მავნე პროგრამა | |
 | vulnerability | ხარვეზი / მოწყვლადობა | |
-| encryption | დაშიფვრა | ❌ `შიფრაცია` in news copy (needs-review) |
+| encryption | დაშიფვრა | ❌ `შიფრაცია` (Russian calque) |
 | update | განახლება | |
 | feature | ფუნქცია | |
 | user | მომხმარებელი | |

@@ -42,7 +42,7 @@
 | в связи с | დაკავშირებით (overused) | გამო |
 | осуществлять | ახორციელებს | აკეთებს, ატარებს, ქმნის (use the concrete verb) |
 | по мнению | აზრით ✅ | correct: `ექსპერტების აზრით` |
-| letter names ტე, პე, ბე | ტე-ესი, ბე-ემ-ვე | English letter names: ტი, პი, ბი (see georgian-speech) |
+| letter names ტე, პე, ბე | ტე-ესი, ჯი-პი-ტე | English letter names: ტი, პი, ბი (see georgian-speech). Exception: `ბე-ემ-ვე` (BMW) is the established spoken form |
 
 ## Words that are English in disguise
 

@@ -248,7 +248,11 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
             add("latin_in_speech", "error", f"„{m.group(0)}“: ხმის ტექსტში რიცხვი სიტყვებით", m)
 
     if mode == "speech" and on("russian_letter"):
+        # ბე-ემ-ვე is how Georgians say BMW (German letter names); it is the one established exception.
+        allowed = [range(a.start(), a.end()) for a in re.finditer(r"ბე[\s-]+ემ[\s-]+ვე", body)]
         for m in re.finditer(r"(?<![ა-ჰ])(ტე|პე|ბე)(?![ა-ჰ])", body):
+            if any(m.start() in r for r in allowed):
+                continue
             add("russian_letter", "error", f"„{m.group(0)}“: რუსული ასოს სახელი (გამოიყენე ტი, პი, ბი)", m)
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):

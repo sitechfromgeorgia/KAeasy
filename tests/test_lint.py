@@ -61,7 +61,8 @@ def test_speech_mode_allows_georgian_brands_and_flags_latin_digits():
 def test_speech_mode_russian_letters():
     assert "russian_letter" in checks("ახალი ჯი პი ტე გამოვიდა.", mode="speech")
     assert "russian_letter" in checks("ახალი გე პე უ წარადგინეს.", mode="speech")
-    assert "russian_letter" in checks("ბე ემ ვე-ს მანქანა.", mode="speech")
+    assert "russian_letter" in checks("ბე ბი სის რეპორტაჟი.", mode="speech")
+    assert checks("ბე-ემ-ვე-მ ახალი მოდელი წარადგინა.", mode="speech") == set()
     assert "russian_letter" in checks("ა პე ი განახლდა.", mode="speech")
     assert checks("ახალი ჯი პი ტი გამოვიდა.", mode="speech") == set()
     assert checks("ახალი ჯი პი იუ წარადგინეს.", mode="speech") == set()

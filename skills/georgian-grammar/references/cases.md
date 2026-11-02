@@ -40,7 +40,9 @@ The hyphen is mandatory; the ending follows how the name **sounds**:
 | NVIDIA | vowel (…ა) | NVIDIA-მ | NVIDIA-ს | NVIDIA-ს | NVIDIA-თი | — |
 | GPU | vowel (…იუ) | GPU-მ | GPU-ს | GPU-ს | GPU-თი | GPU-ები |
 
-needs-review: the instrumental of vowel-final names (`NVIDIA-თი` or `NVIDIA-ით`, `GPU-თი` or `GPU-ით`) varies
-in the press. The genitive of vowel-final Latin names too. Georgian media mostly write `Meta-ს`, `NVIDIA-ს`, `Tesla-ს`;
-the fleet's older GEORGIAN-STYLE.md uses `Meta-ის`. Pick one per publication and stay consistent until a
-native editor decides.
+Decided 2026-11-02 (docs/NEEDS-REVIEW.md): names ending in `-ა`, `-ო`, `-უ` take `-ს` in the genitive
+(`Meta-ს`, `NVIDIA-ს`, `Tesla-ს`, as Georgian media write them) and `-თი` in the instrumental (`NVIDIA-თი`,
+`GPU-თი`, never `NVIDIA-ით`). The fleet's older `Meta-ის` is retired.
+
+needs-review: names ending in an -i sound (`OpenAI`, `ChatGPT`, `Spotify`, `Gemini`) take genitive `-ის` or
+`-ს`. Stay consistent within one text until this is settled.
