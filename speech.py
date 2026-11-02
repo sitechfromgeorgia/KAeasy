@@ -5,7 +5,9 @@ postpositional noun loses its final ი (2012 წელს → ორი ათ�
 (Opus 4.7 → ოთხი წერტილი შვიდი), currencies and units. Latin names come from data/lexicon_ka.json (approved), then
 the caller's own "say" map, then names learned earlier (lexicon_learned.json in the Kaeasy data dir); letter
 acronyms are spelled (GPU → ჯი პი იუ). Screen text keeps the Latin name; only the voice gets Georgian letters.
-Keep this file in sync with the Shorts copy until Shorts imports it from here.
+
+This file is the source. SiTech Shorts vendors it unchanged as shorts/normalize_ka.py, with lexicon_ka.json and
+latin_endings.json next to it (Shorts: tools/sync_kaeasy.py). Change it here, never in the copy.
 """
 import json
 import os
@@ -23,9 +25,11 @@ LETTERS = {"A": "ეი", "B": "ბი", "C": "სი", "D": "დი", "E": "ი
            "J": "ჯეი", "K": "ქეი", "L": "ელ", "M": "ემ", "N": "ენ", "O": "ოუ", "P": "პი", "Q": "ქიუ", "R": "არ",
            "S": "ეს", "T": "ტი", "U": "იუ", "V": "ვი", "W": "დაბლიუ", "X": "ექს", "Y": "უაი", "Z": "ზედ"}
 HERE = pathlib.Path(__file__).resolve().parent
-WORDS = json.loads((HERE / "data" / "lexicon_ka.json").read_text(encoding="utf-8"))["words"]  # approved spoken forms
+# Kaeasy keeps the JSON in data/; the vendored copy in SiTech Shorts keeps it next to this file.
+DATA = HERE / "data" if (HERE / "data" / "lexicon_ka.json").exists() else HERE
+WORDS = json.loads((DATA / "lexicon_ka.json").read_text(encoding="utf-8"))["words"]  # approved spoken forms
 # Sound class of a Latin name's ending (latin-names.md). "i-sound" names keep their ი before an ending: სონიმ, სონის.
-SOUND = json.loads((HERE / "data" / "latin_endings.json").read_text(encoding="utf-8"))["names"]
+SOUND = json.loads((DATA / "latin_endings.json").read_text(encoding="utf-8"))["names"]
 VOWELS = "აეიოუ"
 CURRENCY = {"$": "დოლარ", "€": "ევრო", "₾": "ლარ", "£": "ფუნტ"}
 UNITS = {"GB": "გიგაბაიტ", "TB": "ტერაბაიტ", "MB": "მეგაბაიტ", "GHz": "გიგაჰერც", "km": "კილომეტრ", "W": "ვატ",
@@ -181,8 +185,13 @@ def tokens(text):
 
 
 def learned_path():
-    from .memory import data_dir
-    return pathlib.Path(os.environ.get("SHORTS_DATA") or data_dir()) / "lexicon_learned.json"
+    if os.environ.get("SHORTS_DATA"):
+        return pathlib.Path(os.environ["SHORTS_DATA"]) / "lexicon_learned.json"
+    try:
+        from .memory import data_dir
+    except ImportError:  # the vendored copy in SiTech Shorts: <repo>/data
+        return HERE.parent / "data" / "lexicon_learned.json"
+    return pathlib.Path(data_dir()) / "lexicon_learned.json"
 
 
 def learned():
