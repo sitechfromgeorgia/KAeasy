@@ -35,12 +35,9 @@ The hyphen is mandatory; the ending follows how the name **sounds**:
 |---|---|---|---|---|---|---|
 | Microsoft | consonant | Microsoft-მა | Microsoft-ს | Microsoft-ის | Microsoft-ით | — |
 | Google | consonant | Google-მა | Google-ს | Google-ის | Google-ით | — |
-| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ის | OpenAI-ით | — |
-| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ის | ChatGPT-ით | — |
+| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ს | OpenAI-თი | OpenAI-ები |
+| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ს | ChatGPT-თი | ChatGPT-ები |
 | NVIDIA | vowel (…ა) | NVIDIA-მ | NVIDIA-ს | NVIDIA-ს | NVIDIA-თი | — |
 | GPU | vowel (…იუ) | GPU-მ | GPU-ს | GPU-ს | GPU-თი | GPU-ები |
 
-needs-review: the instrumental of vowel-final names (`NVIDIA-თი` or `NVIDIA-ით`, `GPU-თი` or `GPU-ით`) varies
-in the press. The genitive of vowel-final Latin names too. Georgian media mostly write `Meta-ს`, `NVIDIA-ს`, `Tesla-ს`;
-the fleet's older GEORGIAN-STYLE.md uses `Meta-ის`. Pick one per publication and stay consistent until a
-native editor decides.
+All foreign names ending in a vowel sound (-ა, -ე, -ი sound, -ო, -უ) strictly take **`-მ`** in the ergative, **`-ს`** in the dative and genitive, and **`-თი`** in the instrumental (`Meta-ს`, `Tesla-ს`, `NVIDIA-ს`, `OpenAI-ს`, `ChatGPT-ს`, `Sony-ს`, `GPU-ს`; instrumental `NVIDIA-თი`, `GPU-თი`, `OpenAI-თი`). Consonant stems strictly take **`-მა`**, **`-ს`**, **`-ის`**, **`-ით`** (`Microsoft-ის`, `Google-ის`). For the complete 7-case paradigm and 200+ brand dictionary, see `references/latin-names.md` in `kaeasy:georgian-names-numbers`.

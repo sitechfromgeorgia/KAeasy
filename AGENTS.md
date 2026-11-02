@@ -6,7 +6,7 @@ Guide for anyone (human or agent) changing this repo.
 
 A Hermes Agent plugin. The repo root **is** the plugin directory: `plugin.yaml`, `__init__.py` (register),
 `lint.py` (deterministic linter), `memory.py` (mistakes memory), `skills/<name>/SKILL.md` with `references/` and
-`examples/`. There is no build step.
+`examples/`, and `evals/` (120-task benchmark + offline scoring). There is no build step.
 
 ## Commands
 
@@ -14,6 +14,7 @@ A Hermes Agent plugin. The repo root **is** the plugin directory: `plugin.yaml`,
 uv run --with pytest --with pyyaml python -m pytest -q   # all tests
 uv run --with ruff ruff check .                          # lint
 python lint.py --text "..." --strict                     # try the linter
+uv run python evals/score.py --inspect news_001          # inspect an eval task
 ```
 
 ## Hard rules

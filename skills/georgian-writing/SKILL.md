@@ -28,6 +28,11 @@ rule wins.
 | Brands, acronyms, countries, numbers, dates, quotes, dashes | `kaeasy:georgian-names-numbers` |
 | News article or headline (tbilisi.today, sitech.ge blog) | `kaeasy:georgian-news` |
 | Social post, ad, card, on-screen video text | `kaeasy:georgian-social` |
+| Client/partner emails, offers, invoices, follow-ups | `kaeasy:georgian-business` |
+| Taglines, CTAs, landing page copy, ads, Shorts hooks | `kaeasy:georgian-marketing` |
+| Customer support in chat, email, comments, ticket closing | `kaeasy:georgian-support` |
+| Press releases, official statements, city/gov notices, TOS | `kaeasy:georgian-official` |
+| Translating EN→KA or RU→KA (restructuring, idioms, names) | `kaeasy:georgian-translation` |
 | Buttons, labels, errors, statuses | `kaeasy:georgian-ui` |
 | Text that will be read aloud by TTS (`speech_text`) | `kaeasy:georgian-speech` |
 | Reviewing or fixing someone's Georgian | `kaeasy:georgian-proofread` |

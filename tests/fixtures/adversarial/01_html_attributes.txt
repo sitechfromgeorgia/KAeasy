@@ -1,0 +1,8 @@
+<div class="card shadow-sm p-4" id="main-container" data-status="ready">
+  <h3 class="card-title">სისტემური შეტყობინება</h3>
+  <p class="card-text">მომსახურების გასაგრძელებლად დააჭირეთ ქვემოთ მოცემულ ღილაკს:</p>
+  <button type="button" class="btn btn-primary" data-action="submit-form" aria-label="გაგზავნა">
+    დადასტურება
+  </button>
+</div>
+აღნიშნული კომპონენტი სრულად მორგებულია მობილურ მოწყობილობებზე და მუშაობს უნაკლოდ.

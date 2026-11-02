@@ -69,3 +69,41 @@ def test_hint_only_on_first_turn(kaeasy, monkeypatch):
     assert kaeasy._hint(is_first_turn=False) is None
     monkeypatch.setenv("KAEASY_HINT", "0")
     assert kaeasy._hint(is_first_turn=True) is None
+
+
+def test_glossaries_schema_and_counts():
+    domains = {
+        "tbilisi": 60,
+        "tech-ai": 150,
+        "finance": 60,
+        "crypto": 60,
+        "sport": 60,
+        "health": 60,
+        "law": 60,
+    }
+    glossary_dir = ROOT / "data" / "glossary"
+    ref_dir = ROOT / "skills" / "georgian-names-numbers" / "references"
+
+    for domain, min_count in domains.items():
+        json_file = glossary_dir / f"{domain}.json"
+        assert json_file.exists(), f"Missing {json_file}"
+        items = json.loads(json_file.read_text(encoding="utf-8"))
+        assert len(items) >= min_count, f"{domain} has {len(items)} items, expected >= {min_count}"
+
+        for idx, item in enumerate(items):
+            assert "preferred" in item and isinstance(item["preferred"], str) and item["preferred"].strip()
+            assert "avoid" in item and isinstance(item["avoid"], list)
+            assert "latin" in item and isinstance(item["latin"], str) and item["latin"].strip()
+            assert "note" in item and isinstance(item["note"], str)
+
+        md_file = ref_dir / f"glossary-{domain}.md"
+        assert md_file.exists(), f"Missing {md_file}"
+        md_text = md_file.read_text(encoding="utf-8")
+        assert len(md_text) > 1000, f"{md_file} is too short"
+
+    # Specific mandatory terms for finance
+    finance_items = json.loads((glossary_dir / "finance.json").read_text(encoding="utf-8"))
+    finance_prefs = {x["preferred"] for x in finance_items}
+    for req in ["ლარი", "ეროვნული ბანკი", "ინფლაცია", "რეფინანსირების განაკვეთი", "აქცია", "ობლიგაცია", "დივიდენდი"]:
+        assert req in finance_prefs, f"Missing required finance term: {req}"
+

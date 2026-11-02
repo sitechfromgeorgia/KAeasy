@@ -13,7 +13,7 @@ Each line: ❌ wrong, ✅ right. Read before writing; use correct Latin script, 
 - ❌ ამაზონმა ფასები შეამცირა ✅ Amazon-მა ფასები შეამცირა
 - ❌ ტესლამ ქარხანა გახსნა ✅ Tesla-მ ქარხანა გახსნა
 - ❌ ანთროპიკმა უსაფრთხოების წესები გამოაქვეყნა ✅ Anthropic-მა უსაფრთხოების წესები გამოაქვეყნა
-- ❌ ჩატჯიპიტის ახალი ვერსია ✅ ChatGPT-ის ახალი ვერსია
+- ❌ ჩატჯიპიტის ახალი ვერსია ✅ ChatGPT-ს ახალი ვერსია
 - ❌ დიფსიკმა ახალი მოდელი გამოუშვა ✅ DeepSeek-მა ახალი მოდელი გამოუშვა
 - ❌ გითჰაბზე პროექტი გამოქვეყნდა ✅ GitHub-ზე პროექტი გამოქვეყნდა
 - ❌ იუთუბმა ახალი წესი დააწესა ✅ YouTube-მა ახალი წესი დააწესა
@@ -35,98 +35,234 @@ Each line: ❌ wrong, ✅ right. Read before writing; use correct Latin script, 
 - ❌ ჯემინაიმ კითხვას უპასუხა ✅ Gemini-მ კითხვას უპასუხა
 - ❌ ფაიზერმა ვაქცინა გამოცადა ✅ Pfizer-მა ვაქცინა გამოცადა
 
-## Brand names: hyphenation and case endings
+## Brand names: hyphenation and case endings (50 common brands)
 
-- ❌ Microsoftმა / Microsoft -მა / Microsoft- მა ✅ Microsoft-მა
-- ❌ Microsoftის შემოსავალი ✅ Microsoft-ის შემოსავალი
-- ❌ Microsoftს გადაეცა ჯილდო ✅ Microsoft-ს გადაეცა ჯილდო
-- ❌ Microsoftით სარგებლობა ✅ Microsoft-ით სარგებლობა
-- ❌ Appleმა გამოაცხადა ✅ Apple-მა გამოაცხადა
-- ❌ Appleის აქციები ✅ Apple-ის აქციები
-- ❌ Appleს დაეკისრა ჯარიმა ✅ Apple-ს დაეკისრა ჯარიმა
-- ❌ Appleით გადახდა ✅ Apple-ით გადახდა
-- ❌ Googleმა დაამატა ✅ Google-მა დაამატა
-- ❌ Googleის სერვისები ✅ Google-ის სერვისები
-- ❌ Googleს მიმართეს ✅ Google-ს მიმართეს
-- ❌ Googleით ძიება ✅ Google-ით ძიება
-- ❌ OpenAI-მა გამოაცხადა (vowel ending takes -მ) ✅ OpenAI-მ გამოაცხადა
-- ❌ OpenAIის მოდელი ✅ OpenAI-ის მოდელი
-- ❌ OpenAIს გადაწყვეტილება ✅ OpenAI-ს გადაწყვეტილება
-- ❌ NVIDIA-მა წარადგინა ✅ NVIDIA-მ წარადგინა
-- ❌ NVIDIAის ჩიპები ✅ NVIDIA-ის ჩიპები
-- ❌ NVIDIAს პარტნიორები ✅ NVIDIA-ს პარტნიორები
-- ❌ Meta-მა დახურა პროექტი ✅ Meta-მ დახურა პროექტი
-- ❌ Metaს ხელმძღვანელი ✅ Meta-ს ხელმძღვანელი
-- ❌ Metaით გაზიარება ✅ Meta-ით გაზიარება
-- ❌ Tesla-მა გაყიდვები გაზარდა ✅ Tesla-მ გაყიდვები გაზარდა
-- ❌ Teslaს მოდელები ✅ Tesla-ს მოდელები
-- ❌ Teslaით მგზავრობა ✅ Tesla-ით მგზავრობა
-- ❌ Anthropicმა გამოაქვეყნა ✅ Anthropic-მა გამოაქვეყნა
-- ❌ Anthropicს უსაფრთხოების სისტემა ✅ Anthropic-ს უსაფრთხოების სისტემა
-- ❌ DeepSeekმა შექმნა ალგორითმი ✅ DeepSeek-მა შექმნა ალგორითმი
-- ❌ DeepSeekს მომხმარებლები ✅ DeepSeek-ს მომხმარებლები
-- ❌ GitHubმა კოდი განათავსა ✅ GitHub-მა კოდი განათავსა
-- ❌ GitHubზე რეპოზიტორი ✅ GitHub-ზე რეპოზიტორი
-- ❌ YouTubeმა წესები შეცვალა ✅ YouTube-მა წესები შეცვალა
-- ❌ YouTubeზე არხი ✅ YouTube-ზე არხი
-- ❌ Netflixმა სერიალი დაამატა ✅ Netflix-მა სერიალი დაამატა
-- ❌ Netflixის გამომწერები ✅ Netflix-ის გამომწერები
-- ❌ Spotify-მა ფლეილისტი შექმნა ✅ Spotify-მ ფლეილისტი შექმნა
-- ❌ Spotifyს მომხმარებლები ✅ Spotify-ს მომხმარებლები
-- ❌ Stripeმა გადახდები გაამარტივა ✅ Stripe-მა გადახდები გაამარტივა
-- ❌ Stripeით ანგარიშსწორება ✅ Stripe-ით ანგარიშსწორება
-- ❌ Cloudflareმა ტრაფიკი გაფილტრა ✅ Cloudflare-მა ტრაფიკი გაფილტრა
-- ❌ Cloudflareის სერვერები ✅ Cloudflare-ის სერვერები
-- ❌ Uberმა მგზავრობის ტარიფი შეამცირა ✅ Uber-მა მგზავრობის ტარიფი შეამცირა
-- ❌ Uberით სარგებლობა ✅ Uber-ით სარგებლობა
-- ❌ SpaceXმა თანამგზავრები გაუშვა ✅ SpaceX-მა თანამგზავრები გაუშვა
-- ❌ SpaceXის მისია ✅ SpaceX-ის მისია
-- ❌ Intelმა ქარხანა ააშენა ✅ Intel-მა ქარხანა ააშენა
-- ❌ Intelის პროცესორები ✅ Intel-ის პროცესორები
-- ❌ AMD-მა ჩიპი წარმოადგინა ✅ AMD-მ ჩიპი წარმოადგინა
-- ❌ AMDს გრაფიკული ბარათები ✅ AMD-ს გრაფიკული ბარათები
-- ❌ Samsungმა ტელეფონი გამოუშვა ✅ Samsung-მა ტელეფონი გამოუშვა
-- ❌ Samsungის ეკრანები ✅ Samsung-ის ეკრანები
-- ❌ TikTokმა კონკურსი დაიწყო ✅ TikTok-მა კონკურსი დაიწყო
-- ❌ Slackში შეტყობინება ✅ Slack-ში შეტყობინება
-- ❌ Notionში შენიშვნები ✅ Notion-ში შენიშვნები
-- ❌ Figma-მა განახლება მიიღო ✅ Figma-მ განახლება მიიღო
-- ❌ Zoomით შეხვედრა ✅ Zoom-ით შეხვედრა
-- ❌ Redditზე დისკუსია ✅ Reddit-ზე დისკუსია
-- ❌ Telegramში არხი ✅ Telegram-ში არხი
-- ❌ WhatsAppში ჯგუფი ✅ WhatsApp-ში ჯგუფი
-- ❌ LinkedInზე პოსტი ✅ LinkedIn-ზე პოსტი
-- ❌ Sony-მა კონსოლი გამოუშვა ✅ Sony-მ კონსოლი გამოუშვა
-- ❌ ASUSმა ლეპტოპი წარადგინა ✅ ASUS-მა ლეპტოპი წარადგინა
-- ❌ TSMC-მა წარმოება გაზარდა ✅ TSMC-მ წარმოება გაზარდა
-- ❌ Oracleმა ბაზა განაახლა ✅ Oracle-მა ბაზა განაახლა
-- ❌ Adobe-მა პროგრამა განაახლა ✅ Adobe-მ პროგრამა განაახლა
-- ❌ Dockerით გაშვება ✅ Docker-ით გაშვება
-- ❌ Kubernetesში მართვა ✅ Kubernetes-ში მართვა
-- ❌ Claudeმა კოდი დაწერა ✅ Claude-მა კოდი დაწერა
-- ❌ Mistralმა მოდელი გააზიარა ✅ Mistral-მა მოდელი გააზიარა
-- ❌ Salesforceმა კომპანია შეიძინა ✅ Salesforce-მა კომპანია შეიძინა
-- ❌ Airbnb-მა წესები შეცვალა ✅ Airbnb-მ წესები შეცვალა
-- ❌ PayPalით გადახდა ✅ PayPal-ით გადახდა
-- ❌ IBMმა კვლევა გამოაქვეყნა ✅ IBM-მა კვლევა გამოაქვეყნა
-- ❌ ByteDanceმა ინვესტიცია ჩადო ✅ ByteDance-მა ინვესტიცია განახორციელა
-- ❌ Chromeში ჩანართი ✅ Chrome-ში ჩანართი
-- ❌ Firefoxით გახსნა ✅ Firefox-ით გახსნა
+- ❌ Microsoftმა / Microsoft -მა / Microsoft- მა ✅ Microsoft-მა (ergative)
+- ❌ Microsoftის შემოსავალი ✅ Microsoft-ის შემოსავალი (genitive)
+- ❌ Microsoftს გადაეცა ჯილდო ✅ Microsoft-ს გადაეცა ჯილდო (dative)
+- ❌ Microsoftით სარგებლობა ✅ Microsoft-ით სარგებლობა (instrumental)
+- ❌ Appleმა გამოაცხადა ✅ Apple-მა გამოაცხადა (ergative)
+- ❌ Appleის აქციები ✅ Apple-ის აქციები (genitive)
+- ❌ Appleს დაეკისრა ჯარიმა ✅ Apple-ს დაეკისრა ჯარიმა (dative)
+- ❌ Appleით გადახდა ✅ Apple-ით გადახდა (instrumental)
+- ❌ Googleმა დაამატა ✅ Google-მა დაამატა (ergative)
+- ❌ Googleის სერვისები ✅ Google-ის სერვისები (genitive)
+- ❌ Googleს მიმართეს ✅ Google-ს მიმართეს (dative)
+- ❌ Googleით ძიება ✅ Google-ით ძიება (instrumental)
+- ❌ OpenAI-მა გამოაცხადა (vowel ending takes -მ) ✅ OpenAI-მ გამოაცხადა (ergative)
+- ❌ OpenAIის მოდელი ✅ OpenAI-ს მოდელი (genitive)
+- ❌ OpenAIს გადაწყვეტილება ✅ OpenAI-ს გადაწყვეტილება (dative)
+- ❌ OpenAIით გენერირება ✅ OpenAI-თი გენერირება (instrumental)
+- ❌ NVIDIA-მა წარადგინა (vowel sound takes -მ) ✅ NVIDIA-მ წარადგინა (ergative)
+- ❌ NVIDIAის ჩიპები ✅ NVIDIA-ს ჩიპები (genitive)
+- ❌ NVIDIAს პარტნიორები ✅ NVIDIA-ს პარტნიორები (dative)
+- ❌ NVIDIAით აჩქარება ✅ NVIDIA-თი აჩქარება (instrumental)
+- ❌ Meta-მა დახურა პროექტი ✅ Meta-მ დახურა პროექტი (ergative)
+- ❌ Metaს პოლიტიკა ✅ Meta-ს პოლიტიკა (genitive)
+- ❌ Metaს გადაეცა მოთხოვნა ✅ Meta-ს გადაეცა მოთხოვნა (dative)
+- ❌ Metaით გაზიარება ✅ Meta-თი გაზიარება (instrumental)
+- ❌ Amazonმა ფასები შეამცირა ✅ Amazon-მა ფასები შეამცირა (ergative)
+- ❌ Amazonის საწყობი ✅ Amazon-ის საწყობი (genitive)
+- ❌ Amazonს მიმართა ✅ Amazon-ს მიმართა (dative)
+- ❌ Amazonით მიწოდება ✅ Amazon-ით მიწოდება (instrumental)
+- ❌ Tesla-მა გაყიდვები გაზარდა ✅ Tesla-მ გაყიდვები გაზარდა (ergative)
+- ❌ Teslaს მოდელები ✅ Tesla-ს მოდელები (genitive)
+- ❌ Teslaს დაეკისრა შემოწმება ✅ Tesla-ს დაეკისრა შემოწმება (dative)
+- ❌ Teslaით მგზავრობა ✅ Tesla-თი მგზავრობა (instrumental)
+- ❌ Anthropicმა გამოაქვეყნა ✅ Anthropic-მა გამოაქვეყნა (ergative)
+- ❌ Anthropicის კვლევა ✅ Anthropic-ის კვლევა (genitive)
+- ❌ Anthropicს უსაფრთხოების სისტემა ✅ Anthropic-ს უსაფრთხოების სისტემა (dative)
+- ❌ Anthropicით დამუშავება ✅ Anthropic-ით დამუშავება (instrumental)
+- ❌ DeepSeekმა შექმნა ალგორითმი ✅ DeepSeek-მა შექმნა ალგორითმი (ergative)
+- ❌ DeepSeekის არქიტექტურა ✅ DeepSeek-ის არქიტექტურა (genitive)
+- ❌ DeepSeekს მომხმარებლები ✅ DeepSeek-ს მომხმარებლები (dative)
+- ❌ DeepSeekით კოდირება ✅ DeepSeek-ით კოდირება (instrumental)
+- ❌ GitHubმა კოდი განათავსა ✅ GitHub-მა კოდი განათავსა (ergative)
+- ❌ GitHubის რეპოზიტორი ✅ GitHub-ის რეპოზიტორი (genitive)
+- ❌ GitHubს დაემატა ფუნქცია ✅ GitHub-ს დაემატა ფუნქცია (dative)
+- ❌ GitHubით მართვა ✅ GitHub-ით მართვა (instrumental)
+- ❌ YouTubeმა წესები შეცვალა ✅ YouTube-მა წესები შეცვალა (ergative)
+- ❌ YouTubeის აუდიტორია ✅ YouTube-ის აუდიტორია (genitive)
+- ❌ YouTubeს მიმართეს ✅ YouTube-ს მიმართეს (dative)
+- ❌ YouTubeით გავრცელება ✅ YouTube-ით გავრცელება (instrumental)
+- ❌ Netflixმა სერიალი დაამატა ✅ Netflix-მა სერიალი დაამატა (ergative)
+- ❌ Netflixის გამომწერები ✅ Netflix-ის გამომწერები (genitive)
+- ❌ Netflixს გადაეცა ლიცენზია ✅ Netflix-ს გადაეცა ლიცენზია (dative)
+- ❌ Netflixით სტრიმინგი ✅ Netflix-ით სტრიმინგი (instrumental)
+- ❌ Spotify-მა ფლეილისტი შექმნა ✅ Spotify-მ ფლეილისტი შექმნა (ergative)
+- ❌ Spotifyის კატალოგი ✅ Spotify-ს კატალოგი (genitive)
+- ❌ Spotifyს მომხმარებლები ✅ Spotify-ს მომხმარებლები (dative)
+- ❌ Spotifyით მოსმენა ✅ Spotify-თი მოსმენა (instrumental)
+- ❌ Stripeმა გადახდები გაამარტივა ✅ Stripe-მა გადახდები გაამარტივა (ergative)
+- ❌ Stripeის ინტეგრაცია ✅ Stripe-ის ინტეგრაცია (genitive)
+- ❌ Stripeს დაემატა ვალუტა ✅ Stripe-ს დაემატა ვალუტა (dative)
+- ❌ Stripeით ანგარიშსწორება ✅ Stripe-ით ანგარიშსწორება (instrumental)
+- ❌ Cloudflareმა ტრაფიკი გაფილტრა ✅ Cloudflare-მა ტრაფიკი გაფილტრა (ergative)
+- ❌ Cloudflareის სერვერები ✅ Cloudflare-ის სერვერები (genitive)
+- ❌ Cloudflareს მიმართეს ✅ Cloudflare-ს მიმართეს (dative)
+- ❌ Cloudflareით დაცვა ✅ Cloudflare-ით დაცვა (instrumental)
+- ❌ Uberმა მგზავრობის ტარიფი შეამცირა ✅ Uber-მა მგზავრობის ტარიფი შეამცირა (ergative)
+- ❌ Uberის აპლიკაცია ✅ Uber-ის აპლიკაცია (genitive)
+- ❌ Uberს დაეკისრა რეგულაცია ✅ Uber-ს დაეკისრა რეგულაცია (dative)
+- ❌ Uberით სარგებლობა ✅ Uber-ით სარგებლობა (instrumental)
+- ❌ SpaceXმა თანამგზავრები გაუშვა ✅ SpaceX-მა თანამგზავრები გაუშვა (ergative)
+- ❌ SpaceXის მისია ✅ SpaceX-ის მისია (genitive)
+- ❌ SpaceXს მიენიჭა კონტრაქტი ✅ SpaceX-ს მიენიჭა კონტრაქტი (dative)
+- ❌ SpaceXით გაშვება ✅ SpaceX-ით გაშვება (instrumental)
+- ❌ Intelმა ქარხანა ააშენა ✅ Intel-მა ქარხანა ააშენა (ergative)
+- ❌ Intelის პროცესორები ✅ Intel-ის პროცესორები (genitive)
+- ❌ Intelს გაუუარესდა მაჩვენებლები ✅ Intel-ს გაუუარესდა მაჩვენებლები (dative)
+- ❌ Intelით აღჭურვა ✅ Intel-ით აღჭურვა (instrumental)
+- ❌ AMD-მა ჩიპი წარმოადგინა ✅ AMD-მ ჩიპი წარმოადგინა (ergative)
+- ❌ AMDის გრაფიკა ✅ AMD-ს გრაფიკა (genitive)
+- ❌ AMDს გრაფიკული ბარათები ✅ AMD-ს გრაფიკული ბარათები (dative)
+- ❌ AMDით აწყობა ✅ AMD-თი აწყობა (instrumental)
+- ❌ Samsungმა ტელეფონი გამოუშვა ✅ Samsung-მა ტელეფონი გამოუშვა (ergative)
+- ❌ Samsungის ეკრანები ✅ Samsung-ის ეკრანები (genitive)
+- ❌ Samsungს დაემატა ფუნქცია ✅ Samsung-ს დაემატა ფუნქცია (dative)
+- ❌ Samsungით გადაღება ✅ Samsung-ით გადაღება (instrumental)
+- ❌ TikTokმა კონკურსი დაიწყო ✅ TikTok-მა კონკურსი დაიწყო (ergative)
+- ❌ TikTokის ალგორითმი ✅ TikTok-ის ალგორითმი (genitive)
+- ❌ TikTokს აეკრძალა წვდომა ✅ TikTok-ს აეკრძალა წვდომა (dative)
+- ❌ TikTokით რეკლამირება ✅ TikTok-ით რეკლამირება (instrumental)
+- ❌ Instagramმა ფუნქცია დაამატა ✅ Instagram-მა ფუნქცია დაამატა (ergative)
+- ❌ Instagramის სიახლეები ✅ Instagram-ის სიახლეები (genitive)
+- ❌ Instagramს მიმართა ✅ Instagram-ს მიმართა (dative)
+- ❌ Instagramით გაზიარება ✅ Instagram-ით გაზიარება (instrumental)
+- ❌ Facebookმა ანგარიში დაბლოკა ✅ Facebook-მა ანგარიში დაბლოკა (ergative)
+- ❌ Facebookის ჯგუფი ✅ Facebook-ის ჯგუფი (genitive)
+- ❌ Facebookს მიენიჭა ნებართვა ✅ Facebook-ს მიენიჭა ნებართვა (dative)
+- ❌ Facebookით დაკავშირება ✅ Facebook-ით დაკავშირება (instrumental)
+- ❌ Telegramმა დაშიფვრა განაახლა ✅ Telegram-მა დაშიფვრა განაახლა (ergative)
+- ❌ Telegramის არხი ✅ Telegram-ის არხი (genitive)
+- ❌ Telegramს დაემატა ბოტები ✅ Telegram-ს დაემატა ბოტები (dative)
+- ❌ Telegramით შეტყობინება ✅ Telegram-ით შეტყობინება (instrumental)
+- ❌ WhatsAppმა წესები განაახლა ✅ WhatsApp-მა წესები განაახლა (ergative)
+- ❌ WhatsAppის საზოგადოება ✅ WhatsApp-ის საზოგადოება (genitive)
+- ❌ WhatsAppს დაემატა ზარები ✅ WhatsApp-ს დაემატა ზარები (dative)
+- ❌ WhatsAppით დარეკვა ✅ WhatsApp-ით დარეკვა (instrumental)
+- ❌ LinkedInმა ალგორითმი შეცვალა ✅ LinkedIn-მა ალგორითმი შეცვალა (ergative)
+- ❌ LinkedInის პროფილი ✅ LinkedIn-ის პროფილი (genitive)
+- ❌ LinkedInს მიმართეს კომპანიებმა ✅ LinkedIn-ს მიმართეს კომპანიებმა (dative)
+- ❌ LinkedInით მოძიება ✅ LinkedIn-ით მოძიება (instrumental)
+- ❌ Slackმა არხები განაახლა ✅ Slack-მა არხები განაახლა (ergative)
+- ❌ Slackის ინტეგრაციები ✅ Slack-ის ინტეგრაციები (genitive)
+- ❌ Slackს დაემატა ხელსაწყო ✅ Slack-ს დაემატა ხელსაწყო (dative)
+- ❌ Slackით კომუნიკაცია ✅ Slack-ით კომუნიკაცია (instrumental)
+- ❌ Notionმა ფუნქცია გამოუშვა ✅ Notion-მა ფუნქცია გამოუშვა (ergative)
+- ❌ Notionის გვერდები ✅ Notion-ის გვერდები (genitive)
+- ❌ Notionს დაემატა AI ✅ Notion-ს დაემატა AI (dative)
+- ❌ Notionით ორგანიზება ✅ Notion-ით ორგანიზება (instrumental)
+- ❌ Figma-მა განახლება მიიღო ✅ Figma-მ განახლება მიიღო (ergative)
+- ❌ Figmaის ფაილები ✅ Figma-ს ფაილები (genitive)
+- ❌ Figmaს მომხმარებლები ✅ Figma-ს მომხმარებლები (dative)
+- ❌ Figmaით პროტოტიპირება ✅ Figma-თი პროტოტიპირება (instrumental)
+- ❌ Zoomმა ფუნქციები გააფართოვა ✅ Zoom-მა ფუნქციები გააფართოვა (ergative)
+- ❌ Zoomის შეხვედრა ✅ Zoom-ის შეხვედრა (genitive)
+- ❌ Zoomს დაემატა სუბტიტრები ✅ Zoom-ს დაემატა სუბტიტრები (dative)
+- ❌ Zoomით დაკავშირება ✅ Zoom-ით დაკავშირება (instrumental)
+- ❌ Redditმა წესები გაამკაცრა ✅ Reddit-მა წესები გაამკაცრა (ergative)
+- ❌ Redditის თემი ✅ Reddit-ის თემი (genitive)
+- ❌ Redditს დაეკისრა მონიტორინგი ✅ Reddit-ს დაეკისრა მონიტორინგი (dative)
+- ❌ Redditით გავრცელება ✅ Reddit-ით გავრცელება (instrumental)
+- ❌ Sony-მა კონსოლი გამოუშვა ✅ Sony-მ კონსოლი გამოუშვა (ergative)
+- ❌ Sonyის ექსკლუზივი ✅ Sony-ს ექსკლუზივი (genitive)
+- ❌ Sonyს გადაეცა პატენტი ✅ Sony-ს გადაეცა პატენტი (dative)
+- ❌ Sonyით თამაში ✅ Sony-თი თამაში (instrumental)
+- ❌ ASUSმა ლეპტოპი წარადგინა ✅ ASUS-მა ლეპტოპი წარადგინა (ergative)
+- ❌ ASUSის დედაპლატა ✅ ASUS-ის დედაპლატა (genitive)
+- ❌ ASUSს მიენიჭა ჯილდო ✅ ASUS-ს მიენიჭა ჯილდო (dative)
+- ❌ ASUSით აწყობა ✅ ASUS-ით აწყობა (instrumental)
+- ❌ TSMC-მა წარმოება გაზარდა ✅ TSMC-მ წარმოება გაზარდა (ergative)
+- ❌ TSMCის ქარხანა ✅ TSMC-ს ქარხანა (genitive)
+- ❌ TSMCს შეუკვეთეს ჩიპები ✅ TSMC-ს შეუკვეთეს ჩიპები (dative)
+- ❌ TSMCით დამზადება ✅ TSMC-თი დამზადება (instrumental)
+- ❌ Oracleმა ბაზა განაახლა ✅ Oracle-მა ბაზა განაახლა (ergative)
+- ❌ Oracleის მონაცემთა ბაზა ✅ Oracle-ის მონაცემთა ბაზა (genitive)
+- ❌ Oracleს ენდობა ბანკი ✅ Oracle-ს ენდობა ბანკი (dative)
+- ❌ Oracleით მართვა ✅ Oracle-ით მართვა (instrumental)
+- ❌ Adobe-მა პროგრამა განაახლა ✅ Adobe-მ პროგრამა განაახლა (ergative)
+- ❌ Adobeის გამოწერა ✅ Adobe-ს გამოწერა (genitive)
+- ❌ Adobeს დაემატა ხელსაწყო ✅ Adobe-ს დაემატა ხელსაწყო (dative)
+- ❌ Adobeით დამუშავება ✅ Adobe-თი დამუშავება (instrumental)
+- ❌ Dockerმა იმიჯი შექმნა ✅ Docker-მა იმიჯი შექმნა (ergative)
+- ❌ Dockerის კონტეინერი ✅ Docker-ის კონტეინერი (genitive)
+- ❌ Dockerს მიენიჭა წვდომა ✅ Docker-ს მიენიჭა წვდომა (dative)
+- ❌ Dockerით გაშვება ✅ Docker-ით გაშვება (instrumental)
+- ❌ Kubernetesმა კლასტერი შექმნა ✅ Kubernetes-მა კლასტერი შექმნა (ergative)
+- ❌ Kubernetesის არქიტექტურა ✅ Kubernetes-ის არქიტექტურა (genitive)
+- ❌ Kubernetesს დაევალა მართვა ✅ Kubernetes-ს დაევალა მართვა (dative)
+- ❌ Kubernetesით ორკესტრაცია ✅ Kubernetes-ით ორკესტრაცია (instrumental)
+- ❌ Claudeმა კოდი დაწერა ✅ Claude-მა კოდი დაწერა (ergative)
+- ❌ Claudeის პასუხი ✅ Claude-ის პასუხი (genitive)
+- ❌ Claudeს დაესვა კითხვა ✅ Claude-ს დაესვა კითხვა (dative)
+- ❌ Claudeით გენერირება ✅ Claude-ით გენერირება (instrumental)
+- ❌ Mistralმა მოდელი გააზიარა ✅ Mistral-მა მოდელი გააზიარა (ergative)
+- ❌ Mistralის წონები ✅ Mistral-ის წონები (genitive)
+- ❌ Mistralს მიმართეს დეველოპერებმა ✅ Mistral-ს მიმართეს დეველოპერებმა (dative)
+- ❌ Mistralით დატრენინგება ✅ Mistral-ით დატრენინგება (instrumental)
+- ❌ Salesforceმა კომპანია შეიძინა ✅ Salesforce-მა კომპანია შეიძინა (ergative)
+- ❌ Salesforceის პლატფორმა ✅ Salesforce-ის პლატფორმა (genitive)
+- ❌ Salesforceს დაემატა CRM მოდული ✅ Salesforce-ს დაემატა CRM მოდული (dative)
+- ❌ Salesforceით მართვა ✅ Salesforce-ით მართვა (instrumental)
+- ❌ Airbnb-მა წესები შეცვალა ✅ Airbnb-მ წესები შეცვალა (ergative)
+- ❌ Airbnbის ჯავშანი ✅ Airbnb-ს ჯავშანი (genitive)
+- ❌ Airbnbს დაეკისრა გადასახადი ✅ Airbnb-ს დაეკისრა გადასახადი (dative)
+- ❌ Airbnbით დაჯავშნა ✅ Airbnb-თი დაჯავშნა (instrumental)
+- ❌ PayPalმა ტარიფი შეამცირა ✅ PayPal-მა ტარიფი შეამცირა (ergative)
+- ❌ PayPalის ანგარიში ✅ PayPal-ის ანგარიში (genitive)
+- ❌ PayPalს დაუკავშირდა ბანკი ✅ PayPal-ს დაუკავშირდა ბანკი (dative)
+- ❌ PayPalით გადახდა ✅ PayPal-ით გადახდა (instrumental)
+- ❌ IBMმა კვლევა გამოაქვეყნა ✅ IBM-მა კვლევა გამოაქვეყნა (ergative)
+- ❌ IBMის სერვერები ✅ IBM-ის სერვერები (genitive)
+- ❌ IBMს მიენიჭა პატენტი ✅ IBM-ს მიენიჭა პატენტი (dative)
+- ❌ IBMით გადაწყვეტა ✅ IBM-ით გადაწყვეტა (instrumental)
+- ❌ ByteDanceმა ინვესტიცია ჩადო ✅ ByteDance-მა ინვესტიცია განახორციელა (ergative)
+- ❌ ByteDanceის შემოსავალი ✅ ByteDance-ის შემოსავალი (genitive)
+- ❌ ByteDanceს დაეკისრა შეზღუდვა ✅ ByteDance-ს დაეკისრა შეზღუდვა (dative)
+- ❌ ByteDanceით გავრცელება ✅ ByteDance-ით გავრცელება (instrumental)
+- ❌ Chromeმა მეხსიერება გაათავისუფლა ✅ Chrome-მა მეხსიერება გაათავისუფლა (ergative)
+- ❌ Chromeის ჩანართი ✅ Chrome-ის ჩანართი (genitive)
+- ❌ Chromeს დაემატა გაფართოება ✅ Chrome-ს დაემატა გაფართოება (dative)
+- ❌ Chromeით დათვალიერება ✅ Chrome-ით დათვალიერება (instrumental)
+- ❌ Firefoxმა უსაფრთხოება გააძლიერა ✅ Firefox-მა უსაფრთხოება გააძლიერა (ergative)
+- ❌ Firefoxის განახლება ✅ Firefox-ის განახლება (genitive)
+- ❌ Firefoxს ენდობა მომხმარებელი ✅ Firefox-ს ენდობა მომხმარებელი (dative)
+- ❌ Firefoxით გახსნა ✅ Firefox-ით გახსნა (instrumental)
+- ❌ Linuxმა ბირთვი განაახლა ✅ Linux-მა ბირთვი განაახლა (ergative)
+- ❌ Linuxის დისტრიბუცია ✅ Linux-ის დისტრიბუცია (genitive)
+- ❌ Linuxს იყენებს სერვერი ✅ Linux-ს იყენებს სერვერი (dative)
+- ❌ Linuxით მართვა ✅ Linux-ით მართვა (instrumental)
+- ❌ Windowsმა სისტემა განაახლა ✅ Windows-მა სისტემა განაახლა (ergative)
+- ❌ Windowsის რეესტრი ✅ Windows-ის რეესტრი (genitive)
+- ❌ Windowsს დაემატა ფუნქცია ✅ Windows-ს დაემატა ფუნქცია (dative)
+- ❌ Windowsით სარგებლობა ✅ Windows-ით სარგებლობა (instrumental)
 
 ## Plurals of acronyms and Latin nouns
 
 - ❌ iPhoneები გაიყიდა ✅ iPhone-ები გაიყიდა
+- ❌ iPhoneებმა მიიღო განახლება ✅ iPhone-ებმა განახლება მიიღო
 - ❌ iPhoneებს აქვს ახალი კამერა ✅ iPhone-ებს ახალი კამერა აქვს
 - ❌ iPhoneებით სარგებლობენ ✅ iPhone-ებით სარგებლობენ
 - ❌ MacBookები განახლდა ✅ MacBook-ები განახლდა
+- ❌ MacBookებმა აჩვენა მაღალი სიჩქარე ✅ MacBook-ებმა მაღალი სიჩქარე აჩვენა
+- ❌ MacBookებს სჭირდება დამტენი ✅ MacBook-ებს დამტენი სჭირდება
+- ❌ MacBookებით მუშაობენ ✅ MacBook-ებით მუშაობენ
+- ❌ Pixelები გამოვიდა ✅ Pixel-ები გამოვიდა
+- ❌ Pixelებმა გააუმჯობესა გადაღება ✅ Pixel-ებმა გადაღება გააუმჯობესა
+- ❌ Pixelებს აქვს სუფთა Android ✅ Pixel-ებს სუფთა Android აქვს
 - ❌ GPUები გამოიყენება AI-სთვის ✅ GPU-ები AI-სთვის გამოიყენება
 - ❌ GPUებმა დააჩქარეს გამოთვლები ✅ GPU-ებმა გამოთვლები დააჩქარა
 - ❌ GPUებს სჭირდება მეტი ენერგია ✅ GPU-ებს მეტი ენერგია სჭირდება
+- ❌ GPUებით სწავლება ✅ GPU-ებით სწავლება
+- ❌ CPUები გაცხელდა ✅ CPU-ები გაცხელდა
+- ❌ CPUებმა გაუძლეს დატვირთვას ✅ CPU-ებმა დატვირთვას გაუძლო
 - ❌ APIები შეიცვალა ✅ API-ები შეიცვალა
 - ❌ APIებს იყენებენ დეველოპერები ✅ API-ებს დეველოპერები იყენებენ
 - ❌ LLMები ვითარდება ✅ LLM-ები ვითარდება
 - ❌ botები აგზავნიან სპამს ✅ bot-ები სპამს აგზავნის
 - ❌ SSDები უფრო სწრაფია ✅ SSD-ები უფრო სწრაფია
+- ❌ serverები გაითიშა ✅ server-ები გაითიშა
 - ❌ AI-ები სწრაფად ვითარდება ✅ AI მოდელები სწრაფად ვითარდება
 - ❌ ხელოვნური ინტელექტი (AI) და AI ხელსაწყოები ერთ წინადადებაში ✅ აირჩიე ერთი ფორმა თითო წინადადებაში
 

@@ -1,0 +1,4 @@
+დამატებითი ინფორმაციისთვის მიმართეთ სერვერის ძირითად მისამართს:
+https://api.sitech.ge/v2/resources?filter=active&sort=desc#section
+მოთხოვნის გაგზავნა შესაძლებელია როგორც GET, ისე POST მეთოდით.
+დეტალური ლოგები ხელმისაწვდომია მისამართზე https://monitor.sitech.ge/status/2026.

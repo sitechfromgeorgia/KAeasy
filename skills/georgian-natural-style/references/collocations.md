@@ -1,15 +1,47 @@
 # Natural Georgian Collocations (მყარი შესიტყვებები)
 
-One of the clearest signs of machine-translated or unedited copy is the use of literal word-for-word
-calques for idiomatic verb + noun collocations. In English or Russian, many concepts rely on "make",
-"take", "give", or "have". Natural Georgian uses specific historic light verbs (`მიღება`, `გაკეთება`,
-`ჩადენა`, `დაშვება`, `გაწევა`, `მინიჭება`, `გავლება`).
+One of the most persistent weaknesses in machine-translated or unedited Georgian copy is the literal calquing
+of foreign light verbs. In English and Russian, a small handful of generalized verbs (*make, take, give, hold, play, have* /
+*сделать, принять, оказать, играть*) are combined mechanically with almost any abstract noun.
 
-When editing or drafting, consult this table of 80 high-frequency collocations.
+Natural Georgian does **not** possess a universal "do/make" verb for abstract concepts. Instead, the language uses
+highly specific, historically established semantic light verbs. Substituting `გაკეთება` ("making/doing") or `მიღება` ("receiving")
+for these native verbs immediately flags a text as amateurish or machine-generated.
 
 ---
 
-## 80 Natural vs Wrong Verb + Noun Collocations
+## 1. Functional Semantic Domains of Georgian Collocations
+
+When drafting or editing, align abstract nouns with their natural verbal domain:
+
+1. **Decisions & Measures (`მიღება`)**:
+   - `გადაწყვეტილების მიღება` (not ❌ `გადაწყვეტილების გაკეთება`)
+   - `ზომების მიღება` (not ❌ `ზომების გაკეთება / აღება`)
+2. **Steps & Movement (`გადადგმა`)**:
+   - `ნაბიჯის გადადგმა` (not ❌ `ნაბიჯის გაკეთება / მიღება`)
+3. **Discourse, Statements & Commentary (`გაკეთება`, `გაცემა`, `დასმა`)**:
+   - Statements & comments: `განცხადების გაკეთება`, `კომენტარის გაკეთება`
+   - Inquiries & answers: `კითხვის დასმა`, `პასუხის გაცემა`
+4. **Aid, Services, Competition & Resistance (`გაწევა`)**:
+   - `დახმარების გაწევა`, `მომსახურების გაწევა`, `კონკურენციის გაწევა`, `წინააღმდეგობის გაწევა`
+5. **Harm, Damage & Injury (`მიყენება`)**:
+   - `ზიანის მიყენება`, `შეურაცხყოფის მიყენება`, `დარტყმის მიყენება`, `ჭრილობის მიყენება`
+6. **Status, Privilege & Importance (`მინიჭება`)**:
+   - `სტატუსის მინიჭება`, `პრიორიტეტის მინიჭება`, `მნიშვნელობის მინიჭება`, `უპირატესობის მინიჭება`
+7. **Errors vs Transgressions (`დაშვება` vs `ჩადენა`)**:
+   - Inadvertent mistakes: `შეცდომის დაშვება` (never ❌ `შეცდომის გაკეთება`)
+   - Intentional crimes: `დანაშაულის ჩადენა`, `მკვლელობის ჩადენა`
+8. **Boundaries, Parallels & Lines (`გავლება`)**:
+   - `ზღვრის გავლება`, `პარალელის გავლება`
+9. **Duties, Promises & Roles (`შესრულება`)**:
+   - `როლის შესრულება` (not ❌ `როლის თამაში`), `პირობის შესრულება`, `ვალდებულების შესრულება`, `ფუნქციის შესრულება`
+10. **Reforms, Policies & Execution (`გატარება`, `განხორციელება`)**:
+    - Policy execution: `რეფორმის გატარება`, `პოლიტიკის გატარება`
+    - High-stakes projects/finance: `პროექტის განხორციელება`, `ინვესტიციის განხორციელება`, `გადახდის განხორციელება`
+
+---
+
+## 2. 80 Natural vs Wrong Verb + Noun Collocations Reference Table
 
 | # | Natural collocation (✅) | Wrong / Unnatural (❌) | Origin / Literal calque | Usage notes |
 |---|---|---|---|---|

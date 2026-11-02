@@ -1,42 +1,67 @@
 # Brands and Products: Written Cases and Spoken TTS Forms
 
 In published Georgian texts (articles, web copy, social posts), foreign brand and product names **remain in the Latin alphabet**.
-Case endings attach with a mandatory hyphen (`-`), determined by the **final sound** of the word when pronounced.
+Case endings attach with a mandatory hyphen (`-`), determined strictly by the **phonetic ending (final sound)** of the name when pronounced.
 
-For text-to-speech (TTS), scripts, and audio copy, names are transcribed phonetically into Georgian Mkhedruli letters.
-
----
-
-## Declension Rules for Latin Names
-
-1. **Consonant-ending sound** (e.g., `Microsoft` /t/, `Apple` /l/, `Google` /l/, `Amazon` /n/, `YouTube` /b/):
-   - Ergative: `-მა` (`Microsoft-მა`, `Apple-მა`)
-   - Genitive: `-ის` (`Microsoft-ის`, `Apple-ის`)
-   - Dative: `-ს` (`Microsoft-ს`, `Apple-ს`)
-2. **Vowel-ending sound** (e.g., `OpenAI` /aɪ/, `Meta` /a/, `Tesla` /a/, `Sony` /i/, `Volvo` /o/):
-   - Ergative: `-მ` (`OpenAI-მ`, `Meta-მ`, `Tesla-მ`, `Sony-მ`)
-   - Dative: `-ს` (`OpenAI-ს`, `Meta-ს`, `Tesla-ს`, `Sony-ს`)
-   - Genitive: For `-ა` stems, Georgian news overwhelmingly uses `-ს` (`Meta-ს`, `Tesla-ს`, `NVIDIA-ს`),
-     though some traditional style guides use `-ის` (`Meta-ის`, `Tesla-ის`). Disputed variants are marked `needs-review`.
+For text-to-speech (TTS), video voiceovers, broadcast scripts, and teleprompters, foreign names are transcribed phonetically into Georgian Mkhedruli letters.
 
 ---
 
-## 120 Global Brands and Products
+## 1. Declension Rules for Latin Names in Written Copy
+
+1. **Consonant-Ending Sound** (e.g., `Microsoft` /t/, `Apple` /l/, `Google` /l/, `Amazon` /n/, `YouTube` /b/, `Netflix` /ks/):
+   - **Ergative**: `-მა` (`Microsoft-მა`, `Apple-მა`, `Google-მა`)
+   - **Genitive**: `-ის` (`Microsoft-ის`, `Apple-ის`, `Google-ის`)
+   - **Dative**: `-ს` (`Microsoft-ს`, `Apple-ს`, `Google-ს`)
+   - **Instrumental**: `-ით` (`Microsoft-ით`, `Apple-ით`)
+   - **Adverbial**: `-ად` (`Microsoft-ად`)
+
+2. **Vowel-Ending Sound** (all vowel classes: `-ა`, `-ე`, `-ი` sound, `-ო`, `-უ`):
+   - **Ergative**: `-მ` (`Meta-მ`, `Tesla-მ`, `OpenAI-მ`, `Sony-მ`, `Volvo-მ`, `Porsche-მ`)
+   - **Dative**: `-ს` (`Meta-ს`, `Tesla-ს`, `OpenAI-ს`, `Sony-ს`, `Volvo-ს`, `Porsche-ს`)
+   - **Instrumental**: `-თი` (`Meta-თი`, `Tesla-თი`, `OpenAI-თი`, `Sony-თი`, `Volvo-თი`, `Porsche-თი`)
+   - **Adverbial**: `-დ` (`Meta-დ`, `OpenAI-დ`, `Volvo-დ`, `Porsche-დ`)
+   - **Genitive**: Strictly **`-ს`** for all vowel-ending foreign names:
+     - `-ა` stems: `Meta-ს შემოსავალი`, `Tesla-ს აქციები`, `NVIDIA-ს ჩიპები`
+     - `-ი` sound stems: behave as non-truncating vowel stems (like `ტაქსი → ტაქსის`): `OpenAI-ს`, `ChatGPT-ს`, `Spotify-ს`, `Gemini-ს`, `Sony-ს`, `Audi-ს`, `Hyundai-ს`
+     - `-ო` / `-უ` stems: `Volvo-ს`, `Nintendo-ს`, `Baidu-ს`
+     - `-ე` stems: `Porsche-ს`, `Chevrolet-ს`
+
+3. **Initialisms and Acronyms**:
+   - Declension is governed strictly by the spoken sound of the final letter (or word):
+     - Initialisms ending in an -ი sound letter (D, C, P, G, T, V, Z): `AMD-მ`, `AMD-ს`, `AMD-ს`, `AMD-თი`; `TSMC-მ`, `TSMC-ს`, `TSMC-ს`
+     - Initialisms ending in a consonant letter (M, L, N, R, S, X): `IBM-მა`, `IBM-ის`, `IBM-ს`, `IBM-ით`; `ASML-მა`, `ASML-ის`, `ASML-ს`
+     - Initialisms ending in an -უ sound letter (U): `GPU-მ`, `GPU-ს`, `GPU-ს`, `GPU-თი`
+     - Initialisms ending in an -ე sound letter (W): `BMW-მ`, `BMW-ს`, `BMW-ს`, `BMW-თი`
+     - Acronyms read as words: `NATO-მ`, `NATO-ს`, `NATO-ს`, `NATO-თი` (ends in -ო); `NASA-მ`, `NASA-ს`, `NASA-ს`, `NASA-თი` (ends in -ა)
+
+For the complete 7-case paradigm, postpositions, and 200+ name dictionary, see `references/latin-names.md`.
+
+---
+
+## 2. Spoken Forms for TTS and Voiceovers
+
+- **Phonetic Georgian**: In scripts or TTS prompts, transcribe foreign names according to natural Georgian phonetics (`ეფლი`, `გუგლი`, `მაიკროსოფტი`).
+- **Eliminate Russian Phonetic Calques**: Never import Russian letter names or vowel reductions (e.g., strictly use `ჩატ-ჯი-პი-ტი` not ❌ `ჩატ-ჯე-პე-ტე`; `ჯი-პი-იუ` not ❌ `გე-პე-უ`; `ბე-ემ-ვე` not ❌ `ბე-ემ-დაბლიუ` or Russian distortions).
+
+---
+
+## 3. 120 Global Brands and Products Reference Table
 
 | # | Written form | Ergative | Genitive | Dative | Spoken form (TTS) |
 |---|---|---|---|---|---|
 | 1 | Microsoft | Microsoft-მა | Microsoft-ის | Microsoft-ს | მაიკროსოფტი |
 | 2 | Apple | Apple-მა | Apple-ის | Apple-ს | ეფლი |
 | 3 | Google | Google-მა | Google-ის | Google-ს | გუგლი |
-| 4 | OpenAI | OpenAI-მ | OpenAI-ის | OpenAI-ს | ოუფენ-ეი-აი |
-| 5 | ChatGPT | ChatGPT-მ | ChatGPT-ის | ChatGPT-ს | ჩატ-ჯი-პი-ტი |
+| 4 | OpenAI | OpenAI-მ | OpenAI-ს | OpenAI-ს | ოუფენ-ეი-აი |
+| 5 | ChatGPT | ChatGPT-მ | ChatGPT-ს | ChatGPT-ს | ჩატ-ჯი-პი-ტი |
 | 6 | Claude | Claude-მა | Claude-ის | Claude-ს | კლოდი |
 | 7 | Gemini | Gemini-მ | Gemini-ს | Gemini-ს | ჯემინაი (needs-review: ჯემინი) |
 | 8 | DeepSeek | DeepSeek-მა | DeepSeek-ის | DeepSeek-ს | დიპსიქი |
 | 9 | Anthropic | Anthropic-მა | Anthropic-ის | Anthropic-ს | ანთროპიკი |
-| 10 | Meta | Meta-მ | Meta-ს (needs-review: Meta-ის) | Meta-ს | მეტა |
+| 10 | Meta | Meta-მ | Meta-ს | Meta-ს | მეტა |
 | 11 | Amazon | Amazon-მა | Amazon-ის | Amazon-ს | ამაზონი |
-| 12 | NVIDIA | NVIDIA-მ | NVIDIA-ს (needs-review: NVIDIA-ის) | NVIDIA-ს | ენვიდია |
+| 12 | NVIDIA | NVIDIA-მ | NVIDIA-ს | NVIDIA-ს | ენვიდია |
 | 13 | Intel | Intel-მა | Intel-ის | Intel-ს | ინტელი |
 | 14 | AMD | AMD-მ | AMD-ს | AMD-ს | ეი-ემ-დი |
 | 15 | IBM | IBM-მა | IBM-ის | IBM-ს | აი-ბი-ემი |
@@ -44,7 +69,7 @@ For text-to-speech (TTS), scripts, and audio copy, names are transcribed phoneti
 | 17 | Salesforce | Salesforce-მა | Salesforce-ის | Salesforce-ს | სეილსფორსი |
 | 18 | Adobe | Adobe-მ | Adobe-ს | Adobe-ს | ადობი (needs-review: ედოუბი) |
 | 19 | Netflix | Netflix-მა | Netflix-ის | Netflix-ს | ნეტფლიქსი |
-| 20 | Spotify | Spotify-მ | Spotify-ის | Spotify-ს | სპოტიფაი |
+| 20 | Spotify | Spotify-მ | Spotify-ს | Spotify-ს | სპოტიფაი |
 | 21 | YouTube | YouTube-მა | YouTube-ის | YouTube-ს | იუთუბი (needs-review: იუთიუბი) |
 | 22 | TikTok | TikTok-მა | TikTok-ის | TikTok-ს | ტიკტოკი |
 | 23 | Instagram | Instagram-მა | Instagram-ის | Instagram-ს | ინსტაგრამი |
@@ -60,10 +85,10 @@ For text-to-speech (TTS), scripts, and audio copy, names are transcribed phoneti
 | 33 | Zoom | Zoom-მა | Zoom-ის | Zoom-ს | ზუმი |
 | 34 | Uber | Uber-მა | Uber-ის | Uber-ს | უბერი |
 | 35 | Airbnb | Airbnb-მ | Airbnb-ს | Airbnb-ს | ეარბიენბი |
-| 36 | Tesla | Tesla-მ | Tesla-ს (needs-review: Tesla-ის) | Tesla-ს | ტესლა |
+| 36 | Tesla | Tesla-მ | Tesla-ს | Tesla-ს | ტესლა |
 | 37 | SpaceX | SpaceX-მა | SpaceX-ის | SpaceX-ს | სპეის-იქსი |
 | 38 | Samsung | Samsung-მა | Samsung-ის | Samsung-ს | სამსუნგი |
-| 39 | Sony | Sony-მ | Sony-ს (needs-review: Sony-ის) | Sony-ს | სონი |
+| 39 | Sony | Sony-მ | Sony-ს | Sony-ს | სონი |
 | 40 | PlayStation | PlayStation-მა | PlayStation-ის | PlayStation-ს | პლეისტეიშენი |
 | 41 | Xbox | Xbox-მა | Xbox-ის | Xbox-ს | ექსბოქსი |
 | 42 | Nintendo | Nintendo-მ | Nintendo-ს | Nintendo-ს | ნინტენდო |
@@ -74,7 +99,7 @@ For text-to-speech (TTS), scripts, and audio copy, names are transcribed phoneti
 | 47 | Lenovo | Lenovo-მ | Lenovo-ს | Lenovo-ს | ლენოვო |
 | 48 | Asus | Asus-მა | Asus-ის | Asus-ს | ასუსი |
 | 49 | Acer | Acer-მა | Acer-ის | Acer-ს | ეისერი |
-| 50 | Huawei | Huawei-მ | Huawei-ს (needs-review: Huawei-ის) | Huawei-ს | ჰუავეი |
+| 50 | Huawei | Huawei-მ | Huawei-ს | Huawei-ს | ჰუავეი |
 | 51 | Xiaomi | Xiaomi-მ | Xiaomi-ს | Xiaomi-ს | შაომი (needs-review: ქსიაომი) |
 | 52 | OnePlus | OnePlus-მა | OnePlus-ის | OnePlus-ს | ვანპლასი |
 | 53 | Qualcomm | Qualcomm-მა | Qualcomm-ის | Qualcomm-ს | ქუალკომი |
@@ -110,37 +135,37 @@ For text-to-speech (TTS), scripts, and audio copy, names are transcribed phoneti
 | 83 | Mistral | Mistral-მა | Mistral-ის | Mistral-ს | მისტრალი |
 | 84 | Hugging Face | Hugging Face-მა | Hugging Face-ის | Hugging Face-ს | ჰაგინგ ფეისი |
 | 85 | Cohere | Cohere-მა | Cohere-ის | Cohere-ს | კოჰირი |
-| 86 | Stability AI | Stability AI-მ | Stability AI-ის | Stability AI-ს | სტაბილიტი ეი-აი |
+| 86 | Stability AI | Stability AI-მ | Stability AI-ს | Stability AI-ს | სტაბილიტი ეი-აი |
 | 87 | ByteDance | ByteDance-მა | ByteDance-ის | ByteDance-ს | ბაითდენსი |
 | 88 | Tencent | Tencent-მა | Tencent-ის | Tencent-ს | ტენსენტი |
-| 89 | Alibaba | Alibaba-მ | Alibaba-ს (needs-review: Alibaba-ის) | Alibaba-ს | ალიბაბა |
+| 89 | Alibaba | Alibaba-მ | Alibaba-ს | Alibaba-ს | ალიბაბა |
 | 90 | Baidu | Baidu-მ | Baidu-ს | Baidu-ს | ბაიდუ |
-| 91 | eBay | eBay-მ | eBay-ს (needs-review: eBay-ის) | eBay-ს | იბეი |
+| 91 | eBay | eBay-მ | eBay-ს | eBay-ს | იბეი |
 | 92 | PayPal | PayPal-მა | PayPal-ის | PayPal-ს | ფეიფალი |
 | 93 | Stripe | Stripe-მა | Stripe-ის | Stripe-ს | სტრაიპი |
-| 94 | Visa | Visa-მ | Visa-ს (needs-review: Visa-ის) | Visa-ს | ვიზა |
+| 94 | Visa | Visa-მ | Visa-ს | Visa-ს | ვიზა |
 | 95 | Mastercard | Mastercard-მა | Mastercard-ის | Mastercard-ს | მასტერქარდი |
 | 96 | Revolut | Revolut-მა | Revolut-ის | Revolut-ს | რევოლუტი |
 | 97 | BMW | BMW-მ | BMW-ს | BMW-ს | ბე-ემ-ვე |
 | 98 | Mercedes-Benz | Mercedes-Benz-მა | Mercedes-Benz-ის | Mercedes-Benz-ს | მერსედეს-ბენცი |
-| 99 | Audi | Audi-მ | Audi-ს (needs-review: Audi-ის) | Audi-ს | აუდი |
+| 99 | Audi | Audi-მ | Audi-ს | Audi-ს | აუდი |
 | 100 | Porsche | Porsche-მ | Porsche-ს | Porsche-ს | პორშე |
 | 101 | Volkswagen | Volkswagen-მა | Volkswagen-ის | Volkswagen-ს | ფოლკსვაგენი |
-| 102 | Toyota | Toyota-მ | Toyota-ს (needs-review: Toyota-ის) | Toyota-ს | ტოიოტა |
-| 103 | Honda | Honda-მ | Honda-ს (needs-review: Honda-ის) | Honda-ს | ჰონდა |
-| 104 | Hyundai | Hyundai-მ | Hyundai-ს (needs-review: Hyundai-ის) | Hyundai-ს | ჰიუნდაი (needs-review: ჰიონდე) |
-| 105 | Kia | Kia-მ | Kia-ს (needs-review: Kia-ის) | Kia-ს | კია |
+| 102 | Toyota | Toyota-მ | Toyota-ს | Toyota-ს | ტოიოტა |
+| 103 | Honda | Honda-მ | Honda-ს | Honda-ს | ჰონდა |
+| 104 | Hyundai | Hyundai-მ | Hyundai-ს | Hyundai-ს | ჰიუნდაი (needs-review: ჰიონდე) |
+| 105 | Kia | Kia-მ | Kia-ს | Kia-ს | კია |
 | 106 | Ford | Ford-მა | Ford-ის | Ford-ს | ფორდი |
 | 107 | Chevrolet | Chevrolet-მ | Chevrolet-ს | Chevrolet-ს | შევროლე |
 | 108 | BYD | BYD-მ | BYD-ს | BYD-ს | ბი-უაი-დი |
 | 109 | Volvo | Volvo-მ | Volvo-ს | Volvo-ს | ვოლვო |
-| 110 | Nike | Nike-მ | Nike-ის (needs-review: Nike-ს) | Nike-ს | ნაიკი (needs-review: ნაიკ) |
+| 110 | Nike | Nike-მ | Nike-ს | Nike-ს | ნაიკი (needs-review: ნაიკ) |
 | 111 | Adidas | Adidas-მა | Adidas-ის | Adidas-ს | ადიდასი |
-| 112 | Puma | Puma-მ | Puma-ს (needs-review: Puma-ის) | Puma-ს | პუმა |
-| 113 | Zara | Zara-მ | Zara-ს (needs-review: Zara-ის) | Zara-ს | ზარა |
+| 112 | Puma | Puma-მ | Puma-ს | Puma-ს | პუმა |
+| 113 | Zara | Zara-მ | Zara-ს | Zara-ს | ზარა |
 | 114 | H&M | H&M-მა | H&M-ის | H&M-ს | ეიჩ-ენდ-ემი |
-| 115 | IKEA | IKEA-მ | IKEA-ს (needs-review: IKEA-ის) | IKEA-ს | იკეა |
-| 116 | Coca-Cola | Coca-Cola-მ | Coca-Cola-ს (needs-review: Coca-Cola-ის) | Coca-Cola-ს | კოკა-კოლა |
+| 115 | IKEA | IKEA-მ | IKEA-ს | IKEA-ს | იკეა |
+| 116 | Coca-Cola | Coca-Cola-მ | Coca-Cola-ს | Coca-Cola-ს | კოკა-კოლა |
 | 117 | Pepsi | Pepsi-მ | Pepsi-ს | Pepsi-ს | პეპსი |
 | 118 | McDonald's | McDonald's-მა | McDonald's-ის | McDonald's-ს | მაკდონალდსი |
 | 119 | Starbucks | Starbucks-მა | Starbucks-ის | Starbucks-ს | სტარბაქსი |

@@ -1,0 +1,7 @@
+<div class="product-item" data-sku="SKU-99201">
+  <span class="badge">ახალი</span>
+  <h3>Apple-ის iPhone 16 Pro</h3>
+  <p>ფასი: 1 250 ₾ (განვადებით თვეში 115 ₾-დან).</p>
+  <a href="/checkout?item=SKU-99201" class="btn">ყიდვა</a>
+</div>
+შეკვეთების მისაღებად დარეკეთ ნომერზე: +995 577 11 22 33.

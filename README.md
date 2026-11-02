@@ -20,6 +20,7 @@ mistakes memory feeds every correction back to all agents.
 | `skills/georgian-ui` | Buttons, statuses, errors, forms |
 | `skills/georgian-speech` | `speech_text` for TTS: numbers in words, brands in Georgian letters |
 | `skills/georgian-proofread` | Three-pass self-edit, review format, learning loop |
+| `evals/` | 120 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |
 | `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates |
 | `ka_learn` / `ka_mistakes` tools | Shared memory of corrections (JSONL), most frequent first |
 | `pre_llm_call` hook | One short hint per session so agents know the skills exist |
@@ -51,6 +52,18 @@ python lint.py --file draft.md --mode social --summary
 ```bash
 uv run --with pytest --with pyyaml python -m pytest -q
 uv run --with ruff ruff check .
+```
+
+## Evals Benchmark
+
+See [`evals/README.md`](evals/README.md) for the 120-task benchmark and zero-cost offline scoring utility:
+
+```bash
+# Inspect a task prompt, reference answer, and mistake checklist
+uv run python evals/score.py --inspect news_001
+
+# Score model output manually
+uv run python evals/score.py --task news_001 --text "Microsoft-მა..."
 ```
 
 See `AGENTS.md` for the rules of the repo (how to add a rule or an example without breaking anything).

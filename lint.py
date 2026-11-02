@@ -89,9 +89,14 @@ PLURAL_AFTER_WORD_NUM = re.compile(
 
 CYRILLIC = re.compile(r"[а-яА-ЯёЁіІїЇєЄғҒқҚүҮұҰөӨһҺәӘ]")
 
+POSTPOSITION_DATIVE = re.compile(
+    r"(?<![A-Za-z0-9-])\b(ამას|იმას|რას|[ა-ჰ]{2,}ებს)\s+(შესახებ|გამო|მიხედვით)\b"
+)
+
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
-          "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter"}
+          "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
+          "postposition_dative"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -158,7 +163,7 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                 add("ending_hyphen", "error", f"„{tok}“ → „{fixed}“ (დეფისი სავალდებულოა)", m)
         for m in re.finditer(r"\b[A-Za-z][A-Za-z0-9.]*(?:\s+-\s*|-\s+)(მა|ის|ს|ით|ზე|ში)\b", body):
             add("ending_hyphen", "error", f"„{m.group(0)}“ → დეფისი გამოტოვების გარეშე", m)
-        for m in re.finditer(r"\b([A-Za-z][A-Za-z0-9.]*)\s+(მა|მ|ს|ით|ზე|ში|დან|მდე|ად|ები)\b", body):
+        for m in re.finditer(r"\b([A-Za-z][A-Za-z0-9.]*)\s+(მა|მ|ს|ით|თი|ზე|ში|დან|მდე|ად|ები|ების|ებს|ებმა|ებით|ებად)\b", body):
             if not any(in_tag[m.start():m.end()]):
                 add("ending_hyphen", "error", f"„{m.group(0)}“ → „{m.group(1)}-{m.group(2)}“ (დეფისი სავალდებულოა)", m)
 
@@ -250,6 +255,21 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
     if mode == "speech" and on("russian_letter"):
         for m in re.finditer(r"(?<![ა-ჰ])(ტე|პე|ბე)(?![ა-ჰ])", body):
             add("russian_letter", "error", f"„{m.group(0)}“: რუსული ასოს სახელი (გამოიყენე ტი, პი, ბი)", m)
+
+    if on("postposition_dative"):
+        for m in POSTPOSITION_DATIVE.finditer(body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            word, postp = m.group(1), m.group(2)
+            if word == "ამას":
+                fix_word = "ამის"
+            elif word == "იმას":
+                fix_word = "იმის"
+            elif word == "რას":
+                fix_word = "რის"
+            else:
+                fix_word = re.sub(r"ებს$", "ების", word)
+            add("postposition_dative", "error", f"„{m.group(0)}“ → „{fix_word} {postp}“ (თანდებული მოითხოვს ნათესაობით ბრუნვას)", m)
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()

@@ -1,0 +1,3 @@
+ავტორიზაციის შესამოწმებლად გამოიძახეთ processUserData() მეთოდი.
+პარამეტრად გადაეცით user_auth_token ცვლადი და MAX_RETRY_COUNT მუდმივა.
+შეცდომის შემთხვევაში ფუნქცია აბრუნებს StatusCode.UNAUTHORIZED მნიშვნელობას.

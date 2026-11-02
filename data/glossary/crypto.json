@@ -1,0 +1,426 @@
+[
+  {
+    "preferred": "ბლოკჩეინი",
+    "avoid": [],
+    "latin": "blockchain",
+    "note": "Distributed, decentralized cryptographic ledger."
+  },
+  {
+    "preferred": "კრიპტოვალუტა",
+    "avoid": [
+      "კრიპტო ვალუტა"
+    ],
+    "latin": "cryptocurrency",
+    "note": "Digital currency secured by cryptography. Written as one word."
+  },
+  {
+    "preferred": "ბიტკოინი",
+    "avoid": [
+      "ბიტკოინ"
+    ],
+    "latin": "Bitcoin (BTC)",
+    "note": "Spelled with final nominative -ი: ბიტკოინი."
+  },
+  {
+    "preferred": "ეთერიუმი",
+    "avoid": [
+      "ეთერიუმ"
+    ],
+    "latin": "Ethereum (ETH)",
+    "note": "Spelled with final nominative -ი: ეთერიუმი."
+  },
+  {
+    "preferred": "მაინინგი",
+    "avoid": [],
+    "latin": "mining",
+    "note": "Validating transactions and minting new tokens via compute work."
+  },
+  {
+    "preferred": "მაინერი",
+    "avoid": [],
+    "latin": "miner",
+    "note": "Node or hardware operator participating in proof-of-work consensus."
+  },
+  {
+    "preferred": "კრიპტოგრაფიული საფულე",
+    "avoid": [],
+    "latin": "crypto wallet",
+    "note": "Application or hardware device managing cryptographic keys."
+  },
+  {
+    "preferred": "ცივი საფულე",
+    "avoid": [],
+    "latin": "cold wallet",
+    "note": "Offline cryptocurrency storage disconnected from the internet."
+  },
+  {
+    "preferred": "ცხელი საფულე",
+    "avoid": [],
+    "latin": "hot wallet",
+    "note": "Cryptocurrency wallet connected to the internet."
+  },
+  {
+    "preferred": "აპარატურული საფულე",
+    "avoid": [],
+    "latin": "hardware wallet",
+    "note": "Physical device (e.g. Ledger, Trezor) storing private keys in a secure enclave."
+  },
+  {
+    "preferred": "ჭკვიანი კონტრაქტი",
+    "avoid": [],
+    "latin": "smart contract",
+    "note": "Self-executing digital agreement deployed on a blockchain."
+  },
+  {
+    "preferred": "დეცენტრალიზებული ფინანსები",
+    "avoid": [],
+    "latin": "decentralized finance (DeFi)",
+    "note": "Financial services built on smart contracts without traditional intermediaries."
+  },
+  {
+    "preferred": "დეცენტრალიზებული აპლიკაცია",
+    "avoid": [],
+    "latin": "decentralized application (dApp)",
+    "note": "Application running on a distributed network."
+  },
+  {
+    "preferred": "გაზის საკომისიო",
+    "avoid": [],
+    "latin": "gas fee",
+    "note": "Execution fee paid to network validators for processing transactions."
+  },
+  {
+    "preferred": "კონსენსუსის მექანიზმი",
+    "avoid": [],
+    "latin": "consensus mechanism",
+    "note": "Fault-tolerant protocol ensuring all nodes agree on ledger state."
+  },
+  {
+    "preferred": "სამუშაოს მტკიცებულება",
+    "avoid": [],
+    "latin": "Proof of Work (PoW)",
+    "note": "Consensus model requiring computational resource expenditure."
+  },
+  {
+    "preferred": "წილის მტკიცებულება",
+    "avoid": [],
+    "latin": "Proof of Stake (PoS)",
+    "note": "Consensus model requiring validators to lock up financial tokens."
+  },
+  {
+    "preferred": "ჰეშრეიტი",
+    "avoid": [],
+    "latin": "hash rate",
+    "note": "Aggregate computational speed of all miners on a PoW network."
+  },
+  {
+    "preferred": "ჰალვინგი",
+    "avoid": [],
+    "latin": "halving",
+    "note": "Programmatic 50% reduction in miner block rewards every 210,000 blocks."
+  },
+  {
+    "preferred": "არაურთიერთშემცვლელი ტოკენი",
+    "avoid": [],
+    "latin": "non-fungible token (NFT)",
+    "note": "Unique digital certificate of ownership recorded on a blockchain."
+  },
+  {
+    "preferred": "სტეიბლკოინი",
+    "avoid": [],
+    "latin": "stablecoin",
+    "note": "Cryptocurrency pegged to a stable asset (e.g. USD, EUR, gold)."
+  },
+  {
+    "preferred": "ალტკოინი",
+    "avoid": [],
+    "latin": "altcoin",
+    "note": "Any alternative cryptocurrency other than Bitcoin."
+  },
+  {
+    "preferred": "მემკოინი",
+    "avoid": [],
+    "latin": "memecoin",
+    "note": "Cryptocurrency originating from an internet meme or viral community."
+  },
+  {
+    "preferred": "სტეიკინგი",
+    "avoid": [],
+    "latin": "staking",
+    "note": "Locking tokens in a PoS network to support validation and earn yield."
+  },
+  {
+    "preferred": "ვალიდატორი",
+    "avoid": [],
+    "latin": "validator",
+    "note": "Participant in a PoS network responsible for verifying new blocks."
+  },
+  {
+    "preferred": "კვანძი",
+    "avoid": [],
+    "latin": "node",
+    "note": "Individual computer connected to a blockchain network."
+  },
+  {
+    "preferred": "სრული კვანძი",
+    "avoid": [],
+    "latin": "full node",
+    "note": "Node storing the complete historical ledger of the blockchain."
+  },
+  {
+    "preferred": "ერდროპი",
+    "avoid": [
+      "აერდროპი"
+    ],
+    "latin": "airdrop",
+    "note": "Free distribution of crypto tokens to community wallet addresses."
+  },
+  {
+    "preferred": "თეთრი წიგნი",
+    "avoid": [
+      "ვაითპეიპერი"
+    ],
+    "latin": "whitepaper",
+    "note": "Technical manifesto outlining the architecture and goals of a crypto project."
+  },
+  {
+    "preferred": "კერძო გასაღები",
+    "avoid": [
+      "პრივატული გასაღები"
+    ],
+    "latin": "private key",
+    "note": "Secret cryptographic alphanumeric string granting spending authority."
+  },
+  {
+    "preferred": "საჯარო გასაღები",
+    "avoid": [],
+    "latin": "public key",
+    "note": "Cryptographic key publicly shared to generate wallet addresses."
+  },
+  {
+    "preferred": "აღდგენის ფრაზა",
+    "avoid": [],
+    "latin": "seed phrase / recovery phrase",
+    "note": "Ordered sequence of 12 or 24 mnemonic words backing up private keys."
+  },
+  {
+    "preferred": "კრიპტობირჟა",
+    "avoid": [
+      "კრიპტო ბირჟა"
+    ],
+    "latin": "crypto exchange",
+    "note": "Platform for trading digital assets. Written as one word."
+  },
+  {
+    "preferred": "ცენტრალიზებული ბირჟა",
+    "avoid": [],
+    "latin": "centralized exchange (CEX)",
+    "note": "Custodial trading venue operated by an enterprise (e.g. Binance, Coinbase)."
+  },
+  {
+    "preferred": "დეცენტრალიზებული ბირჟა",
+    "avoid": [],
+    "latin": "decentralized exchange (DEX)",
+    "note": "Peer-to-peer non-custodial trading venue operated by smart contracts (e.g. Uniswap)."
+  },
+  {
+    "preferred": "ლიკვიდურობის აუზი",
+    "avoid": [],
+    "latin": "liquidity pool",
+    "note": "Crowdsourced pool of tokens locked in a smart contract facilitating trades."
+  },
+  {
+    "preferred": "ლიკვიდურობის მიმწოდებელი",
+    "avoid": [],
+    "latin": "liquidity provider (LP)",
+    "note": "User who deposits token pairs into liquidity pools to earn fees."
+  },
+  {
+    "preferred": "ავტომატური მარკეტ-მეიკერი",
+    "avoid": [],
+    "latin": "automated market maker (AMM)",
+    "note": "Algorithmic pricing mechanism governing DEX liquidity pools."
+  },
+  {
+    "preferred": "მოსავლიანობის ფერმერობა",
+    "avoid": [],
+    "latin": "yield farming",
+    "note": "Lending or staking crypto assets in DeFi protocols to maximize returns."
+  },
+  {
+    "preferred": "პირველი დონის ქსელი",
+    "avoid": [],
+    "latin": "Layer 1 (L1)",
+    "note": "Base foundational blockchain protocol (e.g. Bitcoin, Ethereum, Solana)."
+  },
+  {
+    "preferred": "მეორე დონის ქსელი",
+    "avoid": [],
+    "latin": "Layer 2 (L2)",
+    "note": "Secondary framework or scaling protocol built on top of Layer 1."
+  },
+  {
+    "preferred": "როლაპი",
+    "avoid": [],
+    "latin": "rollup",
+    "note": "L2 scaling solution batching and executing transactions off-chain."
+  },
+  {
+    "preferred": "ოპტიმისტური როლაპი",
+    "avoid": [],
+    "latin": "optimistic rollup",
+    "note": "Rollup assuming transactions are valid unless challenged via fraud proofs."
+  },
+  {
+    "preferred": "ნულოვანი ცოდნის როლაპი",
+    "avoid": [],
+    "latin": "zero-knowledge rollup (ZK-rollup)",
+    "note": "Rollup using succinct cryptographic validity proofs (SNARKs/STARKs)."
+  },
+  {
+    "preferred": "ნულოვანი ცოდნის მტკიცებულება",
+    "avoid": [],
+    "latin": "zero-knowledge proof (ZKP)",
+    "note": "Cryptographic method proving statement validity without revealing underlying data."
+  },
+  {
+    "preferred": "ორაკული",
+    "avoid": [],
+    "latin": "blockchain oracle",
+    "note": "Third-party service feeding external off-chain data into smart contracts."
+  },
+  {
+    "preferred": "ფორკი",
+    "avoid": [
+      "ჩანგალი"
+    ],
+    "latin": "fork",
+    "note": "Split in the software rules of a blockchain network. 'ჩანგალი' is a clumsy literal calque."
+  },
+  {
+    "preferred": "მყარი ფორკი",
+    "avoid": [],
+    "latin": "hard fork",
+    "note": "Backward-incompatible protocol update splitting the blockchain."
+  },
+  {
+    "preferred": "რბილი ფორკი",
+    "avoid": [],
+    "latin": "soft fork",
+    "note": "Backward-compatible protocol update."
+  },
+  {
+    "preferred": "ტოკენომიკა",
+    "avoid": [],
+    "latin": "tokenomics",
+    "note": "Economic model, issuance schedule, and utility incentives of a crypto token."
+  },
+  {
+    "preferred": "პირველადი მონეტარული შეთავაზება",
+    "avoid": [],
+    "latin": "Initial Coin Offering (ICO)",
+    "note": "Fundraising mechanism selling newly minted digital tokens to early backers."
+  },
+  {
+    "preferred": "პირველადი DEX-შეთავაზება",
+    "avoid": [],
+    "latin": "Initial DEX Offering (IDO)",
+    "note": "Token launch executed on a decentralized liquidity exchange."
+  },
+  {
+    "preferred": "დეცენტრალიზებული ავტონომიური ორგანიზაცია",
+    "avoid": [],
+    "latin": "DAO",
+    "note": "Community-governed organization managed by rules encoded in smart contracts."
+  },
+  {
+    "preferred": "მმართველობითი ტოკენი",
+    "avoid": [],
+    "latin": "governance token",
+    "note": "Token granting voting rights on protocol parameters and treasury spend."
+  },
+  {
+    "preferred": "ჯვარედინი ხიდი",
+    "avoid": [],
+    "latin": "cross-chain bridge",
+    "note": "Protocol enabling value and data transfer between independent blockchains."
+  },
+  {
+    "preferred": "ურთიერთთავსებადობა",
+    "avoid": [],
+    "latin": "interoperability",
+    "note": "Ability of disparate blockchain ecosystems to communicate and exchange data."
+  },
+  {
+    "preferred": "შეუქცევადობა",
+    "avoid": [],
+    "latin": "immutability",
+    "note": "Ledger attribute ensuring finalized transactions cannot be modified or erased."
+  },
+  {
+    "preferred": "დროებითი დანაკარგი",
+    "avoid": [],
+    "latin": "impermanent loss",
+    "note": "Paper loss experienced by LP providers due to divergent volatility of pooled tokens."
+  },
+  {
+    "preferred": "ფასის ცურვა",
+    "avoid": [],
+    "latin": "slippage",
+    "note": "Difference between expected execution price of a trade and final fulfilled price."
+  },
+  {
+    "preferred": "გაზის ლიმიტი",
+    "avoid": [],
+    "latin": "gas limit",
+    "note": "Maximum units of gas an account authorizer is willing to spend on a transaction."
+  },
+  {
+    "preferred": "სატოში",
+    "avoid": [],
+    "latin": "satoshi",
+    "note": "Smallest unit of Bitcoin (0.00000001 BTC)."
+  },
+  {
+    "preferred": "გვეი",
+    "avoid": [],
+    "latin": "gwei",
+    "note": "Denomination of ether used for gas calculations (10^-9 ETH)."
+  },
+  {
+    "preferred": "დაბლოკილი მთლიანი ღირებულება",
+    "avoid": [],
+    "latin": "Total Value Locked (TVL)",
+    "note": "Aggregate dollar value of crypto assets committed into DeFi protocols."
+  },
+  {
+    "preferred": "რაგ-პული",
+    "avoid": [],
+    "latin": "rug pull",
+    "note": "Malicious exit scam where developers abandon project and steal investors' funds."
+  },
+  {
+    "preferred": "ფიატური ვალუტა",
+    "avoid": [],
+    "latin": "fiat currency",
+    "note": "Government-issued legal tender not backed by physical commodities (e.g. USD, EUR, GEL)."
+  },
+  {
+    "preferred": "კრიპტოაქტივი",
+    "avoid": [],
+    "latin": "crypto asset",
+    "note": "Broad regulatory classification encompassing digital currencies and tokens."
+  },
+  {
+    "preferred": "თვითმეურვეობითი საფულე",
+    "avoid": [],
+    "latin": "self-custodial wallet",
+    "note": "Wallet where user maintains exclusive control over private keys."
+  },
+  {
+    "preferred": "მეურვეობითი საფულე",
+    "avoid": [],
+    "latin": "custodial wallet",
+    "note": "Wallet where a third party holds and safeguards private keys."
+  }
+]

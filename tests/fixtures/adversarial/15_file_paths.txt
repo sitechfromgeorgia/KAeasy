@@ -1,0 +1,3 @@
+სისტემური ლოგები განთავსებულია /var/log/nginx/access.log ფაილში.
+კონფიგურაციის სარეზერვო ასლი ინახება C:\Projects\Kaeasy\config.yaml გზაზე.
+მოდულის კოდი შეგიძლიათ იხილოთ src/utils/parser.py დირექტორიაში.

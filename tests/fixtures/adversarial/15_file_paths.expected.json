@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "fixed": "სისტემური ლოგები განთავსებულია /var/log/nginx/access.log ფაილში.\nკონფიგურაციის სარეზერვო ასლი ინახება C:\\Projects\\Kaeasy\\config.yaml გზაზე.\nმოდულის კოდი შეგიძლიათ იხილოთ src/utils/parser.py დირექტორიაში."
+}

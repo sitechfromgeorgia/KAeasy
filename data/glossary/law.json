@@ -1,0 +1,483 @@
+[
+  {
+    "preferred": "კონსტიტუცია",
+    "avoid": [],
+    "latin": "Constitution",
+    "note": "Supreme law of Georgia: 'საქართველოს კონსტიტუცია'."
+  },
+  {
+    "preferred": "კანონმდებლობა",
+    "avoid": [
+      "ზაკონოდატელობა"
+    ],
+    "latin": "legislation",
+    "note": "'ზაკონოდატელობა' is a Russianism; correct Georgian is 'კანონმდებლობა'."
+  },
+  {
+    "preferred": "კანონი",
+    "avoid": [],
+    "latin": "law / statute",
+    "note": "Legal enactment passed by Parliament and signed by President."
+  },
+  {
+    "preferred": "კანონპროექტი",
+    "avoid": [
+      "კანონის პროექტი"
+    ],
+    "latin": "draft law / legislative bill",
+    "note": "Draft text submitted for legislative consideration. Written as one word."
+  },
+  {
+    "preferred": "ნორმატიული აქტი",
+    "avoid": [],
+    "latin": "normative act",
+    "note": "Legal act containing binding rules of general conduct."
+  },
+  {
+    "preferred": "ინდივიდუალური სამართლებრივი აქტი",
+    "avoid": [],
+    "latin": "individual legal act",
+    "note": "Act addressed to a specifically determined person or entity."
+  },
+  {
+    "preferred": "კოდექსი",
+    "avoid": [],
+    "latin": "code of law",
+    "note": "Systematic codification of laws (e.g. სამოქალაქო კოდექსი, სისხლის სამართლის კოდექსი)."
+  },
+  {
+    "preferred": "სისხლის სამართალი",
+    "avoid": [
+      "კრიმინალური სამართალი"
+    ],
+    "latin": "criminal law",
+    "note": "Branch of law dealing with crimes and punishments."
+  },
+  {
+    "preferred": "სამოქალაქო სამართალი",
+    "avoid": [],
+    "latin": "civil law",
+    "note": "Branch of law dealing with private rights, contracts, and property."
+  },
+  {
+    "preferred": "ადმინისტრაციული სამართალი",
+    "avoid": [],
+    "latin": "administrative law",
+    "note": "Branch governing the activities of administrative agencies of government."
+  },
+  {
+    "preferred": "შრომის სამართალი",
+    "avoid": [],
+    "latin": "labor law",
+    "note": "Branch regulating employment relationships and labor rights."
+  },
+  {
+    "preferred": "საერთაშორისო სამართალი",
+    "avoid": [],
+    "latin": "international law",
+    "note": "Body of rules recognized as binding on sovereign nations."
+  },
+  {
+    "preferred": "სასამართლო",
+    "avoid": [
+      "სუდი"
+    ],
+    "latin": "court of law",
+    "note": "'სუდი' is a Russianism; standard Georgian is 'სასამართლო'."
+  },
+  {
+    "preferred": "საქართველოს საკონსტიტუციო სასამართლო",
+    "avoid": [],
+    "latin": "Constitutional Court of Georgia",
+    "note": "High judicial organ of constitutional control located in Batumi."
+  },
+  {
+    "preferred": "საქართველოს უზენაესი სასამართლო",
+    "avoid": [],
+    "latin": "Supreme Court of Georgia",
+    "note": "Highest and final court of cassation jurisdiction located in Tbilisi."
+  },
+  {
+    "preferred": "სააპელაციო სასამართლო",
+    "avoid": [],
+    "latin": "Court of Appeals",
+    "note": "Second-instance appellate judicial body (Tbilisi, Kutaisi)."
+  },
+  {
+    "preferred": "რაიონული სასამართლო",
+    "avoid": [],
+    "latin": "District Court",
+    "note": "First-instance court in municipal districts; 'საქალაქო სასამართლო' in cities."
+  },
+  {
+    "preferred": "მოსამართლე",
+    "avoid": [
+      "სუდია"
+    ],
+    "latin": "judge",
+    "note": "'სუდია' is a Russianism; correct term is 'მოსამართლე'."
+  },
+  {
+    "preferred": "ნაფიცი მსაჯული",
+    "avoid": [],
+    "latin": "juror / jury member",
+    "note": "Layperson sworn to give a verdict in a legal trial."
+  },
+  {
+    "preferred": "პროკურორი",
+    "avoid": [],
+    "latin": "prosecutor",
+    "note": "State official conducting criminal prosecution."
+  },
+  {
+    "preferred": "საქართველოს გენერალური პროკურატურა",
+    "avoid": [],
+    "latin": "General Prosecutor's Office of Georgia",
+    "note": "Central state prosecution authority."
+  },
+  {
+    "preferred": "ადვოკატი",
+    "avoid": [],
+    "latin": "attorney / advocate",
+    "note": "Licensed defense counsel and legal practitioner."
+  },
+  {
+    "preferred": "იურიდიული პირი",
+    "avoid": [
+      "იურიდიული სახე"
+    ],
+    "latin": "legal entity / corporate person",
+    "note": "Entity recognized by law as having separate legal personality."
+  },
+  {
+    "preferred": "ფიზიკური პირი",
+    "avoid": [
+      "ფიზიკური სახე"
+    ],
+    "latin": "natural person / individual",
+    "note": "Individual human being with legal capacity."
+  },
+  {
+    "preferred": "სარჩელი",
+    "avoid": [
+      "ისკი"
+    ],
+    "latin": "lawsuit / statement of claim",
+    "note": "'ისკი' is a Russianism; correct Georgian is 'სარჩელი'."
+  },
+  {
+    "preferred": "სარჩელის აღძვრა",
+    "avoid": [],
+    "latin": "filing a lawsuit / initiating legal action",
+    "note": "Commencing civil or administrative litigation before a court."
+  },
+  {
+    "preferred": "მოსარჩელე",
+    "avoid": [
+      "ისტეცი"
+    ],
+    "latin": "plaintiff / claimant",
+    "note": "'ისტეცი' is a Russianism; correct Georgian is 'მოსარჩელე'."
+  },
+  {
+    "preferred": "მოპასუხე",
+    "avoid": [
+      "ატვეტჩიკი"
+    ],
+    "latin": "defendant / respondent",
+    "note": "'ატვეტჩიკი' is a Russianism; correct Georgian is 'მოპასუხე'."
+  },
+  {
+    "preferred": "მესამე პირი",
+    "avoid": [],
+    "latin": "third party",
+    "note": "Person not a direct party to an action but having a legal interest in the outcome."
+  },
+  {
+    "preferred": "კანონიერი წარმომადგენელი",
+    "avoid": [],
+    "latin": "legal representative",
+    "note": "Person authorized by law or contract to act on behalf of another."
+  },
+  {
+    "preferred": "მინდობილობა",
+    "avoid": [
+      "დოვერენოსტი"
+    ],
+    "latin": "power of attorney",
+    "note": "'დოვერენოსტი' is a Russianism; correct Georgian is 'მინდობილობა'."
+  },
+  {
+    "preferred": "ხელშეკრულება",
+    "avoid": [
+      "დოგავორი"
+    ],
+    "latin": "contract / agreement",
+    "note": "'დოგავორი' is a Russianism; correct Georgian is 'ხელშეკრულება'."
+  },
+  {
+    "preferred": "შეთანხმება",
+    "avoid": [],
+    "latin": "agreement / accord",
+    "note": "Mutual assent between two or more parties."
+  },
+  {
+    "preferred": "პირობა",
+    "avoid": [
+      "უსლოვიე"
+    ],
+    "latin": "clause / condition / stipulation",
+    "note": "'უსლოვიე' is a Russianism; correct Georgian is 'პირობა'."
+  },
+  {
+    "preferred": "ხელშეკრულების დარღვევა",
+    "avoid": [],
+    "latin": "breach of contract",
+    "note": "Failure to perform contractual obligation without valid justification."
+  },
+  {
+    "preferred": "ზიანი",
+    "avoid": [
+      "უშერბი"
+    ],
+    "latin": "damage / harm",
+    "note": "'უშერბი' is a Russianism; correct Georgian is 'ზიანი'."
+  },
+  {
+    "preferred": "ზარალის ანაზღაურება",
+    "avoid": [],
+    "latin": "compensation of damages",
+    "note": "Remedy restoring claimant to the economic position had damage not occurred."
+  },
+  {
+    "preferred": "მორალური ზიანი",
+    "avoid": [],
+    "latin": "moral / non-pecuniary damage",
+    "note": "Compensation for physical pain, mental suffering, or injury to reputation."
+  },
+  {
+    "preferred": "პირგასამტეხლო",
+    "avoid": [
+      "ნეუსტოიკა"
+    ],
+    "latin": "liquidated damages / penalty",
+    "note": "'ნეუსტოიკა' is a Russianism; correct Georgian is 'პირგასამტეხლო'."
+  },
+  {
+    "preferred": "განაჩენი",
+    "avoid": [
+      "პრიგავორი",
+      "გადაწყვეტილება"
+    ],
+    "latin": "verdict / criminal sentence",
+    "note": "'პრიგავორი' is a Russianism. In criminal law, use 'განაჩენი', not 'გადაწყვეტილება'."
+  },
+  {
+    "preferred": "გადაწყვეტილება",
+    "avoid": [
+      "რეშენიე"
+    ],
+    "latin": "judgment / court decision (civil/admin)",
+    "note": "'რეშენიე' is a Russianism. In civil/administrative cases, court renders 'გადაწყვეტილება'."
+  },
+  {
+    "preferred": "განჩინება",
+    "avoid": [
+      "ოპრედელენიე"
+    ],
+    "latin": "court ruling / order",
+    "note": "'ოპრედელენიე' is a Russianism; correct Georgian is 'განჩინება'."
+  },
+  {
+    "preferred": "აღკვეთის ღონისძიება",
+    "avoid": [],
+    "latin": "measure of restraint / preventive measure",
+    "note": "Pre-trial procedural constraint applied to criminal accused (bail, detention)."
+  },
+  {
+    "preferred": "პატიმრობა",
+    "avoid": [],
+    "latin": "imprisonment / custodial detention",
+    "note": "Deprivation of liberty as criminal sanction or preventive measure."
+  },
+  {
+    "preferred": "წინასწარი პატიმრობა",
+    "avoid": [],
+    "latin": "pre-trial detention",
+    "note": "Custodial restraint during investigation and trial."
+  },
+  {
+    "preferred": "გირაო",
+    "avoid": [
+      "ზალოგი"
+    ],
+    "latin": "bail",
+    "note": "'ზალოგი' is a Russianism; in criminal procedure, bail is strictly 'გირაო'."
+  },
+  {
+    "preferred": "ხანდაზმულობა",
+    "avoid": [
+      "დავნოსტი"
+    ],
+    "latin": "statute of limitations",
+    "note": "'დავნოსტი' is a Russianism; correct Georgian is 'ხანდაზმულობა'."
+  },
+  {
+    "preferred": "ხანდაზმულობის ვადა",
+    "avoid": [],
+    "latin": "limitation period",
+    "note": "Maximum statutory period after an event within which legal action may be taken."
+  },
+  {
+    "preferred": "ბრალდება",
+    "avoid": [
+      "ობვინენიე"
+    ],
+    "latin": "charge / prosecution",
+    "note": "'ობვინენიე' is a Russianism; correct Georgian is 'ბრალდება'."
+  },
+  {
+    "preferred": "ბრალდებული",
+    "avoid": [
+      "ობვინიაემი"
+    ],
+    "latin": "the accused / criminal defendant",
+    "note": "'ობვინიაემი' is a Russianism; correct Georgian is 'ბრალდებული'."
+  },
+  {
+    "preferred": "მსჯავრდებული",
+    "avoid": [
+      "ასუჟდენი"
+    ],
+    "latin": "convicted person / convict",
+    "note": "'ასუჟდენი' is a Russianism; correct Georgian is 'მსჯავრდებული'."
+  },
+  {
+    "preferred": "გამართლებული",
+    "avoid": [],
+    "latin": "acquitted person",
+    "note": "Person declared not guilty by criminal court judgment."
+  },
+  {
+    "preferred": "დაზარალებული",
+    "avoid": [
+      "პატერპევში"
+    ],
+    "latin": "injured party / victim",
+    "note": "'პატერპევში' is a Russianism; correct Georgian is 'დაზარალებული'."
+  },
+  {
+    "preferred": "მოწმე",
+    "avoid": [
+      "სვიდეტელი"
+    ],
+    "latin": "witness",
+    "note": "'სვიდეტელი' is a Russianism; correct Georgian is 'მოწმე'."
+  },
+  {
+    "preferred": "ჩვენება",
+    "avoid": [
+      "პაკაზანიე"
+    ],
+    "latin": "testimony / deposition",
+    "note": "'პაკაზანიე' is a Russianism; in judicial procedure, witness testimony is 'ჩვენება'."
+  },
+  {
+    "preferred": "სასამართლო ექსპერტიზა",
+    "avoid": [],
+    "latin": "forensic expert examination",
+    "note": "Scientific or technical investigation ordered by court or investigator."
+  },
+  {
+    "preferred": "ნივთმტკიცება",
+    "avoid": [
+      "ვეშდოკი"
+    ],
+    "latin": "physical evidence",
+    "note": "'ვეშდოკი' is a Russianism; correct Georgian is 'ნივთმტკიცება'."
+  },
+  {
+    "preferred": "მტკიცებულება",
+    "avoid": [
+      "დოკაზატელობა"
+    ],
+    "latin": "evidence / proof",
+    "note": "'დოკაზატელობა' is a Russianism; correct Georgian is 'მტკიცებულება'."
+  },
+  {
+    "preferred": "მტკიცების ტვირთი",
+    "avoid": [],
+    "latin": "burden of proof",
+    "note": "Duty placed upon a civil party to establish factual allegations."
+  },
+  {
+    "preferred": "უდანაშაულობის პრეზუმფცია",
+    "avoid": [],
+    "latin": "presumption of innocence",
+    "note": "Fundamental constitutional principle that one is innocent until proven guilty."
+  },
+  {
+    "preferred": "კანონიერი ძალა",
+    "avoid": [],
+    "latin": "legal force / res judicata",
+    "note": "State when a court judgment can no longer be appealed by standard channels."
+  },
+  {
+    "preferred": "გასაჩივრება",
+    "avoid": [
+      "ობჟალოვანება"
+    ],
+    "latin": "appeal / challenging a decision",
+    "note": "'ობჟალოვანება' is a Russianism; correct Georgian is 'გასაჩივრება'."
+  },
+  {
+    "preferred": "სააპელაციო საჩივარი",
+    "avoid": [],
+    "latin": "appellate complaint",
+    "note": "Petition appealing first-instance court judgment to appellate court."
+  },
+  {
+    "preferred": "საკასაციო საჩივარი",
+    "avoid": [],
+    "latin": "cassation complaint",
+    "note": "Petition appealing appellate judgment to the Supreme Court on points of law."
+  },
+  {
+    "preferred": "სააღსრულებო ფურცელი",
+    "avoid": [
+      "ისპალნიტელნი ლისტი"
+    ],
+    "latin": "writ of execution",
+    "note": "'ისპალნიტელნი ლისტი' is a Russianism; correct Georgian is 'სააღსრულებო ფურცელი'."
+  },
+  {
+    "preferred": "აღსრულების ეროვნული ბიურო",
+    "avoid": [],
+    "latin": "National Bureau of Enforcement (NBE)",
+    "note": "State enforcement agency executing final court judgments."
+  },
+  {
+    "preferred": "საავტორო უფლება",
+    "avoid": [],
+    "latin": "copyright",
+    "note": "Exclusive legal right given to the creator of literary or artistic work."
+  },
+  {
+    "preferred": "ინტელექტუალური საკუთრება",
+    "avoid": [],
+    "latin": "intellectual property (IP)",
+    "note": "Category of property including intangible creations of human intellect."
+  },
+  {
+    "preferred": "პატენტი",
+    "avoid": [],
+    "latin": "patent",
+    "note": "Government authority or licence conferring a sole right to make or use an invention."
+  },
+  {
+    "preferred": "სასაქონლო ნიშანი",
+    "avoid": [],
+    "latin": "trademark",
+    "note": "Legally registered symbol, word, or logo identifying goods of a manufacturer."
+  }
+]
