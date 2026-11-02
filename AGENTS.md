@@ -5,8 +5,9 @@ Guide for anyone (human or agent) changing this repo.
 ## What this repo is
 
 A Hermes Agent plugin. The repo root **is** the plugin directory: `plugin.yaml`, `__init__.py` (register),
-`lint.py` (deterministic linter), `memory.py` (mistakes memory), `skills/<name>/SKILL.md` with `references/` and
-`examples/`. There is no build step.
+`lint.py` (deterministic linter), `fix.py` (mechanical fixer), `speech.py` (TTS text, a port of SiTech Shorts'
+`normalize_ka.py`: keep the two in sync), `data/lexicon_ka.json` (approved spoken forms), `memory.py` (mistakes
+memory), `skills/<name>/SKILL.md` with `references/` and `examples/`, `evals/`, `scripts/`. There is no build step.
 
 ## Commands
 
@@ -25,6 +26,8 @@ python lint.py --text "..." --strict                     # try the linter
   and `examples/`, which the agent opens on demand.
 - **Instructions in English, examples in Georgian.** Cheap models follow English instructions better.
 - **Mark uncertainty.** A Georgian rule you are not sure about gets `needs-review` in the text. Do not guess.
+- `ka_fix` only fixes what a strict rule flags and a machine can fix without judgment. It never changes
+  grammar, and it leaves HTML, code and URLs untouched (tests in `tests/test_fix.py`).
 - Handlers never raise; they return JSON with `error`.
 - Nothing secret or personal in examples or in the memory (`memory.py` masks emails, phones, tokens).
 

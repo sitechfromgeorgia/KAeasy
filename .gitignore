@@ -6,3 +6,4 @@ __pycache__/
 .env
 data/mistakes.jsonl
 data/lexicon_learned.json
+evals/runs/

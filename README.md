@@ -20,7 +20,9 @@ mistakes memory feeds every correction back to all agents.
 | `skills/georgian-ui` | Buttons, statuses, errors, forms |
 | `skills/georgian-speech` | `speech_text` for TTS: numbers in words, brands in Georgian letters |
 | `skills/georgian-proofread` | Three-pass self-edit, review format, learning loop |
-| `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates |
+| `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates, `fields` for JSON scripts (`{"say": "speech", "*": "social"}`) |
+| `ka_fix` tool | Fixes what strict lint flags and a machine can fix: quotes, brand hyphens, transliterated brands, decimal comma, dashes, spacing. Never grammar |
+| `ka_speech` tool | Written Georgian → TTS text: numbers with case, times, money, versions, brands (`data/lexicon_ka.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
 | `ka_learn` / `ka_mistakes` tools | Shared memory of corrections (JSONL), most frequent first |
 | `pre_llm_call` hook | One short hint per session so agents know the skills exist |
 
@@ -46,6 +48,17 @@ python lint.py --text "Microsoftმა 5 სტატიები გამო�
 python lint.py --file draft.md --mode social --summary
 ```
 
+## Evals ($0)
+
+`evals/tasks.json` has 120 tasks; `evals/score.py` scores answers offline. `evals/run_opencode.py --n 5` runs 20
+of them through a free opencode model with and without Kaeasy and writes `evals/RESULTS.md` (40 requests; it stops
+when the free quota, shared with SiTech Shorts, is used up).
+
+## Seed the memory
+
+`python3 -m kaeasy.scripts.import_edits /root/sitech-shorts-lab/data/edits.jsonl` imports the language edits of
+the Shorts review (with `KAEASY_DATA_DIR` set). Run it once per file.
+
 ## Develop
 
 ```bash
@@ -58,4 +71,5 @@ See `AGENTS.md` for the rules of the repo (how to add a rule or an example witho
 ## Credits
 
 The linter and the first rules come from the SiTech fleet's `ge_ka_lint.py`, `GEORGIAN-STYLE.md` and the
-`georgian-copy-quality` skill, plus the SiTech Shorts rulebook (K1-K22).
+`georgian-copy-quality` skill, plus the SiTech Shorts rulebook (K1-K22), `normalize_ka.py`, its lexicon and
+review edits.
