@@ -4,4 +4,6 @@ __pycache__/
 .ruff_cache/
 .venv/
 .env
-data/
+data/mistakes.jsonl
+data/lexicon_learned.json
+evals/runs/

@@ -8,6 +8,11 @@ description: Turning written Georgian (ka) into speech_text for TTS (Gemini TTS,
 Two texts exist: `display_text` (screen, follows `kaeasy:georgian-names-numbers`) and `speech_text` (voice,
 this skill). Speech text has **no Latin letters and no digits**. `ka_lint` with `mode: speech` enforces that.
 
+**Use the `ka_speech` tool first.** It converts the written text deterministically (numbers with case, times,
+percent, money, versions, brands from the approved lexicon, acronyms) and returns `speech`, the Latin names it
+could not voice (`unspoken`) and any `ka_lint` findings left. Give it a `say` map for new names
+(`{"ARTEX": "არტექსი"}`). Do the conversion by hand only for what it leaves, using the rules below.
+
 ## Numbers in words (vigesimal: counts in twenties)
 
 | Digits | Words |

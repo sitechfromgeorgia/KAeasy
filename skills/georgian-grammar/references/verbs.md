@@ -42,7 +42,7 @@ The future and aorist need a preverb; the present usually has none:
 | `მთავრობამ სერვისი დახურა` | `სერვისი დაიხურა` |
 | `დეველოპერებმა შეცდომა გაასწორეს` | `შეცდომა გასწორდა` |
 | `Apple-მა გაყიდვები შეამცირა` | `გაყიდვები შემცირდა` |
-| `ჰაკერებმა სისტემა გატეხეს` | `სისტემა გატყდა` |
+| `ჰაკერებმა სისტემა გატეხეს` | `სისტემა გატეხილია` (❌ `სისტემა გატყდა`: გატყდა is for glass and bones) |
 
 The commonest error: an intransitive verb with an ergative subject (❌ `ფასმა გაიზარდა`) or a transitive verb
 with a nominative subject (❌ `კომპანია გაზარდა ფასი`).
@@ -53,7 +53,8 @@ with a nominative subject (❌ `კომპანია გაზარდა �
   უჩივიან`. With a numeral the subject is singular: `ხუთმა ექსპერტმა განაცხადა`.
 - Inanimate plural subjects usually take a **singular** verb in news style: ✅ `ფასები გაიზარდა`,
   `გაყიდვები შემცირდა`. Animate plurals take the plural: ✅ `თანამშრომლები გაიფიცნენ`.
-  needs-review: edge cases (organizations as plural subjects, `კომპანიებმა განაცხადეს` is plural and correct).
+  Organizations acting as agents take the plural like animate subjects: ✅ `კომპანიებმა განაცხადეს`,
+  `ბანკებმა გაზარდეს` (decided 2026-11-02).
 - Indirect objects show up inside the verb: `მომხმარებელს ელფოსტა გაუგზავნა` ("sent to the user");
   `მომხმარებლებს გაუგზავნა` (plural object, same verb form is fine in the 3rd person).
 

@@ -14,7 +14,8 @@ Singular noun and singular verb after: digits, number words, `რამდენ
 | ყველა მომხმარებელს აქვთ | ყველა მომხმარებელს აქვს |
 
 `ყველა` + singular noun is the norm (`ყველა მომხმარებელი`), but the verb may be plural when the meaning is
-"all of them" (`ყველამ თქვა`, `ყველა მოვიდა`). needs-review for `ყველა მომხმარებელმა განაცხადა/განაცხადეს`.
+"all of them" (`ყველამ თქვა`, `ყველა მოვიდა`). With `ყველა` + singular noun the verb is singular:
+✅ `ყველა მომხმარებელმა განაცხადა`, ❌ `ყველა მომხმარებელმა განაცხადეს` (decided 2026-11-02).
 
 ## Collective nouns
 

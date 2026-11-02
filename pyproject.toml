@@ -1,6 +1,6 @@
 [project]
 name = "kaeasy"
-version = "0.1.0"
+version = "0.3.0"
 description = "Georgian writing skills plugin for Hermes agents"
 requires-python = ">=3.11"
 dependencies = []
@@ -17,5 +17,4 @@ target-version = "py311"
 
 [tool.ruff.lint]
 # Hermes tool handlers must never raise; they catch everything and return error JSON.
-# N999 is ignored because directory is capitalized on Windows (Kaeasy).
-ignore = ["BLE001", "N999"]
+ignore = ["BLE001"]

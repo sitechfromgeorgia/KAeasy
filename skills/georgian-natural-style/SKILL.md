@@ -11,7 +11,7 @@ Weak models write English sentences with Georgian words. Rewrite for **meaning**
 
 1. **Actor + verb at the end.** `Amazon-მა ახალი მოდელი გამოუშვა.` Not `გამოუშვა Amazon-მა ახალი მოდელი.`
 2. **Active voice with a named actor.** ❌ `გადაწყვეტილება იქნა მიღებული` → ✅ `მთავრობამ გადაწყვიტა`.
-   Passive only when the actor is unknown: `სერვერი გატეხეს` / `სერვერი გატყდა`.
+   Passive only when the actor is unknown: `სერვერი გატეხეს` (❌ `სერვერი გატყდა`: გატყდა is for glass and bones).
 3. **A verb instead of a noun phrase.** ❌ `განხორციელდა აპლიკაციის განახლება` → ✅ `აპლიკაცია განახლდა`.
    ❌ `არსებობს საჭიროება` → ✅ `საჭიროა`.
 4. **One idea per sentence**, about 8-20 words. Split at `და რომელიც`, `რაც იმას ნიშნავს, რომ`.
@@ -49,4 +49,4 @@ says that relation exists. Do not glue sentences with them for rhythm.
 ## Examples
 
 - `references/collocations.md`: 80 natural vs wrong verb + noun pairs (გადაწყვეტილების მიღება, განცხადების გაკეთება).
-- `examples/rewrites.md`: 30 translated-sounding sentences and their natural rewrites. Read them before editing.
+- `examples/rewrites.md`: 80+ translated-sounding sentences and their natural rewrites. Read them before editing.

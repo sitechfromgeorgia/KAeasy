@@ -13,10 +13,13 @@ rule wins.
 ## Workflow (every public Georgian text)
 
 1. `ka_mistakes` (limit 20): read the fleet's recent mistakes. Do not repeat them.
+   `examples/fleet-mistakes.md` has 30+ real ones from our own Shorts reviews.
 2. Load the sibling skill for the job (table below). Read its `examples/` before drafting.
 3. Draft. Think in Georgian sentence structure: actor + object + verb at the end.
 4. Self-edit with `kaeasy:georgian-proofread` (fact freeze, rewrite, copy desk). Same model, no extra cost.
-5. `ka_lint` with the right `mode`, `strict: true` as the gate. Fix every finding and run it again.
+5. `ka_lint` with the right `mode`, `strict: true` as the gate (`fields` for JSON scripts, e.g.
+   `{"say": "speech", "*": "social"}`). `ka_fix` repairs the mechanical findings; fix the rest yourself and run
+   `ka_lint` again. Voice text: `ka_speech` (see `kaeasy:georgian-speech`).
 6. When a human or a review corrects you, call `ka_learn` once per fix (short phrase, not the whole text).
 
 ## Which skill

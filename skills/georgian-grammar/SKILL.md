@@ -68,4 +68,4 @@ Vowel-stem adjectives (`მწვანე`, `ფართო`, `ახლო`) 
 - `references/noun-stems.md`: syncope and truncation rules with genitive, instrumental and plural for 60 nouns.
 - `references/verbs.md`: series, preverbs, version vowels, person agreement, common verb pairs.
 - `references/agreement.md`: plural subjects, collective nouns, "ის / ისინი", relative `რომელიც`.
-- `examples/grammar-fixes.md`: 40+ wrong → right sentences from news, tech and social copy. Read before writing.
+- `examples/grammar-fixes.md`: 200+ wrong → right sentences from news, tech and social copy. Read before writing.

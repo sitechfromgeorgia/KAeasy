@@ -11,3 +11,15 @@ This document tracks disputed points, regional/register variations, and stylisti
 | `skills/georgian-grammar/references/verbs.md` | `needs-review: edge cases (organizations as plural subjects, კომპანიებმა განაცხადეს is plural and correct)` | Retain plural verb for plural institutional/corporate agents: `კომპანიებმა განაცხადეს`, `ბანკებმა გაზარდეს` | Unlike purely inanimate plural nouns (which strictly take singular verbs in news style: `ფასები გაიზარდა`, `აქციები დაეცა`), organizations, banks, governments, and corporations in the plural acting as conscious agents (მოქმედი სუბიექტები) take plural verbs in quality media (`კომპანიებმა გააფორმეს შეთანხმება`). Singular `კომპანიამ განაცხადა` remains singular. | High |
 | `skills/georgian-grammar/references/verbs.md` | `\| ჰაკერებმა სისტემა გატეხეს \| სისტემა გატყდა \|` | Replace `სისტემა გატყდა` with `სისტემა გატეხეს` (impersonal active) or `სისტემაში შეიჭრნენ`, or use a physical object (`მინა გატყდა`) | In Georgian, `გატყდა` is semantically restricted to physical, brittle objects snapping/shattering (glass, wood, bone). Saying `სისტემა გატყდა` or `სერვერი გატყდა` sounds comical or calqued from English slang. In Georgian IT journalism, unauthorized system access is rendered via active voice `სისტემა გატეხეს`, stative `სისტემა გატეხილია`, or `სისტემაში შეიჭრნენ`. | High |
 | `skills/georgian-names-numbers/references/terms.md` | `\| encryption \| დაშიფვრა \| ❌ შიფრაცია in news copy (needs-review) \|` | Standardize on **`დაშიფვრა`**; drop `needs-review` | `დაშიფვრა` (verbal noun from `დაშიფრა`) is the standard, official, and universally accepted Georgian technical term for encryption. `შიფრაცია` is an unadapted Russian calque (шифрация) that has no standing in standard Georgian lexicography. | High |
+
+## Decisions (Louie, 2026-11-02)
+
+All seven rows above are **accepted** and applied in `skills/` (the GPU-ს row keeps `GPU-ის` as an accepted
+variant). The `needs-review` tags for them are removed.
+
+## Open
+
+| file | current | question | next step |
+|---|---|---|---|
+| `skills/georgian-names-numbers/references/brands.md`, `cases.md` | `OpenAI-ის`, `ChatGPT-ის`, `Spotify-ის` but `Gemini-ს`, `Perplexity-ს`, `Midjourney-ს` | Genitive of names ending in an -i sound: `-ის` or `-ს`? | Antigravity prompt P6 (knowledge/kaeasy-antigravity-prompts.md in the hub) |
+| `skills/georgian-natural-style/references/calques.md`, `lint.py` | `ბე-ემ-ვე` was both ✅ (brands.md) and ❌ (calques.md) | Settled: `ბე-ემ-ვე` is the established spoken form of BMW; `ka_lint` allows it | done |
