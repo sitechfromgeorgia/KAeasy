@@ -1,0 +1,762 @@
+[
+  {
+    "preferred": "მთაწმინდის რაიონი",
+    "avoid": [
+      "მთაწმინდა რაიონი"
+    ],
+    "latin": "Mtatsminda District",
+    "note": "Official administrative district. Genitive case for the district name."
+  },
+  {
+    "preferred": "ვაკის რაიონი",
+    "avoid": [
+      "ვაკე რაიონი"
+    ],
+    "latin": "Vake District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "საბურთალოს რაიონი",
+    "avoid": [
+      "საბურთალო რაიონი"
+    ],
+    "latin": "Saburtalo District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "კრწანისის რაიონი",
+    "avoid": [
+      "კრწანისი რაიონი"
+    ],
+    "latin": "Krtsanisi District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "ისნის რაიონი",
+    "avoid": [
+      "ისანი რაიონი"
+    ],
+    "latin": "Isani District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "სამგორის რაიონი",
+    "avoid": [
+      "სამგორი რაიონი"
+    ],
+    "latin": "Samgori District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "ჩუღურეთის რაიონი",
+    "avoid": [
+      "ჩუღურეთი რაიონი",
+      "პლეხანოვის რაიონი"
+    ],
+    "latin": "Chughureti District",
+    "note": "Official administrative district. Plekhanov is an obsolete Soviet designation."
+  },
+  {
+    "preferred": "დიდუბის რაიონი",
+    "avoid": [
+      "დიდუბე რაიონი"
+    ],
+    "latin": "Didube District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "ნაძალადევის რაიონი",
+    "avoid": [
+      "ნაძალადევი რაიონი",
+      "ნახალოვკის რაიონი"
+    ],
+    "latin": "Nadzaladevi District",
+    "note": "Official administrative district. 'ნახალოვკა' is a Russianism (Нахаловка)."
+  },
+  {
+    "preferred": "გლდანის რაიონი",
+    "avoid": [
+      "გლდანი რაიონი"
+    ],
+    "latin": "Gldani District",
+    "note": "Official administrative district."
+  },
+  {
+    "preferred": "მთაწმინდა",
+    "avoid": [],
+    "latin": "Mtatsminda",
+    "note": "Historic and geographical neighborhood."
+  },
+  {
+    "preferred": "ვაკე",
+    "avoid": [],
+    "latin": "Vake",
+    "note": "Central neighborhood."
+  },
+  {
+    "preferred": "საბურთალო",
+    "avoid": [],
+    "latin": "Saburtalo",
+    "note": "Central neighborhood."
+  },
+  {
+    "preferred": "ვერა",
+    "avoid": [],
+    "latin": "Vera",
+    "note": "Historic central neighborhood."
+  },
+  {
+    "preferred": "სოლოლაკი",
+    "avoid": [
+      "სალალაკი"
+    ],
+    "latin": "Sololaki",
+    "note": "Historic Old Tbilisi neighborhood."
+  },
+  {
+    "preferred": "ავლაბარი",
+    "avoid": [],
+    "latin": "Avlabari",
+    "note": "Historic neighborhood on the left bank."
+  },
+  {
+    "preferred": "ორთაჭალა",
+    "avoid": [],
+    "latin": "Ortachala",
+    "note": "Historic southern neighborhood."
+  },
+  {
+    "preferred": "ჩუღურეთი",
+    "avoid": [
+      "პლეხანოვი"
+    ],
+    "latin": "Chughureti",
+    "note": "Left bank neighborhood. 'პლეხანოვი' is obsolete Soviet street/neighborhood name."
+  },
+  {
+    "preferred": "დიდუბე",
+    "avoid": [],
+    "latin": "Didube",
+    "note": "Historic left bank transport and residential hub."
+  },
+  {
+    "preferred": "ნაძალადევი",
+    "avoid": [
+      "ნახალოვკა"
+    ],
+    "latin": "Nadzaladevi",
+    "note": "Left bank neighborhood. 'ნახალოვკა' is an informal Russianism."
+  },
+  {
+    "preferred": "გლდანი",
+    "avoid": [],
+    "latin": "Gldani",
+    "note": "Major northern residential district divided into 8 micro-districts (მიკრორაიონი)."
+  },
+  {
+    "preferred": "კრწანისი",
+    "avoid": [],
+    "latin": "Krtsanisi",
+    "note": "Historic diplomatic and residential area."
+  },
+  {
+    "preferred": "ისანი",
+    "avoid": [],
+    "latin": "Isani",
+    "note": "Left bank district."
+  },
+  {
+    "preferred": "სამგორი",
+    "avoid": [],
+    "latin": "Samgori",
+    "note": "Eastern district."
+  },
+  {
+    "preferred": "ელია",
+    "avoid": [],
+    "latin": "Elia",
+    "note": "Neighborhood overlooking Avlabari and the Holy Trinity Cathedral."
+  },
+  {
+    "preferred": "დიღმის მასივი",
+    "avoid": [
+      "დიღომი მასივი"
+    ],
+    "latin": "Dighomi Massive",
+    "note": "Residential district divided into quarters (კვარტალი)."
+  },
+  {
+    "preferred": "დიდი დიღომი",
+    "avoid": [
+      "დიდიღომი"
+    ],
+    "latin": "Didi Dighomi",
+    "note": "Northwestern residential development divided into micro-districts (მიკრორაიონი)."
+  },
+  {
+    "preferred": "სოფელი დიღომი",
+    "avoid": [],
+    "latin": "Sopeli Dighomi (Village Dighomi)",
+    "note": "Historic suburban settlement northwest of Tbilisi."
+  },
+  {
+    "preferred": "ზღვისუბანი",
+    "avoid": [],
+    "latin": "Zghvisubani (Temka)",
+    "note": "Official municipal name is ზღვისუბანი; colloquially known as თემქა (acronym of თბილისის ელმავალმშენებელი ქარხანა)."
+  },
+  {
+    "preferred": "სანზონა",
+    "avoid": [],
+    "latin": "Sanzona",
+    "note": "Left bank neighborhood between Didube and Gldani."
+  },
+  {
+    "preferred": "ლოტკინი",
+    "avoid": [],
+    "latin": "Lotkini",
+    "note": "Neighborhood in Nadzaladevi district."
+  },
+  {
+    "preferred": "მუხიანი",
+    "avoid": [],
+    "latin": "Mukhiani",
+    "note": "Northern residential area adjacent to Gldani."
+  },
+  {
+    "preferred": "ფონიჭალა",
+    "avoid": [
+      "სოღანლუღი"
+    ],
+    "latin": "Ponichala",
+    "note": "Southeastern district. 'სოღანლუღი' is historical pre-Soviet name."
+  },
+  {
+    "preferred": "ვაზისუბანი",
+    "avoid": [],
+    "latin": "Vazisubani",
+    "note": "Eastern residential district."
+  },
+  {
+    "preferred": "ვარკეთილი",
+    "avoid": [],
+    "latin": "Varketili",
+    "note": "Major southeastern residential district with numbered upper/lower micro-districts."
+  },
+  {
+    "preferred": "აფრიკის დასახლება",
+    "avoid": [],
+    "latin": "Aprika settlement",
+    "note": "Settlement in Samgori district."
+  },
+  {
+    "preferred": "ბახტრიონი",
+    "avoid": [],
+    "latin": "Bakhtrioni",
+    "note": "Sub-area in Saburtalo around Bakhtrioni Street."
+  },
+  {
+    "preferred": "დოლიძე",
+    "avoid": [],
+    "latin": "Dolidze",
+    "note": "Sub-area in Saburtalo around Victor Dolidze Street."
+  },
+  {
+    "preferred": "ხილიანი",
+    "avoid": [],
+    "latin": "Khiliani",
+    "note": "Sub-area in Saburtalo around Chikovani (Khiliani) Street."
+  },
+  {
+    "preferred": "წყნეთი",
+    "avoid": [],
+    "latin": "Tskneti",
+    "note": "Suburban township administratively part of Vake district."
+  },
+  {
+    "preferred": "კოჯორი",
+    "avoid": [],
+    "latin": "Kojori",
+    "note": "Suburban township administratively part of Mtatsminda district."
+  },
+  {
+    "preferred": "ტაბახმელა",
+    "avoid": [],
+    "latin": "Tabakhmela",
+    "note": "Suburban settlement in Mtatsminda district."
+  },
+  {
+    "preferred": "შინდისი",
+    "avoid": [],
+    "latin": "Shindisi",
+    "note": "Suburban settlement in Mtatsminda district."
+  },
+  {
+    "preferred": "წავკისი",
+    "avoid": [],
+    "latin": "Tsavkisi",
+    "note": "Suburban settlement in Mtatsminda district."
+  },
+  {
+    "preferred": "ოქროყანა",
+    "avoid": [],
+    "latin": "Okrokana",
+    "note": "Suburban settlement in Mtatsminda district below Mtatsminda plateau."
+  },
+  {
+    "preferred": "ზაჰესი",
+    "avoid": [],
+    "latin": "Zahesi",
+    "note": "Acronym of ზემო ავჭალის ჰიდროელექტროსადგური."
+  },
+  {
+    "preferred": "ავჭალა",
+    "avoid": [],
+    "latin": "Avchala",
+    "note": "Northern industrial and residential area."
+  },
+  {
+    "preferred": "ლილო",
+    "avoid": [],
+    "latin": "Lilo",
+    "note": "Eastern settlement and trading hub near airport."
+  },
+  {
+    "preferred": "თბილისის მუნიციპალიტეტის მერია",
+    "avoid": [
+      "თბილისის მუნიციპალური მერია",
+      "თბილისის გორსოვეტი"
+    ],
+    "latin": "Tbilisi City Hall",
+    "note": "Official constitutional title. Media and prose use short form 'თბილისის მერია'."
+  },
+  {
+    "preferred": "თბილისის მუნიციპალიტეტის საკრებულო",
+    "avoid": [
+      "თბილისის გორსაბჭო"
+    ],
+    "latin": "Tbilisi City Assembly",
+    "note": "Official representative organ. Short form: 'თბილისის საკრებულო'."
+  },
+  {
+    "preferred": "რაიონული გამგეობა",
+    "avoid": [
+      "რაიკომი",
+      "რაიისპოლკომი"
+    ],
+    "latin": "District Administration (Gamgeoba)",
+    "note": "E.g. 'ვაკის რაიონის გამგეობა'."
+  },
+  {
+    "preferred": "თბილისის სატრანსპორტო კომპანია",
+    "avoid": [
+      "თბილისის ტრანსპორტის სამსახური"
+    ],
+    "latin": "Tbilisi Transport Company (TTC)",
+    "note": "Municipal enterprise operating metro, buses, and cable cars."
+  },
+  {
+    "preferred": "თბილისის განვითარების ფონდი",
+    "avoid": [],
+    "latin": "Tbilisi Development Fund",
+    "note": "Municipal non-profit entity for urban rehabilitation."
+  },
+  {
+    "preferred": "თბილისის მუნიციპალური ინსპექცია",
+    "avoid": [],
+    "latin": "Tbilisi Municipal Inspection",
+    "note": "City supervisory agency overseeing construction and municipal regulations."
+  },
+  {
+    "preferred": "თბილისის მუნიციპალური ლაბორატორია",
+    "avoid": [],
+    "latin": "Tbilisi Municipal Laboratory",
+    "note": "Infrastructure and material quality testing agency."
+  },
+  {
+    "preferred": "თბილისის არქიტექტურის სამსახური",
+    "avoid": [],
+    "latin": "Tbilisi Architecture Service",
+    "note": "Public law entity under Tbilisi City Hall."
+  },
+  {
+    "preferred": "თბილისის საქალაქო სასამართლო",
+    "avoid": [
+      "თბილისის გოროდსკოი სუდი"
+    ],
+    "latin": "Tbilisi City Court",
+    "note": "First-instance common court of general jurisdiction in Tbilisi."
+  },
+  {
+    "preferred": "თბილისის სააპელაციო სასამართლო",
+    "avoid": [],
+    "latin": "Tbilisi Court of Appeals",
+    "note": "Appellate court located on Grigol Robakidze Ave."
+  },
+  {
+    "preferred": "იუსტიციის სახლი",
+    "avoid": [],
+    "latin": "Public Service Hall",
+    "note": "Centrally located front office for public registrations and services."
+  },
+  {
+    "preferred": "საჯარო რეესტრის ეროვნული სააგენტო",
+    "avoid": [],
+    "latin": "National Agency of Public Registry (NAPR)",
+    "note": "Agency maintaining property, cadastral, and business registries."
+  },
+  {
+    "preferred": "თბილისის შოთა რუსთაველის სახელობის საერთაშორისო აეროპორტი",
+    "avoid": [
+      "ნოვოალექსეევკის აეროპორტი"
+    ],
+    "latin": "Tbilisi Shota Rustaveli International Airport",
+    "note": "Short form: 'თბილისის საერთაშორისო აეროპორტი'."
+  },
+  {
+    "preferred": "თბილისის ცენტრალური რკინიგზის სადგური",
+    "avoid": [
+      "თბილისის ვაგზალი"
+    ],
+    "latin": "Tbilisi Central Railway Station",
+    "note": "'ვაგზალი' is a Russianism; standard form is 'რკინიგზის სადგური'."
+  },
+  {
+    "preferred": "რუსთაველის გამზირი",
+    "avoid": [
+      "რუსთაველის პროსპექტი"
+    ],
+    "latin": "Rustaveli Avenue",
+    "note": "Main central avenue. 'პროსპექტი' is a Russianism."
+  },
+  {
+    "preferred": "ილია ჭავჭავაძის გამზირი",
+    "avoid": [
+      "ჭავჭავაძის პროსპექტი"
+    ],
+    "latin": "Ilia Chavchavadze Avenue",
+    "note": "Major avenue in Vake."
+  },
+  {
+    "preferred": "დავით აღმაშენებლის გამზირი",
+    "avoid": [
+      "აღმაშენებლის პროსპექტი",
+      "პლეხანოვის პროსპექტი"
+    ],
+    "latin": "David Aghmashenebeli Avenue",
+    "note": "Major avenue in Chughureti/Didube."
+  },
+  {
+    "preferred": "აკაკი წერეთლის გამზირი",
+    "avoid": [
+      "წერეთლის პროსპექტი"
+    ],
+    "latin": "Akaki Tsereteli Avenue",
+    "note": "Major avenue in Didube."
+  },
+  {
+    "preferred": "მერაბ კოსტავას ქუჩა",
+    "avoid": [],
+    "latin": "Merab Kostava Street",
+    "note": "Major thoroughfare connecting Vera, Saakadze Sq. and Saburtalo."
+  },
+  {
+    "preferred": "პეკინის გამზირი",
+    "avoid": [
+      "პეკინის ქუჩა",
+      "გამსახურდიას პროსპექტი"
+    ],
+    "latin": "Pekini Avenue",
+    "note": "Officially გამზირი; was temporarily named გამსახურდიას გამზირი."
+  },
+  {
+    "preferred": "ვაჟა-ფშაველას გამზირი",
+    "avoid": [
+      "ვაჟა-ფშაველას პროსპექტი",
+      "ვაჟას პროსპექტი"
+    ],
+    "latin": "Vazha-Pshavela Avenue",
+    "note": "Avenue with hyphenated name. Hyphen mandatory."
+  },
+  {
+    "preferred": "ალექსანდრე ყაზბეგის გამზირი",
+    "avoid": [
+      "ყაზბეგის პროსპექტი"
+    ],
+    "latin": "Aleksandre Kazbegi Avenue",
+    "note": "Parallel avenue to Vazha-Pshavela in Saburtalo."
+  },
+  {
+    "preferred": "ქეთევან დედოფლის გამზირი",
+    "avoid": [],
+    "latin": "Ketevan Dedofali Avenue",
+    "note": "Major avenue in Isani/Avlabari."
+  },
+  {
+    "preferred": "მოსკოვის გამზირი",
+    "avoid": [
+      "მოსკოვის პროსპექტი"
+    ],
+    "latin": "Moskovi Avenue",
+    "note": "Avenue in Samgori district."
+  },
+  {
+    "preferred": "მარშალ გელოვანის გამზირი",
+    "avoid": [
+      "გელოვანის ტრასა"
+    ],
+    "latin": "Marshal Gelovani Avenue",
+    "note": "High-speed avenue connecting Saburtalo to Dighomi."
+  },
+  {
+    "preferred": "კახეთის გზატკეცილი",
+    "avoid": [
+      "კახეთის ტრასა"
+    ],
+    "latin": "Kakheti Highway",
+    "note": "'ტრასა' is a Russianism; correct term is 'გზატკეცილი'."
+  },
+  {
+    "preferred": "დავით აღმაშენებლის ხეივანი",
+    "avoid": [
+      "აღმაშენებლის ტრასა"
+    ],
+    "latin": "David Aghmashenebeli Alley",
+    "note": "Northbound exit highway toward Mtskheta."
+  },
+  {
+    "preferred": "თავისუფლების მოედანი",
+    "avoid": [
+      "ლენინის მოედანი"
+    ],
+    "latin": "Freedom Square",
+    "note": "Central square of Tbilisi."
+  },
+  {
+    "preferred": "პირველი რესპუბლიკის მოედანი",
+    "avoid": [
+      "ვარდების რევოლუციის მოედანი"
+    ],
+    "latin": "First Republic Square",
+    "note": "Renamed from ვარდების რევოლუციის მოედანი in 2018."
+  },
+  {
+    "preferred": "ევროპის მოედანი",
+    "avoid": [],
+    "latin": "Europe Square",
+    "note": "Square in Rike / Metekhi area."
+  },
+  {
+    "preferred": "ორბელიანის მოედანი",
+    "avoid": [
+      "კოლმეურნეობის მოედანი"
+    ],
+    "latin": "Orbeliani Square",
+    "note": "'კოლმეურნეობის მოედანი' is obsolete Soviet name."
+  },
+  {
+    "preferred": "გიორგი სააკაძის მოედანი",
+    "avoid": [],
+    "latin": "Giorgi Saakadze Square",
+    "note": "Major junction square in Saburtalo."
+  },
+  {
+    "preferred": "გმირთა მოედანი",
+    "avoid": [],
+    "latin": "Heroes Square",
+    "note": "Central traffic hub with the Memorial to Fallen Heroes."
+  },
+  {
+    "preferred": "სადგურის მოედანი",
+    "avoid": [
+      "ვაგზლის მოედანი"
+    ],
+    "latin": "Station Square",
+    "note": "Public transit and rail hub. Avoid Russianism 'ვაგზალი'."
+  },
+  {
+    "preferred": "მარჯანიშვილის მოედანი",
+    "avoid": [],
+    "latin": "Marjanishvili Square",
+    "note": "Roundabout square on Aghmashenebeli Ave."
+  },
+  {
+    "preferred": "მშრალი ხიდი",
+    "avoid": [],
+    "latin": "Dry Bridge",
+    "note": "Historic bridge and flea market location."
+  },
+  {
+    "preferred": "ბარათაშვილის ხიდი",
+    "avoid": [],
+    "latin": "Baratashvili Bridge",
+    "note": "Major bridge connecting Vera/Rustaveli side to Avlabari."
+  },
+  {
+    "preferred": "მშვიდობის ხიდი",
+    "avoid": [],
+    "latin": "Bridge of Peace",
+    "note": "Glass pedestrian bridge over the Mtkvari."
+  },
+  {
+    "preferred": "მეტეხის ხიდი",
+    "avoid": [],
+    "latin": "Metekhi Bridge",
+    "note": "Oldest historic bridge crossing location in Tbilisi."
+  },
+  {
+    "preferred": "რიყის პარკი",
+    "avoid": [
+      "რიყე პარკი"
+    ],
+    "latin": "Rike Park",
+    "note": "Recreational park along the Mtkvari left bank."
+  },
+  {
+    "preferred": "ვაკის პარკი",
+    "avoid": [
+      "გამარჯვების პარკი"
+    ],
+    "latin": "Vake Park",
+    "note": "'გამარჯვების პარკი' is obsolete Soviet name."
+  },
+  {
+    "preferred": "მთაწმინდის პარკი",
+    "avoid": [],
+    "latin": "Mtatsminda Park",
+    "note": "Plateau amusement park and TV broadcast tower area."
+  },
+  {
+    "preferred": "ვერის ბაღი",
+    "avoid": [],
+    "latin": "Vera Garden",
+    "note": "Historic recreational park in Vera."
+  },
+  {
+    "preferred": "მზიური",
+    "avoid": [],
+    "latin": "Mziuri Park",
+    "note": "Valley park between Vake and Saburtalo."
+  },
+  {
+    "preferred": "კუს ტბა",
+    "avoid": [
+      "ჩერეპაშკა"
+    ],
+    "latin": "Turtle Lake",
+    "note": "'ჩერეპაშკა' is a Russianism."
+  },
+  {
+    "preferred": "ლისის ტბა",
+    "avoid": [],
+    "latin": "Lisi Lake",
+    "note": "Lake and recreation area above Saburtalo."
+  },
+  {
+    "preferred": "თბილისის ზღვა",
+    "avoid": [
+      "თბილისკოე მორე"
+    ],
+    "latin": "Tbilisi Sea (Reservoir)",
+    "note": "Officially თბილისის წყალსაცავი; widely referred to as თბილისის ზღვა."
+  },
+  {
+    "preferred": "ქუჩა",
+    "avoid": [
+      "ულიცა"
+    ],
+    "latin": "Street (abbr. ქ.)",
+    "note": "Post-positioned: 'რუსთაველის ქუჩა'."
+  },
+  {
+    "preferred": "გამზირი",
+    "avoid": [
+      "პროსპექტი",
+      "პრ."
+    ],
+    "latin": "Avenue (abbr. გამზ.)",
+    "note": "Post-positioned: 'ჭავჭავაძის გამზირი'."
+  },
+  {
+    "preferred": "შესახვევი",
+    "avoid": [
+      "პერეულოკი"
+    ],
+    "latin": "Lane / Turn (abbr. შეს.)",
+    "note": "'პერეულოკი' is a Russianism."
+  },
+  {
+    "preferred": "ჩიხი",
+    "avoid": [
+      "ტუპიკი"
+    ],
+    "latin": "Cul-de-sac / Dead End (abbr. ჩ.)",
+    "note": "'ტუპიკი' is a Russianism."
+  },
+  {
+    "preferred": "გზატკეცილი",
+    "avoid": [
+      "ტრასა"
+    ],
+    "latin": "Highway (abbr. გზატკ.)",
+    "note": "'ტრასა' is a Russianism."
+  },
+  {
+    "preferred": "ჩასახვევი",
+    "avoid": [],
+    "latin": "Descent / Turnoff",
+    "note": "E.g. 'მეტეხის ჩასახვევი'."
+  },
+  {
+    "preferred": "აღმართი",
+    "avoid": [],
+    "latin": "Ascent / Hill street",
+    "note": "E.g. 'ბარათაშვილის აღმართი'."
+  },
+  {
+    "preferred": "მოედანი",
+    "avoid": [
+      "პლოშადი"
+    ],
+    "latin": "Square (abbr. მოედ.)",
+    "note": "'პლოშადი' is a Russianism."
+  },
+  {
+    "preferred": "კორპუსი",
+    "avoid": [],
+    "latin": "Building / Block (abbr. კორპ.)",
+    "note": "Multi-apartment residential block."
+  },
+  {
+    "preferred": "სადარბაზო",
+    "avoid": [
+      "პადეზდი"
+    ],
+    "latin": "Entrance / Porch (abbr. სად.)",
+    "note": "'პადეზდი' is a Russianism (подъезд)."
+  },
+  {
+    "preferred": "სართული",
+    "avoid": [
+      "ეტაჟი"
+    ],
+    "latin": "Floor / Storey (abbr. სართ.)",
+    "note": "'ეტაჟი' is a Russianism (этаж)."
+  },
+  {
+    "preferred": "ბინა",
+    "avoid": [
+      "კვარტირა"
+    ],
+    "latin": "Apartment / Flat (abbr. ბ.)",
+    "note": "'კვარტირა' is a Russianism (квартира)."
+  },
+  {
+    "preferred": "საფოსტო ინდექსი",
+    "avoid": [
+      "პოჩტოვი ინდექსი"
+    ],
+    "latin": "Postal Code / ZIP",
+    "note": "Georgian Post format: 4 digits, e.g. '0179'."
+  }
+]

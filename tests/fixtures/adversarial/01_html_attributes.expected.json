@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "fixed": "<div class=\"card shadow-sm p-4\" id=\"main-container\" data-status=\"ready\">\n  <h3 class=\"card-title\">სისტემური შეტყობინება</h3>\n  <p class=\"card-text\">მომსახურების გასაგრძელებლად დააჭირეთ ქვემოთ მოცემულ ღილაკს:</p>\n  <button type=\"button\" class=\"btn btn-primary\" data-action=\"submit-form\" aria-label=\"გაგზავნა\">\n    დადასტურება\n  </button>\n</div>\nაღნიშნული კომპონენტი სრულად მორგებულია მობილურ მოწყობილობებზე და მუშაობს უნაკლოდ."
+}

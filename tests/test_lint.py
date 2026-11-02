@@ -1,3 +1,4 @@
+import json
 import re
 from pathlib import Path
 
@@ -30,6 +31,18 @@ def checks(text, **kw):
     ("ოფისი Germany-ში გაიხსნა.", "country"),
     ("კომპანია და და პროდუქტი.", "dup_word"),
     ("ტექსტი пример აქ.", "cyrillic"),
+    ("ამას შესახებ ინფორმაცია არ გვაქვს.", "postposition_dative"),
+    ("ამას გამო პროექტი შეფერხდა.", "postposition_dative"),
+    ("ამას მიხედვით გადაწყვეტენ.", "postposition_dative"),
+    ("იმას შესახებ არაფერი უთქვამს.", "postposition_dative"),
+    ("იმას გამო კომპანია დაიხურა.", "postposition_dative"),
+    ("იმას მიხედვით იმსჯელებენ.", "postposition_dative"),
+    ("რას შესახებ საუბრობთ?", "postposition_dative"),
+    ("მონაცემებს მიხედვით სისტემა მზადაა.", "postposition_dative"),
+    ("კომპანიებს შესახებ ახალი კანონი მიიღეს.", "postposition_dative"),
+    ("შეცდომებს გამო სერვისი გაითიშა.", "postposition_dative"),
+    ("API ებს გადასცემენ.", "ending_hyphen"),
+    ("Meta თი სარგებლობენ.", "ending_hyphen"),
 ])
 def test_detects(text, check):
     assert check in checks(text)
@@ -48,9 +61,29 @@ def test_detects(text, check):
     "Python ის ენაა, რომელსაც ყველა იყენებს.",
     "Tesla Model S გამოვიდა.",
     "May თვის ანგარიში გამოქვეყნდა.",
+    "ამის შესახებ დოკუმენტში წერია.",
+    "იმის გამო გადაიდო, რომ წვიმდა.",
+    "მონაცემების მიხედვით სისტემა მზადაა.",
+    "კომპანიების შესახებ ანგარიში მომზადდა.",
+    "ვის შესახებ საუბრობთ?",
+    "ყველას შესახებ ვიცით.",
+    "ჩვენს შესახებ გვერდი განახლდა.",
+    "გიორგის შესახებ მოვისმინეთ.",
+    "შოთას შესახებ დაწერეს.",
+    "მეტროს შესახებ სტატია გამოქვეყნდა.",
+    "Meta-ს შესახებ ინფორმაცია გავრცელდა.",
 ])
 def test_clean(text):
     assert lint.check_text(text) == []
+
+
+def test_postposition_dative():
+    findings = lint.check_text("ამას შესახებ და მონაცემებს მიხედვით.")
+    assert len(findings) == 2
+    assert findings[0].check == "postposition_dative"
+    assert "„ამას შესახებ“ → „ამის შესახებ“" in findings[0].message
+    assert findings[1].check == "postposition_dative"
+    assert "„მონაცემებს მიხედვით“ → „მონაცემების მიხედვით“" in findings[1].message
 
 
 def test_speech_mode_allows_georgian_brands_and_flags_latin_digits():
@@ -108,3 +141,63 @@ def _right_examples():
 def test_examples_right_side_is_clean(skill, text):
     mode = {"georgian-social": "social", "georgian-speech": "speech", "georgian-ui": "ui"}.get(skill, "article")
     assert [f.message for f in lint.check_text(text, mode=mode, strict=True)] == []
+
+
+def test_brands_match_latin_endings():
+    root = Path(__file__).resolve().parent.parent
+    data_path = root / "data" / "latin_endings.json"
+    assert data_path.exists(), "data/latin_endings.json missing"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    classes = data["classes"]
+    names = data["names"]
+
+    brands_md = SKILLS / "georgian-names-numbers" / "references" / "brands.md"
+    assert brands_md.exists(), "brands.md missing"
+    text = brands_md.read_text(encoding="utf-8")
+    table_lines = [l for l in text.splitlines() if re.match(r"^\|\s*\d+\s*\|", l)]
+    assert len(table_lines) == 120, f"Expected 120 brands in brands.md, got {len(table_lines)}"
+
+    for l in table_lines:
+        parts = [p.strip() for p in l.split("|")[1:-1]]
+        _, name, erg, gen, dat = parts[:5]
+        assert name in names, f"Brand '{name}' from brands.md not found in data/latin_endings.json"
+        sound_class = names[name]
+        assert sound_class in classes, f"Unknown sound class '{sound_class}' for brand '{name}'"
+        c = classes[sound_class]
+        assert erg == f"{name}{c['erg']}", f"Ergative mismatch for {name}: expected {name}{c['erg']}, got {erg}"
+        assert gen == f"{name}{c['gen']}", f"Genitive mismatch for {name}: expected {name}{c['gen']}, got {gen}"
+        assert dat == f"{name}{c['dat']}", f"Dative mismatch for {name}: expected {name}{c['dat']}, got {dat}"
+
+
+def test_latin_names_reference_table():
+    root = Path(__file__).resolve().parent.parent
+    data_path = root / "data" / "latin_endings.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    classes = data["classes"]
+    names = data["names"]
+
+    latin_names_md = SKILLS / "georgian-names-numbers" / "references" / "latin-names.md"
+    assert latin_names_md.exists(), "latin-names.md missing"
+    text = latin_names_md.read_text(encoding="utf-8")
+    table_lines = [
+        l for l in text.splitlines()
+        if l.startswith("|") and not l.startswith("| written") and not l.startswith("|---")
+        and not l.startswith("| #") and not l.startswith("| **") and not l.startswith("| Grammatical")
+    ]
+    assert len(table_lines) >= 200, f"Expected at least 200 names in latin-names.md, got {len(table_lines)}"
+
+    for l in table_lines:
+        parts = [p.strip() for p in l.split("|")[1:-1]]
+        if len(parts) < 9:
+            continue
+        written, sound_class, erg, dat, gen, instr, in_post, plural = parts[:8]
+        assert written in names, f"Name '{written}' not in data/latin_endings.json"
+        assert sound_class == names[written], f"Class mismatch for '{written}'"
+        c = classes[sound_class]
+        assert erg == f"{written}{c['erg']}"
+        assert dat == f"{written}{c['dat']}"
+        assert gen == f"{written}{c['gen']}"
+        assert instr == f"{written}{c['instr']}"
+        assert in_post == f"{written}{c['in']}"
+        assert plural == f"{written}{c['plural']}"
+

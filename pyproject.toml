@@ -17,4 +17,5 @@ target-version = "py311"
 
 [tool.ruff.lint]
 # Hermes tool handlers must never raise; they catch everything and return error JSON.
-ignore = ["BLE001"]
+# N999 ignored because checkout directory on Windows may be capitalized ('Kaeasy').
+ignore = ["BLE001", "N999"]

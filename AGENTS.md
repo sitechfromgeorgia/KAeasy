@@ -15,6 +15,7 @@ memory), `skills/<name>/SKILL.md` with `references/` and `examples/`, `evals/`, 
 uv run --with pytest --with pyyaml python -m pytest -q   # all tests
 uv run --with ruff ruff check .                          # lint
 python lint.py --text "..." --strict                     # try the linter
+uv run python evals/score.py --inspect news_001          # inspect an eval task
 ```
 
 ## Hard rules

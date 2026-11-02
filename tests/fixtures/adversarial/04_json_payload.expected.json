@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "fixed": "სისტემა აგზავნის შემდეგ JSON შეტყობინებას ვებჰუკის საშუალებით:\n```json\n{\n  \"event\": \"payment_received\",\n  \"status\": \"success\",\n  \"amount\": 1250,\n  \"currency\": \"GEL\"\n}\n```\nმონაცემები მუშავდება რეალურ დროში და ინახება ბაზაში."
+}

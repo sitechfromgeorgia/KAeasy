@@ -20,6 +20,12 @@ mistakes memory feeds every correction back to all agents.
 | `skills/georgian-ui` | Buttons, statuses, errors, forms |
 | `skills/georgian-speech` | `speech_text` for TTS: numbers in words, brands in Georgian letters |
 | `skills/georgian-proofread` | Three-pass self-edit, review format, learning loop |
+| `skills/georgian-business` | Commercial correspondence, invoices, B2B, email etiquette |
+| `skills/georgian-marketing` | Hype-free copy, CTAs, landing pages, campaigns |
+| `skills/georgian-official` | Official notices, legal citations, bureaucratic forms |
+| `skills/georgian-support` | Customer support, empathy, problem-resolution tone |
+| `skills/georgian-translation` | Translation protocol, false friends, localization |
+| `evals/` | 120 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |
 | `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates, `fields` for JSON scripts (`{"say": "speech", "*": "social"}`) |
 | `ka_fix` tool | Fixes what strict lint flags and a machine can fix: quotes, brand hyphens, transliterated brands, decimal comma, dashes, spacing. Never grammar |
 | `ka_speech` tool | Written Georgian → TTS text: numbers with case, times, money, versions, brands (`data/lexicon_ka.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
@@ -64,6 +70,18 @@ the Shorts review (with `KAEASY_DATA_DIR` set). Run it once per file.
 ```bash
 uv run --with pytest --with pyyaml python -m pytest -q
 uv run --with ruff ruff check .
+```
+
+## Evals Benchmark
+
+See [`evals/README.md`](evals/README.md) for the 120-task benchmark and zero-cost offline scoring utility:
+
+```bash
+# Inspect a task prompt, reference answer, and mistake checklist
+uv run python evals/score.py --inspect news_001
+
+# Score model output manually
+uv run python evals/score.py --task news_001 --text "Microsoft-მა..."
 ```
 
 See `AGENTS.md` for the rules of the repo (how to add a rule or an example without breaking anything).

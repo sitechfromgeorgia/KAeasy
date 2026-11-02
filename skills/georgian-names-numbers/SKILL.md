@@ -18,8 +18,8 @@ Tolerated exception: `აიფონი` (but `iPhone` is preferred).
 
 `Microsoft-მა`, `Microsoft-ის`, `Microsoft-ს`, `OpenAI-მ`, `NVIDIA-ს`, `GPU-ები`, `YouTube-ზე`, `Linux-ში`,
 `2025 წელს`, `36%-ით`, `4-ჯერ`. Never glued (`Microsoftმა`), never spaced (`Microsoft -მა`).
-Nominative = the bare name: `Apple გეგმავს`. Which ending (`-მა` or `-მ`, `-ის` or `-ს`): see the
-Latin-names table in the cases reference of `kaeasy:georgian-grammar`.
+Nominative = the bare name: `Apple გეგმავს`. Which ending (`-მა` or `-მ`, `-ის` or `-ს`): see
+the rules and table in `references/latin-names.md` and `references/brands.md`.
 
 ## Georgian, not Latin
 
@@ -53,8 +53,16 @@ Latin-names table in the cases reference of `kaeasy:georgian-grammar`.
 - Comma before `რომ`, `რომელიც`, `თუ`, `როცა`, `რადგან`, `მაგრამ`; no comma between subject and verb.
 - Headlines: no final period.
 
-## Examples
+## Examples & Domain Glossaries
 
-- `references/brands.md`: 120 brands and products with written cases, TTS spoken forms and disputed variants.
+- `references/latin-names.md`: deterministic rules, 5 sound classes, 7 cases and 200+ Latin names table.
+- `references/brands.md`: 120 brands and products with written cases and TTS spoken forms.
 - `references/terms.md`: full glossary of technical terms in Georgian.
+- `references/glossary-tbilisi.md`: Tbilisi districts, official institutions, streets, places, and address rules.
+- `references/glossary-tech-ai.md`: 150+ technology, AI, ML, and cloud architecture terms.
+- `references/glossary-finance.md`: banking, NBG, macroeconomics, capital markets, and taxation terms.
+- `references/glossary-crypto.md`: blockchain, Web3, DeFi, and tokenomics terms.
+- `references/glossary-sport.md`: sports disciplines, match states, refereeing, and positions without Russianisms.
+- `references/glossary-health.md`: clinical medicine, diagnostics, pharmacology, and healthcare terms.
+- `references/glossary-law.md`: legislation, judicial proceedings, contracts, and constitutional terms.
 - `examples/names-numbers-fixes.md`: wrong → right brand names, numbers, dates and punctuation.

@@ -67,5 +67,7 @@ Vowel-stem adjectives (`მწვანე`, `ფართო`, `ახლო`) 
 - `references/verb-classes.md`: four verb classes, series case alignment, and 40 frequent news verbs table.
 - `references/noun-stems.md`: syncope and truncation rules with genitive, instrumental and plural for 60 nouns.
 - `references/verbs.md`: series, preverbs, version vowels, person agreement, common verb pairs.
+- `references/person-markers.md`: polypersonal agreement, prefixes მ-/გ-/გვ-, plural -თ, and 3rd person ჰ-/ს-/∅.
 - `references/agreement.md`: plural subjects, collective nouns, "ის / ისინი", relative `რომელიც`.
+- `references/syntax.md`: conditionals, subjunctive, reported speech, active vs passive, word order, commas, negation.
 - `examples/grammar-fixes.md`: 200+ wrong → right sentences from news, tech and social copy. Read before writing.

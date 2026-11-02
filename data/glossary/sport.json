@@ -1,0 +1,469 @@
+[
+  {
+    "preferred": "ფეხბურთი",
+    "avoid": [],
+    "latin": "football / soccer",
+    "note": "Most popular team sport in Georgia."
+  },
+  {
+    "preferred": "კალათბურთი",
+    "avoid": [],
+    "latin": "basketball",
+    "note": "Major team sport."
+  },
+  {
+    "preferred": "რაგბი",
+    "avoid": [],
+    "latin": "rugby union",
+    "note": "Georgian national rugby team ('ბორჯღალოსნები')."
+  },
+  {
+    "preferred": "ჩოგბურთი",
+    "avoid": [],
+    "latin": "tennis",
+    "note": "Racket sport."
+  },
+  {
+    "preferred": "ძიუდო",
+    "avoid": [],
+    "latin": "judo",
+    "note": "Olympic combat sport with major Georgian heritage."
+  },
+  {
+    "preferred": "ჭიდაობა",
+    "avoid": [],
+    "latin": "wrestling",
+    "note": "Traditional combat sport."
+  },
+  {
+    "preferred": "თავისუფალი ჭიდაობა",
+    "avoid": [],
+    "latin": "freestyle wrestling",
+    "note": "Olympic wrestling discipline."
+  },
+  {
+    "preferred": "ბერძნულ-რომაული ჭიდაობა",
+    "avoid": [],
+    "latin": "Greco-Roman wrestling",
+    "note": "Olympic wrestling discipline."
+  },
+  {
+    "preferred": "ძალოსნობა",
+    "avoid": [
+      "შტანგა"
+    ],
+    "latin": "weightlifting",
+    "note": "'შტანგა' is an informal Russianism; correct term is 'ძალოსნობა'."
+  },
+  {
+    "preferred": "ცურვა",
+    "avoid": [],
+    "latin": "swimming",
+    "note": "Aquatic sport."
+  },
+  {
+    "preferred": "წყალბურთი",
+    "avoid": [],
+    "latin": "water polo",
+    "note": "Team water sport."
+  },
+  {
+    "preferred": "მძლეოსნობა",
+    "avoid": [
+      "ლიოხკაია ატლეტიკა",
+      "ატლეტიკა"
+    ],
+    "latin": "athletics / track and field",
+    "note": "'ლიოხკაია ატლეტიკა' is a Russianism; correct standard Georgian is 'მძლეოსნობა'."
+  },
+  {
+    "preferred": "ფარიკაობა",
+    "avoid": [],
+    "latin": "fencing",
+    "note": "Combat sport with swords."
+  },
+  {
+    "preferred": "მშვილდოსნობა",
+    "avoid": [],
+    "latin": "archery",
+    "note": "Bow and arrow target sport."
+  },
+  {
+    "preferred": "ტანვარჯიში",
+    "avoid": [],
+    "latin": "gymnastics",
+    "note": "Acrobatic and apparatus sport."
+  },
+  {
+    "preferred": "მხატვრული ტანვარჯიში",
+    "avoid": [],
+    "latin": "rhythmic gymnastics",
+    "note": "Gymnastics discipline involving ribbons, hoops, clubs, balls."
+  },
+  {
+    "preferred": "ფრენბურთი",
+    "avoid": [],
+    "latin": "volleyball",
+    "note": "Net-divided team sport."
+  },
+  {
+    "preferred": "ხელბურთი",
+    "avoid": [],
+    "latin": "handball",
+    "note": "Team ball sport."
+  },
+  {
+    "preferred": "კრივი",
+    "avoid": [],
+    "latin": "boxing",
+    "note": "Pugilistic combat sport."
+  },
+  {
+    "preferred": "შერეული საბრძოლო ხელოვნება",
+    "avoid": [],
+    "latin": "Mixed Martial Arts (MMA)",
+    "note": "Full-contact combat discipline. Often abbreviated as 'MMA'."
+  },
+  {
+    "preferred": "ჩემპიონატი",
+    "avoid": [
+      "ჩემპიონშიპი"
+    ],
+    "latin": "championship",
+    "note": "National or continental tournament. 'ჩემპიონშიპი' is an English loanword unnecessary in generic Georgian."
+  },
+  {
+    "preferred": "პირველობა",
+    "avoid": [],
+    "latin": "tournament / title competition",
+    "note": "Synonym for championship or premier contest."
+  },
+  {
+    "preferred": "ოლიმპიური თამაშები",
+    "avoid": [],
+    "latin": "Olympic Games",
+    "note": "Major quadrennial international multi-sport event."
+  },
+  {
+    "preferred": "ეროვნული ნაკრები",
+    "avoid": [
+      "სბორნაია"
+    ],
+    "latin": "national team",
+    "note": "'სბორნაია' is a Russianism; correct Georgian is 'ეროვნული ნაკრები'."
+  },
+  {
+    "preferred": "მთავარი მწვრთნელი",
+    "avoid": [
+      "გლავნი ტრენერი"
+    ],
+    "latin": "head coach",
+    "note": "'გლავნი ტრენერი' is a Russianism; correct term is 'მთავარი მწვრთნელი'."
+  },
+  {
+    "preferred": "სამწვრთნელო შტაბი",
+    "avoid": [],
+    "latin": "coaching staff",
+    "note": "Group of assistant coaches, analysts, and physical preparation trainers."
+  },
+  {
+    "preferred": "მსაჯი",
+    "avoid": [
+      "სუდია"
+    ],
+    "latin": "referee / umpire",
+    "note": "'სუდია' is a Russianism; correct term is 'მსაჯი'."
+  },
+  {
+    "preferred": "გვერდითი მსაჯი",
+    "avoid": [
+      "ბაკავოი"
+    ],
+    "latin": "assistant referee / linesman",
+    "note": "'ბაკავოი' is a Russianism; standard Georgian is 'გვერდითი მსაჯი'."
+  },
+  {
+    "preferred": "მთავარი მსაჯი",
+    "avoid": [],
+    "latin": "lead / field referee",
+    "note": "Head match official on the pitch."
+  },
+  {
+    "preferred": "ვიდეორეფერენტული სისტემა",
+    "avoid": [],
+    "latin": "Video Assistant Referee (VAR)",
+    "note": "Acronym 'VAR' used in everyday sports broadcasting."
+  },
+  {
+    "preferred": "თამაშგარე მდგომარეობა",
+    "avoid": [
+      "ვნე იგრა"
+    ],
+    "latin": "offside",
+    "note": "'ვნე იგრა' is a Russianism; correct Georgian term is 'თამაშგარე მდგომარეობა'."
+  },
+  {
+    "preferred": "პენალტი",
+    "avoid": [
+      "პენალი"
+    ],
+    "latin": "penalty kick",
+    "note": "'პენალი' is a Russianism; formal Georgian uses 'პენალტი' or 'თერთმეტმეტრიანი'."
+  },
+  {
+    "preferred": "საჯარიმო დარტყმა",
+    "avoid": [
+      "შტრაფნოი"
+    ],
+    "latin": "free kick",
+    "note": "'შტრაფნოი' is a Russianism; correct Georgian is 'საჯარიმო დარტყმა'."
+  },
+  {
+    "preferred": "თავისუფალი დარტყმა",
+    "avoid": [],
+    "latin": "indirect free kick",
+    "note": "Free kick from which a goal cannot be scored directly."
+  },
+  {
+    "preferred": "კუთხური დარტყმა",
+    "avoid": [
+      "უგლავოი"
+    ],
+    "latin": "corner kick",
+    "note": "'უგლავოი' is a Russianism; correct Georgian is 'კუთხური' or 'კუთხური დარტყმა'."
+  },
+  {
+    "preferred": "აუტი",
+    "avoid": [],
+    "latin": "throw-in",
+    "note": "Restarting play from the sideline."
+  },
+  {
+    "preferred": "ყვითელი ბარათი",
+    "avoid": [
+      "ჟოლტი კარტოჩკა"
+    ],
+    "latin": "yellow card",
+    "note": "'ჟოლტი კარტოჩკა' is a Russianism; correct Georgian is 'ყვითელი ბარათი'."
+  },
+  {
+    "preferred": "წითელი ბარათი",
+    "avoid": [
+      "კრასნი კარტოჩკა"
+    ],
+    "latin": "red card",
+    "note": "'კრასნი კარტოჩკა' is a Russianism; correct Georgian is 'წითელი ბარათი'."
+  },
+  {
+    "preferred": "გაფრთხილება",
+    "avoid": [],
+    "latin": "caution / booking",
+    "note": "Disciplinary booking issued by referee."
+  },
+  {
+    "preferred": "გაძევება",
+    "avoid": [
+      "უდალენიე"
+    ],
+    "latin": "sending-off / ejection",
+    "note": "'უდალენიე' is a Russianism; correct Georgian is 'გაძევება'."
+  },
+  {
+    "preferred": "დამატებითი დრო",
+    "avoid": [],
+    "latin": "extra time",
+    "note": "Two additional periods played when a knockout match ends in a draw."
+  },
+  {
+    "preferred": "კომპენსირებული დრო",
+    "avoid": [],
+    "latin": "stoppage time / added time",
+    "note": "Minutes added to the end of a regular half for stoppages."
+  },
+  {
+    "preferred": "პენალტების სერია",
+    "avoid": [],
+    "latin": "penalty shootout",
+    "note": "Tie-breaking penalty tie-breaker."
+  },
+  {
+    "preferred": "ტაიმი",
+    "avoid": [],
+    "latin": "half",
+    "note": "One of two halves in a football/rugby match."
+  },
+  {
+    "preferred": "პერიოდი",
+    "avoid": [],
+    "latin": "period",
+    "note": "Division of game time in hockey or water polo."
+  },
+  {
+    "preferred": "მეოთხედი",
+    "avoid": [],
+    "latin": "quarter",
+    "note": "One of four quarters in a basketball game."
+  },
+  {
+    "preferred": "სეტი",
+    "avoid": [],
+    "latin": "set",
+    "note": "Scoring division in tennis and volleyball."
+  },
+  {
+    "preferred": "გეიმი",
+    "avoid": [],
+    "latin": "game (tennis)",
+    "note": "Individual game within a tennis set."
+  },
+  {
+    "preferred": "მეკარე",
+    "avoid": [
+      "ვრატარი"
+    ],
+    "latin": "goalkeeper",
+    "note": "'ვრატარი' is a Russianism; standard Georgian is 'მეკარე'."
+  },
+  {
+    "preferred": "მცველი",
+    "avoid": [
+      "ზაშიტნიკი"
+    ],
+    "latin": "defender",
+    "note": "'ზაშიტნიკი' is a Russianism; standard Georgian is 'მცველი'."
+  },
+  {
+    "preferred": "ცენტრალური მცველი",
+    "avoid": [],
+    "latin": "center-back",
+    "note": "Central defensive position."
+  },
+  {
+    "preferred": "განაპირა მცველი",
+    "avoid": [],
+    "latin": "full-back / wing-back",
+    "note": "Flank defensive position."
+  },
+  {
+    "preferred": "ნახევარმცველი",
+    "avoid": [
+      "პოლუზაშიტნიკი"
+    ],
+    "latin": "midfielder",
+    "note": "'პოლუზაშიტნიკი' is a Russianism; standard Georgian is 'ნახევარმცველი'."
+  },
+  {
+    "preferred": "საყრდენი ნახევარმცველი",
+    "avoid": [],
+    "latin": "defensive midfielder",
+    "note": "Central holding midfield position."
+  },
+  {
+    "preferred": "თავდამსხმელი",
+    "avoid": [
+      "ნაპადაიუში"
+    ],
+    "latin": "forward / striker",
+    "note": "'ნაპადაიუში' is a Russianism; standard Georgian is 'თავდამსხმელი'."
+  },
+  {
+    "preferred": "ცენტრფორვარდი",
+    "avoid": [],
+    "latin": "center-forward",
+    "note": "Lead central offensive striker."
+  },
+  {
+    "preferred": "საგოლე გადაცემა",
+    "avoid": [],
+    "latin": "assist",
+    "note": "Pass directly leading to a scored goal."
+  },
+  {
+    "preferred": "ავტოგოლი",
+    "avoid": [],
+    "latin": "own goal",
+    "note": "Goal scored into one's own net."
+  },
+  {
+    "preferred": "ჰეთ-თრიკი",
+    "avoid": [],
+    "latin": "hat-trick",
+    "note": "Three goals scored by one player in a single match."
+  },
+  {
+    "preferred": "მშრალი მატჩი",
+    "avoid": [],
+    "latin": "clean sheet",
+    "note": "Match completed without conceding a single goal."
+  },
+  {
+    "preferred": "სატურნირო ცხრილი",
+    "avoid": [
+      "ტურნირნაია ტაბლიცა"
+    ],
+    "latin": "league table / standings",
+    "note": "'ტურნირნაია ტაბლიცა' is a Russianism; correct Georgian is 'სატურნირო ცხრილი'."
+  },
+  {
+    "preferred": "ფრე",
+    "avoid": [
+      "ნიჩია"
+    ],
+    "latin": "draw / tie",
+    "note": "'ნიჩია' is a Russianism; standard Georgian is 'ფრე'."
+  },
+  {
+    "preferred": "გამარჯვება",
+    "avoid": [
+      "პაბედა"
+    ],
+    "latin": "victory / win",
+    "note": "'პაბედა' is a Russianism; correct Georgian is 'გამარჯვება'."
+  },
+  {
+    "preferred": "მარცხი",
+    "avoid": [
+      "პორაჟენიე"
+    ],
+    "latin": "defeat / loss",
+    "note": "'პორაჟენიე' is a Russianism; standard Georgian is 'მარცხი'."
+  },
+  {
+    "preferred": "ანგარიში",
+    "avoid": [
+      "სჩოტი"
+    ],
+    "latin": "score",
+    "note": "'სჩოტი' is a Russianism; standard Georgian is 'ანგარიში'."
+  },
+  {
+    "preferred": "ფლეი-ოფი",
+    "avoid": [],
+    "latin": "play-offs",
+    "note": "Postseason knockout tournament phase."
+  },
+  {
+    "preferred": "ჯგუფური ეტაპი",
+    "avoid": [],
+    "latin": "group stage",
+    "note": "Round-robin preliminary stage of a tournament."
+  },
+  {
+    "preferred": "მეოთხედფინალი",
+    "avoid": [],
+    "latin": "quarter-final",
+    "note": "Round of eight teams preceding semi-finals."
+  },
+  {
+    "preferred": "ნახევარფინალი",
+    "avoid": [],
+    "latin": "semi-final",
+    "note": "Round of four teams preceding the final."
+  },
+  {
+    "preferred": "ფინალი",
+    "avoid": [],
+    "latin": "final",
+    "note": "Championship match deciding the winner."
+  }
+]

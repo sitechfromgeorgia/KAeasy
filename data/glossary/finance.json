@@ -1,0 +1,559 @@
+[
+  {
+    "preferred": "ლარი",
+    "avoid": [
+      "ლარები"
+    ],
+    "latin": "Lari (GEL)",
+    "note": "Official national currency. Singular noun after numerals: '500 ლარი', not '500 ლარები'."
+  },
+  {
+    "preferred": "ეროვნული ბანკი",
+    "avoid": [
+      "ნაციონალური ბანკი"
+    ],
+    "latin": "National Bank of Georgia (NBG)",
+    "note": "Central bank of Georgia. 'ნაციონალური ბანკი' is a Russianism (национальный банк)."
+  },
+  {
+    "preferred": "ინფლაცია",
+    "avoid": [
+      "ინფლაციონი"
+    ],
+    "latin": "inflation",
+    "note": "Sustained increase in general price levels."
+  },
+  {
+    "preferred": "რეფინანსირების განაკვეთი",
+    "avoid": [
+      "რეფინანსირების პროცენტი"
+    ],
+    "latin": "refinancing rate",
+    "note": "Primary monetary policy interest rate of the NBG."
+  },
+  {
+    "preferred": "აქცია",
+    "avoid": [
+      "აქციები"
+    ],
+    "latin": "share / stock",
+    "note": "Equity security. Singular noun after numerals: '100 აქცია'."
+  },
+  {
+    "preferred": "ობლიგაცია",
+    "avoid": [
+      "ობლიგაციები",
+      "ბონდი"
+    ],
+    "latin": "bond",
+    "note": "Fixed-income debt security. Singular after numerals. 'ბონდი' is informal trading slang."
+  },
+  {
+    "preferred": "დივიდენდი",
+    "avoid": [
+      "დივიდენტი",
+      "დივიდენტები"
+    ],
+    "latin": "dividend",
+    "note": "Distribution of earnings to shareholders. Spelled with d (დ), not t (ტ)."
+  },
+  {
+    "preferred": "მთლიანი შიდა პროდუქტი",
+    "avoid": [
+      "ვალოვი პროდუქტი",
+      "გდპ"
+    ],
+    "latin": "Gross Domestic Product (GDP)",
+    "note": "Standard macroeconomic measure: მშპ (GDP). 'ვალოვი პროდუქტი' is a Russianism."
+  },
+  {
+    "preferred": "ფულად-საკრედიტო პოლიტიკა",
+    "avoid": [],
+    "latin": "monetary policy",
+    "note": "Official constitutional term; 'მონეტარული პოლიტიკა' also used."
+  },
+  {
+    "preferred": "საპროცენტო განაკვეთი",
+    "avoid": [
+      "პროცენტი"
+    ],
+    "latin": "interest rate",
+    "note": "Rate charged for borrowing or paid on investment."
+  },
+  {
+    "preferred": "სავალუტო კურსი",
+    "avoid": [
+      "კურსი ვალუტის"
+    ],
+    "latin": "exchange rate",
+    "note": "Conversion rate between national and foreign currencies."
+  },
+  {
+    "preferred": "სავალუტო რეზერვები",
+    "avoid": [],
+    "latin": "foreign exchange reserves",
+    "note": "Official foreign currency holdings maintained by the central bank."
+  },
+  {
+    "preferred": "კომერციული ბანკი",
+    "avoid": [],
+    "latin": "commercial bank",
+    "note": "Licensed financial institution accepting deposits and extending credit."
+  },
+  {
+    "preferred": "მიკროსაფინანსო ორგანიზაცია",
+    "avoid": [],
+    "latin": "microfinance organization (MFO)",
+    "note": "Non-bank lending entity regulated by the NBG."
+  },
+  {
+    "preferred": "ფასიანი ქაღალდები",
+    "avoid": [
+      "ცენნი ბუმაგები"
+    ],
+    "latin": "securities",
+    "note": "Tradable financial assets. 'ცენნი ბუმაგები' is a crude Russianism."
+  },
+  {
+    "preferred": "აქტივები",
+    "avoid": [],
+    "latin": "assets",
+    "note": "Economic resources owned by an entity."
+  },
+  {
+    "preferred": "ვალდებულებები",
+    "avoid": [
+      "ობიაზატელობები"
+    ],
+    "latin": "liabilities",
+    "note": "Financial debts or obligations. 'ობიაზატელობები' is a Russianism."
+  },
+  {
+    "preferred": "კაპიტალი",
+    "avoid": [],
+    "latin": "capital / equity",
+    "note": "Financial wealth or shareholders' equity."
+  },
+  {
+    "preferred": "ლიკვიდურობა",
+    "avoid": [],
+    "latin": "liquidity",
+    "note": "Ease with which an asset can be converted into ready cash without loss of value."
+  },
+  {
+    "preferred": "შემოსავალი",
+    "avoid": [
+      "დახოდი"
+    ],
+    "latin": "income / revenue",
+    "note": "Money received. 'დახოდი' is a Russianism."
+  },
+  {
+    "preferred": "ხარჯი",
+    "avoid": [
+      "რასხოდი"
+    ],
+    "latin": "expense / expenditure",
+    "note": "Outflow of money. 'რასხოდი' is a Russianism."
+  },
+  {
+    "preferred": "წმინდა მოგება",
+    "avoid": [
+      "ჩისტი პრიბილი"
+    ],
+    "latin": "net profit",
+    "note": "Gross profit minus all expenses. 'პრიბილი' is a Russianism."
+  },
+  {
+    "preferred": "საოპერაციო მოგება",
+    "avoid": [],
+    "latin": "operating profit (EBIT)",
+    "note": "Profit realized from core business operations."
+  },
+  {
+    "preferred": "ზარალი",
+    "avoid": [
+      "უბიტკი"
+    ],
+    "latin": "loss",
+    "note": "Negative net income or damage. 'უბიტკი' is a Russianism."
+  },
+  {
+    "preferred": "ბალანსი",
+    "avoid": [],
+    "latin": "balance sheet",
+    "note": "Financial statement summarizing assets, liabilities, and shareholders' equity."
+  },
+  {
+    "preferred": "ფინანსური ანგარიშგება",
+    "avoid": [
+      "ფინანსური ატჩოტი"
+    ],
+    "latin": "financial statements / reporting",
+    "note": "Formal records of financial activities. 'ატჩოტი' is a Russianism."
+  },
+  {
+    "preferred": "აუდიტი",
+    "avoid": [],
+    "latin": "audit",
+    "note": "Official inspection of an individual's or organization's accounts."
+  },
+  {
+    "preferred": "გადასახადი",
+    "avoid": [
+      "ნალოგი"
+    ],
+    "latin": "tax",
+    "note": "Compulsory fiscal contribution. 'ნალოგი' is a Russianism."
+  },
+  {
+    "preferred": "დამატებული ღირებულების გადასახადი",
+    "avoid": [
+      "ენდეთე"
+    ],
+    "latin": "Value Added Tax (VAT)",
+    "note": "Georgian abbreviation: დღგ (18%). 'ენდეთე' is a Russianism (НДС)."
+  },
+  {
+    "preferred": "საშემოსავლო გადასახადი",
+    "avoid": [
+      "პადოხოდნი"
+    ],
+    "latin": "personal income tax",
+    "note": "20% flat tax in Georgia. 'პადოხოდნი' is a Russianism."
+  },
+  {
+    "preferred": "მოგების გადასახადი",
+    "avoid": [],
+    "latin": "corporate income tax",
+    "note": "Tax on distributed earnings (Estonian model in Georgia)."
+  },
+  {
+    "preferred": "ქონების გადასახადი",
+    "avoid": [],
+    "latin": "property tax",
+    "note": "Local municipal levy on real estate and enterprise assets."
+  },
+  {
+    "preferred": "აქციზი",
+    "avoid": [],
+    "latin": "excise duty",
+    "note": "Duty levied on specific manufactured goods (fuel, alcohol, tobacco)."
+  },
+  {
+    "preferred": "საბანკო გარანტია",
+    "avoid": [],
+    "latin": "bank guarantee",
+    "note": "Promise from a bank undertaking that liabilities of a debtor will be met."
+  },
+  {
+    "preferred": "აკრედიტივი",
+    "avoid": [],
+    "latin": "letter of credit",
+    "note": "Document from a bank guaranteeing payment upon presentation of documents."
+  },
+  {
+    "preferred": "იპოთეკური სესხი",
+    "avoid": [
+      "იპოტეკა"
+    ],
+    "latin": "mortgage loan",
+    "note": "Loan secured by real property."
+  },
+  {
+    "preferred": "სამომხმარებლო სესხი",
+    "avoid": [],
+    "latin": "consumer loan",
+    "note": "Unsecured credit for personal expenditures."
+  },
+  {
+    "preferred": "ბიზნეს-სესხი",
+    "avoid": [],
+    "latin": "business loan",
+    "note": "Credit extended for enterprise operations or capital expenditure."
+  },
+  {
+    "preferred": "საკრედიტო ბარათი",
+    "avoid": [],
+    "latin": "credit card",
+    "note": "Payment card issued by banks allowing borrowing of funds."
+  },
+  {
+    "preferred": "დებეტური ბარათი",
+    "avoid": [
+      "დებეტორული ბარათი"
+    ],
+    "latin": "debit card",
+    "note": "Payment card linked to bank checking account. 'დებეტორული' relates to debtor accounts."
+  },
+  {
+    "preferred": "საბანკო ანგარიში",
+    "avoid": [],
+    "latin": "bank account",
+    "note": "Financial account maintained by a bank for a customer."
+  },
+  {
+    "preferred": "მიმდინარე ანგარიში",
+    "avoid": [],
+    "latin": "current account / checking account",
+    "note": "Account for day-to-day transactional operations."
+  },
+  {
+    "preferred": "დეპოზიტი",
+    "avoid": [],
+    "latin": "deposit",
+    "note": "Funds placed in a financial institution. Synonym: ანაბარი."
+  },
+  {
+    "preferred": "ვადიანი ანაბარი",
+    "avoid": [],
+    "latin": "term deposit",
+    "note": "Deposit held for a fixed predetermined maturity."
+  },
+  {
+    "preferred": "მოთხოვნამდე ანაბარი",
+    "avoid": [],
+    "latin": "demand deposit",
+    "note": "Deposit that can be withdrawn at any time without notice."
+  },
+  {
+    "preferred": "საპროცენტო შემოსავალი",
+    "avoid": [],
+    "latin": "interest income",
+    "note": "Earnings generated from investments in interest-bearing assets."
+  },
+  {
+    "preferred": "პირდაპირი უცხოური ინვესტიციები",
+    "avoid": [],
+    "latin": "Foreign Direct Investment (FDI)",
+    "note": "Long-term overseas capital placement: პუი (FDI)."
+  },
+  {
+    "preferred": "სავაჭრო ბალანსი",
+    "avoid": [],
+    "latin": "trade balance",
+    "note": "Difference between monetary value of exports and imports."
+  },
+  {
+    "preferred": "მიმდინარე ანგარიშის დეფიციტი",
+    "avoid": [],
+    "latin": "current account deficit",
+    "note": "Macroeconomic measurement of a country's trade and transfers deficit."
+  },
+  {
+    "preferred": "სახელმწიფო ვალი",
+    "avoid": [],
+    "latin": "public / sovereign debt",
+    "note": "Total debt owed by the central government."
+  },
+  {
+    "preferred": "საგარეო ვალი",
+    "avoid": [],
+    "latin": "external debt",
+    "note": "Total public and private debt owed to foreign creditors."
+  },
+  {
+    "preferred": "შიდა ვალი",
+    "avoid": [],
+    "latin": "domestic debt",
+    "note": "Debt owed to internal domestic creditors denominated in domestic currency."
+  },
+  {
+    "preferred": "სახელმწიფო ბიუჯეტი",
+    "avoid": [],
+    "latin": "state budget",
+    "note": "Annual financial plan of government revenue and expenditure."
+  },
+  {
+    "preferred": "საბიუჯეტო დეფიციტი",
+    "avoid": [],
+    "latin": "budget deficit",
+    "note": "Amount by which government expenditure exceeds tax revenue."
+  },
+  {
+    "preferred": "საპენსიო სააგენტო",
+    "avoid": [],
+    "latin": "Pension Agency",
+    "note": "State agency administering Georgia's second-pillar pension scheme."
+  },
+  {
+    "preferred": "დაგროვებითი საპენსიო სქემა",
+    "avoid": [],
+    "latin": "accumulative pension scheme",
+    "note": "Defined contribution pension system (2+2+2 structure)."
+  },
+  {
+    "preferred": "ჰეჯირება",
+    "avoid": [],
+    "latin": "hedging",
+    "note": "Financial strategy offsetting risk of adverse price movements in assets."
+  },
+  {
+    "preferred": "დერივატივი",
+    "avoid": [],
+    "latin": "derivative",
+    "note": "Financial security with a value that relies upon an underlying asset."
+  },
+  {
+    "preferred": "ფიუჩერსი",
+    "avoid": [],
+    "latin": "futures contract",
+    "note": "Standardized legal agreement to buy or sell something at a predetermined price in the future."
+  },
+  {
+    "preferred": "ოფციონი",
+    "avoid": [],
+    "latin": "option contract",
+    "note": "Contract giving buyer the right, but not the obligation, to buy or sell an asset."
+  },
+  {
+    "preferred": "სვოპი",
+    "avoid": [],
+    "latin": "swap contract",
+    "note": "Derivative contract exchanging financial instruments or cash flows."
+  },
+  {
+    "preferred": "საინვესტიციო პორტფელი",
+    "avoid": [],
+    "latin": "investment portfolio",
+    "note": "Collection of financial investments like stocks, bonds, commodities, cash."
+  },
+  {
+    "preferred": "დივერსიფიკაცია",
+    "avoid": [],
+    "latin": "diversification",
+    "note": "Risk management strategy mixing a wide variety of investments."
+  },
+  {
+    "preferred": "რისკის მართვა",
+    "avoid": [],
+    "latin": "risk management",
+    "note": "Identification, evaluation, and prioritization of financial risks."
+  },
+  {
+    "preferred": "საკრედიტო რეიტინგი",
+    "avoid": [],
+    "latin": "credit rating",
+    "note": "Quantified assessment of the creditworthiness of a borrower."
+  },
+  {
+    "preferred": "ემისიის პროსპექტი",
+    "avoid": [],
+    "latin": "issuance prospectus",
+    "note": "Formal legal document disclosing details about an investment offering for sale."
+  },
+  {
+    "preferred": "პირველადი საჯარო შეთავაზება",
+    "avoid": [],
+    "latin": "Initial Public Offering (IPO)",
+    "note": "Offering corporate shares to the public on a securities exchange."
+  },
+  {
+    "preferred": "მეორადი ბაზარი",
+    "avoid": [],
+    "latin": "secondary market",
+    "note": "Financial market where previously issued securities are bought and sold."
+  },
+  {
+    "preferred": "საბაზრო კაპიტალიზაცია",
+    "avoid": [],
+    "latin": "market capitalization",
+    "note": "Total market value of a publicly traded company's outstanding shares."
+  },
+  {
+    "preferred": "საფონდო ბირჟა",
+    "avoid": [],
+    "latin": "stock exchange",
+    "note": "Exchange where traders buy and sell shares of company stock. E.g. საქართველოს საფონდო ბირჟა."
+  },
+  {
+    "preferred": "შემოსავლიანობა",
+    "avoid": [],
+    "latin": "yield",
+    "note": "Earnings generated and realized on an investment over a particular period."
+  },
+  {
+    "preferred": "ინფლაციის სამიზნე მაჩვენებელი",
+    "avoid": [],
+    "latin": "inflation target",
+    "note": "Medium-term target rate maintained by the central bank (currently 3% in Georgia)."
+  },
+  {
+    "preferred": "სამომხმარებლო ფასების ინდექსი",
+    "avoid": [],
+    "latin": "Consumer Price Index (CPI)",
+    "note": "Statistical measure of changes in market basket prices: სფი (CPI)."
+  },
+  {
+    "preferred": "დეფლაცია",
+    "avoid": [],
+    "latin": "deflation",
+    "note": "Sustained decrease in the general price level of goods and services."
+  },
+  {
+    "preferred": "სტაგფლაცია",
+    "avoid": [],
+    "latin": "stagflation",
+    "note": "Coexistence of stagnant economic growth and high inflation."
+  },
+  {
+    "preferred": "დევალვაცია",
+    "avoid": [],
+    "latin": "devaluation",
+    "note": "Official downward adjustment of currency value in a fixed exchange rate regime."
+  },
+  {
+    "preferred": "გამყარება",
+    "avoid": [],
+    "latin": "appreciation",
+    "note": "Market-driven increase in the value of the national currency against foreign currencies."
+  },
+  {
+    "preferred": "გაუფასურება",
+    "avoid": [],
+    "latin": "depreciation",
+    "note": "Market-driven decrease in the value of the national currency."
+  },
+  {
+    "preferred": "ფულადი გზავნილები",
+    "avoid": [],
+    "latin": "remittances",
+    "note": "Inbound cross-border personal money transfers."
+  },
+  {
+    "preferred": "სალარო",
+    "avoid": [
+      "კასა"
+    ],
+    "latin": "cash desk / cash register",
+    "note": "'კასა' is a Russianism (касса)."
+  },
+  {
+    "preferred": "ნაღდი ფული",
+    "avoid": [
+      "ნალიჩნი"
+    ],
+    "latin": "cash",
+    "note": "Physical bank notes and coins. 'ნალიჩნი' is a Russianism (наличные)."
+  },
+  {
+    "preferred": "უნაღდო ანგარიშსწორება",
+    "avoid": [
+      "ბეზნალიჩნი"
+    ],
+    "latin": "cashless settlement",
+    "note": "Electronic or card payment. 'ბეზნალიჩნი' is a Russianism."
+  },
+  {
+    "preferred": "საკომისიო",
+    "avoid": [],
+    "latin": "commission / service fee",
+    "note": "Fee charged by a financial broker or bank for services."
+  },
+  {
+    "preferred": "ტრანზაქცია",
+    "avoid": [],
+    "latin": "transaction",
+    "note": "Completed financial agreement or transfer."
+  }
+]

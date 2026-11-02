@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "fixed": "დამატებითი ინფორმაციისთვის მიმართეთ სერვერის ძირითად მისამართს:\nhttps://api.sitech.ge/v2/resources?filter=active&sort=desc#section\nმოთხოვნის გაგზავნა შესაძლებელია როგორც GET, ისე POST მეთოდით.\nდეტალური ლოგები ხელმისაწვდომია მისამართზე https://monitor.sitech.ge/status/2026."
+}

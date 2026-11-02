@@ -1,0 +1,494 @@
+[
+  {
+    "preferred": "ჯანმრთელობის დაცვა",
+    "avoid": [],
+    "latin": "healthcare",
+    "note": "Constitutional and legal designation. The shortened compound 'ჯანდაცვა' is accepted in common prose and media."
+  },
+  {
+    "preferred": "პირველადი ჯანდაცვა",
+    "avoid": [],
+    "latin": "primary healthcare",
+    "note": "Frontline outpatient clinical services."
+  },
+  {
+    "preferred": "საყოველთაო ჯანდაცვის პროგრამა",
+    "avoid": [],
+    "latin": "Universal Healthcare Program",
+    "note": "State insurance coverage system in Georgia."
+  },
+  {
+    "preferred": "დაავადება",
+    "avoid": [
+      "ბალეზნი"
+    ],
+    "latin": "disease / illness",
+    "note": "'ბალეზნი' is a Russianism; correct Georgian is 'დაავადება'."
+  },
+  {
+    "preferred": "სიმპტომი",
+    "avoid": [
+      "პრიზნაკი"
+    ],
+    "latin": "symptom",
+    "note": "'პრიზნაკი' is a Russianism; correct medical term is 'სიმპტომი'."
+  },
+  {
+    "preferred": "სინდრომი",
+    "avoid": [],
+    "latin": "syndrome",
+    "note": "Recognizable complex of symptoms."
+  },
+  {
+    "preferred": "დიაგნოზი",
+    "avoid": [
+      "დიაგნოსტიკა"
+    ],
+    "latin": "diagnosis",
+    "note": "Formal medical conclusion. 'დიაგნოსტიკა' is the examination process, not the finding."
+  },
+  {
+    "preferred": "დიაგნოსტიკა",
+    "avoid": [],
+    "latin": "diagnostics / examination process",
+    "note": "Methods and procedures used to identify medical conditions."
+  },
+  {
+    "preferred": "დანიშნულება",
+    "avoid": [
+      "ნაზნაჩენიე"
+    ],
+    "latin": "prescription regimen / physician's order",
+    "note": "'ნაზნაჩენიე' is a Russianism; correct Georgian is 'დანიშნულება'."
+  },
+  {
+    "preferred": "რეცეპტი",
+    "avoid": [],
+    "latin": "prescription form",
+    "note": "Official document authorizing dispensing of prescription drugs."
+  },
+  {
+    "preferred": "მედიკამენტი",
+    "avoid": [
+      "ლეკარსტვო"
+    ],
+    "latin": "medication / pharmaceutical",
+    "note": "'ლეკარსტვო' is a Russianism; correct Georgian is 'მედიკამენტი' or 'წამალი'."
+  },
+  {
+    "preferred": "ანტიბიოტიკი",
+    "avoid": [
+      "ანტიბიოტიკები"
+    ],
+    "latin": "antibiotic",
+    "note": "Antimicrobial substance. Singular after numerals: '2 ანტიბიოტიკი'."
+  },
+  {
+    "preferred": "ანტივირუსული პრეპარატი",
+    "avoid": [],
+    "latin": "antiviral medication",
+    "note": "Class of medication used specifically for treating viral infections."
+  },
+  {
+    "preferred": "ტკივილგამაყუჩებელი",
+    "avoid": [
+      "ობეზბოლივაიუში"
+    ],
+    "latin": "analgesic / painkiller",
+    "note": "'ობეზბოლივაიუში' is a Russianism; correct Georgian is 'ტკივილგამაყუჩებელი'."
+  },
+  {
+    "preferred": "ვაქცინა",
+    "avoid": [
+      "პრივივკა"
+    ],
+    "latin": "vaccine",
+    "note": "'პრივივკა' is a Russianism; correct Georgian is 'ვაქცინა' (substance) or 'აცრა' (inoculation)."
+  },
+  {
+    "preferred": "ვაქცინაცია",
+    "avoid": [],
+    "latin": "vaccination",
+    "note": "Administration of a vaccine. Synonym: აცრა."
+  },
+  {
+    "preferred": "იმუნიზაცია",
+    "avoid": [],
+    "latin": "immunization",
+    "note": "Process whereby a person is made immune or resistant to an infectious disease."
+  },
+  {
+    "preferred": "იმუნიტეტი",
+    "avoid": [],
+    "latin": "immunity",
+    "note": "Physiological capacity to resist pathogen infection."
+  },
+  {
+    "preferred": "ანტისხეული",
+    "avoid": [
+      "ანტისხეულები"
+    ],
+    "latin": "antibody",
+    "note": "Blood protein counteracting specific antigens. Singular after numerals."
+  },
+  {
+    "preferred": "ინფექცია",
+    "avoid": [],
+    "latin": "infection",
+    "note": "Invasion of organism body tissues by disease-causing agents."
+  },
+  {
+    "preferred": "ვირუსი",
+    "avoid": [],
+    "latin": "virus",
+    "note": "Submicroscopic infectious agent replicating inside living cells."
+  },
+  {
+    "preferred": "ბაქტერია",
+    "avoid": [],
+    "latin": "bacterium",
+    "note": "Microscopic single-celled organism."
+  },
+  {
+    "preferred": "ანთება",
+    "avoid": [
+      "ვასპალენიე"
+    ],
+    "latin": "inflammation",
+    "note": "'ვასპალენიე' is a Russianism; correct Georgian is 'ანთება'."
+  },
+  {
+    "preferred": "პრევენცია",
+    "avoid": [
+      "პროფილაქტიკა"
+    ],
+    "latin": "prevention",
+    "note": "'პროფილაქტიკა' is an obsolete Sovietism in general health policy; standard modern term is 'პრევენცია'."
+  },
+  {
+    "preferred": "რეაბილიტაცია",
+    "avoid": [],
+    "latin": "rehabilitation",
+    "note": "Post-treatment restorative medical care."
+  },
+  {
+    "preferred": "ჰოსპიტალიზაცია",
+    "avoid": [],
+    "latin": "hospitalization",
+    "note": "Admission to hospital for clinical inpatient treatment."
+  },
+  {
+    "preferred": "სტაციონარული მკურნალობა",
+    "avoid": [],
+    "latin": "inpatient treatment",
+    "note": "Medical treatment requiring stay in a hospital ward."
+  },
+  {
+    "preferred": "ამბულატორიული მკურნალობა",
+    "avoid": [],
+    "latin": "outpatient care",
+    "note": "Medical treatment without overnight hospitalization."
+  },
+  {
+    "preferred": "გადაუდებელი სამედიცინო დახმარება",
+    "avoid": [
+      "სკორი"
+    ],
+    "latin": "emergency medical assistance",
+    "note": "'სკორი' is a Russianism (скорая); official term is 'გადაუდებელი სამედიცინო დახმარება' or 'სასწრაფო დახმარება'."
+  },
+  {
+    "preferred": "ინტენსიური თერაპია",
+    "avoid": [],
+    "latin": "intensive care (ICU)",
+    "note": "Specialized critical care unit. Colloquially: რეანიმაცია."
+  },
+  {
+    "preferred": "ქირურგიული ჩარევა",
+    "avoid": [],
+    "latin": "surgical intervention",
+    "note": "Invasive clinical operation. Synonym: ოპერაცია."
+  },
+  {
+    "preferred": "ანესთეზია",
+    "avoid": [
+      "ნარკოზი"
+    ],
+    "latin": "anesthesia",
+    "note": "'ნარკოზი' is colloquial; medical prose uses 'ანესთეზია' (ზოგადი/ადგილობრივი)."
+  },
+  {
+    "preferred": "არტერიული წნევა",
+    "avoid": [
+      "დავლენიე"
+    ],
+    "latin": "blood pressure",
+    "note": "'დავლენიე' is a Russianism; correct Georgian is 'არტერიული წნევა' or simply 'წნევა'."
+  },
+  {
+    "preferred": "სისხლში გლუკოზის დონე",
+    "avoid": [
+      "შაქარი სისხლში"
+    ],
+    "latin": "blood glucose level",
+    "note": "Clinical laboratory terminology; 'სისხლში შაქარი' is acceptable in informal dialogue."
+  },
+  {
+    "preferred": "სისხლის საერთო ანალიზი",
+    "avoid": [
+      "ობში ანალიზი"
+    ],
+    "latin": "complete blood count (CBC)",
+    "note": "'ობში ანალიზი' is a Russianism; standard medical term is 'სისხლის საერთო ანალიზი'."
+  },
+  {
+    "preferred": "შარდის საერთო ანალიზი",
+    "avoid": [],
+    "latin": "general urinalysis",
+    "note": "Routine laboratory test of urine parameters."
+  },
+  {
+    "preferred": "ბიოქიმიური ანალიზი",
+    "avoid": [],
+    "latin": "biochemical blood profile",
+    "note": "Clinical chemical analysis of blood serum constituents."
+  },
+  {
+    "preferred": "მაგნიტურ-რეზონანსული ტომოგრაფია",
+    "avoid": [
+      "ემერტე"
+    ],
+    "latin": "Magnetic Resonance Imaging (MRI)",
+    "note": "Acronym 'MRI' or full Georgian title. 'ემერტე' is a Russianism (МРТ)."
+  },
+  {
+    "preferred": "კომპიუტერული ტომოგრაფია",
+    "avoid": [
+      "კატე"
+    ],
+    "latin": "Computed Tomography (CT)",
+    "note": "'კატე' is a Russianism (КТ); write in full or use 'CT'."
+  },
+  {
+    "preferred": "რენტგენოგრაფია",
+    "avoid": [],
+    "latin": "radiography / X-ray",
+    "note": "Colloquially: რენტგენი."
+  },
+  {
+    "preferred": "ულტრაბგერითი გამოკვლევა",
+    "avoid": [
+      "უზი"
+    ],
+    "latin": "ultrasonography",
+    "note": "'უზი' is a Russianism (УЗИ); correct terms are 'ულტრაბგერითი გამოკვლევა' or 'ექოსკოპია'."
+  },
+  {
+    "preferred": "ექიმი",
+    "avoid": [
+      "ვრაჩი"
+    ],
+    "latin": "physician / medical doctor",
+    "note": "'ვრაჩი' is a Russianism; standard Georgian is 'ექიმი'."
+  },
+  {
+    "preferred": "მკურნალი ექიმი",
+    "avoid": [
+      "ლეჩაშჩი ვრაჩი"
+    ],
+    "latin": "attending physician",
+    "note": "'ლეჩაშჩი ვრაჩი' is a Russianism; correct Georgian is 'მკურნალი ექიმი'."
+  },
+  {
+    "preferred": "ექთანი",
+    "avoid": [
+      "მედსესტრა"
+    ],
+    "latin": "nurse",
+    "note": "'მედსესტრა' is a Russianism; standard Georgian is 'ექთანი'."
+  },
+  {
+    "preferred": "სანიტარი",
+    "avoid": [],
+    "latin": "hospital orderly",
+    "note": "Hospital assistant supporting ward sanitation and patient care."
+  },
+  {
+    "preferred": "პაციენტი",
+    "avoid": [
+      "ბალნოი"
+    ],
+    "latin": "patient",
+    "note": "'ბალნოი' is a Russianism; standard Georgian is 'პაციენტი'."
+  },
+  {
+    "preferred": "ქრონიკული დაავადება",
+    "avoid": [],
+    "latin": "chronic disease",
+    "note": "Long-lasting medical condition."
+  },
+  {
+    "preferred": "მწვავე დაავადება",
+    "avoid": [],
+    "latin": "acute disease",
+    "note": "Disease characterized by sudden onset and rapid progression."
+  },
+  {
+    "preferred": "გადამდები დაავადება",
+    "avoid": [
+      "ზარაზნი"
+    ],
+    "latin": "contagious / communicable disease",
+    "note": "'ზარაზნი' is a Russianism; correct Georgian is 'გადამდები' or 'ინფექციური'."
+  },
+  {
+    "preferred": "გულ-სისხლძარღვთა დაავადებები",
+    "avoid": [],
+    "latin": "cardiovascular diseases",
+    "note": "Disorders of the heart and blood vessels."
+  },
+  {
+    "preferred": "შაქრიანი დიაბეტი",
+    "avoid": [
+      "სახარნი დიაბეტი"
+    ],
+    "latin": "diabetes mellitus",
+    "note": "'სახარნი დიაბეტი' is a Russianism; correct Georgian is 'შაქრიანი დიაბეტი'."
+  },
+  {
+    "preferred": "ავთვისებიანი სიმსივნე",
+    "avoid": [
+      "ზლოკაჩესტვენი"
+    ],
+    "latin": "malignant tumor / cancer",
+    "note": "'ზლოკაჩესტვენი' is a Russianism; correct medical term is 'ავთვისებიანი სიმსივნე'."
+  },
+  {
+    "preferred": "კეთილთვისებიანი სიმსივნე",
+    "avoid": [
+      "დაბროკაჩესტვენი"
+    ],
+    "latin": "benign tumor",
+    "note": "'დაბროკაჩესტვენი' is a Russianism; correct medical term is 'კეთილთვისებიანი სიმსივნე'."
+  },
+  {
+    "preferred": "მეტასტაზი",
+    "avoid": [],
+    "latin": "metastasis",
+    "note": "Secondary malignant growth spreading away from primary site."
+  },
+  {
+    "preferred": "ქიმიოთერაპია",
+    "avoid": [],
+    "latin": "chemotherapy",
+    "note": "Drug treatment using powerful chemicals to destroy cancer cells."
+  },
+  {
+    "preferred": "სხივური თერაპია",
+    "avoid": [],
+    "latin": "radiotherapy / radiation therapy",
+    "note": "Cancer treatment using high doses of ionizing radiation."
+  },
+  {
+    "preferred": "ალერგია",
+    "avoid": [],
+    "latin": "allergy",
+    "note": "Hypersensitive immune reaction to foreign substances."
+  },
+  {
+    "preferred": "გვერდითი მოვლენა",
+    "avoid": [
+      "პაბოჩნი ეფექტი"
+    ],
+    "latin": "side effect",
+    "note": "'პაბოჩნი ეფექტი' is a Russianism; correct Georgian is 'გვერდითი მოვლენა'."
+  },
+  {
+    "preferred": "უკუჩვენება",
+    "avoid": [
+      "პროტივაპაკაზანიე"
+    ],
+    "latin": "contraindication",
+    "note": "'პროტივაპაკაზანიე' is a Russianism; correct Georgian is 'უკუჩვენება'."
+  },
+  {
+    "preferred": "ჩვენება",
+    "avoid": [
+      "პაკაზანიე"
+    ],
+    "latin": "indication",
+    "note": "'პაკაზანიე' is a Russianism; in clinical context the correct term is 'ჩვენება'."
+  },
+  {
+    "preferred": "დოზირება",
+    "avoid": [
+      "დოზაჟი"
+    ],
+    "latin": "dosage",
+    "note": "'დოზაჟი' is a clumsy Russian/French loanword; correct Georgian is 'დოზირება'."
+  },
+  {
+    "preferred": "გადაჭარბებული დოზა",
+    "avoid": [
+      "პერედოზირება"
+    ],
+    "latin": "overdose",
+    "note": "'პერედოზირება' is a Russianism; correct Georgian is 'გადაჭარბებული დოზა'."
+  },
+  {
+    "preferred": "ტრავმა",
+    "avoid": [],
+    "latin": "physical trauma / injury",
+    "note": "Physical wound or damage inflicted upon the body."
+  },
+  {
+    "preferred": "მოტეხილობა",
+    "avoid": [
+      "პერელომი"
+    ],
+    "latin": "bone fracture",
+    "note": "'პერელომი' is a Russianism; correct Georgian is 'მოტეხილობა'."
+  },
+  {
+    "preferred": "დაჟეჟილობა",
+    "avoid": [
+      "უშიბი"
+    ],
+    "latin": "contusion / bruise",
+    "note": "'უშიბი' is a Russianism; correct Georgian is 'დაჟეჟილობა'."
+  },
+  {
+    "preferred": "დამწვრობა",
+    "avoid": [
+      "აჟოგი"
+    ],
+    "latin": "burn injury",
+    "note": "'აჟოგი' is a Russianism; correct Georgian is 'დამწვრობა'."
+  },
+  {
+    "preferred": "მოწამვლა",
+    "avoid": [
+      "ატრავალენიე"
+    ],
+    "latin": "poisoning / intoxication",
+    "note": "'ატრავალენიე' is a Russianism; correct Georgian is 'მოწამვლა' or clinical 'ინტოქსიკაცია'."
+  },
+  {
+    "preferred": "კარანტინი",
+    "avoid": [],
+    "latin": "quarantine",
+    "note": "Strict isolation imposed to prevent the spread of infectious disease."
+  },
+  {
+    "preferred": "ეპიდემია",
+    "avoid": [],
+    "latin": "epidemic",
+    "note": "Widespread occurrence of an infectious disease in a community."
+  },
+  {
+    "preferred": "პანდემია",
+    "avoid": [],
+    "latin": "pandemic",
+    "note": "Epidemic of infectious disease that spreads across entire continents or worldwide."
+  }
+]

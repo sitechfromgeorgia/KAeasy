@@ -1,0 +1,992 @@
+[
+  {
+    "preferred": "მოდელი",
+    "avoid": [
+      "მოდელკა"
+    ],
+    "latin": "model",
+    "note": "Core machine learning or statistical model."
+  },
+  {
+    "preferred": "ზუსტი მორგება",
+    "avoid": [
+      "ფაინტუნინგი"
+    ],
+    "latin": "fine-tuning",
+    "note": "Adapting a pre-trained model on specialized data. Technical jargon 'ფაინ-ტიუნინგი' is also used."
+  },
+  {
+    "preferred": "ინფერენსი",
+    "avoid": [],
+    "latin": "inference",
+    "note": "Executing a trained model. Also expressed as 'მოდელის გაშვება' or 'დასკვნის გამოტანა'."
+  },
+  {
+    "preferred": "პრომპტი",
+    "avoid": [
+      "პრომტი"
+    ],
+    "latin": "prompt",
+    "note": "Input instruction or query given to a generative model. Always spelled with p-t (პტ)."
+  },
+  {
+    "preferred": "ტოკენი",
+    "avoid": [],
+    "latin": "token",
+    "note": "Sub-word or text fragment in NLP processing."
+  },
+  {
+    "preferred": "ღია კოდის",
+    "avoid": [
+      "ოპენსორსი",
+      "ღია წყარო"
+    ],
+    "latin": "open source",
+    "note": "Software or model with publicly accessible source code: 'ღია კოდის მქონე'."
+  },
+  {
+    "preferred": "ჩიპი",
+    "avoid": [],
+    "latin": "chip",
+    "note": "Integrated circuit or semiconductor microchip. Synonym: მიკროსქემა."
+  },
+  {
+    "preferred": "ღრუბლოვანი სერვისი",
+    "avoid": [
+      "ღრუბელი"
+    ],
+    "latin": "cloud / cloud service",
+    "note": "Cloud infrastructure. Do not use bare 'ღრუბელი' without technical context."
+  },
+  {
+    "preferred": "ხელოვნური ინტელექტი",
+    "avoid": [],
+    "latin": "artificial intelligence (AI)",
+    "note": "First mention in full: 'ხელოვნური ინტელექტი (AI)', subsequent mentions as 'AI'."
+  },
+  {
+    "preferred": "მანქანური სწავლება",
+    "avoid": [
+      "მანქანური დასწავლა",
+      "მაშინ ლერნინგი"
+    ],
+    "latin": "machine learning (ML)",
+    "note": "Field of study giving computers ability to learn without explicit programming."
+  },
+  {
+    "preferred": "ღრმა სწავლება",
+    "avoid": [
+      "ღრმა დასწავლა",
+      "დიპ ლერნინგი"
+    ],
+    "latin": "deep learning (DL)",
+    "note": "Subset of ML based on multi-layered neural networks."
+  },
+  {
+    "preferred": "ნეირონული ქსელი",
+    "avoid": [
+      "ნეიროქსელი"
+    ],
+    "latin": "neural network",
+    "note": "Computational system modeled on biological neural networks."
+  },
+  {
+    "preferred": "დიდი ენობრივი მოდელი",
+    "avoid": [
+      "დიდი ენის მოდელი"
+    ],
+    "latin": "large language model (LLM)",
+    "note": "Acronym LLM may follow in parentheses on first mention."
+  },
+  {
+    "preferred": "მცირე ენობრივი მოდელი",
+    "avoid": [],
+    "latin": "small language model (SLM)",
+    "note": "Resource-efficient language model."
+  },
+  {
+    "preferred": "საბაზისო მოდელი",
+    "avoid": [],
+    "latin": "foundation model",
+    "note": "Broadly trained model adapted to various downstream tasks."
+  },
+  {
+    "preferred": "მოწინავე მოდელი",
+    "avoid": [],
+    "latin": "frontier model",
+    "note": "State-of-the-art model at the boundary of AI capabilities."
+  },
+  {
+    "preferred": "მსჯელობის მოდელი",
+    "avoid": [],
+    "latin": "reasoning model",
+    "note": "Model trained specifically for step-by-step logical reasoning."
+  },
+  {
+    "preferred": "მოდელის წვრთნა",
+    "avoid": [
+      "ტრენინგი"
+    ],
+    "latin": "training",
+    "note": "Computational optimization of parameters on training data. Also 'სწავლება'."
+  },
+  {
+    "preferred": "წინასწარი წვრთნა",
+    "avoid": [],
+    "latin": "pre-training",
+    "note": "Initial training phase on large unannotated corpora."
+  },
+  {
+    "preferred": "შემდგომი წვრთნა",
+    "avoid": [],
+    "latin": "post-training",
+    "note": "Post-pretraining phase including alignment, SFT, and RLHF."
+  },
+  {
+    "preferred": "წონები",
+    "avoid": [],
+    "latin": "weights",
+    "note": "Learned internal parameters of neural network layers."
+  },
+  {
+    "preferred": "პარამეტრები",
+    "avoid": [],
+    "latin": "parameters",
+    "note": "Configurable or learned variables in a mathematical model."
+  },
+  {
+    "preferred": "ვექტორული ჩანერგვა",
+    "avoid": [],
+    "latin": "embeddings",
+    "note": "Vector representation of semantic tokens. Plural: 'ემბედინგები'."
+  },
+  {
+    "preferred": "ვექტორული მონაცემთა ბაზა",
+    "avoid": [],
+    "latin": "vector database",
+    "note": "Specialized database indexing high-dimensional embeddings."
+  },
+  {
+    "preferred": "ძიებით გამდიდრებული გენერაცია",
+    "avoid": [],
+    "latin": "retrieval-augmented generation (RAG)",
+    "note": "First mention in full; acronym 'RAG' used subsequently."
+  },
+  {
+    "preferred": "ჰალუცინაცია",
+    "avoid": [],
+    "latin": "hallucination",
+    "note": "Plausible but ungrounded or factually incorrect generation by LLM."
+  },
+  {
+    "preferred": "კონტექსტის ფანჯარა",
+    "avoid": [],
+    "latin": "context window",
+    "note": "Maximum token capacity a model can process in one call."
+  },
+  {
+    "preferred": "კონტექსტის სიგრძე",
+    "avoid": [],
+    "latin": "context length",
+    "note": "Token count in context window."
+  },
+  {
+    "preferred": "ტემპერატურა",
+    "avoid": [],
+    "latin": "temperature",
+    "note": "Hyperparameter controlling randomness of token selection."
+  },
+  {
+    "preferred": "დაყოვნება",
+    "avoid": [
+      "ლატენტურობა"
+    ],
+    "latin": "latency",
+    "note": "Time taken from request dispatch to response arrival."
+  },
+  {
+    "preferred": "გამტარუნარიანობა",
+    "avoid": [],
+    "latin": "throughput",
+    "note": "Volume of tokens or requests processed per second."
+  },
+  {
+    "preferred": "ბენჩმარკი",
+    "avoid": [],
+    "latin": "benchmark",
+    "note": "Standardized evaluation test suite. Synonym: საორიენტაციო ტესტი."
+  },
+  {
+    "preferred": "მონაცემთა ნაკრები",
+    "avoid": [
+      "დატასეტი"
+    ],
+    "latin": "dataset",
+    "note": "Curated collection of training or testing data."
+  },
+  {
+    "preferred": "ნულოვანი გადაცემით სწავლება",
+    "avoid": [],
+    "latin": "zero-shot learning",
+    "note": "Performing a task without task-specific training examples. Also 'zero-shot სწავლება'."
+  },
+  {
+    "preferred": "რამდენიმე მაგალითით მითითება",
+    "avoid": [],
+    "latin": "few-shot prompting",
+    "note": "Supplying several demonstration exemplars inside the prompt."
+  },
+  {
+    "preferred": "ერთმაგალითიანი სწავლება",
+    "avoid": [],
+    "latin": "one-shot learning",
+    "note": "Learning or prompting with exactly one demonstration."
+  },
+  {
+    "preferred": "განმტკიცებითი სწავლება",
+    "avoid": [
+      "რეინფორსმენტ ლერნინგი"
+    ],
+    "latin": "reinforcement learning (RL)",
+    "note": "Agent learning optimal policies through environmental rewards and penalties."
+  },
+  {
+    "preferred": "განმტკიცებითი სწავლება ადამიანის უკუკავშირით",
+    "avoid": [],
+    "latin": "RLHF",
+    "note": "Reinforcement learning from human feedback."
+  },
+  {
+    "preferred": "პირდაპირი პრეფერენციული ოპტიმიზაცია",
+    "avoid": [],
+    "latin": "direct preference optimization (DPO)",
+    "note": "Alignment without training a separate reward model."
+  },
+  {
+    "preferred": "ტრანსფორმერი",
+    "avoid": [],
+    "latin": "transformer",
+    "note": "Neural network architecture based on self-attention mechanisms."
+  },
+  {
+    "preferred": "ყურადღების მექანიზმი",
+    "avoid": [],
+    "latin": "attention mechanism",
+    "note": "Mathematical mechanism weighing dynamic relevance of tokens."
+  },
+  {
+    "preferred": "თვითყურადღება",
+    "avoid": [],
+    "latin": "self-attention",
+    "note": "Attention applied within the same sequence."
+  },
+  {
+    "preferred": "ჯვარედინი ყურადღება",
+    "avoid": [],
+    "latin": "cross-attention",
+    "note": "Attention mapping between two distinct sequences (e.g. text to image)."
+  },
+  {
+    "preferred": "კვანტიზაცია",
+    "avoid": [],
+    "latin": "quantization",
+    "note": "Reducing numerical precision of model weights (e.g. FP16 to INT8/INT4)."
+  },
+  {
+    "preferred": "გასხვლა",
+    "avoid": [],
+    "latin": "pruning",
+    "note": "Removing redundant weights or attention heads from a neural net. Also 'შეკვეცა'."
+  },
+  {
+    "preferred": "მოდელის დისტილაცია",
+    "avoid": [],
+    "latin": "model distillation",
+    "note": "Training a compact student model on outputs of a larger teacher model."
+  },
+  {
+    "preferred": "მულტიმოდალური",
+    "avoid": [
+      "მრავალმოდალური"
+    ],
+    "latin": "multimodal",
+    "note": "Processing multiple sensory modes (text, audio, vision)."
+  },
+  {
+    "preferred": "დიფუზიური მოდელი",
+    "avoid": [],
+    "latin": "diffusion model",
+    "note": "Generative model based on iterative denoising processes."
+  },
+  {
+    "preferred": "გენერაციული ხელოვნური ინტელექტი",
+    "avoid": [],
+    "latin": "generative AI",
+    "note": "AI synthesizing novel content (text, audio, image, code)."
+  },
+  {
+    "preferred": "კომპიუტერული ხედვა",
+    "avoid": [],
+    "latin": "computer vision",
+    "note": "AI processing and understanding visual imagery."
+  },
+  {
+    "preferred": "ბუნებრივი ენის დამუშავება",
+    "avoid": [
+      "ნატურალური ენის დამუშავება"
+    ],
+    "latin": "natural language processing (NLP)",
+    "note": "'ნატურალური ენის დამუშავება' is a Russianism."
+  },
+  {
+    "preferred": "ბუნებრივი ენის გააზრება",
+    "avoid": [],
+    "latin": "natural language understanding (NLU)",
+    "note": "Subfield of NLP focusing on machine comprehension."
+  },
+  {
+    "preferred": "ბუნებრივი ენის გენერაცია",
+    "avoid": [],
+    "latin": "natural language generation (NLG)",
+    "note": "Synthesizing coherent human-readable text."
+  },
+  {
+    "preferred": "მეტყველების ტექსტად გარდაქმნა",
+    "avoid": [],
+    "latin": "speech-to-text (STT)",
+    "note": "Automated speech recognition (ASR)."
+  },
+  {
+    "preferred": "ტექსტის გახმოვანება",
+    "avoid": [],
+    "latin": "text-to-speech (TTS)",
+    "note": "Neural speech synthesis. Also 'მეტყველებად გარდაქმნა'."
+  },
+  {
+    "preferred": "ტექსტის გამოსახულებად გარდაქმნა",
+    "avoid": [],
+    "latin": "text-to-image (T2I)",
+    "note": "Synthesizing graphics from natural language prompts."
+  },
+  {
+    "preferred": "ტექსტის ვიდეოდ გარდაქმნა",
+    "avoid": [],
+    "latin": "text-to-video (T2V)",
+    "note": "Synthesizing video clips from prompt instructions."
+  },
+  {
+    "preferred": "გამოსახულების ვიდეოდ გარდაქმნა",
+    "avoid": [],
+    "latin": "image-to-video (I2V)",
+    "note": "Animating static input images into coherent video sequences."
+  },
+  {
+    "preferred": "ავტონომიური აგენტი",
+    "avoid": [],
+    "latin": "autonomous agent",
+    "note": "Entity perceiving environment and taking actions to reach assigned goals."
+  },
+  {
+    "preferred": "მრავალაგენტიანი სისტემა",
+    "avoid": [],
+    "latin": "multi-agent system",
+    "note": "Orchestration of collaborative or specialized autonomous agents."
+  },
+  {
+    "preferred": "მსჯელობის ჯაჭვი",
+    "avoid": [],
+    "latin": "chain-of-thought (CoT)",
+    "note": "Decomposing complex queries into intermediate reasoning steps."
+  },
+  {
+    "preferred": "აზრთა ხე",
+    "avoid": [],
+    "latin": "tree-of-thoughts (ToT)",
+    "note": "Exploration of multiple branching reasoning paths."
+  },
+  {
+    "preferred": "გადამეტებული მორგება",
+    "avoid": [
+      "გადამეტებული გადამზადება",
+      "ოვერფიტინგი"
+    ],
+    "latin": "overfitting",
+    "note": "Model fits training noise and generalizes poorly to unseen data."
+  },
+  {
+    "preferred": "არასაკმარისი მორგება",
+    "avoid": [],
+    "latin": "underfitting",
+    "note": "Model fails to capture underlying patterns in training data."
+  },
+  {
+    "preferred": "მიკერძოებულობა",
+    "avoid": [
+      "ბიასი"
+    ],
+    "latin": "bias",
+    "note": "Systematic skew or prejudice in training data and model outputs."
+  },
+  {
+    "preferred": "დისპერსია",
+    "avoid": [],
+    "latin": "variance",
+    "note": "Sensitivity of model predictions to fluctuations in training sets."
+  },
+  {
+    "preferred": "თანხვედრა",
+    "avoid": [],
+    "latin": "alignment",
+    "note": "Ensuring model behaviors align with human intent and ethical values. Also 'მორგება'."
+  },
+  {
+    "preferred": "უსაფრთხოების ზღუდეები",
+    "avoid": [],
+    "latin": "safety guardrails",
+    "note": "Programmatic filters and checks preventing hazardous outputs."
+  },
+  {
+    "preferred": "ჩატბოტი",
+    "avoid": [
+      "ჩატ ბოტი"
+    ],
+    "latin": "chatbot",
+    "note": "One word in Georgian: ჩატბოტი."
+  },
+  {
+    "preferred": "დამუშავების ეტაპები",
+    "avoid": [],
+    "latin": "pipeline",
+    "note": "Sequence of connected data processing stages. In technical code: 'პაიპლაინი'."
+  },
+  {
+    "preferred": "ფრონტენდი",
+    "avoid": [
+      "წინა მხარე"
+    ],
+    "latin": "frontend",
+    "note": "Client-side user presentation layer."
+  },
+  {
+    "preferred": "ბექენდი",
+    "avoid": [
+      "უკანა მხარე"
+    ],
+    "latin": "backend",
+    "note": "Server-side business logic and database persistence layer."
+  },
+  {
+    "preferred": "აპლიკაციის პროგრამული ინტერფეისი",
+    "avoid": [],
+    "latin": "API",
+    "note": "Contract for inter-program communication. Common acronym: 'API'."
+  },
+  {
+    "preferred": "ფრეიმვორკი",
+    "avoid": [],
+    "latin": "framework",
+    "note": "Standardized software platform or skeleton architecture."
+  },
+  {
+    "preferred": "რეპოზიტორია",
+    "avoid": [],
+    "latin": "repository",
+    "note": "Storage location for software packages or source code. Synonym: საცავი."
+  },
+  {
+    "preferred": "ღია წონები",
+    "avoid": [],
+    "latin": "open weights",
+    "note": "Models releasing neural network weights publicly."
+  },
+  {
+    "preferred": "დახურული კოდის",
+    "avoid": [],
+    "latin": "closed source",
+    "note": "Proprietary software with non-public source code."
+  },
+  {
+    "preferred": "საკუთრებითი",
+    "avoid": [],
+    "latin": "proprietary",
+    "note": "Commercial technology owned exclusively by a single enterprise."
+  },
+  {
+    "preferred": "პერიფერიული გამოთვლები",
+    "avoid": [],
+    "latin": "edge computing",
+    "note": "Computing performed locally on client devices rather than centralized clouds."
+  },
+  {
+    "preferred": "ქეშირება",
+    "avoid": [
+      "დაქეშვა"
+    ],
+    "latin": "caching",
+    "note": "Storing copies of data in rapid transient storage."
+  },
+  {
+    "preferred": "აპარატურული ამაჩქარებელი",
+    "avoid": [],
+    "latin": "hardware accelerator",
+    "note": "Specialized silicon speeding up numerical workloads."
+  },
+  {
+    "preferred": "გრაფიკული პროცესორი",
+    "avoid": [],
+    "latin": "GPU",
+    "note": "Graphics processing unit. Abbreviation 'GPU' hyphenated in Georgian (GPU-ები)."
+  },
+  {
+    "preferred": "ტენზორული პროცესორი",
+    "avoid": [],
+    "latin": "TPU",
+    "note": "Google-designed ASIC accelerator for tensor calculations."
+  },
+  {
+    "preferred": "ნეირონული პროცესორი",
+    "avoid": [],
+    "latin": "NPU",
+    "note": "Neural processing unit designed for on-device inference."
+  },
+  {
+    "preferred": "ცენტრალური პროცესორი",
+    "avoid": [],
+    "latin": "CPU",
+    "note": "Main execution engine of a computer."
+  },
+  {
+    "preferred": "მეხსიერების გამტარუნარიანობა",
+    "avoid": [],
+    "latin": "memory bandwidth",
+    "note": "Rate at which data can be read from or stored into semiconductor memory."
+  },
+  {
+    "preferred": "გამოთვლითი კლასტერი",
+    "avoid": [],
+    "latin": "compute cluster",
+    "note": "Interconnected group of compute servers acting as a single resource."
+  },
+  {
+    "preferred": "მონაცემთა ცენტრი",
+    "avoid": [],
+    "latin": "data center",
+    "note": "Facility housing networked computer servers and enterprise storage systems."
+  },
+  {
+    "preferred": "სერვერი",
+    "avoid": [],
+    "latin": "server",
+    "note": "Computer program or device providing service to clients."
+  },
+  {
+    "preferred": "მონაცემთა ბაზა",
+    "avoid": [],
+    "latin": "database",
+    "note": "Structured set of data held in a computer."
+  },
+  {
+    "preferred": "პროგრამული უზრუნველყოფა",
+    "avoid": [],
+    "latin": "software",
+    "note": "Programs and operating information used by a computer."
+  },
+  {
+    "preferred": "აპარატურული უზრუნველყოფა",
+    "avoid": [],
+    "latin": "hardware",
+    "note": "Physical components of a computer system."
+  },
+  {
+    "preferred": "მიკროპროგრამული უზრუნველყოფა",
+    "avoid": [],
+    "latin": "firmware",
+    "note": "Permanent software programmed into read-only memory."
+  },
+  {
+    "preferred": "ალგორითმი",
+    "avoid": [],
+    "latin": "algorithm",
+    "note": "Step-by-step procedure for solving a computational problem."
+  },
+  {
+    "preferred": "დანაკარგის ფუნქცია",
+    "avoid": [],
+    "latin": "loss function",
+    "note": "Mathematical objective function measuring model error during training."
+  },
+  {
+    "preferred": "გრადიენტული დაშვება",
+    "avoid": [],
+    "latin": "gradient descent",
+    "note": "First-order iterative optimization algorithm for finding a local minimum."
+  },
+  {
+    "preferred": "უკუგავრცელება",
+    "avoid": [],
+    "latin": "backpropagation",
+    "note": "Backward pass algorithm calculating gradient of loss function with respect to weights."
+  },
+  {
+    "preferred": "სწავლის სიჩქარე",
+    "avoid": [],
+    "latin": "learning rate",
+    "note": "Step size hyperparameter in gradient descent."
+  },
+  {
+    "preferred": "პაკეტის ზომა",
+    "avoid": [],
+    "latin": "batch size",
+    "note": "Number of training samples evaluated in one forward/backward pass."
+  },
+  {
+    "preferred": "ეპოქა",
+    "avoid": [],
+    "latin": "epoch",
+    "note": "One complete pass through the entirety of a training dataset."
+  },
+  {
+    "preferred": "საკონტროლო წერტილი",
+    "avoid": [],
+    "latin": "checkpoint",
+    "note": "Saved snapshot of model weights during training."
+  },
+  {
+    "preferred": "პრომპტ-ინჟინერია",
+    "avoid": [
+      "პრომტ ინჟინერია"
+    ],
+    "latin": "prompt engineering",
+    "note": "Structuring and optimizing prompt instructions for generative models."
+  },
+  {
+    "preferred": "სისტემური პრომპტი",
+    "avoid": [
+      "სისტემური პრომტი"
+    ],
+    "latin": "system prompt",
+    "note": "High-priority instructions setting persona and boundaries for an LLM."
+  },
+  {
+    "preferred": "მომხმარებლის პრომპტი",
+    "avoid": [
+      "იუზერ პრომპტი"
+    ],
+    "latin": "user prompt",
+    "note": "Turn query or instruction issued by the end-user."
+  },
+  {
+    "preferred": "ასისტენტის პასუხი",
+    "avoid": [],
+    "latin": "assistant response",
+    "note": "Generation delivered back by conversational agent."
+  },
+  {
+    "preferred": "კონტექსტის შეყვანა",
+    "avoid": [],
+    "latin": "context injection",
+    "note": "Passing dynamic grounding data into the prompt payload."
+  },
+  {
+    "preferred": "ფაქტობრივი დაფუძნება",
+    "avoid": [],
+    "latin": "grounding",
+    "note": "Anchoring model outputs in verifiable retrieval sources. Technical: გრაუნდინგი."
+  },
+  {
+    "preferred": "სემანტიკური ძიება",
+    "avoid": [],
+    "latin": "semantic search",
+    "note": "Searching by conceptual meaning rather than literal keyword matches."
+  },
+  {
+    "preferred": "მსგავსების მიხედვით ძიება",
+    "avoid": [],
+    "latin": "similarity search",
+    "note": "Nearest neighbor query in high-dimensional vector spaces."
+  },
+  {
+    "preferred": "კოსინუსური მსგავსება",
+    "avoid": [],
+    "latin": "cosine similarity",
+    "note": "Metric measuring cosine of the angle between two non-zero vectors."
+  },
+  {
+    "preferred": "ვექტორული სივრცე",
+    "avoid": [],
+    "latin": "vector space",
+    "note": "Mathematical space in which vectors can be combined and scaled."
+  },
+  {
+    "preferred": "განზომილება",
+    "avoid": [],
+    "latin": "dimension",
+    "note": "Vector dimensionality representing features."
+  },
+  {
+    "preferred": "სინთეზური მონაცემები",
+    "avoid": [],
+    "latin": "synthetic data",
+    "note": "Artificially generated training data produced by computer simulations or AI."
+  },
+  {
+    "preferred": "მონაცემთა მარკირება",
+    "avoid": [],
+    "latin": "data labeling",
+    "note": "Attaching ground truth labels to raw data."
+  },
+  {
+    "preferred": "ანოტაცია",
+    "avoid": [],
+    "latin": "annotation",
+    "note": "Detailed semantic tagging of training samples."
+  },
+  {
+    "preferred": "ზედამხედველობითი სწავლება",
+    "avoid": [],
+    "latin": "supervised learning",
+    "note": "ML paradigm using labeled input-output pairs."
+  },
+  {
+    "preferred": "ზედამხედველობის გარეშე სწავლება",
+    "avoid": [],
+    "latin": "unsupervised learning",
+    "note": "ML paradigm finding inherent clusters and patterns without target labels."
+  },
+  {
+    "preferred": "თვითზედამხედველობითი სწავლება",
+    "avoid": [],
+    "latin": "self-supervised learning",
+    "note": "Training where supervisory signals are derived directly from the unannotated data."
+  },
+  {
+    "preferred": "ტრანსფერული სწავლება",
+    "avoid": [],
+    "latin": "transfer learning",
+    "note": "Applying knowledge acquired in one problem domain to a different one."
+  },
+  {
+    "preferred": "აქტიური სწავლება",
+    "avoid": [],
+    "latin": "active learning",
+    "note": "Algorithm interactively querying human annotators for new labels."
+  },
+  {
+    "preferred": "პრომპტის ინექცია",
+    "avoid": [
+      "პრომტ ინექცია"
+    ],
+    "latin": "prompt injection",
+    "note": "Adversarial exploit manipulating prompt instructions to bypass guardrails."
+  },
+  {
+    "preferred": "დაცვის გარღვევა",
+    "avoid": [],
+    "latin": "jailbreak",
+    "note": "Bypassing safety alignment constraints in an LLM. Also 'ჯეილბრეიკი'."
+  },
+  {
+    "preferred": "შეტაკებითი შეტევა",
+    "avoid": [],
+    "latin": "adversarial attack",
+    "note": "Deliberately crafting perturbed inputs designed to deceive an ML model."
+  },
+  {
+    "preferred": "ციფრული წყლის ნიშანი",
+    "avoid": [],
+    "latin": "watermarking",
+    "note": "Embedding invisible cryptographic or statistical markers into generated media."
+  },
+  {
+    "preferred": "წითელი გუნდის შემოწმება",
+    "avoid": [],
+    "latin": "red teaming",
+    "note": "Structured adversarial testing to uncover vulnerabilities. Also 'რედ-თიმინგი'."
+  },
+  {
+    "preferred": "შეფასება",
+    "avoid": [],
+    "latin": "evaluation",
+    "note": "Assessing model accuracy, bias, and performance against benchmark standards. Also 'ევალუაცია'."
+  },
+  {
+    "preferred": "ლიდერბორდი",
+    "avoid": [],
+    "latin": "leaderboard",
+    "note": "Comparative ranking board for models on specific benchmarks. Also 'რეიტინგის დაფა'."
+  },
+  {
+    "preferred": "პარამეტრულად ეფექტიანი ზუსტი მორგება",
+    "avoid": [],
+    "latin": "PEFT",
+    "note": "Parameter-efficient fine-tuning."
+  },
+  {
+    "preferred": "დაბალი რანგის ადაპტაცია",
+    "avoid": [],
+    "latin": "LoRA",
+    "note": "Low-rank adaptation: freezing weights and injecting trainable rank decomposition matrices."
+  },
+  {
+    "preferred": "ექსპერტთა ნაზავი",
+    "avoid": [],
+    "latin": "mixture of experts (MoE)",
+    "note": "Sparse architecture routing tokens to specialized expert sub-networks."
+  },
+  {
+    "preferred": "top-k შერჩევა",
+    "avoid": [],
+    "latin": "top-k sampling",
+    "note": "Restricting next-token sampling to the k highest-probability candidates."
+  },
+  {
+    "preferred": "top-p შერჩევა",
+    "avoid": [],
+    "latin": "top-p sampling (nucleus)",
+    "note": "Restricting sampling to smallest candidate pool whose cumulative probability exceeds p."
+  },
+  {
+    "preferred": "ხარბი დეკოდირება",
+    "avoid": [],
+    "latin": "greedy decoding",
+    "note": "Deterministically selecting token with highest probability at each step."
+  },
+  {
+    "preferred": "სხივური ძიება",
+    "avoid": [],
+    "latin": "beam search",
+    "note": "Heuristic search algorithm maintaining a predetermined number of best candidate paths."
+  },
+  {
+    "preferred": "ავტოენკოდერი",
+    "avoid": [],
+    "latin": "autoencoder",
+    "note": "Neural network trained to compress and reconstruct its own inputs."
+  },
+  {
+    "preferred": "ენკოდერ-დეკოდერი",
+    "avoid": [],
+    "latin": "encoder-decoder",
+    "note": "Sequence-to-sequence model structure (e.g. original T5)."
+  },
+  {
+    "preferred": "მხოლოდ დეკოდერი",
+    "avoid": [],
+    "latin": "decoder-only",
+    "note": "Autoregressive architecture characteristic of modern LLMs (e.g. GPT, LLaMA)."
+  },
+  {
+    "preferred": "მხოლოდ ენკოდერი",
+    "avoid": [],
+    "latin": "encoder-only",
+    "note": "Bidirectional representation architecture (e.g. BERT)."
+  },
+  {
+    "preferred": "მდგომარეობათა სივრცის მოდელი",
+    "avoid": [],
+    "latin": "state space model (SSM)",
+    "note": "Sub-quadratic sequential processing architecture (e.g. Mamba)."
+  },
+  {
+    "preferred": "რეკურენტული ნეირონული ქსელი",
+    "avoid": [],
+    "latin": "recurrent neural network (RNN)",
+    "note": "Neural network containing internal recurrence loops."
+  },
+  {
+    "preferred": "კონვოლუციური ნეირონული ქსელი",
+    "avoid": [],
+    "latin": "convolutional neural network (CNN)",
+    "note": "Grid-processing neural network using spatial convolution kernels."
+  },
+  {
+    "preferred": "კიბერუსაფრთხოება",
+    "avoid": [
+      "კიბერ უსაფრთხოება"
+    ],
+    "latin": "cybersecurity",
+    "note": "Protection of computer systems from malicious digital attacks. Written as one word."
+  },
+  {
+    "preferred": "კიბერშეტევა",
+    "avoid": [
+      "კიბერ შეტევა"
+    ],
+    "latin": "cyberattack",
+    "note": "Malicious attempt to damage or disrupt a computer network. Written as one word."
+  },
+  {
+    "preferred": "ფიშინგი",
+    "avoid": [],
+    "latin": "phishing",
+    "note": "Deceptive attempt to obtain sensitive credentials."
+  },
+  {
+    "preferred": "მავნე პროგრამა",
+    "avoid": [],
+    "latin": "malware",
+    "note": "Hostile or intrusive software designed to harm computers."
+  },
+  {
+    "preferred": "გამომძალველი პროგრამა",
+    "avoid": [],
+    "latin": "ransomware",
+    "note": "Extortion software encrypting victim files until payment is delivered."
+  },
+  {
+    "preferred": "მოწყვლადობა",
+    "avoid": [],
+    "latin": "vulnerability",
+    "note": "Flaw or weakness in software logic or design. Synonym: ხარვეზი."
+  },
+  {
+    "preferred": "ნულოვანი დღის ექსპლოიტი",
+    "avoid": [],
+    "latin": "zero-day exploit",
+    "note": "Cyberattack targeting an undisclosed software flaw unknown to the vendor."
+  },
+  {
+    "preferred": "დაშიფვრა",
+    "avoid": [
+      "შიფრაცია"
+    ],
+    "latin": "encryption",
+    "note": "'შიფრაცია' is a Russianism; correct Georgian is 'დაშიფვრა'."
+  },
+  {
+    "preferred": "გაშიფვრა",
+    "avoid": [],
+    "latin": "decryption",
+    "note": "Reversing encryption to recover plaintext."
+  },
+  {
+    "preferred": "ციფრული ხელმოწერა",
+    "avoid": [],
+    "latin": "digital signature",
+    "note": "Cryptographic authentication mechanism ensuring non-repudiation."
+  },
+  {
+    "preferred": "ღრუბლოვანი პროვაიდერი",
+    "avoid": [],
+    "latin": "cloud provider",
+    "note": "Commercial entity offering hosted infrastructure (e.g. AWS, GCP, Azure)."
+  },
+  {
+    "preferred": "უსერვერო არქიტექტურა",
+    "avoid": [],
+    "latin": "serverless",
+    "note": "Event-driven execution model where server provisioning is handled transparently."
+  },
+  {
+    "preferred": "კონტეინერიზაცია",
+    "avoid": [],
+    "latin": "containerization",
+    "note": "Encapsulating software dependencies into portable isolated runtimes (e.g. Docker)."
+  },
+  {
+    "preferred": "მიკროსერვისები",
+    "avoid": [],
+    "latin": "microservices",
+    "note": "Architectural approach decomposing apps into small, decoupled services."
+  }
+]

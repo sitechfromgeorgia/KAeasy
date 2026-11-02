@@ -1,0 +1,4 @@
+{
+  "findings": [],
+  "fixed": "ავტორიზაციის შესამოწმებლად გამოიძახეთ processUserData() მეთოდი.\nპარამეტრად გადაეცით user_auth_token ცვლადი და MAX_RETRY_COUNT მუდმივა.\nშეცდომის შემთხვევაში ფუნქცია აბრუნებს StatusCode.UNAUTHORIZED მნიშვნელობას."
+}

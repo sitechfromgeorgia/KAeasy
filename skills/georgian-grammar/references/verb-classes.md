@@ -1,70 +1,118 @@
 # Georgian Verb Classes (ზმნის ოთხი ჯგუფი)
 
 Georgian verbs fall into four distinct morphological and syntactic classes. Each class dictates
-which case the subject and direct object take across the three tense series.
+which case the subject, direct object, and indirect object take across the three tense-aspect series.
 
-For news, tech, and business writers, the most critical distinction is knowing when the subject takes
-the **Ergative** (`-მა` / `-მ`), **Nominative**, or **Dative** (`-ს`).
-
----
-
-## 1. The Four Classes at a Glance
-
-| Class | Description | Series I (Pres / Fut) | Series II (Aorist) | Series III (Perfect) | Direct Object Case |
-|---|---|---|---|---|---|
-| **Class 1 (Transitive)** | Active, agentive, transitive (`აკეთებს`, `წერს`, `უშვებს`) | **Nominative** | **Ergative (-მა/-მ)** | **Dative (-ს)** | Series I: Dat / Series II: Nom / Series III: Nom |
-| **Class 2 (Intransitive / Passive)** | Inchoative, passive, motion (`იზრდება`, `იხსნება`, `შენდება`) | **Nominative** | **Nominative** | **Nominative** | No direct object |
-| **Class 3 (Medioactive)** | Continuous activity, sound, motion (`მუშაობს`, `თამაშობს`, `საუბრობს`) | **Nominative** | **Ergative (-მა/-მ)** | **Dative (-ს)** | Usually no direct object |
-| **Class 4 (Inversive / Experiencer)** | State, feeling, need, possession (`სჭირდება`, `აქვს`, `უნდა`, `მოსწონს`) | **Dative (-ს)** | **Dative (-ს)** | **Dative (-ს)** | Stimulus / Theme is Nominative |
+For news, tech, and business writers, the most critical challenge is mastering split ergativity:
+knowing precisely when the subject takes the **Ergative** (`-მა` / `-მ`), **Nominative**, or **Dative** (`-ს`).
 
 ---
 
-## 2. Core Rules and Common Traps
+## 1. The Screeves and Three Series (მწკრივები და სერიები)
 
-### Class 1 vs Class 2 Pairs (Transitive vs Intransitive)
-The most common mistake in news translation is assigning an ergative subject to a Class 2 intransitive verb,
-or a nominative subject to a Class 1 transitive verb in Series II (Aorist):
+Georgian verbs conjugate across eleven screeves (მწკრივები), grouped into three distinct Series (სერიები).
+The case marking of noun phrases changes from series to series depending on the verb class:
 
-- **Class 1 (Transitive)**: Needs an agent in the Ergative:
-  - ✅ `კომპანიამ ფასი გაზარდა`
-  - ❌ `კომპანია ფასი გაზარდა`
-- **Class 2 (Intransitive)**: The patient is the subject in the Nominative:
-  - ✅ `ფასი გაიზარდა`
-  - ❌ `ფასმა გაიზარდა`
-
-Other frequent pairs:
-- `მთავრობამ სერვისი დახურა` (Class 1) vs `სერვისი დაიხურა` (Class 2)
-- `დეველოპერებმა შეცდომა გაასწორეს` (Class 1) vs `შეცდომა გასწორდა` (Class 2)
-- `Apple-მა გაყიდვები შეამცირა` (Class 1) vs `გაყიდვები შემცირდა` (Class 2)
-- `გუნდმა პროექტი დაიწყო` (Class 1) vs `პროექტი დაიწყო` (Class 2)
-
-### Class 3 (Medioactive) Takes Ergative in the Aorist
-Even though Class 3 verbs are intransitive (no direct object), their subject behaves like a transitive verb:
-- Series I (Present): `გუნდი აქტიურად მუშაობს` (Nominative)
-- Series II (Aorist): `გუნდმა აქტიურად იმუშავა` (Ergative: ❌ `გუნდი იმუშავა`)
-- Series III (Perfect): `გუნდს აქტიურად უმუშავია` (Dative)
-
-Other Class 3 verbs: `ითამაშა`, `ისაუბრა`, `ითანამშრომლა`, `იბრძოლა`.
-
-### Class 4 (Inversive) Experiencer is Always Dative
-Verbs expressing feeling, possession, or necessity invert the subject into the Dative case across screeves:
-- `მომხმარებელს ახალი ინტერფეისი მოსწონს` (Present)
-- `მომხმარებელს ახალი ინტერფეისი მოეწონა` (Aorist: ❌ `მომხმარებელმა მოეწონა`)
-- `კომპანიას ახალი სერვერი სჭირდება` (Present: ❌ `კომპანია სჭირდება`)
-- `კომპანიას ახალი სერვერი დასჭირდა` (Aorist)
+| Series | Sub-series / Screeves | Tense / Aspect | Example (Class 1) |
+|---|---|---|---|
+| **Series I (I სერია)** | **Present sub-series**: აწმყო (Present), უწყვეტელი (Imperfect), აწმყოს კავშირებითი (Pres. Subjunctive)<br>**Future sub-series**: მყოფადი (Future), ხოლმეობითი/პირობითი (Conditional), მყოფადის კავშირებითი (Fut. Subjunctive) | Present, continuous, future, hypothetical | `წერს`, `წერდა`, `წერდეს`<br>`დაწერს`, `დაწერდა`, `დაწერდეს` |
+| **Series II (II სერია)** | წყვეტილი (Aorist / Simple Past), II კავშირებითი (Optative / Subjunctive) | Completed past action, subjunctive wish | `დაწერა`, `დაწეროს` |
+| **Series III (III სერია)** | I თურმეობითი (Present Perfect / Evidential I), II თურმეობითი (Pluperfect / Evidential II) | Evidential, inferential, perfect result | `დაუწერია`, `დაეწერა` |
 
 ---
 
-## 3. 40 Frequent News Verbs
+## 2. Syntactic Case Alignment Matrix
 
-The table below lists 40 high-frequency verbs in Georgian news, technology, and business writing.
+The table below defines which case the **Subject**, **Direct Object**, and **Indirect Object** take across the three series for each of the four verb classes:
+
+| Class | Description | Series I (Pres / Fut) | Series II (Aorist) | Series III (Perfect) |
+|---|---|---|---|---|
+| **Class 1 (Transitive)**<br>*გარდამავალი* | Active, agentive action affecting a direct object (`წერს`, `უშვებს`, `ზრდის`) | **Subj**: Nominative<br>**Dir Obj**: Dative<br>**Indir Obj**: Dative | **Subj**: Ergative (`-მა/-მ`)<br>**Dir Obj**: Nominative<br>**Indir Obj**: Dative | **Subj**: Dative (`-ს`)<br>**Dir Obj**: Nominative<br>**Indir Obj**: Postposition (`-თვის`) |
+| **Class 2 (Intransitive / Passive)**<br>*გარდაუვალი / ვნებითი* | Change of state, passive, inchoative, motion (`იზრდება`, `იხსნება`, `შენდება`) | **Subj**: Nominative<br>**Dir Obj**: —<br>**Indir Obj**: Dative | **Subj**: Nominative<br>**Dir Obj**: —<br>**Indir Obj**: Dative | **Subj**: Nominative<br>**Dir Obj**: —<br>**Indir Obj**: Postposition (`-თვის`) |
+| **Class 3 (Medioactive)**<br>*მედიოაქტიური* | Continuous dynamic activity, atelic action, sound (`მუშაობს`, `თამაშობს`, `საუბრობს`) | **Subj**: Nominative<br>**Dir Obj**: —<br>**Indir Obj**: Dative | **Subj**: Ergative (`-მა/-მ`)<br>**Dir Obj**: —<br>**Indir Obj**: Dative | **Subj**: Dative (`-ს`)<br>**Dir Obj**: —<br>**Indir Obj**: Postposition (`-თვის`) |
+| **Class 4 (Inversive / Experiencer)**<br>*ინვერსიული / თავისებური* | Inner states, emotions, possession, necessity (`სჭირდება`, `აქვს`, `უნდა`, `მოსწონს`) | **Subj (Exp)**: Dative (`-ს`)<br>**Stimulus**: Nominative | **Subj (Exp)**: Dative (`-ს`)<br>**Stimulus**: Nominative | **Subj (Exp)**: Dative (`-ს`)<br>**Stimulus**: Nominative |
+
+---
+
+## 3. Deep Dive into the Four Classes
+
+### Class 1: Transitive Verbs (გარდამავალი ზმნები)
+- **Morphology**: Usually marked with thematic suffixes in the present (`-ებ`: `აკეთებს`, `-ობ`: `ამბობს`, `-ავ`: `ხატავს`, `-ამ`: `აბამს`) or root stems (`წერს`, `ჭრის`).
+- **Series I**: Subject is Nominative, Direct Object is Dative:
+  - `კომპანია ახალ მოდელს უშვებს.`
+- **Series II (Aorist)**: The agent moves to the **Ergative** (`-მა` after consonant, `-მ` after vowel); direct object becomes **Nominative**:
+  - `კომპანიამ ახალი მოდელი გამოუშვა.` (❌ `კომპანია ახალი მოდელი გამოუშვა`)
+- **Series III (Perfect / Inversion)**: The agent inverts to the **Dative** (`-ს`), direct object is **Nominative**:
+  - `კომპანიას ახალი მოდელი გამოუშვია.`
+
+### Class 2: Intransitive & Passive Verbs (გარდაუვალი და ვნებითი ზმნები)
+- **Morphology**: Formed with prefix `ი-` (`იხსნება`, `იზრდება`), suffix `-დ-` (`მცირდება`, `ფართოვდება`), or root intransitives (`ჩერდება`, `ტყდება`).
+- **Absolute Nominative Rule**: The subject is **ALWAYS Nominative** in Series I, II, and III. It never takes the Ergative case!
+  - Series I: `ფასი იზრდება.`
+  - Series II: `ფასი გაიზარდა.` (❌ `ფასმა გაიზარდა` — a severe error)
+  - Series III: `ფასი გაზრდილა.`
+
+### Class 3: Medioactive / Medial Verbs (მედიოაქტიური ზმნები)
+- **Semantics & Morphology**: Atelic activities, bodily/mental exertion, movement (`მუშაობს`, `საუბრობს`, `თამაშობს`, `კამათობს`, `თანამშრომლობს`). Form future with circumfix `ი-...-ებ` (`იმუშავებს`, `ისაუბრებს`, `ითანამშრომლებს`).
+- **Split Syntax**: Semantically intransitive (no direct object), but syntactically behaves like Class 1 regarding subject case!
+  - Series I: `გუნდი აქტიურად მუშაობს.` (Nominative)
+  - Series II (Aorist): `გუნდმა აქტიურად იმუშავა.` (**Ergative**: ❌ `გუნდი იმუშავა`)
+  - Series III: `გუნდს აქტიურად უმუშავია.` (**Dative**)
+
+### Class 4: Inversive / Experiencer Verbs (ინვერსიული / თავისებური ზმნები)
+- **Semantics**: Sensation, emotion, psychological attitude, possession, necessity (`სჭირდება`, `აქვს`, `ჰყავს`, `უნდა`, `მოსწონს`, `ახსოვს`).
+- **Inversion Across Screeves**: The experiencer/possessor is **always Dative** (`-ს`); the perceived stimulus or possessed entity is **always Nominative**:
+  - Present: `მომხმარებელს განახლება სჭირდება.` (❌ `მომხმარებელი სჭირდება`)
+  - Aorist: `მომხმარებელს განახლება დასჭირდა.` (❌ `მომხმარებელმა დასჭირდა`)
+  - Perfect: `მომხმარებელს განახლება დასჭირვებია.`
+
+---
+
+## 4. Frequent Editorial Pitfalls in News & Tech Copy
+
+### Pitfall 1: Transitive vs Intransitive Pairs
+Weak machine translation constantly confounds transitive Class 1 and intransitive Class 2 forms:
+- `გაზარდა` (Class 1 transitive: *increased something*) vs `გაიზარდა` (Class 2 intransitive: *increased on its own*):
+  - ✅ `Apple-მა ფასი გაზარდა.`
+  - ✅ `ფასი გაიზარდა.`
+  - ❌ `ფასმა გაიზარდა.` / ❌ `Apple-მა გაიზარდა ფასი.`
+- `დახურა` (Class 1) vs `დაიხურა` (Class 2):
+  - ✅ `მთავრობამ სერვისი დახურა.`
+  - ✅ `სერვისი დაიხურა.`
+- `შეამცირა` (Class 1) vs `შემცირდა` (Class 2):
+  - ✅ `კომპანიამ ხარჯები შეამცირა.`
+  - ✅ `ხარჯები შემცირდა.`
+- `გაავრცელა` (Class 1) vs `გავრცელდა` (Class 2):
+  - ✅ `სააგენტომ ინფორმაცია გაავრცელა.`
+  - ✅ `ინფორმაცია მალე გავრცელდა.`
+
+### Pitfall 2: Medioactive Aorist Missing Ergative
+Because Class 3 verbs look intransitive, translation models erroneously leave the subject in the Nominative:
+- ✅ `პარლამენტმა საკითხზე იმსჯელა.` (❌ `პარლამენტი იმსჯელა`)
+- ✅ `კომპანიებმა პროექტზე ითანამშრომლეს.` (❌ `კომპანიები ითანამშრომლეს`)
+
+### Pitfall 3: Experiencer Inversion Missing Dative
+- ✅ `მკითხველს სტატია მოეწონა.` (❌ `მკითხველმა სტატია მოეწონა`)
+- ✅ `კომპანიას ახალი ლიცენზია სჭირდება.` (❌ `კომპანია ახალი ლიცენზია სჭირდება`)
+
+### Pitfall 4: Plural Subject-Verb Agreement (Inanimate vs Corporate Agent)
+- Inanimate plural nouns take a **singular verb**:
+  - ✅ `ფასები გაიზარდა.` (❌ `ფასები გაიზარდნენ`)
+  - ✅ `სერვერები გაითიშა.` (❌ `სერვერები გაითიშნენ`)
+- Corporate, institutional, or collective human agents take a **plural verb**:
+  - ✅ `კომპანიებმა შეთანხმებას მოაწერეს ხელი.`
+  - ✅ `მხარეებმა მოლაპარაკებები დაიწყეს.`
+
+---
+
+## 5. 40 Frequent News Verbs Reference Table
 
 | # | Present | Future | Aorist | Perfect | Class | Subject case |
 |---|---|---|---|---|---|---|
 | 1 | აცხადებს | განაცხადებს | განაცხადა | განუცხადებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 2 | აქვეყნებს | გამოაქვეყნებს | გამოაქვეყნა | გამოუქვეყნებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 3 | უშვებს | გამოუშვებს | გამოუშვა | გამოუშვია | Class 1 | I: Nom / II: Erg / III: Dat |
-| 4 | წარადგენს | წარადგენს | წარადგინა | წარუდგენია | Class 1 | I: Nom / II: Erg / III: Dat |
+| 4 | ავრცელებს | გაავრცელებს | გაავრცელა | გაუვრცელებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 5 | ქმნის | შექმნის | შექმნა | შეუქმნია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 6 | იწყებს | დაიწყებს | დაიწყო | დაუწყია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 7 | ამთავრებს | დაამთავრებს | დაამთავრა | დაუმთავრებია | Class 1 | I: Nom / II: Erg / III: Dat |
@@ -74,8 +122,8 @@ The table below lists 40 high-frequency verbs in Georgian news, technology, and 
 | 11 | ამცირებს | შეამცირებს | შეამცირა | შეუმცირებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 12 | ხსნის | გახსნის | გახსნა | გაუხსნია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 13 | ხურავს | დახურავს | დახურა | დაუხურავს | Class 1 | I: Nom / II: Erg / III: Dat |
-| 14 | აწერს (ხელს) | მოაწერს (ხელს) | მოაწერა (ხელი) | მოუწერია (ხელი) | Class 1 | I: Nom / II: Erg / III: Dat |
-| 15 | აგებს | ააგებს | ააგო | აუგია | Class 1 | I: Nom / II: Erg / III: Dat |
+| 14 | ხელს აწერს | ხელს მოაწერს | ხელი მოაწერა | ხელი მოუწერია | Class 1 | I: Nom / II: Erg / III: Dat |
+| 15 | აშენებს | ააშენებს | ააშენა | აუშენებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 16 | აჩერებს | შეაჩერებს | შეაჩერა | შეუჩერებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 17 | აფრთხილებს | გააფრთხილებს | გააფრთხილა | გაუფრთხილებია | Class 1 | I: Nom / II: Erg / III: Dat |
 | 18 | იკვლევს | გამოიკვლევს | გამოიკვლია | გამოუკვლევია | Class 1 | I: Nom / II: Erg / III: Dat |

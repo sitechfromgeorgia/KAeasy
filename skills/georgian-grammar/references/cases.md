@@ -35,14 +35,11 @@ The hyphen is mandatory; the ending follows how the name **sounds**:
 |---|---|---|---|---|---|---|
 | Microsoft | consonant | Microsoft-მა | Microsoft-ს | Microsoft-ის | Microsoft-ით | — |
 | Google | consonant | Google-მა | Google-ს | Google-ის | Google-ით | — |
-| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ის | OpenAI-ით | — |
-| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ის | ChatGPT-ით | — |
+| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ს | OpenAI-თი | OpenAI-ები |
+| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ს | ChatGPT-თი | ChatGPT-ები |
 | NVIDIA | vowel (…ა) | NVIDIA-მ | NVIDIA-ს | NVIDIA-ს | NVIDIA-თი | — |
 | GPU | vowel (…იუ) | GPU-მ | GPU-ს | GPU-ს | GPU-თი | GPU-ები |
 
-Decided 2026-11-02 (docs/NEEDS-REVIEW.md): names ending in `-ა`, `-ო`, `-უ` take `-ს` in the genitive
-(`Meta-ს`, `NVIDIA-ს`, `Tesla-ს`, as Georgian media write them) and `-თი` in the instrumental (`NVIDIA-თი`,
-`GPU-თი`, never `NVIDIA-ით`). The fleet's older `Meta-ის` is retired.
+Decided 2026-11-02 (`docs/NEEDS-REVIEW.md`): names ending in `-ა`, `-ო`, `-უ` take `-ს` in the genitive (`Meta-ს`, `NVIDIA-ს`, `Tesla-ს`, as Georgian media write them) and `-თი` in the instrumental (`NVIDIA-თი`, `GPU-თი`, never `NVIDIA-ით`). The fleet's older `Meta-ის` is retired.
 
-needs-review: names ending in an -i sound (`OpenAI`, `ChatGPT`, `Spotify`, `Gemini`) take genitive `-ის` or
-`-ს`. Stay consistent within one text until this is settled.
+All foreign names ending in a vowel sound (-ა, -ე, -ი sound, -ო, -უ) take **`-მ`** in the ergative, **`-ს`** in the dative and genitive, and **`-თი`** in the instrumental (`Meta-ს`, `Tesla-ს`, `NVIDIA-ს`, `OpenAI-ს`, `ChatGPT-ს`, `Sony-ს`, `GPU-ს`; instrumental `NVIDIA-თი`, `GPU-თი`, `OpenAI-თი`). Consonant stems strictly take **`-მა`**, **`-ს`**, **`-ის`**, **`-ით`** (`Microsoft-ის`, `Google-ის`). For the complete 7-case paradigm and 200+ brand dictionary, see `references/latin-names.md` in `kaeasy:georgian-names-numbers`.

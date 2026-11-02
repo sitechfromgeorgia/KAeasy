@@ -1,74 +1,106 @@
 # Georgian Noun Stem Changes (ფუძის ცვლილებები: კვეცა და კუმშვა)
 
-Georgian nouns undergo two major stem modifications during declension:
+Georgian nouns fall into two broad morphological categories based on their nominative stem:
+**Consonant stems** (თანხმოვანფუძიანი: `მკვლევარ-ი`, `ავტორ-ი`) and **Vowel stems** (ხმოვანფუძიანი: `კომპანია`, `მოწაფე`, `სააგენტო`).
+
+During declension and word formation, stems undergo two fundamental morphophonological changes:
 1. **Truncation (კვეცა)** — dropping the stem-final vowel.
-2. **Syncope (კუმშვა)** — dropping an internal stem vowel before sonorants.
+2. **Syncope (კუმშვა)** — dropping an internal stem vowel in the final closed syllable before sonorants.
 
 These changes apply in the **Genitive** (`-ის`), **Instrumental** (`-ით`), **Adverbial** (`-ად`),
-and in the case of syncope, before the plural suffix **`-ებ-`**.
+and in the case of syncope, critically before the plural suffix **`-ებ-`**.
 
 ---
 
 ## 1. Truncation (კვეცა)
 
-### Rules
-- Nouns ending in **-ა** and **-ე** drop this final vowel before `-ის`, `-ით`, and `-ად`:
-  - `კომპანია` → `კომპანიის`, `კომპანიით`, `კომპანიად` (❌ `კომპანიაის`, `კომპანიაით`)
-  - `მთავრობა` → `მთავრობის`, `მთავრობით`, `მთავრობად`
-  - `მოწაფე` → `მოწაფის`, `მოწაფით`, `მოწაფედ`
-- **Plural formation**:
-  - Regular **-ა** stems keep the **-ა-** before the plural suffix `-ებ-`:
+### Rules & Mechanics
+- **Truncating Vowels (-ა and -ე)**: Nouns whose stem ends in **-ა** or **-ე** drop this final vowel before case endings starting with a vowel (`-ის`, `-ით`, `-ად`):
+  - `კომპანია` → Gen: `კომპანიის` (from `კომპანი-` + `-ის`, avoiding hiatus ❌ `კომპანიაის`), Inst: `კომპანიით`, Adv: `კომპანიად`
+  - `მთავრობა` → Gen: `მთავრობის`, Inst: `მთავრობით`, Adv: `მთავრობად`
+  - `მოწაფე` → Gen: `მოწაფის`, Inst: `მოწაფით`, Adv: `მოწაფედ`
+  - `დღე` → Gen: `დღის`, Inst: `დღით`, Adv: `დღედ`
+- **Plural Formation**:
+  - Regular **-ა** stems keep their **-ა-** before the plural suffix `-ებ-`:
     `კომპანიები`, `მთავრობები`, `პროგრამები`, `სისტემები`.
-  - Regular **-ე** stems keep **-ე-**: `მოწაფეები`, `დღეები`, `მზეები`.
-- **Non-truncating vowels (-ო, -უ)**:
+  - Regular **-ე** stems keep their **-ე-** before `-ებ-`:
+    `მოწაფეები`, `დღეები`, `მზეები`.
+- **Non-Truncating Vowels (-ო and -უ)**:
   - Stems ending in **-ო** and **-უ** do **not** truncate in modern literary Georgian:
-    - `სააგენტო` → `სააგენტოს`, `სააგენტოთი`, `სააგენტოები`
-    - `ბიურო` → `ბიუროს`, `ბიუროთი`, `ბიუროები`
-    - `მეტრო` → `მეტროს`, `მეტროთი`, `მეტროები`
+    - Genitive ending is **`-ს`**: `სააგენტოს`, `ბიუროს`, `მეტროს`, `წყაროს`, `ფოტოს`, `ინტერვიუს`
+    - Instrumental ending is **`-თი`**: `სააგენტოთი`, `ბიუროთი`, `მეტროთი`, `წყაროთი`
+    - Plural suffix attaches directly: `სააგენტოები`, `ბიუროები`, `მეტროები`, `წყაროები`
 
 ---
 
 ## 2. Syncope (კუმშვა)
 
-### Rules
-Syncope drops an internal vowel (**-ა-**, **-ე-**, or **-ო-**) in the final syllable of the stem
-when adding case endings starting with a vowel (`-ის`, `-ით`, `-ად`) **and before plural `-ებ-`**.
+### Rules & Mechanics
+Syncope is the elision of an internal stem vowel (**-ა-**, **-ე-**, or **-ო-**) in the final closed syllable
+when an inflectional suffix starting with a vowel (`-ის`, `-ით`, `-ად`) or the plural suffix **`-ებ-`** is added.
 
-- **Phonological condition**: Syncope only occurs when the dropped vowel is followed by one of the
-  sonorant consonants: **რ, ლ, მ, ნ**.
-  - Drop of **-ა-**: `მკვლევარი` → `მკვლევრის`, `მკვლევრით`, `მკვლევრები` (❌ `მკვლევარები`)
-  - Drop of **-ე-**: `მომხმარებელი` → `მომხმარებლის`, `მომხმარებლით`, `მომხმარებლები` (❌ `მომხმარებელები`)
-  - Drop of **-ო-** (often alternating with `-ვ-`): `მინდორი` → `მინდვრის`, `ფოთოლი` → `ფოთლის`
+- **Phonological Environment**: Syncope only occurs when the elided vowel precedes one of the sonorant consonants: **რ, ლ, მ, ნ** (and in rare native words, dental **დ**).
+  - Elision of **-ა-**: `მკვლევარი` → `მკვლევრის`, `მკვლევრით`, `მკვლევრები` (❌ `მკვლევარები`)
+  - Elision of **-ე-**: `მომხმარებელი` → `მომხმარებლის`, `მომხმარებლით`, `მომხმარებლები` (❌ `მომხმარებელები`)
+  - Elision of **-ო-** (pure drop): `ფოთოლი` → `ფოთლის`, `ფოთლით`, `ფოთლები`
+  - Alternation of **-ო-** with **-ვ-**: `მინდორი` → `მინდვრის`, `მინდვრით`, `მინდვრები`; `ნიგოზი` → `ნიგვზის`
+  - Elision before **-დ-**: `ბეჭედი` → `ბეჭდის`, `ბეჭდით`, `ბეჭდები`
 
-### Critical Exceptions and Guardrails
-
-1. **Loanwords / Foreign words do NOT syncopate**:
-   Foreign borrowings ending in `-ორი`, `-არი`, `-ერი` preserve their vowel:
-   - `ავტორი` → `ავტორის`, `ავტორები` (never ❌ `ავტრის`)
-   - `დირექტორი` → `დირექტორის`, `დირექტორები` (never ❌ `დირექტრის`)
-   - `სექტორი` → `სექტორის`, `სექტორები` (never ❌ `სექტრის`)
-   - `ინვესტორი` → `ინვესტორის`, `ინვესტორები` (never ❌ `ინვესტრის`)
-   - `კომპიუტერი` → `კომპიუტერის`, `კომპიუტერები` (never ❌ `კომპიუტრის`)
-   - `სერვერი` → `სერვერის`, `სერვერები` (never ❌ `სერვრის`)
-   - `მოდელი` → `მოდელის`, `მოდელები` (never ❌ `მოდლის`)
-
-2. **Consonant clusters block syncope**:
-   When dropping the vowel would create a heavy consonant cluster (especially with preceding sonorants):
-   - `ხელმძღვანელი` → `ხელმძღვანელის`, `ხელმძღვანელები` (cluster `-ღვ-` blocks syncope: ❌ `ხელმძღვანლის`)
-   - `მმართველი` → `მმართველის`, `მმართველები` (cluster `-რთვ-` blocks syncope: ❌ `მმართვლის`)
+### Critical Distinction: Syncope in the Plural
+Unlike truncation (which does not affect plural `-ებ-`), **syncope strictly carries into the plural**:
+- ✅ `მკვლევრები` (❌ `მკვლევარები`)
+- ✅ `მომხმარებლები` (❌ `მომხმარებელები`)
+- ✅ `მასწავლებლები` (❌ `მასწავლებელები`)
+- ✅ `სოფლები` (❌ `სოფელები`)
+- ✅ `მეგობრები` (❌ `მეგობარები`)
 
 ---
 
 ## 3. Truncation + Syncope Combined (კვეცად-კუმშვადი)
 
-Some stems lose both their final vowel (truncation) and an internal vowel (syncope):
-- `ქვეყანა` → `ქვეყნის`, `ქვეყნით`, `ქვეყნები` (❌ `ქვეყანის`, `ქვეყანები`)
-- `ფანჯარა` → `ფანჯრის`, `ფანჯრით`, `ფანჯრები`
-- `ქარხანა` → `ქარხნის`, `ქარხნით`, `ქარხნები`
+A select group of high-frequency native nouns undergo **both** changes: they drop their final vowel (truncation) AND their internal stem vowel (syncope):
+- `ქვეყანა` → Gen: `ქვეყნის`, Inst: `ქვეყნით`, Plural: `ქვეყნები` (❌ `ქვეყანის`, ❌ `ქვეყანები`)
+- `ფანჯარა` → Gen: `ფანჯრის`, Inst: `ფანჯრით`, Plural: `ფანჯრები`
+- `ქარხანა` → Gen: `ქარხნის`, Inst: `ქარხნით`, Plural: `ქარხნები`
+- `ბეგარა` → Gen: `ბეგრის`, Inst: `ბეგრით`, Plural: `ბეგრები`
 
 ---
 
-## 4. 60 Frequent Nouns: Forms and Stem Types
+## 4. Critical Guardrails for Writers and Language Models
+
+### Guardrail 1: Foreign Loanwords NEVER Syncopate
+Borrowed words and technical internationalisms ending in `-ორი`, `-არი`, `-ერი`, `-ელი` preserve their internal vowel across all cases and in the plural:
+- `ავტორი` → `ავტორის`, `ავტორები` (never ❌ `ავტრის`, ❌ `ავტრები`)
+- `დირექტორი` → `დირექტორის`, `დირექტორები` (never ❌ `დირექტრის`)
+- `სექტორი` → `სექტორის`, `სექტორები` (never ❌ `სექტრის`)
+- `ინვესტორი` → `ინვესტორის`, `ინვესტორები` (never ❌ `ინვესტრის`)
+- `პროფესორი` → `პროფესორის`, `პროფესორები` (never ❌ `პროფესრის`)
+- `ფაქტორი` → `ფაქტორის`, `ფაქტორები` (never ❌ `ფაქტრის`)
+- `კომპიუტერი` → `კომპიუტერის`, `კომპიუტერები` (never ❌ `კომპიუტრის`)
+- `სერვერი` → `სერვერის`, `სერვერები` (never ❌ `სერვრის`)
+- `მოდელი` → `მოდელის`, `მოდელები` (never ❌ `მოდლის`)
+- `ლიდერი` → `ლიდერის`, `ლიდერები` (never ❌ `ლიდრის`)
+
+### Guardrail 2: Consonant Clusters Block Syncope
+In native nouns where dropping the vowel would yield an unpronounceable consonant cluster (phonotactic restriction), syncope is blocked:
+- `ხელმძღვანელი` → Gen: `ხელმძღვანელის`, Plural: `ხელმძღვანელები` (cluster `-ღვ-` blocks syncope: ❌ `ხელმძღვანლის`)
+- `მმართველი` → Gen: `მმართველის`, Plural: `მმართველები` (cluster `-რთვ-` blocks syncope: ❌ `მმართვლის`)
+
+### Guardrail 3: Postposition Interaction
+- **Dative postpositions (`-ში`, `-ზე`, `-თან`)**: Attach to the unreduced dative stem. Do **not** syncopate or truncate:
+  - `მკვლევარზე` (❌ `მკვლევრზე`)
+  - `ქვეყანაში` (❌ `ქვეყნაში`, ❌ `ქვეყანში`)
+- **Genitive postpositions (`-თვის`, `-გან`, `-კენ`, `შესახებ`, `გამო`, `მიხედვით`)**: Attach to the reduced genitive stem:
+  - `მკვლევრისთვის` (syncope)
+  - `ქვეყნისთვის` (truncation + syncope)
+  - `ქვეყნის შესახებ`
+- **Instrumental postposition (`-დან`)**: Attaches to the reduced instrumental stem:
+  - `ქვეყნიდან` (truncation + syncope)
+  - `სოფლიდან` (syncope)
+
+---
+
+## 5. 60 Frequent Nouns Reference Table
 
 | # | Nominative | Genitive | Instrumental | Plural | Stem change type | Notes |
 |---|---|---|---|---|---|---|

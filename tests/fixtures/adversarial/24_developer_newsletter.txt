@@ -1,0 +1,4 @@
+ყოველკვირეულ ბიულეტენში განვიხილავთ წიგნს "Designing Data-Intensive Applications".
+მიმოხილვა მოამზადა @giorgi_k-მ.
+მასალები და კოდის ნიმუშები ატვირთულია GitHub-ზე: https://github.com/sitech/newsletter-code.
+გამოიწერეთ ჩვენი ბლოგი და მიიღეთ სიახლეები პირველებმა! 🚀
