@@ -13,6 +13,7 @@ rule wins.
 ## Workflow (every public Georgian text)
 
 1. `ka_mistakes` (limit 20): read the fleet's recent mistakes. Do not repeat them.
+   `examples/fleet-mistakes.md` has 30+ real ones from our own Shorts reviews.
 2. Load the sibling skill for the job (table below). Read its `examples/` before drafting.
 3. Draft. Think in Georgian sentence structure: actor + object + verb at the end.
 4. Self-edit with `kaeasy:georgian-proofread` (fact freeze, rewrite, copy desk). Same model, no extra cost.
