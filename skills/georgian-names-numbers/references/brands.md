@@ -19,8 +19,8 @@ For text-to-speech (TTS), video voiceovers, broadcast scripts, and teleprompters
 2. **Vowel-Ending Sound** (all vowel classes: `-ა`, `-ე`, `-ი` sound, `-ო`, `-უ`):
    - **Ergative**: `-მ` (`Meta-მ`, `Tesla-მ`, `OpenAI-მ`, `Sony-მ`, `Volvo-მ`, `Porsche-მ`)
    - **Dative**: `-ს` (`Meta-ს`, `Tesla-ს`, `OpenAI-ს`, `Sony-ს`, `Volvo-ს`, `Porsche-ს`)
-   - **Instrumental**: `-თი` (`Meta-თი`, `Tesla-თი`, `OpenAI-თი`, `Sony-თი`, `Volvo-თი`, `Porsche-თი`)
-   - **Adverbial**: `-დ` (`Meta-დ`, `OpenAI-დ`, `Volvo-დ`, `Porsche-დ`)
+   - **Instrumental**: `-თი` (`Meta-თი`, `Tesla-თი`, `OpenAI-ით`, `Sony-ით`, `Volvo-თი`, `Porsche-თი`)
+   - **Adverbial**: `-დ` (`Meta-დ`, `OpenAI-ად`, `Volvo-დ`, `Porsche-დ`)
    - **Genitive**: Strictly **`-ს`** for all vowel-ending foreign names:
      - `-ა` stems: `Meta-ს შემოსავალი`, `Tesla-ს აქციები`, `NVIDIA-ს ჩიპები`
      - `-ი` sound stems: behave as non-truncating vowel stems (like `ტაქსი → ტაქსის`): `OpenAI-ს`, `ChatGPT-ს`, `Spotify-ს`, `Gemini-ს`, `Sony-ს`, `Audi-ს`, `Hyundai-ს`
@@ -29,7 +29,7 @@ For text-to-speech (TTS), video voiceovers, broadcast scripts, and teleprompters
 
 3. **Initialisms and Acronyms**:
    - Declension is governed strictly by the spoken sound of the final letter (or word):
-     - Initialisms ending in an -ი sound letter (D, C, P, G, T, V, Z): `AMD-მ`, `AMD-ს`, `AMD-ს`, `AMD-თი`; `TSMC-მ`, `TSMC-ს`, `TSMC-ს`
+     - Initialisms ending in an -ი sound letter (D, C, P, G, T, V, Z): `AMD-მ`, `AMD-ს`, `AMD-ს`, `AMD-ით`; `TSMC-მ`, `TSMC-ს`, `TSMC-ს`
      - Initialisms ending in a consonant letter (M, L, N, R, S, X): `IBM-მა`, `IBM-ის`, `IBM-ს`, `IBM-ით`; `ASML-მა`, `ASML-ის`, `ASML-ს`
      - Initialisms ending in an -უ sound letter (U): `GPU-მ`, `GPU-ს`, `GPU-ს`, `GPU-თი`
      - Initialisms ending in an -ე sound letter (W): `BMW-მ`, `BMW-ს`, `BMW-ს`, `BMW-თი`

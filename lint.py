@@ -118,9 +118,13 @@ class Finding:
         return asdict(self)
 
 
+# Spans that are not prose: code (fenced, inline, <pre>/<code>) and HTML tags. Their content is never linted.
+NOT_PROSE = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>", re.DOTALL | re.IGNORECASE)
+
+
 def strip_html(s: str) -> str:
-    # Same length as the input so offsets stay valid: every tag character becomes a space.
-    return re.sub(r"<[^>]+>", lambda m: " " * len(m.group(0)), s or "")
+    # Same length as the input so offsets stay valid: every masked character becomes a space (newlines stay).
+    return NOT_PROSE.sub(lambda m: re.sub(r"[^\n]", " ", m.group(0)), s or "")
 
 
 def _ctx(text: str, start: int, end: int, pad: int = 45) -> str:
@@ -134,9 +138,9 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         raise ValueError(f"mode must be one of {MODES}")
     skip = MODE_SKIP.get(mode, set())
     body = strip_html(text)
-    # Positions that were HTML tags: blanked to keep offsets, so whitespace rules must ignore them.
+    # Positions that were HTML tags or code: blanked to keep offsets, so whitespace rules must ignore them.
     in_tag = [False] * len(body)
-    for t in re.finditer(r"<[^>]+>", text or ""):
+    for t in NOT_PROSE.finditer(text or ""):
         in_tag[t.start():t.end()] = [True] * (t.end() - t.start())
     out: list[Finding] = []
 

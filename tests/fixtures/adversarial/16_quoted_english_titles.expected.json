@@ -1,4 +1,37 @@
 {
-  "findings": [],
-  "fixed": "სტატია გამოქვეყნდა \"The Wall Street Journal\"-სა და \"The New York Times\"-ში.\nავტორები ეყრდნობიან ჟურნალ \"Nature\"-ში დაბეჭდილ უახლეს კვლევას.\nმიმოხილვა ასევე ხელმისაწვდომია გამოცემა \"Wired\"-ის ვებგვერდზე."
+  "findings": [
+    {
+      "check": "quotes",
+      "severity": "error",
+      "message": "ინგლისური ბრჭყალები → „…“",
+      "snippet": "სტატია გამოქვეყნდა \"The Wall Street Journal\"-სა და \"The New York Times\"-ში.⏎ავტორები ეყრდ…",
+      "start": 19,
+      "end": 44
+    },
+    {
+      "check": "quotes",
+      "severity": "error",
+      "message": "ინგლისური ბრჭყალები → „…“",
+      "snippet": "… გამოქვეყნდა \"The Wall Street Journal\"-სა და \"The New York Times\"-ში.⏎ავტორები ეყრდნობიან ჟურნალ \"Nature\"-ში დ…",
+      "start": 51,
+      "end": 71
+    },
+    {
+      "check": "quotes",
+      "severity": "error",
+      "message": "ინგლისური ბრჭყალები → „…“",
+      "snippet": "…w York Times\"-ში.⏎ავტორები ეყრდნობიან ჟურნალ \"Nature\"-ში დაბეჭდილ უახლეს კვლევას.⏎მიმოხილვა ასევე …",
+      "start": 103,
+      "end": 111
+    },
+    {
+      "check": "quotes",
+      "severity": "error",
+      "message": "ინგლისური ბრჭყალები → „…“",
+      "snippet": "…ვას.⏎მიმოხილვა ასევე ხელმისაწვდომია გამოცემა \"Wired\"-ის ვებგვერდზე.",
+      "start": 180,
+      "end": 187
+    }
+  ],
+  "fixed": "სტატია გამოქვეყნდა „The Wall Street Journal“-სა და „The New York Times“-ში.\nავტორები ეყრდნობიან ჟურნალ „Nature“-ში დაბეჭდილ უახლეს კვლევას.\nმიმოხილვა ასევე ხელმისაწვდომია გამოცემა „Wired“-ის ვებგვერდზე."
 }

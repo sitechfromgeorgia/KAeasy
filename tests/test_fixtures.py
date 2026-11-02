@@ -34,15 +34,8 @@ ADVERSARIAL_DIR = FIXTURES_DIR / "adversarial"
 SPEECH_GOLDEN_PATH = FIXTURES_DIR / "speech_golden.jsonl"
 BUGS_DOC_PATH = Path(__file__).resolve().parent.parent / "docs" / "TOOL-BUGS.md"
 
-# Known tool bugs documented in docs/TOOL-BUGS.md (marked as xfail until resolved by Claude)
-KNOWN_LINT_BUGS = {
-    "02_markdown_links_fences": "quotes rule flags code inside markdown fences",
-    "04_json_payload": "quotes rule flags JSON string syntax inside fences",
-    "16_quoted_english_titles": "quotes rule flags ASCII quotes around Latin titles",
-    "22_data_science_metrics": "decimal rule flags floating point percentage in technical metric",
-    "24_developer_newsletter": "quotes rule flags ASCII quotes around English book title",
-    "25_full_composite_article": "quotes rule flags JSON quotes inside <pre><code> block",
-}
+# Known tool bugs (docs/TOOL-BUGS.md), marked xfail until fixed. All six found in P9 are fixed in v0.4.
+KNOWN_LINT_BUGS: dict[str, str] = {}
 
 
 def _discover_ka_fix():
@@ -177,9 +170,9 @@ def test_adversarial_fix(name, text, expected):
     )
 
 
-@pytest.mark.parametrize("idx,case", SPEECH_CASES[:50], ids=[f"speech_{x[0]:03d}" for x in SPEECH_CASES[:50]])
-def test_speech_golden_sample(idx, case):
-    """Sample test for ka_speech conversion on golden dataset."""
+@pytest.mark.parametrize("idx,case", SPEECH_CASES, ids=[f"speech_{x[0]:03d}" for x in SPEECH_CASES])
+def test_speech_golden(idx, case):
+    """ka_speech on every golden pair."""
     if KA_SPEECH_FN is None:
         pytest.skip("ka_speech is not yet implemented (scheduled for v0.3)")
 

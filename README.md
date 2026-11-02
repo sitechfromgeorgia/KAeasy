@@ -28,7 +28,7 @@ mistakes memory feeds every correction back to all agents.
 | `evals/` | 120 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |
 | `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates, `fields` for JSON scripts (`{"say": "speech", "*": "social"}`) |
 | `ka_fix` tool | Fixes what strict lint flags and a machine can fix: quotes, brand hyphens, transliterated brands, decimal comma, dashes, spacing. Never grammar |
-| `ka_speech` tool | Written Georgian → TTS text: numbers with case, times, money, versions, brands (`data/lexicon_ka.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
+| `ka_speech` tool | Written Georgian → TTS text: numbers with case, halves, times, ranges, money, units, phone numbers, versions, brands (`data/lexicon_ka.json`, endings by `data/latin_endings.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
 | `ka_learn` / `ka_mistakes` tools | Shared memory of corrections (JSONL), most frequent first |
 | `pre_llm_call` hook | One short hint per session so agents know the skills exist |
 

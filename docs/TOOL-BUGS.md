@@ -200,8 +200,29 @@ Per repository rules (`AGENTS.md` and project roadmap):
 
 ---
 
-## 3. Tool Status for `ka_fix` and `ka_speech`
+## 3. Status (review, 2026-11-02)
 
-- **`ka_fix`**: Not yet implemented in v0.2. Tests in `tests/test_fixtures.py` are configured to skip when `ka_fix` is absent and immediately execute when the module becomes available in v0.3.
-- **`ka_speech`**: Not yet implemented in v0.2. Tests in `tests/test_fixtures.py` are configured to skip when `ka_speech` is absent and immediately execute when the module becomes available in v0.3.
-- **Golden Speech Dataset**: 393 verified lines are established in `tests/fixtures/speech_golden.jsonl`. All 393 spoken target outputs are verified clean with zero lint errors in `mode="speech"`.
+All six `ka_lint` bugs above are fixed, and their `xfail` marks are gone.
+
+| Bug | Fix |
+|---|---|
+| 1, 2, 6 | `lint.py` masks fenced code, inline code and `<pre>`/`<code>` blocks before any rule runs (`NOT_PROSE`). `fix.py` protects `<pre>`/`<code>` blocks too. |
+| 3, 5 | Not a bug. Georgian prose takes „…“ around Latin titles too (`„Nature“-ში`), so the rule stays. The fixture expectations now list the finding and the fixed text. |
+| 4 | Not a bug. House style is a decimal comma before `%` (`98,5%`), so the rule stays. Bare decimals without `%` or a scale word (`0.94`) are not flagged. |
+
+`ka_fix` and `ka_speech` exist since v0.3. `tests/test_fixtures.py` runs every adversarial fixture through both and checks all 393 golden speech pairs (it used to check only the first 50).
+
+The golden run found 151 mismatches in `ka_speech`.
+- Fixed in `speech.py`:
+  - a root ი before an ending (`ChatGPT-მ` → `ჩატ ჯი პი ტიმ`, `Sony-მ` → `სონიმ`), using `data/latin_endings.json`;
+  - unit and currency words (`10 ₾`, `100 ₾-ად`, `$50-ით`, `60 კმ/სთ`, `25°C`);
+  - halves (`1,5` → `ერთნახევარი`);
+  - `1-ელ`/`1 ივნისს` → `პირველ`;
+  - a time before `საათზე`;
+  - ranges before a counted noun (`10-15 წუთი` → `ათიდან თხუთმეტ წუთამდე`);
+  - `+995` phone numbers;
+  - `v3.8`, `B2B`, and a final consonant letter taking ი (`SMS` → `ეს ემ ესი`).
+- Changed in the golden file, where the old expectation was a matter of taste:
+  - 12-hour time (`ექვსის ნახევარზე`): news TTS keeps 24-hour time;
+  - `ანდროიდ`/`ვინდოუს`/`პითონ` without ი, and `ჩატჯიპიტმა`: the spoken forms Shorts approved by listening win, and so does the -ი sound class;
+  - letter spacing (`ეიემდი` vs `ეი ემ დი`).

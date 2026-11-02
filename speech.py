@@ -24,10 +24,25 @@ LETTERS = {"A": "ეი", "B": "ბი", "C": "სი", "D": "დი", "E": "ი
            "S": "ეს", "T": "ტი", "U": "იუ", "V": "ვი", "W": "დაბლიუ", "X": "ექს", "Y": "უაი", "Z": "ზედ"}
 HERE = pathlib.Path(__file__).resolve().parent
 WORDS = json.loads((HERE / "data" / "lexicon_ka.json").read_text(encoding="utf-8"))["words"]  # approved spoken forms
+# Sound class of a Latin name's ending (latin-names.md). "i-sound" names keep their ი before an ending: სონიმ, სონის.
+SOUND = json.loads((HERE / "data" / "latin_endings.json").read_text(encoding="utf-8"))["names"]
 VOWELS = "აეიოუ"
 CURRENCY = {"$": "დოლარ", "€": "ევრო", "₾": "ლარ", "£": "ფუნტ"}
 UNITS = {"GB": "გიგაბაიტ", "TB": "ტერაბაიტ", "MB": "მეგაბაიტ", "GHz": "გიგაჰერც", "km": "კილომეტრ", "W": "ვატ",
          "nm": "ნანომეტრ"}
+# Symbols and Georgian unit abbreviations written as their own word after a number (Kaeasy addition): 10 ₾, 5 კმ.
+UNIT_WORDS = {"₾": "ლარი", "$": "დოლარი", "€": "ევრო", "£": "ფუნტი", "კმ/სთ": "კილომეტრი საათში",
+              "მბ/წმ": "მეგაბაიტი წამში", "კმ": "კილომეტრი", "მ": "მეტრი", "სმ": "სანტიმეტრი", "მმ": "მილიმეტრი",
+              "კგ": "კილოგრამი", "გ": "გრამი", "ლ": "ლიტრი", "მბ": "მეგაბაიტი", "გბ": "გიგაბაიტი", "ტბ": "ტერაბაიტი",
+              "ჰც": "ჰერცი", "ვ": "ვოლტი", "°C": "გრადუსი", "°": "გრადუსი"}
+UNIT_RE = re.compile("(?P<u>" + "|".join(re.escape(u) for u in sorted(UNIT_WORDS, key=len, reverse=True))
+                     + r")(?:-(?P<suf>[ა-ჿ]+))?")
+MONTHS = re.compile(r"^(იანვ|თებერვ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტ|სექტემბ|ოქტომბ|ნოემბ|დეკემბ)")
+# Counted nouns that take the -მდე of a range (10-15 წუთი → ათიდან თხუთმეტ წუთამდე), as nominative → -მდე form.
+RANGE_NOUNS = {"წამი": "წამამდე", "წუთი": "წუთამდე", "საათი": "საათამდე", "დღე": "დღემდე", "კვირა": "კვირამდე",
+               "თვე": "თვემდე", "წელი": "წლამდე", "წლებში": "წლამდე", "პროცენტი": "პროცენტამდე", "ლარი": "ლარამდე",
+               "დოლარი": "დოლარამდე", "ევრო": "ევრომდე", "ადამიანი": "ადამიანამდე", "კილომეტრი": "კილომეტრამდე",
+               "მეტრი": "მეტრამდე", "კილოგრამი": "კილოგრამამდე", "ცალი": "ცალამდე"}
 
 GEO = re.compile(r"[ა-ჿ]")
 
@@ -94,7 +109,7 @@ def inflect(words, suffix):
 def attributive(words, next_word):
     """A numeral before a noun: dative/adverbial/postpositional nouns take the stem (ხუთ სერვერს)."""
     w = next_word.strip(".,;:!?„“\"()")
-    if re.search(r"(ზე|ში|თან|ად|ამდე|მდე)$", w) or (w.endswith("ს") and not w.endswith("ის")):
+    if re.search(r"(ზე|ში|თან|ად|(?<=[აეიოუ])დ|ამდე|მდე)$", w) or (w.endswith("ს") and not w.endswith("ის")):
         return stem(words)
     if w.endswith("მა"):
         return stem(words) + "მა"
@@ -105,15 +120,28 @@ def spell(latin):
     return " ".join(LETTERS[c.upper()] for c in latin if c.upper() in LETTERS)
 
 
-def attach(nominative, suf):
+def spell_name(latin):
+    """A spelled acronym used as a noun: a last letter ending in a consonant takes the nominative ი (ეს ემ ესი)."""
+    s = spell(latin)
+    return s + "ი" if s and s[-1] not in VOWELS else s
+
+
+def root_i(latin):
+    """Does the spoken name end in a root ი that stays before an ending (Sony, Gemini, AMD), not a nominative ი?"""
+    if is_acronym(latin):
+        return LETTERS[latin[-1].upper()][-1] == "ი"
+    return SOUND.get(latin) == "i-sound" or latin[-1:].lower() in ("i", "y")
+
+
+def attach(nominative, suf, keep_i=False):
     """A Georgian spoken name (nominative) + the case ending written after its hyphen.
 
     მაიკროსოფტი + მა → მაიკროსოფტმა (the nominative ი is an ending, it drops); ენვიდია + ის → ენვიდიას,
     + მა → ენვიდიამ, + ით → ენვიდიათი (vowel stems, like spelled acronyms: ეი აი + ს → ეი აის); a root ი after
-    a vowel stays (ჰუავეი + მა → ჰუავეიმ)."""
+    a vowel stays (ჰუავეი + მა → ჰუავეიმ), and so does one the Latin name ends in (keep_i: სონი + მა → სონიმ)."""
     last = nominative.split()[-1]
-    if nominative.endswith("ი") and len(last) > 1 and last[-2] not in VOWELS:
-        return nominative[:-1] + suf
+    if nominative.endswith("ი") and len(last) > 1 and last[-2] not in VOWELS and not keep_i:
+        return nominative[:-1] + {"მდე": "ამდე", "დან": "იდან", "თვის": "ისთვის", "დ": "ად"}.get(suf, suf)  # ტამდე
     if nominative[-1] in VOWELS:  # research table: vowel stems don't truncate (ტესლამ, ტესლას, ენვიდიას)
         return nominative + {"ის": "ს", "მა": "მ", "ით": "თ" if nominative[-1] == "ი" else "თი", "ად": "დ"}.get(suf, suf)
     return nominative + suf
@@ -125,6 +153,8 @@ def number(text):
     text = text.replace(",", "") if re.fullmatch(r"\d{1,3}(,\d{3})+", text) else text
     if "." in text or ("," in text and not text.endswith(",")):
         whole, frac = re.split(r"[.,]", text, maxsplit=1)
+        if frac == "5" and int(whole) < 20:  # 1,5 → ერთნახევარი, 0,5 → ნახევარი (Kaeasy addition)
+            return (stem(cardinal(int(whole))) if int(whole) else "") + "ნახევარი"
         return f"{cardinal(int(whole))} მთელი {cardinal(int(frac))} {DENOMINATORS.get(len(frac), 'მეათასედი')}"
     return cardinal(int(text))
 
@@ -234,12 +264,22 @@ def speak_token(core, next_word="", prev_word="", known=None):
     if m:
         return clock(int(m["h"]), int(m["min"]), m["suf"] or "")
     m = re.fullmatch(r"(?P<w>.*[A-Za-z0-9.])-(?P<suf>[ა-ჿ]+)", core)  # NVIDIA-ს, AI-ს, GPU-ები, Storm-0940-მა
-    if m and LATIN.search(m["w"]):
+    if m and LATIN.search(m["w"]) and not UNIT_RE.fullmatch(core) and "°" not in core:
         w, suf = m["w"], m["suf"]
-        base = known.get(w) or (spell(w) if is_acronym(w) else speak_token(w, prev_word=prev_word, known=known))
+        base = known.get(w) or (spell_name(w) if is_acronym(w) else speak_token(w, prev_word=prev_word, known=known))
         if not base:
             return None
-        return attach(base, suf) if ENDING.fullmatch(suf) else base + " " + suf  # AI-აგენტები: a compound
+        return attach(base, suf, root_i(w)) if ENDING.fullmatch(suf) else base + " " + suf  # AI-აგენტები: compound
+    m = re.fullmatch(r"v(?P<n>\d+(?:\.\d+)+)", core)  # v3.8 → ვერსია სამი წერტილი რვა (Kaeasy addition)
+    if m:
+        return "ვერსია " + version(m["n"])
+    m = re.fullmatch(r"(?P<a>[A-Z])2(?P<b>[A-Z])", core)  # B2B → ბი თუ ბი
+    if m:
+        return f'{spell(m["a"])} თუ {spell_name(m["b"])}'
+    m = UNIT_RE.fullmatch(core)  # 10 ₾, 500 ₾-ით, 5 კმ: a unit word after a number
+    if m and re.fullmatch(rf"[+−-]?(?:{NUM})", prev_word or ""):
+        head, _, rest = UNIT_WORDS[m["u"]].partition(" ")
+        return (attach(head, m["suf"]) if m["suf"] else head) + (" " + rest if rest else "")
     m = re.fullmatch(r"(?P<n>\d+(?:\.\d+){2,})(?:-(?P<suf>[ა-ჿ]+))?", core)  # 23.0.1, 23.0.1-ზე
     if m or (prev_word and LATIN.search(prev_word) and re.fullmatch(r"\d+\.\d+(?:-[ა-ჿ]+)?", core)):  # Opus 4.7
         n, _, suf = core.partition("-")
@@ -248,13 +288,21 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(r"(?P<a>\d+)[–-](?P<b>\d+)", core)  # 10–15 (not a model name like GPT-5)
     if m:
         return inflect(cardinal(int(m["a"])), "დან") + " " + inflect(cardinal(int(m["b"])), "მდე")
-    m = re.fullmatch(rf"(?P<cur>[$€₾£])(?P<n>{NUM})", core)
+    m = re.fullmatch(rf"(?P<cur>[$€₾£])(?P<n>{NUM})(?:-(?P<suf>[ა-ჿ]+))?", core)
     if m:
         unit = CURRENCY[m["cur"]]
         tail = next_word.strip(".,;:!?")
-        if tail in ("მილიონი", "მილიარდი", "ათასი", "million", "billion"):
+        if tail in ("მილიონი", "მილიარდი", "ათასი", "million", "billion") and not m["suf"]:
             return number(m["n"])  # the scale word follows; the currency is spoken after it by the writer
-        return number(m["n"]) + " " + unit + ("ი" if not unit.endswith("ო") else "")
+        noun = unit + ("ი" if not unit.endswith("ო") else "")
+        if m["suf"]:  # $50-ით → ორმოცდაათი დოლარით, $100-ად → ას დოლარად
+            noun = attach(noun, m["suf"])
+            return attributive(number(m["n"]), noun) + " " + noun
+        return number(m["n"]) + " " + noun
+    m = re.fullmatch(rf"(?P<n>{NUM})\s?°C?(?:-(?P<suf>[ა-ჿ]+))?", core)  # 25°C, 25°C-მდე
+    if m:
+        noun = attach("გრადუსი", m["suf"]) if m["suf"] else "გრადუსი"
+        return attributive(number(m["n"]), noun) + " " + noun
     m = re.fullmatch(rf"(?P<n>{NUM})%(?:-(?P<suf>[ა-ჿ]+))?", core)  # 36%, 36%-ის
     if m:
         n, suf = number(m["n"]), m["suf"]
@@ -268,9 +316,9 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(rf"(?P<n>{NUM})\s?(?P<u>GB|TB|MB|GHz|km|W|nm)", core)
     if m:
         return number(m["n"]) + " " + UNITS[m["u"]] + "ი"
-    m = re.fullmatch(r"(?P<n>\d+)-(?:ე|ელი|ლი)", core)  # 21-ე, 1-ელი
+    m = re.fullmatch(r"(?P<n>\d+)-(?P<o>ე|ელი|ლი|ელ|ლ)", core)  # 21-ე, 1-ელი, 1-ელ იანვარს
     if m:
-        return ordinal(int(m["n"]))
+        return ordinal(int(m["n"])) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(int(m["n"])))
     m = re.fullmatch(r"მე-(?P<n>\d+)(?:-ე)?", core)  # მე-2
     if m:
         return ordinal(int(m["n"]))
@@ -280,12 +328,18 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(rf"(?P<n>{NUM})", core)
     if m:
         words = number(m["n"])
+        after = TOKEN.match(next_word or "")["core"]
+        if words == "ერთი" and MONTHS.match(after):  # 1 ივნისს → პირველ ივნისს
+            words = ordinal(1)
+        unit = UNIT_RE.fullmatch(after) and speak_token(after, prev_word=m["n"], known=known)
+        if unit:  # 100 ₾-ად → ას ლარად
+            return attributive(words, unit.split()[0])
         return attributive(words, next_word) if GEO.search(next_word or "") else words
     m = re.fullmatch(r"(?P<w>[A-Za-z]+)-?(?P<n>\d+)(?P<rest>[A-Za-z]*)", core)  # B300, GPT-5, M4
     if m and m["w"].isupper():
         return f'{spell(m["w"])} {cardinal(int(m["n"]))}' + (f' {spell(m["rest"])}' if m["rest"] else "")
-    if is_acronym(core):  # AI, GPU, AMD, TSMC
-        return spell(core)
+    if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი
+        return spell_name(core)
     return None
 
 
@@ -293,7 +347,7 @@ def pairs(text, say=None):
     """[(display token, spoken text)] for every token of the narration (tokens()). say: the script's own
     spoken forms for names the lexicon doesn't know ({"ARTEX": "არტექსი"})."""
     toks, known = tokens(text), names(say)
-    multi = multiword(toks, known)
+    multi = {**joined(toks), **multiword(toks, known)}
     out = []
     for i, tok in enumerate(toks):
         m = TOKEN.match(tok)
@@ -301,6 +355,46 @@ def pairs(text, say=None):
         prev = TOKEN.match(toks[i - 1])["core"] if i else ""
         spoken = multi.get(i) or speak_token(m["core"], nxt, prev, known)
         out.append((tok, tok if spoken is None else m["pre"] + spoken + m["post"]))
+    return out
+
+
+CLOCK_NOUN = {ending: suf for suf, (ending, _) in CLOCK.items()}  # საათ + ზე → "ზე"
+PHONE_GROUP = re.compile(r"\d{2,3}")
+
+
+def _digits(group):
+    return " ".join(SMALL[int(d)] for d in group)
+
+
+def joined(toks):
+    """{token index: spoken} where a number and the next word are read together (Kaeasy addition): a time before
+    საათი (18:30 საათზე → თვრამეტ საათსა და ოცდაათ | წუთზე), a range before a counted noun (10-15 წუთი →
+    ათიდან თხუთმეტ | წუთამდე) and a +995 phone number read in groups. The next token keeps its own slot."""
+    cores = [TOKEN.match(t) for t in toks]
+    out = {}
+    for i, m in enumerate(cores):
+        core = m["core"]
+        nxt = cores[i + 1] if i + 1 < len(toks) else None
+        t = re.fullmatch(r"(?P<h>[01]?\d|2[0-3]):(?P<min>[0-5]\d)", core)
+        if t and nxt and nxt["core"].startswith("საათ") and nxt["core"][4:] in CLOCK_NOUN:
+            head, _, last = clock(int(t["h"]), int(t["min"]), CLOCK_NOUN[nxt["core"][4:]]).rpartition(" ")
+            out[i], out[i + 1] = head, last
+        r = re.fullmatch(r"(?P<a>\d+)[–-](?P<b>\d+)", core)
+        if r and nxt and nxt["core"] in RANGE_NOUNS:
+            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
+            out[i + 1] = RANGE_NOUNS[nxt["core"]]
+        if core == "+995":
+            groups = []
+            for c in cores[i + 1:i + 5]:
+                if not PHONE_GROUP.fullmatch(c["core"]):
+                    break
+                groups.append(c)
+            if len(groups) >= 3:
+                out[i] = "პლუს " + cardinal(995) + ","
+                for j, c in enumerate(groups, i + 1):
+                    g = c["core"]
+                    said = _digits(g) if len(g) == 3 or g.startswith("0") else cardinal(int(g))
+                    out[j] = said + ("," if j < i + len(groups) else "")
     return out
 
 
