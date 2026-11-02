@@ -16,6 +16,7 @@ import json
 import re
 import sys
 from dataclasses import asdict, dataclass
+from pathlib import Path
 
 MODES = ("article", "social", "ui", "speech")
 
@@ -93,10 +94,22 @@ POSTPOSITION_DATIVE = re.compile(
     r"(?<![A-Za-z0-9-])\b(ამას|იმას|რას|[ა-ჰ]{2,}ებს)\s+(შესახებ|გამო|მიხედვით)\b"
 )
 
+# Case endings of Latin names by their final sound (data/latin_endings.json, latin-names.md): a vowel sound takes
+# -მ in the ergative (OpenAI-მ, Meta-მ), a consonant -მა (Microsoft-მა). Only names listed there are checked.
+LATIN_CLASS: dict[str, str] = json.loads(
+    (Path(__file__).resolve().parent / "data" / "latin_endings.json").read_text(encoding="utf-8"))["names"]
+LATIN_NAME_ENDING = re.compile(
+    r"(?<![A-Za-z0-9.\-])(" + "|".join(re.escape(n) for n in sorted(LATIN_CLASS, key=len, reverse=True))
+    + r")-(მა|მ|ის|ით|თი)(?![ა-ჰ])")
+# (sound class group, written ending) → right ending. Ergative mistakes are strict; the rest are advisories.
+LATIN_ERGATIVE = {("consonant", "მ"): "მა", ("vowel", "მა"): "მ"}
+LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("i-sound", "თი"): "ით", ("a", "ით"): "თი",
+               ("o-u", "ით"): "თი", ("e", "ით"): "თი"}
+
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative"}
+          "postposition_dative", "latin_ergative"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -278,6 +291,22 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
             else:
                 fix_word = re.sub(r"ებს$", "ების", word)
             add("postposition_dative", "error", f"„{m.group(0)}“ → „{fix_word} {postp}“ (თანდებული მოითხოვს ნათესაობით ბრუნვას)", m)
+
+    if on("latin_ergative") or on("latin_case"):
+        for m in LATIN_NAME_ENDING.finditer(body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            name, suf = m.group(1), m.group(2)
+            cls = LATIN_CLASS[name]
+            group = "consonant" if cls == "consonant" else "vowel"
+            right = LATIN_ERGATIVE.get((group, suf))
+            if right and on("latin_ergative"):
+                add("latin_ergative", "error", f"„{m.group(0)}“ → „{name}-{right}“ (მოთხრობითი ბოლო ბგერით: "
+                    f"ხმოვანზე -მ, თანხმოვანზე -მა)", m)
+                continue
+            right = LATIN_OTHER.get((cls, suf)) or LATIN_OTHER.get((group, suf))
+            if right and on("latin_case"):
+                add("latin_case", "warn", f"„{m.group(0)}“ → „{name}-{right}“ (latin-names.md)", m)
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()

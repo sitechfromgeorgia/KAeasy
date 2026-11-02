@@ -201,3 +201,29 @@ def test_latin_names_reference_table():
         assert in_post == f"{written}{c['in']}"
         assert plural == f"{written}{c['plural']}"
 
+
+
+@pytest.mark.parametrize("text,check,want", [
+    ("OpenAI-მა ახალი მოდელი გამოუშვა.", "latin_ergative", "OpenAI-მ"),
+    ("Meta-მა განაცხადა.", "latin_ergative", "Meta-მ"),
+    ("Microsoft-მ ფასი გაზარდა.", "latin_ergative", "Microsoft-მა"),
+    ("Stability AI-მა მოდელი გახსნა.", "latin_ergative", "Stability AI-მ"),
+    ("OpenAI-ის მოდელი", "latin_case", "OpenAI-ს"),
+    ("ChatGPT-თი დაწერეს.", "latin_case", "ChatGPT-ით"),
+    ("NVIDIA-ით გაიზარდა.", "latin_case", "NVIDIA-თი"),
+])
+def test_latin_name_endings(text, check, want):
+    found = [f for f in lint.check_text(text) if f.check == check]
+    assert found and f"„{want}“" in found[0].message
+    assert (check in {f.check for f in lint.check_text(text, strict=True)}) == (check == "latin_ergative")
+
+
+@pytest.mark.parametrize("text", [
+    "OpenAI-მ, Meta-მ და Microsoft-მა განაცხადეს.",
+    "OpenAI-ს, NVIDIA-ს და Google-ის მოდელები.",
+    "ChatGPT-ით, NVIDIA-თი და Microsoft-ით.",
+    "Meta-სთვის და Microsoft-ისთვის.",
+    "ბლოგი my-OpenAI-მა-test.example-ზე.",
+])
+def test_latin_name_endings_clean(text):
+    assert [f for f in lint.check_text(text) if f.check.startswith("latin_")] == []
