@@ -24,4 +24,8 @@ description: Georgian (ka) UI strings - buttons, labels, status messages, errors
 - Brands keep Latin with hyphenated endings: `Google-ით შესვლა`.
 - Verify status words with a native speaker before a release.
 
+## Examples
+
+`examples/ui-fixes.md`: 50+ button, status, error, empty state and validation fixes.
+
 `ka_lint` with `mode: ui`.

@@ -35,8 +35,8 @@ The hyphen is mandatory; the ending follows how the name **sounds**:
 |---|---|---|---|---|---|---|
 | Microsoft | consonant | Microsoft-მა | Microsoft-ს | Microsoft-ის | Microsoft-ით | — |
 | Google | consonant | Google-მა | Google-ს | Google-ის | Google-ით | — |
-| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ს | OpenAI-ით | — |
-| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ს | ChatGPT-ით | — |
+| OpenAI | vowel (…აი) | OpenAI-მ | OpenAI-ს | OpenAI-ის | OpenAI-ით | — |
+| ChatGPT | vowel (…ტი) | ChatGPT-მ | ChatGPT-ს | ChatGPT-ის | ChatGPT-ით | — |
 | NVIDIA | vowel (…ა) | NVIDIA-მ | NVIDIA-ს | NVIDIA-ს | NVIDIA-თი | — |
 | GPU | vowel (…იუ) | GPU-მ | GPU-ს | GPU-ს | GPU-თი | GPU-ები |
 

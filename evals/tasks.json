@@ -1,0 +1,1475 @@
+[
+  {
+    "id": "news_001",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Microsoft has announced Copilot Pro for enterprise customers in Germany and France. The company stated that the service costs $30 per user per month and includes access to the latest OpenAI models.",
+    "typical_mistakes": [
+      "Transliterating brands into Georgian letters (მაიკროსოფტმა, ოპენაის) instead of keeping Latin (Microsoft-მა, OpenAI-ს).",
+      "Leaving European country names in English (Germany-ში, France-ში) instead of translating (გერმანიასა და საფრანგეთში).",
+      "Dropping the ergative suffix -მა on the subject with an aorist verb (Microsoft გამოაცხადა instead of Microsoft-მა გამოაცხადა).",
+      "Using dative for the direct object in aorist (Copilot Pro-ს გამოაცხადა instead of Copilot Pro გამოაცხადა)."
+    ],
+    "reference": "Microsoft-მა გერმანიასა და საფრანგეთში კორპორაციული მომხმარებლებისთვის Copilot Pro გამოაცხადა. კომპანიის განცხადებით, სერვისი თითოეულ მომხმარებელზე თვეში 30 დოლარი ღირს და OpenAI-ს უახლეს მოდელებზე წვდომას მოიცავს."
+  },
+  {
+    "id": "news_002",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Apple is reportedly delaying the launch of several AI features in Europe due to regulatory uncertainty. According to Bloomberg, five EU member countries expressed privacy concerns over data processing.",
+    "typical_mistakes": [
+      "Using a plural noun after a numeral (ხუთმა ქვეყნებმა instead of ხუთმა ქვეყანამ).",
+      "Omitting the hyphen before the Georgian case ending on Latin brands (Appleის, Apple მა).",
+      "Translating 'due to' with word-for-word calque 'შედეგად იმისა, რომ'.",
+      "Treating reported claims as established facts without attribution (omitting 'გავრცელებული ინფორმაციით' or 'Bloomberg-ის ცნობით')."
+    ],
+    "reference": "გავრცელებული ინფორმაციით, რეგულაციებთან დაკავშირებული გაურკვევლობის გამო Apple ევროპაში რამდენიმე AI ფუნქციის გამოშვებას აფერხებს. Bloomberg-ის ცნობით, მონაცემთა დამუშავების წესებთან დაკავშირებით ევროკავშირის ხუთმა ქვეყანამ უსაფრთხოების რისკებზე მიუთითა."
+  },
+  {
+    "id": "news_003",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: NVIDIA reported record quarterly revenue of $30.0 billion, up 122% year-over-year. The CEO said the demand for Blackwell GPUs exceeded expectations and that the meeting took place in California.",
+    "typical_mistakes": [
+      "Calquing 'the meeting took place' as 'შეხვედრამ ადგილი მიიღო' instead of 'შეხვედრა გაიმართა'.",
+      "Writing decimals with a dot (30.0) or putting a space before percent (122 %) instead of 30,0 and 122%-ით.",
+      "Using plural noun after number (30 მილიარდი დოლარები instead of 30 მილიარდი დოლარი).",
+      "Transliterating NVIDIA as ენვიდიამ instead of NVIDIA-მ."
+    ],
+    "reference": "NVIDIA-მ რეკორდული კვარტალური შემოსავალი გამოაცხადა: 30,0 მილიარდი დოლარი, რაც წლიურად 122%-ით მეტია. კომპანიის აღმასრულებელი დირექტორის თქმით, Blackwell-ის GPU-ებზე მოთხოვნამ მოლოდინს გადააჭარბა, შეხვედრა კი კალიფორნიაში გაიმართა."
+  },
+  {
+    "id": "news_004",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: OpenAI released SearchGPT on Thursday, entering direct competition with Google. The company made a decision to offer the feature to a limited test group of 10,000 users before rolling it out globally.",
+    "typical_mistakes": [
+      "Calquing 'made a decision' as 'გააკეთა გადაწყვეტილება' instead of 'გადაწყვიტა' or 'მიიღო გადაწყვეტილება'.",
+      "Plural noun after number (10 000 მომხმარებლები instead of 10 000 მომხმარებელი).",
+      "Dropping ergative -მ on OpenAI with aorist verb (OpenAI წარადგინა instead of OpenAI-მ წარადგინა).",
+      "Using straight English quotation marks (\"SearchGPT\") instead of Georgian quotes („…“) or no quotes for names."
+    ],
+    "reference": "OpenAI-მ ხუთშაბათს SearchGPT წარადგინა, რითაც Google-ს პირდაპირი კონკურენცია გაუწია. კომპანიამ გადაწყვიტა, გლობალურ გაშვებამდე ფუნქცია სატესტო რეჟიმში 10 000 მომხმარებელს შესთავაზოს."
+  },
+  {
+    "id": "news_005",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Meta will cut 1,000 engineering jobs across several divisions in London and Berlin. It is important to note that the company is shifting its primary focus toward open-source artificial intelligence.",
+    "typical_mistakes": [
+      "Using empty AI filler 'მნიშვნელოვანია აღინიშნოს, რომ' (explicitly flagged by linter).",
+      "Leaving city names in Latin (London-ში, Berlin-ში) instead of ლონდონსა და ბერლინში.",
+      "Plural noun after number (1 000 ინჟინრები instead of 1 000 ინჟინერი).",
+      "Transliterating Meta as მეტა without Latin capitalization and hyphen."
+    ],
+    "reference": "Meta ლონდონსა და ბერლინში რამდენიმე განყოფილებიდან 1 000 ინჟინერს გაათავისუფლებს. კომპანია მთავარ რესურსს ღია კოდის მქონე ხელოვნური ინტელექტისკენ მიმართავს."
+  },
+  {
+    "id": "news_006",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Google DeepMind unveiled AlphaFold 3, which can predict the structure of all life molecules. Researchers in Tokyo confirmed that the model will be available free of charge for non-commercial research.",
+    "typical_mistakes": [
+      "Leaving Tokyo in Latin (Tokyo-ში instead of ტოკიოში).",
+      "Dropping ergative ending on Google DeepMind (Google DeepMind წარადგინა).",
+      "Dropping plural verb agreement for conscious human subjects (მკვლევრებმა დაადასტურა instead of მკვლევრებმა დაადასტურეს).",
+      "Using English quotation marks around AlphaFold 3."
+    ],
+    "reference": "Google DeepMind-მა AlphaFold 3 წარადგინა, რომელსაც ყველა ბიოლოგიური მოლეკულის სტრუქტურის პროგნოზირება შეუძლია. ტოკიოში მომუშავე მკვლევრებმა დაადასტურეს, რომ არაკომერციული კვლევებისთვის მოდელი უფასო იქნება."
+  },
+  {
+    "id": "news_007",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Amazon Web Services will invest 10 billion euros in German cloud infrastructure. The government said the project will create 3,000 jobs by 2028.",
+    "typical_mistakes": [
+      "Plural noun after numeral (10 მილიარდი ევროები, 3 000 სამუშაო ადგილები).",
+      "Leaving German in Latin instead of translating as გერმანიის.",
+      "Transliterating Amazon as ამაზონი.",
+      "Unnatural word order mimicking English passive phrasing."
+    ],
+    "reference": "Amazon Web Services გერმანიის ღრუბლოვან ინფრასტრუქტურაში 10 მილიარდი ევროს ინვესტიციას განახორციელებს. მთავრობის განცხადებით, პროექტის ფარგლებში 2028 წლისთვის 3 000 სამუშაო ადგილი შეიქმნება."
+  },
+  {
+    "id": "news_008",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Cloudflare mitigated a distributed denial-of-service attack that reached 3.8 terabits per second. Security engineers confirmed that no customer data was compromised during the incident.",
+    "typical_mistakes": [
+      "Using decimal dot (3.8) instead of Georgian decimal comma (3,8).",
+      "Passive construction calque (მონაცემები არ იქნა კომპრომეტირებული ინჟინრების მიერ).",
+      "Dropping ergative -მა on Cloudflare with aorist verb მოიგერია.",
+      "Transliterating Cloudflare as კლაუდფლერმა."
+    ],
+    "reference": "Cloudflare-მა 3,8 ტერაბიტი/წამში სიმძლავრის DDoS შეტევა მოიგერია. უსაფრთხოების ინჟინრებმა დაადასტურეს, რომ ინციდენტის დროს მომხმარებელთა მონაცემები არ დაზიანებულა."
+  },
+  {
+    "id": "news_009",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Anthropic launched Claude Enterprise on Wednesday with an extended 500,000-token context window. The company emphasized that customer data is never used to train future foundation models.",
+    "typical_mistakes": [
+      "Transliterating Anthropic as ანთროპიკმა instead of keeping Latin Anthropic-მა.",
+      "Dropping ergative -მა on Anthropic with past verb წარადგინა.",
+      "Passive calque 'მონაცემები არ არის გამოყენებული კომპანიის მიერ'.",
+      "Using straight English quotation marks (\"Claude Enterprise\")."
+    ],
+    "reference": "Anthropic-მა ოთხშაბათს Claude Enterprise წარადგინა, რომელსაც 500 000-ტოკენიანი კონტექსტური ფანჯარა აქვს. კომპანიამ ხაზგასმით აღნიშნა, რომ მომხმარებელთა მონაცემებს სამომავლო მოდელების მოსამზადებლად არ იყენებს."
+  },
+  {
+    "id": "news_010",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: SpaceX caught the giant Starship rocket booster using mechanical arms during its fifth test flight. Founder Elon Musk announced that the next flight could happen before the end of the year.",
+    "typical_mistakes": [
+      "Transliterating SpaceX as სპეისექსმა.",
+      "Translating 'could happen' as definite fact (მოხდება instead of შესაძლოა შედგეს / გაიმართოს).",
+      "Dropping ergative on the founder's name (დამფუძნებელმა Elon Musk განაცხადა instead of დამფუძნებელმა Elon Musk-მა).",
+      "Awkward word-for-word translation of mechanical arms."
+    ],
+    "reference": "SpaceX-მა მეხუთე საცდელი ფრენისას Starship-ის გიგანტური ამაჩქარებელი მექანიკური ბერკეტებით დაიჭირა. დამფუძნებელმა Elon Musk-მა განაცხადა, რომ მომდევნო გაფრენა, შესაძლოა, წლის ბოლომდე შედგეს."
+  },
+  {
+    "id": "news_011",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: The European Union enacted the Artificial Intelligence Act, imposing strict requirements on high-risk models. Representatives said that 3 companies have already requested compliance guidance.",
+    "typical_mistakes": [
+      "Plural noun after number (3 კომპანიებმა მოითხოვეს instead of 3-მა კომპანიამ მოითხოვა).",
+      "Passive calque 'აქტი იქნა ამოქმედებული ევროკავშირის მიერ'.",
+      "Using em dash (—) instead of comma or colon.",
+      "Dropping ergative on European Union with past transitive verb (ევროკავშირი აამოქმედა)."
+    ],
+    "reference": "ევროკავშირმა ხელოვნური ინტელექტის აქტი აამოქმედა, რაც მაღალი რისკის მქონე მოდელებზე მკაცრ მოთხოვნებს აწესებს. წარმომადგენელთა თქმით, წესებთან შესაბამისობის თაობაზე კონსულტაცია უკვე 3-მა კომპანიამ მოითხოვა."
+  },
+  {
+    "id": "news_012",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Bank of Georgia opened a new technology hub in Tbilisi to support 200 developers. The leadership confirmed that 8 teams will focus on cloud infrastructure and mobile banking.",
+    "typical_mistakes": [
+      "Plural noun after number (200 დეველოპერები, 8 გუნდები იმუშავებენ).",
+      "Dropping ergative on subject with aorist verb (საქართველოს ბანკი გახსნა).",
+      "Unnatural word order replicating English infinitive clause 'to support'."
+    ],
+    "reference": "საქართველოს ბანკმა თბილისში ახალი ტექნოლოგიური ჰაბი გახსნა, სადაც 200 დეველოპერი იმუშავებს. ხელმძღვანელობამ დაადასტურა, რომ 8 გუნდი ღრუბლოვან ინფრასტრუქტურასა და მობილბანკზე იმუშავებს."
+  },
+  {
+    "id": "news_013",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: GitHub enabled secret scanning by default for all public and private repositories. The team stated that the tool plays an important role in preventing credential leaks.",
+    "typical_mistakes": [
+      "Calquing 'plays an important role' as 'თამაშობს მნიშვნელოვან როლს' instead of 'მნიშვნელოვან როლს ასრულებს'.",
+      "Dropping hyphen before Georgian case ending (GitHubმა).",
+      "Dropping ergative suffix -მა on GitHub with aorist verb გაააქტიურა."
+    ],
+    "reference": "GitHub-მა საიდუმლო გასაღებების სკანირება ყველა საჯარო და პირად რეპოზიტორიაში ნაგულისხმევ რეჟიმში გაააქტიურა. გუნდის განცხადებით, ხელსაწყო მონაცემთა გაჟონვის თავიდან აცილებაში მნიშვნელოვან როლს ასრულებს."
+  },
+  {
+    "id": "news_014",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: The National Bank of Georgia cut the refinancing rate by 0.5% to 8.0%. In this context, officials noted that annual inflation remains below the target threshold.",
+    "typical_mistakes": [
+      "Using decimal dot (0.5%, 8.0%) and space before percent (0.5 %) instead of decimal comma (0,5%-ით, 8,0%-ზე).",
+      "Using empty AI filler 'ამ კონტექსტში' (flagged by linter).",
+      "Dropping ergative on National Bank with aorist verb (ეროვნული ბანკი შეამცირა)."
+    ],
+    "reference": "საქართველოს ეროვნულმა ბანკმა რეფინანსირების განაკვეთი 0,5%-ით შეამცირა და 8,0%-ზე დაადგინა. ოფიციალური პირების განმარტებით, წლიური ინფლაცია მიზნობრივ ზღვარზე დაბალი რჩება."
+  },
+  {
+    "id": "news_015",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Intel reported a net loss of $1.6 billion for the second quarter and decided to pause dividend payouts. The board of directors held an emergency meeting in California.",
+    "typical_mistakes": [
+      "Transliterating Intel as ინტელმა.",
+      "Decimal dot (1.6) instead of comma (1,6).",
+      "Plural noun after number (1,6 მილიარდი დოლარები).",
+      "Calquing 'held a meeting' as 'ადგილი მიიღო შეხვედრამ' or 'ჩაატარა შეხვედრა'."
+    ],
+    "reference": "Intel-მა მეორე კვარტალში 1,6 მილიარდი დოლარის წმინდა ზარალი დააფიქსირა და დივიდენდების გაცემის შეჩერება გადაწყვიტა. დირექტორთა საბჭომ კალიფორნიაში საგანგებო შეხვედრა გამართა."
+  },
+  {
+    "id": "news_016",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Tesla unveiled its Cybercab robotaxi at an event in Los Angeles without pedals or a steering wheel. CEO Elon Musk claimed production could begin in 2026.",
+    "typical_mistakes": [
+      "Transliterating Tesla as ტესლამ.",
+      "Dropping modality ('could begin' translated as certain 'დაიწყება' instead of 'შესაძლოა დაიწყოს').",
+      "Using dative for direct object with past transitive verb (Cybercab-ს წარადგინა instead of Cybercab წარადგინა)."
+    ],
+    "reference": "Tesla-მ ლოს-ანჯელესში გამართულ ღონისძიებაზე უპედლო და უსაჭო რობოტაქსი Cybercab წარადგინა. კომპანიის ხელმძღვანელის Elon Musk-ის განცხადებით, წარმოება, შესაძლოა, 2026 წელს დაიწყოს."
+  },
+  {
+    "id": "news_017",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Security researchers discovered a critical vulnerability in the Linux kernel that allows privilege escalation. System administrators in Paris were advised to patch their servers immediately.",
+    "typical_mistakes": [
+      "Leaving Paris in Latin (Paris-ში instead of პარიზში).",
+      "Transliterating Linux as ლინუქსის.",
+      "Dropping plural verb agreement for human subjects (მკვლევრებმა აღმოაჩინა instead of მკვლევრებმა აღმოაჩინეს).",
+      "Passive calque 'რეკომენდაცია იქნა გაცემული'."
+    ],
+    "reference": "უსაფრთხოების მკვლევრებმა Linux-ის ბირთვში კრიტიკული ხარვეზი აღმოაჩინეს, რაც პრივილეგიების უკანონო გაზრდის საშუალებას იძლევა. პარიზელ სისტემურ ადმინისტრატორებს სერვერების დაუყოვნებლივ განახლება ურჩიეს."
+  },
+  {
+    "id": "news_018",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Netflix added 8 million subscribers in the third quarter following its crackdown on account sharing. Management announced that operating profit rose by 40%.",
+    "typical_mistakes": [
+      "Transliterating Netflix as ნეტფლიქსს.",
+      "Plural noun after number (8 მილიონი გამომწერები instead of 8 მილიონი გამომწერი).",
+      "Space before percent (40 %-ით).",
+      "Dropping ergative on management with past verb (ხელმძღვანელობა განაცხადა)."
+    ],
+    "reference": "ანგარიშების გაზიარების შეზღუდვის შემდეგ, მესამე კვარტალში Netflix-ს 8 მილიონი გამომწერი დაემატა. ხელმძღვანელობამ განაცხადა, რომ საოპერაციო მოგება 40%-ით გაიზარდა."
+  },
+  {
+    "id": "news_019",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Stripe announced support for cross-border payouts for Georgian digital businesses. Local founders can now accept payments from 135 countries without establishing offshore entities.",
+    "typical_mistakes": [
+      "Transliterating Stripe as სტრაიპმა.",
+      "Plural noun after number (135 ქვეყნებიდან instead of 135 ქვეყნიდან).",
+      "Dropping ergative on Stripe (Stripe გამოაცხადა).",
+      "Literal translation calques for cross-border payouts."
+    ],
+    "reference": "Stripe-მა ქართული ციფრული ბიზნესებისთვის საერთაშორისო გადახდების მხარდაჭერა გამოაცხადა. ადგილობრივ დამფუძნებლებს უკვე შეუძლიათ გადახდები 135 ქვეყნიდან მიიღონ ისე, რომ ოფშორული კომპანიის რეგისტრაცია აღარ დასჭირდეთ."
+  },
+  {
+    "id": "news_020",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: DeepSeek introduced an open-weights reasoning model that competes with proprietary offerings from OpenAI and Google. Independent benchmarks confirmed the model performs well on math and code.",
+    "typical_mistakes": [
+      "Missing hyphens on Latin brands (OpenAIს, Googleის).",
+      "Dropping ergative suffix -მა on DeepSeek (DeepSeek წარადგინა).",
+      "Translating benchmarks with passive calque 'დადასტურებულ იქნა ტესტების მიერ'."
+    ],
+    "reference": "DeepSeek-მა ღია წონების მქონე ლოგიკური მოდელი წარადგინა, რომელიც OpenAI-სა და Google-ის დახურულ სისტემებს უწევს კონკურენციას. დამოუკიდებელმა ტესტებმა დაადასტურა, რომ მოდელი მათემატიკურ და პროგრამირების ამოცანებს მაღალ დონეზე ასრულებს."
+  },
+  {
+    "id": "news_021",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Tbilisi City Hall allocated 45 million GEL for the modern renewal of 10 metro stations. The Mayor confirmed that work will start in January.",
+    "typical_mistakes": [
+      "Plural noun after number (10 მეტროსადგურების, 45 მილიონი ლარები).",
+      "Dropping ergative on City Hall (თბილისის მერია გამოყო) and Mayor (მერი დაადასტურა).",
+      "English quotes around metro stations."
+    ],
+    "reference": "თბილისის მერიამ 10 მეტროსადგურის მოდერნიზაციისთვის 45 მილიონი ლარი გამოყო. მერმა დაადასტურა, რომ სამუშაოები იანვარში დაიწყება."
+  },
+  {
+    "id": "news_022",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Spotify will raise the price of its Premium individual plan by 20% in five European countries. The company explained that the increase reflects higher licensing costs for audio content.",
+    "typical_mistakes": [
+      "Transliterating Spotify as სპოტიფაი.",
+      "Plural noun after number (ხუთ ქვეყნებში instead of ხუთ ქვეყანაში).",
+      "Space before percent (20 %-ით).",
+      "Straight quotes around \"Premium\"."
+    ],
+    "reference": "Spotify ევროპის ხუთ ქვეყანაში Premium პაკეტის ფასს 20%-ით გაზრდის. კომპანიის განმარტებით, ფასის ზრდა აუდიო კონტენტზე გაზრდილ სალიცენზიო ხარჯებს უკავშირდება."
+  },
+  {
+    "id": "news_023",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: AMD unveiled its new MI325X artificial intelligence accelerator to challenge NVIDIA. The company claimed that the chip provides 1.3 times higher memory bandwidth.",
+    "typical_mistakes": [
+      "Transliterating AMD or NVIDIA (ეიმდიმ, ენვიდიასთან).",
+      "Decimal dot (1.3) instead of decimal comma (1,3).",
+      "Dropping ergative on AMD (AMD წარადგინა)."
+    ],
+    "reference": "AMD-მ NVIDIA-სთან კონკურენციისთვის ახალი ხელოვნური ინტელექტის ამაჩქარებელი MI325X წარადგინა. კომპანიის განცხადებით, ჩიპს 1,3-ჯერ მეტი მეხსიერების გამტარუნარიანობა აქვს."
+  },
+  {
+    "id": "news_024",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: French regulators fined Google 250 million euros over copyright disputes with news publishers. The authority stated that Google breached commitments regarding fair payment.",
+    "typical_mistakes": [
+      "Leaving French in Latin (France-ის instead of საფრანგეთის).",
+      "Transliterating Google as გუგლი.",
+      "Plural noun after number (250 მილიონი ევროებით).",
+      "Missing hyphen in Google-მა."
+    ],
+    "reference": "საფრანგეთის მარეგულირებელმა ორგანომ საავტორო უფლებებთან დაკავშირებული დავის გამო Google 250 მილიონი ევროთი დააჯარიმა. უწყების განცხადებით, Google-მა სამართლიანი ანაზღაურების პირობები დაარღვია."
+  },
+  {
+    "id": "news_025",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Twelve Georgian startups raised $15 million in foreign direct investments during the first half of 2026. Experts believe the tech ecosystem is growing at an unprecedented pace.",
+    "typical_mistakes": [
+      "Plural noun after number (თორმეტმა სტარტაპებმა instead of თორმეტმა სტარტაპმა).",
+      "Currency plural (15 მილიონი დოლარები).",
+      "Plural verb after numeral subject (მოიზიდეს instead of მოიზიდა)."
+    ],
+    "reference": "2026 წლის პირველ ნახევარში თორმეტმა ქართულმა სტარტაპმა 15 მილიონი დოლარის პირდაპირი უცხოური ინვესტიცია მოიზიდა. ექსპერტების შეფასებით, ტექნოლოგიური ეკოსისტემა უპრეცედენტო ტემპით ვითარდება."
+  },
+  {
+    "id": "news_026",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: YouTube announced an AI summary feature that provides key bullet points for educational videos. It is worth noting that creators can disable the feature in creator studio settings.",
+    "typical_mistakes": [
+      "Using empty AI filler 'აღსანიშნავია, რომ' (flagged by linter).",
+      "Transliterating YouTube as იუთუბმა.",
+      "Dropping ergative on YouTube with past verb (YouTube გამოაცხადა)."
+    ],
+    "reference": "YouTube-მა საგანმანათლებლო ვიდეოებისთვის ხელოვნური ინტელექტის შემაჯამებელი ფუნქცია გამოაცხადა, რომელიც მთავარ პუნქტებს გამოყოფს. ავტორებს ფუნქციის გათიშვა სტუდიის პარამეტრებიდან შეუძლიათ."
+  },
+  {
+    "id": "news_027",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: A major cyberattack hit three regional hospitals in Germany on Tuesday, disrupting emergency admissions. Investigators believe a foreign ransomware syndicate was behind the incident.",
+    "typical_mistakes": [
+      "Leaving Germany in Latin (Germany-ში instead of გერმანიაში).",
+      "Plural noun after number (სამ საავადმყოფოებზე instead of სამ საავადმყოფოზე).",
+      "Inanimate plural verb agreement error (შეაფერხეს instead of შეაფერხა)."
+    ],
+    "reference": "სამშაბათს გერმანიაში სამ რეგიონულ საავადმყოფოზე მასშტაბური კიბერშეტევა განხორციელდა, რამაც გადაუდებელი განყოფილებების მუშაობა შეაფერხა. გამომძიებლების ვერსიით, ინციდენტის უკან უცხოური გამომძალველი ჯგუფი დგას."
+  },
+  {
+    "id": "news_028",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: NASA postponed the Artemis II lunar test flight until September 2026 to resolve heat shield anomalies. Engineers in Florida stressed that astronaut safety is the primary priority.",
+    "typical_mistakes": [
+      "Transliterating NASA as ნასამ.",
+      "Missing hyphen before case ending (NASA-მ).",
+      "Dropping plural verb agreement on human subjects (ინჟინრებმა აღნიშნა instead of ინჟინრებმა აღნიშნეს)."
+    ],
+    "reference": "NASA-მ სითბური ფარის ხარვეზის გამოსასწორებლად მთვარის საცდელი მისია Artemis II 2026 წლის სექტემბრამდე გადადო. ფლორიდაში მომუშავე ინჟინრებმა აღნიშნეს, რომ ასტრონავტების უსაფრთხოება მთავარი პრიორიტეტია."
+  },
+  {
+    "id": "news_029",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Uber expanded its green fleet incentives to 15 cities across Eastern Europe. The company plans to subsidize electric vehicle charging for partner drivers.",
+    "typical_mistakes": [
+      "Transliterating Uber as უბერმა.",
+      "Plural noun after number (15 ქალაქებში instead of 15 ქალაქში).",
+      "Dropping ergative on Uber with past verb (Uber გააფართოვა)."
+    ],
+    "reference": "Uber-მა აღმოსავლეთ ევროპის 15 ქალაქში ეკოლოგიურად სუფთა ავტოპარკის მხარდამჭერი პროგრამა გააფართოვა. კომპანია პარტნიორი მძღოლებისთვის ელექტრომობილების დამუხტვის სუბსიდირებას გეგმავს."
+  },
+  {
+    "id": "news_030",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: Samsung announced that its 3nm chip production yields improved by 15% over the past two quarters. The manufacturer hopes to secure new orders from mobile chipset designers.",
+    "typical_mistakes": [
+      "Transliterating Samsung as სამსუნგმა.",
+      "Space before percent (15 %-ით).",
+      "Plural noun after number (ორ კვარტლებში instead of ორ კვარტალში).",
+      "Missing hyphen in brand (Samsungმა)."
+    ],
+    "reference": "Samsung-მა განაცხადა, რომ ბოლო ორ კვარტალში 3-ნანომეტრიანი ჩიპების წარმოების ეფექტიანობა 15%-ით გაიზარდა. მწარმოებელი მობილური ჩიპსეტების დამპროექტებლებისგან ახალი შეკვეთების მიღებას იმედოვნებს."
+  },
+  {
+    "id": "headline_001",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Apple raised the base price of the iPhone 16 Pro by $100.",
+    "typical_mistakes": [
+      "Adding a trailing period (Edo's rule: headlines never end with a period).",
+      "Transliterating Apple as ეფლმა instead of keeping Latin Apple-მა.",
+      "Missing hyphen before case ending (Appleმა, Apple-ს instead of Apple-მა).",
+      "Robotic passive nominalization (ფასის გაზრდა მოხდა Apple-ის მიერ)."
+    ],
+    "reference": "Apple-მა iPhone 16 Pro-ს ფასი 100 დოლარით გაზარდა"
+  },
+  {
+    "id": "headline_002",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: OpenAI launched GPT-4o with free access for all users.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating OpenAI as ოპენაიმ instead of OpenAI-მ.",
+      "Missing hyphen before case ending (OpenAIმ).",
+      "Sensationalist clickbait (აი რა გააკეთა OpenAI-მ!)."
+    ],
+    "reference": "OpenAI-მ GPT-4o ყველა მომხმარებლისთვის უფასო გახადა"
+  },
+  {
+    "id": "headline_003",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Google updated its core search algorithm to penalize low-quality AI spam.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Google as გუგლმა.",
+      "Dropping ergative suffix -მა on Google with past verb განაახლა.",
+      "Using English quotation marks around terms."
+    ],
+    "reference": "Google-მა საძიებო ალგორითმი განაახლა და უხარისხო კონტენტზე შეზღუდვები გაამკაცრა"
+  },
+  {
+    "id": "headline_004",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Microsoft eliminated 650 jobs across its Xbox gaming division.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (650 თანამშრომლები instead of 650 თანამშრომელი).",
+      "Transliterating Microsoft as მაიკროსოფტმა.",
+      "Missing hyphen before case ending (Microsoftმა)."
+    ],
+    "reference": "Microsoft-მა Xbox-ის განყოფილებაში 650 თანამშრომელი გაათავისუფლა"
+  },
+  {
+    "id": "headline_005",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: NVIDIA surpassed Apple to become the world's most valuable public company.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating brands as ენვიდიამ and ეფლს.",
+      "Missing hyphens on brands (NVIDIAმ, Appleს).",
+      "Calquing 'became most valuable' as unnatural passive phrase."
+    ],
+    "reference": "NVIDIA-მ Apple-ს გადაასწრო და მსოფლიოს ყველაზე ძვირადღირებული კომპანია გახდა"
+  },
+  {
+    "id": "headline_006",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Meta faces a major antitrust lawsuit from European Union regulators.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Meta as მეტას.",
+      "Calquing 'lawsuit was made' as 'სარჩელი გააკეთა'.",
+      "Passive bureaucratic phrasing."
+    ],
+    "reference": "ევროკავშირის მარეგულირებელმა Meta-ს წინააღმდეგ ანტიმონოპოლიური სარჩელი შეიტანა"
+  },
+  {
+    "id": "headline_007",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Tbilisi City Hall purchased 100 new electric buses for public transport.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (100 ახალი ელექტრობუსები instead of 100 ახალი ელექტრობუსი).",
+      "Dropping ergative on subject (თბილისის მერია შეიძინა instead of მერიამ შეიძინა)."
+    ],
+    "reference": "თბილისის მერიამ 100 ახალი ელექტრობუსი შეიძინა"
+  },
+  {
+    "id": "headline_008",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Anthropic introduced computer use automation for Claude 3.5 Sonnet.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Anthropic as ანთროპიკმა.",
+      "Missing hyphen before case ending (Anthropicმა).",
+      "English quotes around feature names (\"Computer Use\")."
+    ],
+    "reference": "Anthropic-მა Claude 3.5 Sonnet-ს კომპიუტერის მართვის ფუნქცია დაამატა"
+  },
+  {
+    "id": "headline_009",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Bitcoin price broke the historic milestone of $90,000.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Wrong case on price (ბიტკოინის ფასი მიაღწია instead of ფასმა მიაღწია).",
+      "Formatting number with comma instead of thin space (90,000 დოლარი).",
+      "Sensationalist empty exclamation marks."
+    ],
+    "reference": "ბიტკოინის ფასმა ისტორიულ მაქსიმუმს მიაღწია და 90 000 დოლარს გადააჭარბა"
+  },
+  {
+    "id": "headline_010",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Amazon eliminated return shipping fees for damaged and defective orders.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Amazon as ამაზონმა.",
+      "Missing hyphen before case ending (Amazonმა).",
+      "Awkward nominalization (საკომისიოს გაუქმება განახორციელა)."
+    ],
+    "reference": "Amazon-მა დაზიანებული ნივთების დაბრუნებაზე საკომისიო გააუქმა"
+  },
+  {
+    "id": "headline_011",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: The National Bank of Georgia kept its monetary policy rate unchanged at 8%.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Space before percent sign (8 %-ზე).",
+      "Dropping ergative on subject (ეროვნული ბანკი დატოვა instead of ეროვნულმა ბანკმა დატოვა)."
+    ],
+    "reference": "საქართველოს ეროვნულმა ბანკმა მონეტარული პოლიტიკის განაკვეთი 8%-ზე უცვლელად დატოვა"
+  },
+  {
+    "id": "headline_012",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: SpaceX successfully placed 24 Starlink broadband satellites into low Earth orbit.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (24 თანამგზავრები instead of 24 თანამგზავრი).",
+      "Transliterating SpaceX as სპეისექსმა.",
+      "Dropping ergative on SpaceX with past transitive verb."
+    ],
+    "reference": "SpaceX-მა ორბიტაზე Starlink-ის 24 ახალი თანამგზავრი გაიყვანა"
+  },
+  {
+    "id": "headline_013",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Cloudflare intercepted a massive cyberattack targeting Georgian online media portals.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Cloudflare as კლაუდფლერმა.",
+      "Missing hyphen before case ending (Cloudflareმა).",
+      "Calque 'შეტევამ ადგილი მიიღო'."
+    ],
+    "reference": "Cloudflare-მა ქართულ მედიაპორტალებზე მასშტაბური კიბერშეტევა მოიგერია"
+  },
+  {
+    "id": "headline_014",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Tesla recalled 2 million electric vehicles to update Autopilot safety warnings.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (2 მილიონი ავტომობილები instead of 2 მილიონი ავტომობილი).",
+      "Transliterating Tesla as ტესლამ.",
+      "Missing hyphen before case ending (Teslaმა)."
+    ],
+    "reference": "Tesla-მ Autopilot-ის განახლებისთვის 2 მილიონი ავტომობილი უკან გაიწვია"
+  },
+  {
+    "id": "headline_015",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: GitHub launched an automatic code vulnerability remediation feature for developers.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating GitHub as გითჰაბმა.",
+      "Missing hyphen before case ending (GitHubმა).",
+      "Robotic nominalization without clear verb."
+    ],
+    "reference": "GitHub-მა პროგრამისტებისთვის კოდის ხარვეზების ავტომატური შესწორების ფუნქცია ჩაუშვა"
+  },
+  {
+    "id": "headline_016",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Telegram launched advertising revenue sharing for channel owners.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Missing hyphen before case ending (Telegramმა).",
+      "Passive calque 'სისტემა იქნა გაშვებული'."
+    ],
+    "reference": "Telegram-მა არხების მფლობელებისთვის სარეკლამო შემოსავლის გაზიარების სისტემა აამოქმედა"
+  },
+  {
+    "id": "headline_017",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: TBC Bank acquired Georgian digital logistics startup for 12 million GEL.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (12 მილიონ ლარებად).",
+      "Dropping ergative on bank (თიბისი ბანკი შეიძინა instead of თიბისი ბანკმა შეიძინა)."
+    ],
+    "reference": "თიბისი ბანკმა ქართული ლოგისტიკური სტარტაპი 12 მილიონ ლარად შეიძინა"
+  },
+  {
+    "id": "headline_018",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Linux Foundation reported a 40% surge in enterprise cloud adoption.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Space before percent sign (40 %-ით).",
+      "Transliterating Linux as ლინუქსის."
+    ],
+    "reference": "Linux Foundation-ის ანგარიშით, კორპორაციულ სექტორში სისტემის გამოყენება 40%-ით გაიზარდა"
+  },
+  {
+    "id": "headline_019",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Germany approved a $20 billion subsidy package for semiconductor fabrication plants.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Leaving Germany in Latin (Germany-მ instead of გერმანიამ).",
+      "Plural noun after number (20 მილიარდი დოლარები).",
+      "Dropping ergative on country (გერმანია დაამტკიცა)."
+    ],
+    "reference": "გერმანიამ ჩიპების მწარმოებელი ქარხნებისთვის 20 მილიარდი დოლარის სუბსიდია დაამტკიცა"
+  },
+  {
+    "id": "headline_020",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Netflix decided to discontinue its basic ad-free subscription plan.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Netflix as ნეტფლიქსმა.",
+      "Missing hyphen before case ending (Netflixმა)."
+    ],
+    "reference": "Netflix-მა რეკლამის გარეშე ხელმისაწვდომი საბაზისო პაკეტი გააუქმა"
+  },
+  {
+    "id": "headline_021",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Discord implemented end-to-end encryption for direct voice and video calls.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Using Russian calque 'შიფრაცია' instead of standard Georgian 'დაშიფვრა'.",
+      "Missing hyphen before case ending (Discordმა)."
+    ],
+    "reference": "Discord-მა ხმოვან და ვიდეოზარებში ბოლოდან ბოლომდე დაშიფვრა გაააქტიურა"
+  },
+  {
+    "id": "headline_022",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Samsung officially unveiled the Galaxy Z Fold6 with Galaxy AI features.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Samsung as სამსუნგმა.",
+      "Missing hyphen before case ending (Samsungმა).",
+      "English quotes around model names."
+    ],
+    "reference": "Samsung-მა Galaxy AI ფუნქციებით აღჭურვილი Galaxy Z Fold6 წარადგინა"
+  },
+  {
+    "id": "headline_023",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Georgia passed mandatory cybersecurity standards for critical state infrastructure.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Dropping ergative on subject (საქართველო დაამტკიცა instead of საქართველომ დაამტკიცა).",
+      "Robotic nominalization without active verb."
+    ],
+    "reference": "საქართველომ კრიტიკული ინფრასტრუქტურისთვის კიბერუსაფრთხოების სავალდებულო სტანდარტები დაამტკიცა"
+  },
+  {
+    "id": "headline_024",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Intel appointed a new CEO as part of its operational restructuring.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Intel as ინტელმა.",
+      "Missing hyphen before case ending (Intelმა)."
+    ],
+    "reference": "Intel-მა კომპანიის რესტრუქტურიზაციის ფარგლებში ახალი აღმასრულებელი დირექტორი დანიშნა"
+  },
+  {
+    "id": "headline_025",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Stripe surpassed $1 trillion in total payment volume processed globally.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Stripe as სტრაიპის.",
+      "Plural noun after number (1 ტრილიონ დოლარებს)."
+    ],
+    "reference": "Stripe-ის დამუშავებული გადახდების ჯამურმა მოცულობამ 1 ტრილიონ დოლარს გადააჭარბა"
+  },
+  {
+    "id": "headline_026",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Hackers breached database of 5 million European telecom subscribers.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (5 მილიონი მომხმარებლების).",
+      "Using inappropriate physical verb ('სისტემა გატყდა' instead of 'მონაცემები მოიპარეს' or 'ბაზა გატეხეს')."
+    ],
+    "reference": "ჰაკერებმა ევროპული სატელეკომუნიკაციო კომპანიის 5 მილიონი მომხმარებლის მონაცემები მოიპარეს"
+  },
+  {
+    "id": "headline_027",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Spotify began testing prompt-based artificial intelligence playlists in beta.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Spotify as სპოტიფაიმ.",
+      "Missing hyphen before case ending (Spotifyმ)."
+    ],
+    "reference": "Spotify-მ ხელოვნური ინტელექტის მუსიკალური დასაკრავი სიების ტესტირება დაიწყო"
+  },
+  {
+    "id": "headline_028",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Tbilisi subway ridership increased by 18% during 2026.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Space before percent sign (18 %-ით).",
+      "Calquing 'ridership rose' with awkward phrasing."
+    ],
+    "reference": "თბილისის მეტროთი მგზავრთა გადაყვანა 2026 წელს 18%-ით გაიზარდა"
+  },
+  {
+    "id": "headline_029",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: DeepSeek expanded its server cluster with 10,000 new AI processors.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Plural noun after number (10 000 პროცესორები).",
+      "Missing hyphen before case ending (DeepSeekმა)."
+    ],
+    "reference": "DeepSeek-მა სერვერულ ინფრასტრუქტურას 10 000 ახალი AI პროცესორი დაამატა"
+  },
+  {
+    "id": "headline_030",
+    "category": "headline",
+    "mode": "article",
+    "prompt": "Write a headline: Uber recorded its first full-year operating profit since going public.",
+    "typical_mistakes": [
+      "Adding a trailing period.",
+      "Transliterating Uber as უბერმა.",
+      "Missing hyphen before case ending (Uberმა)."
+    ],
+    "reference": "Uber-მა ბირჟაზე გასვლის შემდეგ პირველი წლიური საოპერაციო მოგება დააფიქსირა"
+  },
+  {
+    "id": "shorts_001",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a 3-second opening hook for a Short about 3 Python features that save debugging time.",
+    "typical_mistakes": [
+      "Formulaic YouTube greeting (გამარჯობათ მეგობრებო, მზად ხართ?).",
+      "Mixing informal შენ with formal თქვენ (ანდომებთ? instead of ანდომებ?).",
+      "Plural noun after number (სამი ფუნქციები instead of სამი ფუნქცია)."
+    ],
+    "reference": "Python-ში კოდის გამართვას საათებს ანდომებ? ეს სამი ფუნქცია დროს ორჯერ დაგიზოგავს."
+  },
+  {
+    "id": "shorts_002",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write an opening hook for a Short advising developers to stop writing complex regex manually.",
+    "typical_mistakes": [
+      "Boring presenter intro (ამ ვიდეოში მე გაჩვენებთ).",
+      "Mixing address levels (შეწყვიტეთ / აკეთებ).",
+      "English quotes around terms (\"regex\")."
+    ],
+    "reference": "შეწყვიტე რეგულარული გამოსახულებების ხელით წერა: AI ამას 5 წამში აკეთებს."
+  },
+  {
+    "id": "shorts_003",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook debunking the myth that charging your smartphone overnight ruins the battery.",
+    "typical_mistakes": [
+      "Cliché question opener (იცოდით რომ?).",
+      "Address mismatch (ტოვებთ? instead of ტოვებ?).",
+      "Passive robotic phrasing (ელემენტის დაზიანება ხდება)."
+    ],
+    "reference": "ტელეფონს მთელი ღამით დამტენზე ტოვებ? ნახე, რატომ არ აზიანებს ეს ელემენტს."
+  },
+  {
+    "id": "shorts_004",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook about copying plain text without formatting using a simple keyboard shortcut.",
+    "typical_mistakes": [
+      "Cliché hype (მზად ხარ საოცრებისთვის?!).",
+      "Formal address (გამოიყენეთ).",
+      "Incomplete sentence fragment on screen without finite verb."
+    ],
+    "reference": "ტექსტის კოპირებისას ფორმატირება გაწვალებს? გამოიყენე ეს ერთი მარტივი კომბინაცია."
+  },
+  {
+    "id": "shorts_005",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook comparing Mac and Windows window snapping features.",
+    "typical_mistakes": [
+      "Transliterating brands (ვინდოუსიდან, მაკზე).",
+      "Address mismatch (გადახვედით instead of გადახვედი).",
+      "English calque 'ხდის განსაკუთრებულს'."
+    ],
+    "reference": "Windows-იდან Mac-ზე გადახვედი და ფანჯრების განლაგება გაკლია? პრობლემა მარტივად გვარდება."
+  },
+  {
+    "id": "shorts_006",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook showing how to check if your password was leaked in a data breach in 5 seconds.",
+    "typical_mistakes": [
+      "Formulaic greeting (გამარჯობა ყველას).",
+      "Plural noun after number (5 წამებში instead of 5 წამში).",
+      "Mixing possessives (თქვენი პაროლი / შეამოწმე)."
+    ],
+    "reference": "შენი პაროლი ინტერნეტში უკვე ხომ არ გაჟონა? შეამოწმე 5 წამში უფასოდ."
+  },
+  {
+    "id": "shorts_007",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for developers showing how to undo the last git commit without losing any code changes.",
+    "typical_mistakes": [
+      "Calque 'გააკეთე შეცდომა' instead of 'შეცდომა დაუშვი'.",
+      "Mixing formal and informal verbs.",
+      "Vague on-screen bullet fragment."
+    ],
+    "reference": "Git-ში არასწორი კომიტი გააკეთე? აი, როგორ გააუქმო ცვლილებების დაკარგვის გარეშე."
+  },
+  {
+    "id": "shorts_008",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook about adding one specific constraint word to ChatGPT prompts to get much better answers.",
+    "typical_mistakes": [
+      "Transliterating ChatGPT as ჩატჯიპიტი.",
+      "Using formal verb form (გაძლევთ).",
+      "Calque 'ეს სიტყვა არის თამაშის შემცვლელი'."
+    ],
+    "reference": "ChatGPT ზოგად პასუხებს გაძლევს? დაამატე ეს ერთი სიტყვა და ხარისხი გაორმაგდება."
+  },
+  {
+    "id": "shorts_009",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for tech freelancers on why charging hourly caps their income.",
+    "typical_mistakes": [
+      "Marketing cliché (არ გაუშვა შანსი ხელიდან).",
+      "Mixing address (ხართ / კარგავ).",
+      "Literal translation of idiom 'at the end of the day' as 'დღის ბოლოს'."
+    ],
+    "reference": "ფრილანსერი ხარ და საათობრივად მუშაობ? აი, რატომ კარგავ შემოსავლის ნახევარს."
+  },
+  {
+    "id": "shorts_010",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for a Short showing how to locate any file on Linux terminal instantly.",
+    "typical_mistakes": [
+      "Transliterating Linux as ლინუქსის.",
+      "Address mismatch (ეძებთ instead of ეძებ).",
+      "Empty clickbait claim (გაოცდები!)."
+    ],
+    "reference": "Linux-ის ტერმინალში ფაილს დიდხანს ეძებ? ეს ერთი ბრძანება წამებში დაგეხმარება."
+  },
+  {
+    "id": "shorts_011",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook about an unnecessary iPhone camera setting that wastes storage.",
+    "typical_mistakes": [
+      "Transliterating iPhone as აიფონის.",
+      "Address mismatch (გამორთეთ instead of გამორთე).",
+      "Sensationalist empty hype (შოკისმომგვრელი პარამეტრი)."
+    ],
+    "reference": "iPhone-ის მეხსიერება სწრაფად ივსება? გამორთე ეს ერთი ფუნქცია კამერის პარამეტრებში."
+  },
+  {
+    "id": "shorts_012",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook showing how to free up 2 GB of RAM in Google Chrome with a built-in toggle.",
+    "typical_mistakes": [
+      "Transliterating Chrome as ქრომი.",
+      "Address mismatch (გიმუხრუჭებთ instead of გიმუხრუჭებს).",
+      "Plural noun after number (2 გიგაბაიტებს instead of 2 გიგაბაიტ)."
+    ],
+    "reference": "Chrome-ი კომპიუტერს გიმუხრუჭებს? ჩართე ეს პარამეტრი და 2 გიგაბაიტ ოპერატიულს გაათავისუფლებ."
+  },
+  {
+    "id": "shorts_013",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook demonstrating why the 25-minute Pomodoro technique fails for software engineers.",
+    "typical_mistakes": [
+      "Cliché opener (ყველამ ვიცით რომ).",
+      "Address mismatch (გაწუხებთ instead of გაწუხებს).",
+      "English calque 'აზრს არ იძლევა'."
+    ],
+    "reference": "პროგრამირებისას 25-წუთიანი ტაიმერი გაწუხებს? აი, რატომ არ მუშაობს პომოდორო დეველოპერებისთვის."
+  },
+  {
+    "id": "shorts_014",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook explaining why your real home Wi-Fi speed is often half of what your ISP promised.",
+    "typical_mistakes": [
+      "Address mismatch (იხდით instead of იხდი).",
+      "Plural noun after number (ორი პარამეტრები instead of ორი პარამეტრი).",
+      "English calque 'ინტერნეტი თავს არ იხდის'."
+    ],
+    "reference": "ინტერნეტის საფასურს სრულად იხდი, სიჩქარე კი დაბალია? შეამოწმე ეს ორი პარამეტრი."
+  },
+  {
+    "id": "shorts_015",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook showing how to center any div in CSS with modern grid in two lines.",
+    "typical_mistakes": [
+      "Cliché greeting (მზად ხართ კოდისთვის?).",
+      "Plural noun after number (ორი ხაზები instead of ორი ხაზი).",
+      "Address mismatch (გირთულდებათ instead of გირთულდება)."
+    ],
+    "reference": "CSS-ში ელემენტის ცენტრში მოთავსება ისევ გირთულდება? დაწერე მხოლოდ ეს ორი ხაზი."
+  },
+  {
+    "id": "shorts_016",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write an urgent security hook warning people about fake Georgian Post delivery SMS links.",
+    "typical_mistakes": [
+      "Address mismatch (მიიღეთ / არ დააჭიროთ instead of მიიღე / არ დააჭირო).",
+      "Exclamation mark overload (!!!).",
+      "Vague fearmongering without concrete advice."
+    ],
+    "reference": "საქართველოს ფოსტის სახელით საეჭვო SMS მიიღე? ბმულს არ დააჭირო, ეს თაღლითობაა."
+  },
+  {
+    "id": "shorts_017",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook showing an automated invoice generation trick in Google Sheets.",
+    "typical_mistakes": [
+      "Transliterating Google Sheets as გუგლ შითსი.",
+      "Missing hyphen in brand (Google Sheets-ის).",
+      "Address mismatch (ადგენთ instead of ადგენ)."
+    ],
+    "reference": "კლიენტებისთვის ინვოისებს ხელით ადგენ? Google Sheets-ის ეს ფორმულა ყველაფერს ავტომატურად დათვლის."
+  },
+  {
+    "id": "shorts_018",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook comparing Midjourney and FLUX for photorealistic e-commerce mockups.",
+    "typical_mistakes": [
+      "Missing hyphens on brands (Midjourneyს).",
+      "Address mismatch (ქმნით instead of ქმნი).",
+      "English calque 'ეს მოდელი თამაშის შემცვლელია'."
+    ],
+    "reference": "პროდუქტის რეკლამისთვის AI ფოტოებს ქმნი? ნახე, რატომ ჯობს FLUX Midjourney-ს დეტალებში."
+  },
+  {
+    "id": "shorts_019",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook on why static website generation loads 5x faster than complex server rendering.",
+    "typical_mistakes": [
+      "AI filler (თანამედროვე ციფრულ სამყაროში).",
+      "Address mismatch (თქვენი საიტი instead of შენი საიტი).",
+      "Calque 'თამაშობს დიდ როლს სიჩქარეში'."
+    ],
+    "reference": "შენი საიტი ნელა იტვირთება? აი, რატომ ჯობს სტატიკური გვერდები სერვერულ რენდერს."
+  },
+  {
+    "id": "shorts_020",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook explaining the 3-2-1 backup rule for personal photos and files.",
+    "typical_mistakes": [
+      "Cliché opener (ყველა ადამიანმა უნდა იცოდეს).",
+      "Address mismatch (ინახავთ instead of ინახავ).",
+      "Passive impersonal construction."
+    ],
+    "reference": "ფაილებს მხოლოდ ერთ დისკზე ინახავ? მაშინ ჩათვალე, რომ სარეზერვო ასლი საერთოდ არ გაქვს."
+  },
+  {
+    "id": "shorts_021",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook explaining why JavaScript floating point math yields 0.30000000000000004.",
+    "typical_mistakes": [
+      "Writing decimals with a dot (0.1, 0.2, 0.3) instead of decimal comma (0,1, 0,2, 0,3).",
+      "Transliterating JavaScript as ჯავასკრიპტი.",
+      "Missing hyphen before case ending (JavaScript-ში)."
+    ],
+    "reference": "JavaScript-ში 0,1-ს 0,2 რომ მივუმატოთ, 0,3 არ გამოდის. ნახე, რატომ ხდება ასე."
+  },
+  {
+    "id": "shorts_022",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook showing how to eliminate background microphone hiss with free software.",
+    "typical_mistakes": [
+      "Formulaic intro (გამარჯობა ყველას).",
+      "Address mismatch (გიფუჭებთ instead of გიფუჭებს).",
+      "Calque 'ადგილი აქვს ხმაურს'."
+    ],
+    "reference": "მიკროფონის ხმაური ჩანაწერს გიფუჭებს? გაასუფთავე აუდიო უფასოდ, ზედმეტი აპარატურის გარეშე."
+  },
+  {
+    "id": "shorts_023",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write an urgent privacy hook telling Telegram users to hide their phone numbers.",
+    "typical_mistakes": [
+      "Transliterating Telegram as ტელეგრამის.",
+      "Missing hyphen before case ending (Telegram-ის).",
+      "Address mismatch (თქვენი ნომერი instead of შენი ნომერი)."
+    ],
+    "reference": "Telegram-ის ჯგუფებში შენი ნომერი ყველას უჩანს? დამალე ის პარამეტრებიდან 10 წამში."
+  },
+  {
+    "id": "shorts_024",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for backend developers on why 'SELECT *' kills database performance.",
+    "typical_mistakes": [
+      "Address mismatch (წერთ instead of წერ).",
+      "Calque 'იღებს დიდ რესურსებს'.",
+      "Clickbait cliché (საიდუმლო, რომელსაც ექსპერტები არ ამბობენ)."
+    ],
+    "reference": "SQL-ში ისევ SELECT *-ს წერ? აი, რატომ ანელებს ეს შენი ბაზის მუშაობას."
+  },
+  {
+    "id": "shorts_025",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for beginner UI designers on mastering Figma Auto Layout in 30 seconds.",
+    "typical_mistakes": [
+      "Transliterating Figma as ფიგმაში.",
+      "Missing hyphen before case ending (Figma-ში).",
+      "Plural noun after number (30 წამებში instead of 30 წამში)."
+    ],
+    "reference": "Figma-ში ღილაკების სწორება გაწვალებს? ისწავლე Auto Layout 30 წამში."
+  },
+  {
+    "id": "shorts_026",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook on why saving passwords directly in the web browser is dangerous.",
+    "typical_mistakes": [
+      "Cliché hype (არასოდეს გააკეთო ეს!).",
+      "Address mismatch (ინახავთ instead of ინახავ).",
+      "Calque 'აყენებს საფრთხის ქვეშ'."
+    ],
+    "reference": "პაროლებს ბრაუზერში ინახავ? ნახე, როგორ შეუძლია ნებისმიერ ვირუსს მათი მოპარვა."
+  },
+  {
+    "id": "shorts_027",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook explaining Docker containers in plain English for beginner coders.",
+    "typical_mistakes": [
+      "Transliterating Docker as დოკერი.",
+      "Missing hyphen before case ending (Docker-ი).",
+      "Formulaic presenter opener (გამარჯობა მეგობრებო)."
+    ],
+    "reference": "კოდი შენს კომპიუტერზე მუშაობს, სერვერზე კი ითიშება? აი, რატომ გჭირდება Docker-ი."
+  },
+  {
+    "id": "shorts_028",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook on how to check your SSD drive health and remaining lifespan in Windows.",
+    "typical_mistakes": [
+      "Address mismatch (გინდათ გაიგოთ instead of გინდა გაიგო).",
+      "Missing hyphen on acronym (SSDს).",
+      "Plural noun after number (ერთ წუთებში instead of ერთ წუთში)."
+    ],
+    "reference": "გინდა გაიგო, რამდენ ხანს გაძლებს შენი SSD? შეამოწმე დისკის მდგომარეობა ერთ წუთში."
+  },
+  {
+    "id": "shorts_029",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook on organizing university study notes in Notion with a clean template.",
+    "typical_mistakes": [
+      "Transliterating Notion as ნოუშენი.",
+      "Address mismatch (იკარგებით instead of იკარგები).",
+      "English calque 'ეს შაბლონი არის თამაშის შემცვლელი'."
+    ],
+    "reference": "ლექციების ჩანაწერებში იკარგები? მოაწესრიგე უნივერსიტეტის საგნები Notion-ის მარტივი სისტემით."
+  },
+  {
+    "id": "shorts_030",
+    "category": "shorts_hook",
+    "mode": "social",
+    "prompt": "Write a hook for developers on preventing HTTP 429 errors with exponential backoff.",
+    "typical_mistakes": [
+      "Address mismatch (იღებთ instead of იღებ).",
+      "Missing hyphen before case ending (API-დან).",
+      "Calque 'ადგილი აქვს შეცდომას'."
+    ],
+    "reference": "API-დან ხშირად 429 შეცდომას იღებ? გამოიყენე ეს მარტივი ალგორითმი და დაბლოკვას აირიდებ."
+  },
+  {
+    "id": "ui_001",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a UI error message when saving a document fails due to an internal server error (HTTP 500).",
+    "typical_mistakes": [
+      "Showing a cryptic code alone without explanation (შეცდომა #500).",
+      "Robotic passive nominalization (შენახვა განხორციელდა წარუმატებლად).",
+      "Omitting what the user should do next."
+    ],
+    "reference": "დოკუმენტი ვერ შევინახეთ სერვერის ხარვეზის გამო. სცადე თავიდან რამდენიმე წამში."
+  },
+  {
+    "id": "ui_002",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a 404 page not found UI message with a recovery link.",
+    "typical_mistakes": [
+      "Literal calque of English idiom (რაღაც არასწორად წავიდა).",
+      "Cryptic code alone (შეცდომა 404).",
+      "Missing actionable direction on how to recover."
+    ],
+    "reference": "მოთხოვნილი გვერდი ვერ მოიძებნა. გადაამოწმე მისამართი ან დაბრუნდი მთავარ გვერდზე."
+  },
+  {
+    "id": "ui_003",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a UI error when an ongoing file upload is interrupted because internet connection was lost.",
+    "typical_mistakes": [
+      "Passive robotic phrasing (ფაილის ატვირთვა შეწყდა ქსელის გამო).",
+      "Omitting actionable steps (check network, retry).",
+      "Mixing formal and informal address."
+    ],
+    "reference": "ინტერნეტთან კავშირი გაწყდა და ფაილი არ აიტვირთა. შეამოწმე ქსელი და სცადე ხელახლა."
+  },
+  {
+    "id": "ui_004",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a form validation error for a password that is too short (needs at least 8 characters).",
+    "typical_mistakes": [
+      "Vague error without specifics (არასწორი მონაცემი).",
+      "Address clash (შეიყვანეთ თქვენი პაროლი / შეიყვანე).",
+      "Omitting minimum length requirement."
+    ],
+    "reference": "პაროლი ძალიან მოკლეა. შეიყვანე სულ მცირე 8 სიმბოლო."
+  },
+  {
+    "id": "ui_005",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a UI error during signup when the entered email address is already registered.",
+    "typical_mistakes": [
+      "Passive impersonal statement (ეს ელფოსტა გამოყენებულია ბაზაში).",
+      "Omitting alternative user paths (log in or reset password).",
+      "Blaming tone."
+    ],
+    "reference": "ეს ელფოსტა უკვე დარეგისტრირებულია. გაიარე ავტორიზაცია ან აღადგინე პაროლი."
+  },
+  {
+    "id": "ui_006",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a payment failure UI error when a card transaction is declined due to insufficient balance.",
+    "typical_mistakes": [
+      "Vague rejection string (ტრანზაქცია უარყოფილია).",
+      "Cryptic bank gateway code.",
+      "Missing next step (top up balance or choose another card)."
+    ],
+    "reference": "გადახდა ვერ შესრულდა ანგარიშზე არასაკმარისი თანხის გამო. შეავსე ბალანსი ან გამოიყენე სხვა ბარათი."
+  },
+  {
+    "id": "ui_007",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a file upload error when the attached document exceeds the 25 MB limit.",
+    "typical_mistakes": [
+      "Vague message (ფაილი დიდია).",
+      "Using English decimal dot and units without translation.",
+      "Omitting the specific file size limit in Georgian."
+    ],
+    "reference": "ფაილის ზომა აღემატება ლიმიტს. ატვირთე დოკუმენტი, რომლის მოცულობაც 25 მეგაბაიტზე ნაკლებია."
+  },
+  {
+    "id": "ui_008",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a session expiration notice when the user has been inactive for 30 minutes.",
+    "typical_mistakes": [
+      "Robotic passive (თქვენი სესია დასრულდა სისტემის მიერ).",
+      "Missing action on how to re-authenticate.",
+      "Address mismatch."
+    ],
+    "reference": "სესიის ვადა ამოიწურა უმოქმედობის გამო. უსაფრთხოებისთვის თავიდან გაიარე ავტორიზაცია."
+  },
+  {
+    "id": "ui_009",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an API rate limit error message (HTTP 429) asking user to wait before sending more requests.",
+    "typical_mistakes": [
+      "Showing raw HTTP header (HTTP 429 Too Many Requests).",
+      "Robotic calque 'მოთხოვნების ლიმიტი გადაჭარბებულია'.",
+      "Omitting cooldown time."
+    ],
+    "reference": "ძალიან ბევრი მოთხოვნა გაგზავნე ერთდროულად. დაიცადე ერთი წუთი და სცადე ხელახლა."
+  },
+  {
+    "id": "ui_010",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a UI permission alert when the browser denies access to the microphone.",
+    "typical_mistakes": [
+      "Vague blocker (წვდომა აკრძალულია).",
+      "Blaming user for blocking hardware.",
+      "Omitting guidance on where in the browser to re-enable permission."
+    ],
+    "reference": "მიკროფონთან წვდომა დაბლოკილია. ჩართე ნებართვა ბრაუზერის მისამართების ზოლიდან."
+  },
+  {
+    "id": "ui_011",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an empty state message for an e-commerce search when zero matching products are found.",
+    "typical_mistakes": [
+      "Cold dead-end message (მონაცემები არ არის, შედეგი 0).",
+      "Robotic phrasing 'ძიების შედეგები ცარიელია'.",
+      "Omitting tips on how to broaden search."
+    ],
+    "reference": "შენი მოთხოვნით პროდუქტი ვერ მოიძებნა. შეამოწმე სიტყვის მართლწერა ან შეცვალე ფილტრი."
+  },
+  {
+    "id": "ui_012",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a confirmation dialog message for permanently deleting a team workspace.",
+    "typical_mistakes": [
+      "Asking vague question alone (დარწმუნებული ხართ?).",
+      "Omitting the irreversibility and consequence of deletion.",
+      "Address mismatch (ხართ / წაშალე)."
+    ],
+    "reference": "სამუშაო სივრცის წაშლა შეუქცევადია. ყველა ფაილი წაიშლება. ნამდვილად გინდა წაშლა?"
+  },
+  {
+    "id": "ui_013",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a backup error when cloud storage is completely full.",
+    "typical_mistakes": [
+      "Calque 'მეხსიერება სავსეა'.",
+      "Omitting next action to free space or upgrade storage.",
+      "Passive phrasing (სარეზერვო ასლის შექმნა ვერ განხორციელდა)."
+    ],
+    "reference": "სარეზერვო ასლი ვერ შეიქმნა ღრუბლოვანი საცავის გადავსების გამო. გაათავისუფლე ადგილი დისკზე."
+  },
+  {
+    "id": "ui_014",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a validation error when the booking date entered is in the past.",
+    "typical_mistakes": [
+      "Address clash (აირჩიეთ / მიუთითე).",
+      "Vague statement (არასწორი თარიღი).",
+      "Missing instruction on picking an upcoming date."
+    ],
+    "reference": "მითითებული თარიღი უკვე გავიდა. აირჩიე მომავალი დღე კალენდარში."
+  },
+  {
+    "id": "ui_015",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an authentication error when the two-factor SMS verification code is incorrect.",
+    "typical_mistakes": [
+      "Vague rejection (კოდი მცდარია).",
+      "Omitting action to request a replacement code.",
+      "Cold robotic wording."
+    ],
+    "reference": "დადასტურების კოდი არასწორია. გადაამოწმე SMS შეტყობინება ან მოითხოვე ახალი კოდი."
+  },
+  {
+    "id": "ui_016",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a warning dialog when a user tries to close a tab with unsaved draft edits.",
+    "typical_mistakes": [
+      "Vague generic dialog (ნამდვილად გსურთ გასვლა?).",
+      "Omitting that changes will be permanently discarded.",
+      "Address mismatch."
+    ],
+    "reference": "ცვლილებები შენახული არ არის. თუ გვერდიდან გახვალ, მონაცემები დაიკარგება. მაინც გახვალ?"
+  },
+  {
+    "id": "ui_017",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a location access permission request error when GPS/location services are disabled.",
+    "typical_mistakes": [
+      "Passive phrasing (მდებარეობა უარყოფილია).",
+      "Omitting instruction to enable GPS in device settings.",
+      "Confusing phrasing."
+    ],
+    "reference": "ადგილმდებარეობის დადგენა ვერ მოხერხდა. ჩართე გეოლოკაცია მოწყობილობის პარამეტრებში."
+  },
+  {
+    "id": "ui_018",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a phone number validation error when the Georgian prefix or digit count is wrong.",
+    "typical_mistakes": [
+      "Vague error (არასწორი ფორმატი).",
+      "Omitting concrete example of valid Georgian number.",
+      "Passive robotic tone."
+    ],
+    "reference": "ტელეფონის ნომერი არასწორია. შეიყვანე 9-ნიშნა ნომერი, მაგალითად: 599 12 34 56."
+  },
+  {
+    "id": "ui_019",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an export timeout error when PDF report generation takes too long.",
+    "typical_mistakes": [
+      "Raw server error code (Gateway Timeout #504).",
+      "Passive calque (ექსპორტი ვერ განხორციელდა).",
+      "Omitting recommendation to narrow date filter."
+    ],
+    "reference": "ანგარიშის მომზადება დროულად ვერ დასრულდა. შეამცირე თარიღების შუალედი და სცადე თავიდან."
+  },
+  {
+    "id": "ui_020",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a username validation error when the name contains spaces or illegal characters.",
+    "typical_mistakes": [
+      "Vague statement (შეცდომა სახელში).",
+      "Omitting explicit list of allowed characters.",
+      "Address mismatch."
+    ],
+    "reference": "სახელი შეიცავს დაუშვებელ სიმბოლოებს. გამოიყენე მხოლოდ ლათინური ასოები, ციფრები და ქვედა ტირე."
+  },
+  {
+    "id": "ui_021",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a plan upgrade prompt when a free user attempts to access an enterprise analytics feature.",
+    "typical_mistakes": [
+      "Dead-end refusal (წვდომა შეზღუდულია).",
+      "Omitting upgrade prompt or benefit.",
+      "Cold robotic phrasing."
+    ],
+    "reference": "ეს ფუნქცია ხელმისაწვდომია Pro პაკეტში. განაახლე ტარიფი, რომ სრული ანალიტიკა ნახო."
+  },
+  {
+    "id": "ui_022",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a conflict resolution error when another team member already edited and saved the same file.",
+    "typical_mistakes": [
+      "Robotic status (კონფლიქტი ვერსიებს შორის #409).",
+      "Omitting action to reload and view latest changes.",
+      "Calque 'ადგილი აქვს კონფლიქტს'."
+    ],
+    "reference": "ეს დოკუმენტი თანაგუნდელმა უკვე განაახლა. გადატვირთე გვერდი უახლესი ვერსიის სანახავად."
+  },
+  {
+    "id": "ui_023",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a Bluetooth connection failure toast when device pairing drops.",
+    "typical_mistakes": [
+      "Passive statement (დაკავშირება ვერ განხორციელდა).",
+      "Omitting basic troubleshooting checklist.",
+      "Transliteration errors."
+    ],
+    "reference": "მოწყობილობასთან კავშირი შეწყდა. დარწმუნდი, რომ Bluetooth ჩართულია და მიუახლოვდი ეკრანს."
+  },
+  {
+    "id": "ui_024",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an empty state message when the user has zero new notifications.",
+    "typical_mistakes": [
+      "Cold database dump (ჩანაწერები არ მოიძებნა).",
+      "Omitting reassuring explanation.",
+      "Passive voice."
+    ],
+    "reference": "ახალი შეტყობინებები არ გაქვს. როცა სიახლე გამოჩნდება, აქ შეგატყობინებთ."
+  },
+  {
+    "id": "ui_025",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a password recovery link expired error message.",
+    "typical_mistakes": [
+      "Vague statement (ბმული არ მუშაობს).",
+      "Omitting action to request a new reset email.",
+      "Address mismatch."
+    ],
+    "reference": "პაროლის აღდგენის ბმულს ვადა გაუვიდა. მოითხოვე ახალი ბმული ელფოსტაზე."
+  },
+  {
+    "id": "ui_026",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an invalid file type error when a user uploads an executable instead of an image or PDF.",
+    "typical_mistakes": [
+      "Vague rejection (არასწორი ფაილი).",
+      "Omitting supported formats.",
+      "Passive construction."
+    ],
+    "reference": "ფაილის ეს ფორმატი მხარდაჭერილი არ არის. ატვირთე PDF, PNG ან JPG ფორმატის დოკუმენტი."
+  },
+  {
+    "id": "ui_027",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a billing invoice error when the company identification code is missing.",
+    "typical_mistakes": [
+      "Vague statement (შეცდომა ინვოისში).",
+      "Omitting where to enter missing business credentials.",
+      "Passive bureaucratic phrasing."
+    ],
+    "reference": "ინვოისის შესადგენად საიდენტიფიკაციო კოდი აკლია. შეავსე კომპანიის მონაცემები პროფილში."
+  },
+  {
+    "id": "ui_028",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write a temporary account lockout message after 5 consecutive failed login attempts.",
+    "typical_mistakes": [
+      "Threatening alarmist tone.",
+      "Omitting lockout duration (15 minutes).",
+      "Omitting password recovery escape hatch."
+    ],
+    "reference": "უსაფრთხოების გამო ანგარიში 15 წუთით დაიბლოკა. დაიცადე ან აღადგინე პაროლი ბმულით."
+  },
+  {
+    "id": "ui_029",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an outdated browser warning prompting user to upgrade for security.",
+    "typical_mistakes": [
+      "Passive robotic calque.",
+      "Mixed formal/informal address (თქვენი ბრაუზერი / განაახლე).",
+      "Omitting consequence (features might break)."
+    ],
+    "reference": "შენი ბრაუზერი მოძველებულია და ზოგი ფუნქცია არ იმუშავებს. განაახლე ის უახლეს ვერსიამდე."
+  },
+  {
+    "id": "ui_030",
+    "category": "ui_error",
+    "mode": "ui",
+    "prompt": "Write an out-of-stock notification at checkout when an item in cart was sold to another buyer.",
+    "typical_mistakes": [
+      "Cryptic statement (საქონელი არ არის მარაგში).",
+      "Omitting action on how to proceed with the remaining items in cart.",
+      "Cold passive phrasing."
+    ],
+    "reference": "კალათაში არსებული ნივთი ამოიწურა. ამოიღე ის კალათიდან შეკვეთის გასაგრძელებლად."
+  }
+]

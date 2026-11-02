@@ -91,7 +91,7 @@ CYRILLIC = re.compile(r"[а-яА-ЯёЁіІїЇєЄғҒқҚүҮұҰөӨһҺәӘ]
 
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
-          "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech"}
+          "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -158,6 +158,9 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                 add("ending_hyphen", "error", f"„{tok}“ → „{fixed}“ (დეფისი სავალდებულოა)", m)
         for m in re.finditer(r"\b[A-Za-z][A-Za-z0-9.]*(?:\s+-\s*|-\s+)(მა|ის|ს|ით|ზე|ში)\b", body):
             add("ending_hyphen", "error", f"„{m.group(0)}“ → დეფისი გამოტოვების გარეშე", m)
+        for m in re.finditer(r"\b([A-Za-z][A-Za-z0-9.]*)\s+(მა|მ|ს|ით|ზე|ში|დან|მდე|ად|ები)\b", body):
+            if not any(in_tag[m.start():m.end()]):
+                add("ending_hyphen", "error", f"„{m.group(0)}“ → „{m.group(1)}-{m.group(2)}“ (დეფისი სავალდებულოა)", m)
 
     if on("quotes"):
         for m in re.finditer(r'"[^"\n]{2,80}"', body):
@@ -244,6 +247,10 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         for m in re.finditer(r"\d+", body):
             add("latin_in_speech", "error", f"„{m.group(0)}“: ხმის ტექსტში რიცხვი სიტყვებით", m)
 
+    if mode == "speech" and on("russian_letter"):
+        for m in re.finditer(r"(?<![ა-ჰ])(ტე|პე|ბე)(?![ა-ჰ])", body):
+            add("russian_letter", "error", f"„{m.group(0)}“: რუსული ასოს სახელი (გამოიყენე ტი, პი, ბი)", m)
+
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()
         out.append(Finding("title_period", "warn", "სათაური წერტილით არ მთავრდება", t[:90], 0, len(t)))
@@ -287,6 +294,12 @@ def _load_file(path: str) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        # Windows console encoding safeguard
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
     ap = argparse.ArgumentParser(description="Georgian (ka) linter")
     src = ap.add_mutually_exclusive_group(required=True)
     src.add_argument("--text")
