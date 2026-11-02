@@ -18,6 +18,29 @@ def test_times_and_signs(token, want):
     assert speak_token(token) == want
 
 
+@pytest.mark.parametrize("text,want", [
+    ("15:30 საათზე", "თხუთმეტ საათსა და ოცდაათ წუთზე"),  # the time already says საათ; the noun must not repeat it
+    ("09:00 საათზე", "ცხრა საათზე"),
+    ("10:00 საათზე", "ათ საათზე"),
+    ("15:30 საათამდე", "თხუთმეტ საათსა და ოცდაათ წუთამდე"),
+    ("15:30 საათიდან", "თხუთმეტი საათისა და ოცდაათი წუთიდან"),
+    ("15:30", "თხუთმეტი საათი და ოცდაათი წუთი"),  # bare time keeps the nominative expansion
+])
+def test_time_does_not_repeat_the_hour_word(text, want):
+    assert speech(text) == want
+
+
+def test_time_keeps_the_punctuation_of_the_word_it_absorbs():
+    assert speech("15:30 საათზე, დაიწყება.") == "თხუთმეტ საათსა და ოცდაათ წუთზე, დაიწყება."
+
+
+def test_reported_sentence_says_the_hour_once():
+    spoken = speech("მე ვფიქრობ რომ 2026 წლის 2 ნოემბერს, 15:30 საათზე, 5 000 ლარი გამოიყო.")
+    assert spoken == ("მე ვფიქრობ რომ ორი ათას ოცდაექვსი წლის ორ ნოემბერს, "
+                      "თხუთმეტ საათსა და ოცდაათ წუთზე, ხუთი ათასი ლარი გამოიყო.")
+    assert "საათი საათ" not in spoken and "საათზე საათ" not in spoken
+
+
 @pytest.mark.parametrize("text", [
     "UTC-ით 06:00-დან 15:30-მდე ბირჟამ 4.6%-ით ნაკლები გადაიხადა.",
     "ქულები -1-დან +1-მდე იყო, Microsoft-მა და OpenAI-მ 2026 წელს 36%-ით გაზარდეს.",
