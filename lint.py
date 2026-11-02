@@ -1,0 +1,313 @@
+"""Deterministic Georgian (ka) linter. No network, no LLM.
+
+Ported from the fleet's ge_ka_lint.py (SiTech Hub, shared-knowledge/scripts/georgian-style/), without the
+sitech.ge database modes. Every rule here must stay low-noise: a rule that fires on correct Georgian is worse
+than no rule. The skills cover what a regex cannot (case government, verb agreement, word order).
+
+Usage:
+    python lint.py --text "ტექსტი" [--mode article|social|ui|speech] [--strict] [--json]
+    python lint.py --file draft.md --summary
+Exit code: 0 clean, 1 findings.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from dataclasses import asdict, dataclass
+
+MODES = ("article", "social", "ui", "speech")
+
+# 1. Brands and acronyms written in Georgian letters (forbidden in written text, expected in speech text).
+#    Word-start anchored so „მეტად" is not Meta and „გუბერნატორმა" is not Uber.
+CASE_ENDINGS = r"(?:მ|მა|ის|ს|ით|ზე|ში|თვის|სა|ისა|ად)?"
+TRANSLIT = {
+    "ფბი": "FBI", "სიაიეი": "CIA", "ენესეი": "NSA", "ნასა": "NASA",
+    "მეტა": "Meta", "გუგლ": "Google", "ამაზონ": "Amazon", "მაიკროსოფტ": "Microsoft",
+    "ენვიდია": "NVIDIA", "ნვიდია": "NVIDIA", "ინტელი": "Intel", "ეიმდი": "AMD",
+    "სამსუნგ": "Samsung", "ეპლი": "Apple", "ტესლა": "Tesla", "სპეისექსი": "SpaceX",
+    "ოპენაი": "OpenAI", "ანთროპიკ": "Anthropic", "ჩატჯიპიტ": "ChatGPT",
+    "ჯემინაი": "Gemini", "ვინდოუს": "Windows", "ლინუქს": "Linux",
+    "ანდროიდ": "Android", "ნეტფლიქს": "Netflix", "იუთუბ": "YouTube",
+    "ფეისბუქ": "Facebook", "ინსტაგრამ": "Instagram", "ტვიტერ": "Twitter",
+    "ტიკტოკ": "TikTok", "სპოტიფაი": "Spotify", "უბერ": "Uber", "ფაიზერ": "Pfizer",
+    "კლაუდფლერ": "Cloudflare", "გითჰაბ": "GitHub", "სტრაიპ": "Stripe",
+}
+TRANSLIT_RE = {
+    ka: re.compile(r"(?<![ა-ჰ])" + re.escape(ka) + CASE_ENDINGS + r"(?![ა-ჰ])", re.IGNORECASE) for ka in TRANSLIT
+}
+
+# 2. Calques from English (word-for-word translation) → natural Georgian.
+CALQUES = {
+    r"\bმიიღოს ადგილი\b": "მოხდეს / შედგეს",
+    r"\bადგილი მიიღო\b": "მოხდა / შედგა / გაიმართა",
+    r"\bთამაშობს როლს\b": "მნიშვნელოვანია / როლს ასრულებს",
+    r"\bგააკეთა გადაწყვეტილება\b": "მიიღო გადაწყვეტილება / გადაწყვიტა",
+    r"\bიქნა (გაკეთებული|მიღებული|აღნიშნული|დადასტურებული|გამოყენებული|გამოქვეყნებული)\b":
+        "აქტიური ფორმა: გაკეთდა / მიიღეს / აღნიშნა",
+    r"\bარის საჭიროება\b": "საჭიროა",
+    r"\bარსებობს საჭიროება\b": "საჭიროა",
+    r"\bამ მომენტში\b": "ამჟამად / ახლა",
+    r"\bდიდი რაოდენობით\b": "ბევრი",
+    r"\bმიდის წინ\b": "შემდგომში",
+    r"\bშედეგად იმისა, რომ\b": "იმის გამო, რომ",
+    r"\bეს არის ის, რაც\b": "სწორედ ეს არის",
+    r"\bყურადღების ქვეშ\b": "ყურადღების ცენტრში",
+    r"\bმიმართულია იმისკენ, რომ\b": "მიზნად ისახავს",
+    r"\bმიზნად ისახავს იმას, რომ\b": "მიზნად ისახავს",
+    r"\bთამაშის შემცვლელი\b": "game changer: გარდამტეხი / რადიკალურად ცვლის",
+}
+
+AI_FILLER = {
+    r"\bმნიშვნელოვანია აღინიშნოს,? რომ\b": "დაიწყე პირდაპირ ფაქტით",
+    r"\bაღსანიშნავია,? რომ\b": "დაიწყე პირდაპირ ფაქტით",
+    r"\bთანამედროვე სამყაროში\b": "ამოიღე ცარიელი შესავალი",
+    r"\bროგორც ცნობილია\b": "მიუთითე წყარო ან ამოიღე",
+    r"\bამ კონტექსტში\b": "ამოიღე, თუ ახალს არაფერს ამატებს",
+}
+
+# 3. Countries and cities must be written in Georgian.
+COUNTRIES_LATIN = [
+    "Germany", "France", "China", "Japan", "India", "Brazil", "Turkey", "Italy",
+    "Spain", "Poland", "Netherlands", "Sweden", "Norway", "Finland", "Denmark",
+    "Portugal", "Greece", "Egypt", "Israel", "Canada", "Mexico", "Australia",
+    "Tokyo", "Paris", "Berlin", "London", "Beijing", "Shanghai", "Seoul", "Moscow",
+]
+
+# 4. Numeral + plural noun (Georgian uses the singular after a numeral).
+PLURAL_AFTER_NUM = re.compile(
+    r"\b\d[\d\s,.]*\s+(?:სტატიები|კომპანიები|მომხმარებლები|ადამიანები|წლები|დოლარები|"
+    r"პროცენტები|მილიონები|მილიარდები|ექსპერტები|მკვლევრები|დეველოპერები|აპლიკაციები|"
+    r"მოდელები|სერვერები|პროცესორები|აგენტები|ქვეყნები|თანამშრომლები|დღეები|საათები|წუთები)\b"
+)
+PLURAL_AFTER_WORD_NUM = re.compile(
+    r"(?<![ა-ჰ])(?:ორი|სამი|ოთხი|ხუთი|ექვსი|შვიდი|რვა|ცხრა|ათი|ასი|ათასი|რამდენიმე|ბევრი|ყველა)\s+"
+    r"(?:კომპანიები|მომხმარებლები|ადამიანები|წლები|ექსპერტები|მკვლევრები|აგენტები|ქვეყნები|მოდელები)"
+    r"(?![ა-ჰ])"
+)
+
+CYRILLIC = re.compile(r"[а-яА-ЯёЁіІїЇєЄғҒқҚүҮұҰөӨһҺәӘ]")
+
+# Mechanical, near-zero false positives. A publish gate should block on these only.
+STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
+          "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech"}
+
+# Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
+MODE_SKIP = {
+    "speech": {"translit", "ending_hyphen", "country"},
+    "ui": {"title_period"},
+}
+
+
+@dataclass
+class Finding:
+    check: str
+    severity: str  # error | warn
+    message: str
+    snippet: str
+    start: int
+    end: int
+
+    def as_dict(self) -> dict:
+        return asdict(self)
+
+
+def strip_html(s: str) -> str:
+    # Same length as the input so offsets stay valid: every tag character becomes a space.
+    return re.sub(r"<[^>]+>", lambda m: " " * len(m.group(0)), s or "")
+
+
+def _ctx(text: str, start: int, end: int, pad: int = 45) -> str:
+    a, b = max(0, start - pad), min(len(text), end + pad)
+    return ("…" if a else "") + text[a:b].replace("\n", "⏎") + ("…" if b < len(text) else "")
+
+
+def check_text(text: str, mode: str = "article", title: str | None = None,
+               strict: bool = False) -> list[Finding]:
+    if mode not in MODES:
+        raise ValueError(f"mode must be one of {MODES}")
+    skip = MODE_SKIP.get(mode, set())
+    body = strip_html(text)
+    # Positions that were HTML tags: blanked to keep offsets, so whitespace rules must ignore them.
+    in_tag = [False] * len(body)
+    for t in re.finditer(r"<[^>]+>", text or ""):
+        in_tag[t.start():t.end()] = [True] * (t.end() - t.start())
+    out: list[Finding] = []
+
+    def on(check: str) -> bool:
+        return check not in skip and (not strict or check in STRICT)
+
+    def near_tag(m: re.Match) -> bool:
+        return any(in_tag[max(0, m.start() - 1):m.end() + 1])
+
+    def add(check: str, severity: str, message: str, m: re.Match) -> None:
+        out.append(Finding(check, severity, message, _ctx(body, m.start(), m.end()), m.start(), m.end()))
+
+    if on("translit"):
+        for ka, rx in TRANSLIT_RE.items():
+            for m in rx.finditer(body):
+                add("translit", "error", f"„{m.group(0)}“ → {TRANSLIT[ka]} (ბრენდი ლათინურად)", m)
+
+    if on("ending_hyphen"):
+        # Latin word + Georgian case ending without a hyphen: Metaის, Amazonმა.
+        for m in re.finditer(r"\b[A-Za-z][A-Za-z0-9.]*[ა-ჰ]{1,}", body):
+            tok = m.group(0)
+            if re.search(r"(მა|ის|ს|ით|ზე|ში|მ|თვის|ები|ად|დან|მდე)$", tok):
+                fixed = re.sub(r"([A-Za-z0-9.])([ა-ჰ]+)$", r"\1-\2", tok)
+                add("ending_hyphen", "error", f"„{tok}“ → „{fixed}“ (დეფისი სავალდებულოა)", m)
+        for m in re.finditer(r"\b[A-Za-z][A-Za-z0-9.]*(?:\s+-\s*|-\s+)(მა|ის|ს|ით|ზე|ში)\b", body):
+            add("ending_hyphen", "error", f"„{m.group(0)}“ → დეფისი გამოტოვების გარეშე", m)
+
+    if on("quotes"):
+        for m in re.finditer(r'"[^"\n]{2,80}"', body):
+            add("quotes", "error", "ინგლისური ბრჭყალები → „…“", m)
+
+    if on("ellipsis"):
+        for m in re.finditer(r"\.\.\.", body):
+            add("ellipsis", "warn", "„...“ → „…“", m)
+
+    if on("dash"):
+        # Edo's standing rule (2026-09-25): no em dash or en dash anywhere.
+        for m in re.finditer(r"[—–]", body):
+            add("dash", "error", "ტირე (— –) აკრძალულია: მძიმე, ორწერტილი ან დეფისი", m)
+
+    if on("calque"):
+        for pat, fix in CALQUES.items():
+            for m in re.finditer(pat, body, re.IGNORECASE):
+                add("calque", "error", f"კალკი: „{m.group(0)}“ → {fix}", m)
+
+    if on("ai_filler"):
+        for pat, fix in AI_FILLER.items():
+            for m in re.finditer(pat, body, re.IGNORECASE):
+                add("ai_filler", "error", f"ცარიელი AI ფრაზა: „{m.group(0)}“ → {fix}", m)
+
+    if on("number_plural"):
+        for rx in (PLURAL_AFTER_NUM, PLURAL_AFTER_WORD_NUM):
+            for m in rx.finditer(body):
+                pre = body[max(0, m.start() - 6):m.start() + 1]
+                if re.search(r"\d\s*-\s*\d*$", pre):  # range such as 2020-2024
+                    continue
+                add("number_plural", "error", f"რიცხვის შემდეგ მხოლობითი: „{m.group(0)}“", m)
+
+    if on("percent"):
+        for m in re.finditer(r"\b\d+(?:[.,]\d+)?\s+%", body):
+            add("percent", "error", f"„{m.group(0)}“ → {m.group(0).replace(' ', '')}", m)
+
+    if on("decimal"):
+        for m in re.finditer(r"\b\d+\.\d+\s*(?:მილიარდ|მილიონ|ათას|%)", body):
+            add("decimal", "error", f"ათწილადი მძიმით: „{m.group(0).strip()}“", m)
+
+    if on("space_punct"):
+        for m in re.finditer(r"[ა-ჰ]\s+[,.;:!?](?=\s|$)", body):
+            if not near_tag(m):
+                add("space_punct", "error", "პუნქტუაციის წინ გამოტოვება", m)
+
+    if on("double_space"):
+        for m in re.finditer(r"(?<=\S)  +(?=\S)", body):
+            if not near_tag(m):
+                add("double_space", "warn", "ორმაგი გამოტოვება", m)
+
+    if on("country"):
+        for c in COUNTRIES_LATIN:
+            for m in re.finditer(r"\b" + re.escape(c) + r"(?:-?[ა-ჰ]+)?\b", body):
+                before = body[max(0, m.start() - 30):m.start()]
+                if re.search(r"[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\s+$", before):  # part of an English name
+                    continue
+                add("country", "error", f"„{m.group(0)}“: ქვეყანა და ქალაქი ქართულად იწერება", m)
+
+    if on("cyrillic"):
+        for m in CYRILLIC.finditer(body):
+            add("cyrillic", "error", "კირილიცას ასო ქართულ ტექსტში", m)
+
+    if on("dup_word"):
+        for m in re.finditer(r"(?<![ა-ჰ])([ა-ჰ]{2,})[ \t]+\1(?![ა-ჰ])", body, re.IGNORECASE):
+            add("dup_word", "error", f"გამეორებული სიტყვა: „{m.group(0)}“", m)
+
+    if on("no_space_after"):
+        for m in re.finditer(r"([,;:!?.])([^\s\d)\"'»“”\-–—])", body):
+            p, nxt = m.group(1), m.group(2)
+            prev = body[m.start() - 1] if m.start() > 0 else ""
+            if p == "." and prev.isalnum() and nxt.isalnum():  # domain, version, file name
+                continue
+            if p == "." and (prev == "" or prev.isspace()):
+                continue
+            if p in "?!" and nxt in "?!":
+                continue
+            if nxt in "”«»„“*_`":
+                continue
+            add("no_space_after", "error", f"„{p}{nxt}“: პუნქტუაციის შემდეგ გამოტოვება აკლია", m)
+
+    if mode == "speech" and on("latin_in_speech"):
+        for m in re.finditer(r"[A-Za-z]{2,}", body):
+            add("latin_in_speech", "error", f"„{m.group(0)}“: ხმის ტექსტში მხოლოდ ქართული ასოები", m)
+        for m in re.finditer(r"\d+", body):
+            add("latin_in_speech", "error", f"„{m.group(0)}“: ხმის ტექსტში რიცხვი სიტყვებით", m)
+
+    if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
+        t = title.strip()
+        out.append(Finding("title_period", "warn", "სათაური წერტილით არ მთავრდება", t[:90], 0, len(t)))
+
+    out.sort(key=lambda f: f.start)
+    return out
+
+
+def summary(findings: list[Finding]) -> str:
+    if not findings:
+        return "სუფთაა (0)"
+    counts: dict[str, int] = {}
+    for f in findings:
+        counts[f.check] = counts.get(f.check, 0) + 1
+    return f"{len(findings)} შენიშვნა: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items()))
+
+
+def _load_file(path: str) -> str:
+    with open(path, encoding="utf-8") as fh:
+        raw = fh.read()
+    if path.endswith(".json"):
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError:
+            return raw
+        parts: list[str] = []
+
+        def walk(x):
+            if isinstance(x, str):
+                parts.append(x)
+            elif isinstance(x, dict):
+                for v in x.values():
+                    walk(v)
+            elif isinstance(x, list):
+                for v in x:
+                    walk(v)
+
+        walk(data)
+        return "\n".join(parts)
+    return raw
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Georgian (ka) linter")
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--text")
+    src.add_argument("--file")
+    ap.add_argument("--title")
+    ap.add_argument("--mode", default="article", choices=MODES)
+    ap.add_argument("--strict", action="store_true")
+    ap.add_argument("--json", action="store_true")
+    ap.add_argument("--summary", action="store_true")
+    a = ap.parse_args(argv)
+    text = a.text if a.text is not None else _load_file(a.file)
+    findings = check_text(text, mode=a.mode, title=a.title, strict=a.strict)
+    if a.json:
+        print(json.dumps([f.as_dict() for f in findings], ensure_ascii=False, indent=2))
+    else:
+        for f in findings:
+            print(f"[{f.severity}] {f.check}: {f.message}\n    {f.snippet}")
+        if a.summary or not findings:
+            print(summary(findings))
+    return 1 if findings else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
