@@ -57,14 +57,17 @@ with a nominative subject (❌ `კომპანია გაზარდა �
 - Indirect objects show up inside the verb: `მომხმარებელს ელფოსტა გაუგზავნა` ("sent to the user");
   `მომხმარებლებს გაუგზავნა` (plural object, same verb form is fine in the 3rd person).
 
-## 5. Version vowels (ა-, ი-, უ-, ე-)
+## 5. Version vowels (ი-, უ-, ა-)
 
-They change who the action is for. Models often pick the neutral form where Georgian needs the objective one:
+They change who the action is for (ქცევა): `ი-` for oneself (subjective), `უ-` for someone else (objective),
+`ა-` neutral or superessive (`ე-` marks passive voice or pluperfect, not beneficiary). Models often pick the
+neutral form where Georgian needs the objective one:
 
 - `დაწერა` (wrote) / `დაუწერა` (wrote **for/to someone**): ✅ `ედოს წერილი დაუწერა`.
 - `გააკეთა` / `გაუკეთა`: ✅ `კლიენტს საიტი გაუკეთა`.
 - `აჩვენა` (showed) needs a dative recipient: ✅ `მომხმარებლებს ახალი ფუნქცია აჩვენა`.
-- `შეიძინა` (bought for itself) vs `უყიდა` (bought for someone): ✅ `კომპანიამ სტარტაპი შეიძინა`.
+- `შეიძინა` (acquired for itself) vs `შეუძინა` (acquired for someone); `იყიდა` vs `უყიდა` (bought for someone):
+  ✅ `კომპანიამ სტარტაპი შეიძინა`.
 
 ## 6. Verbs that always take a dative subject
 

@@ -48,4 +48,5 @@ says that relation exists. Do not glue sentences with them for rhythm.
 
 ## Examples
 
-`examples/rewrites.md`: 30 translated-sounding sentences and their natural rewrites. Read them before editing.
+- `references/collocations.md`: 80 natural vs wrong verb + noun pairs (გადაწყვეტილების მიღება, განცხადების გაკეთება).
+- `examples/rewrites.md`: 30 translated-sounding sentences and their natural rewrites. Read them before editing.

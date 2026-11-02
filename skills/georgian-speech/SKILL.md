@@ -22,11 +22,13 @@ this skill). Speech text has **no Latin letters and no digits**. `ka_lint` with 
 | 1000, 1500 | ათასი, ათას ხუთასი |
 | 2026 | ორი ათას ოცდაექვსი |
 | 2 250 | ორი ათას ორას ორმოცდაათი (one number, never "two" + "two hundred fifty") |
-| 3,5 | სამი მთელი ხუთი მეათედი / სამნახევარი (3,5 only) |
+| 3,5 | სამი მთელი ხუთი მეათედი / სამნახევარი (.5 decimals use …ნახევარი: 1,5 ერთნახევარი, 2,5 ორნახევარი) |
 
-- Inside a compound the head loses its -ი: `ას ოცდახუთი`, `ათას ხუთასი`, `ორი ათას ...`.
-- **The case ending belongs to the noun, not the number**: `5 სერვერს` → `ხუთ სერვერს` (❌ `ხუთს სერვერს`),
-  `36%-ის` → `ოცდათექვსმეტი პროცენტის`, `36%-ით` → `ოცდათექვსმეტი პროცენტით`.
+- Inside a compound, non-final components lose their -ი: `ას ოცდახუთი`, `ათას ხუთასი`, `ორი ათას ...`.
+- **Case endings on numbers before nouns**: A numeral before a noun declines like an adjective. In the
+  dative and adverbial it takes the bare stem without -ს (❌ `ხუთს სერვერს` → ✅ `ხუთ სერვერს`,
+  `40%-მდე` → `ორმოც პროცენტამდე`); in the ergative it takes -მა (`ხუთმა სერვერმა`, `ოცდათექვსმეტმა პროცენტმა`);
+  in the genitive and instrumental it keeps -ი (`ოცდათექვსმეტი პროცენტის`, `ოცდათექვსმეტი პროცენტით`).
 - A number with a suffix: `4-ჯერ` → `ოთხჯერ`, `8-დან` → `რვიდან`, `2012 წელს` → `ორი ათას თორმეტ წელს`,
   `40%-მდე` → `ორმოც პროცენტამდე`.
 - Ordinals: `მე-3` → `მესამე`, `მე-20 საუკუნე` → `მეოცე საუკუნე`.
@@ -49,6 +51,10 @@ S ეს, T ტი, U იუ, V ვი, W დაბლიუ, X ექს, Y უ
 
 `%` → `პროცენტი` (with the case: `პროცენტით`), `$300` → `სამასი დოლარი`, `°C` → `გრადუსი`, `km` → `კილომეტრი`,
 `&` → `და`, `/` → rewrite the sentence.
+
+## Examples
+
+`examples/speech-fixes.md`: 60+ written to spoken speech text pairs (numbers, dates, percent, brands, acronyms).
 
 ## Prosody
 

@@ -15,6 +15,10 @@ def checks(text, **kw):
     ("მაიკროსოფტმა ახალი მოდელი წარადგინა.", "translit"),
     ("Microsoftმა ახალი მოდელი წარადგინა.", "ending_hyphen"),
     ("Microsoft -მა ახალი მოდელი წარადგინა.", "ending_hyphen"),
+    ("Microsoft მა ახალი მოდელი წარადგინა.", "ending_hyphen"),
+    ("Google ს ახალი პოლიტიკა აქვს.", "ending_hyphen"),
+    ("Linux ზე სისტემა მუშაობს.", "ending_hyphen"),
+    ("Docker ში გაეშვა.", "ending_hyphen"),
     ('მან თქვა "ჩვენ ვჩერდებით" და წავიდა.', "quotes"),
     ("ფასი 20 % -ით გაიზარდა.", "percent"),
     ("შემოსავალი 2.5 მილიარდი დოლარია.", "decimal"),
@@ -41,6 +45,9 @@ def test_detects(text, check):
     "გამოქვეყნდა და მალე გავრცელდა.",
     "მეტად მნიშვნელოვანი გადაწყვეტილება მიიღეს.",
     "საიტი sitech.ge და ვერსია 3.8 მუშაობს.",
+    "Python ის ენაა, რომელსაც ყველა იყენებს.",
+    "Tesla Model S გამოვიდა.",
+    "May თვის ანგარიში გამოქვეყნდა.",
 ])
 def test_clean(text):
     assert lint.check_text(text) == []
@@ -49,6 +56,19 @@ def test_clean(text):
 def test_speech_mode_allows_georgian_brands_and_flags_latin_digits():
     assert lint.check_text("მაიკროსოფტმა ოცდათექვსმეტი პროცენტით გაზარდა.", mode="speech") == []
     assert "latin_in_speech" in checks("Microsoft-მა 36%-ით გაზარდა.", mode="speech")
+
+
+def test_speech_mode_russian_letters():
+    assert "russian_letter" in checks("ახალი ჯი პი ტე გამოვიდა.", mode="speech")
+    assert "russian_letter" in checks("ახალი გე პე უ წარადგინეს.", mode="speech")
+    assert "russian_letter" in checks("ბე ემ ვე-ს მანქანა.", mode="speech")
+    assert "russian_letter" in checks("ა პე ი განახლდა.", mode="speech")
+    assert checks("ახალი ჯი პი ტი გამოვიდა.", mode="speech") == set()
+    assert checks("ახალი ჯი პი იუ წარადგინეს.", mode="speech") == set()
+    assert checks("ტექნოლოგია და ტელეფონი განახლდა.", mode="speech") == set()
+    assert checks("პერსონალი და ბერკეტი მზადაა.", mode="speech") == set()
+    assert checks("სისტემა გამართულად მუშაობს.", mode="speech") == set()
+    assert "russian_letter" not in checks("ტექნოლოგია სწრაფად ვითარდება.", mode="article")
 
 
 def test_title_period():
@@ -85,5 +105,5 @@ def _right_examples():
 
 @pytest.mark.parametrize("skill,text", _right_examples())
 def test_examples_right_side_is_clean(skill, text):
-    mode = "social" if skill == "georgian-social" else "article"
+    mode = {"georgian-social": "social", "georgian-speech": "speech", "georgian-ui": "ui"}.get(skill, "article")
     assert [f.message for f in lint.check_text(text, mode=mode, strict=True)] == []

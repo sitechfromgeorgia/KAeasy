@@ -55,4 +55,6 @@ Latin-names table in the cases reference of `kaeasy:georgian-grammar`.
 
 ## Examples
 
-`examples/names-numbers-fixes.md`. Full term list: `references/terms.md`.
+- `references/brands.md`: 120 brands and products with written cases, TTS spoken forms and disputed variants.
+- `references/terms.md`: full glossary of technical terms in Georgian.
+- `examples/names-numbers-fixes.md`: wrong → right brand names, numbers, dates and punctuation.
