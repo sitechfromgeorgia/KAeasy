@@ -36,6 +36,7 @@ the rules and table in `references/latin-names.md` and `references/brands.md`.
 - Percent glued: `20%`. ❌ `20 %`.
 - Range with a plain hyphen: `2020-2024`, `10-14 ოქტომბერს`.
 - "up to" = `-მდე` (`40%-მდე`), "about" = `დაახლოებით`, "more than" = `-ზე მეტი`.
+- A percent range is `20-30%`. ❌ `20%-დან 30%-მდე` (clunky, it repeats the marker).
 - Money stays in the source currency: `300 მილიონი დოლარი` or `$300 მლნ`, one style per text.
 - Metric units for a Georgian reader; convert miles, pounds, °F and say `დაახლოებით` when rounding.
   Screen diagonals stay in inches: `14-დიუმიანი ეკრანი`.
