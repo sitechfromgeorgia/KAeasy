@@ -22,9 +22,15 @@ This document tracks disputed points, regional/register variations, and stylisti
 All seven rows above are **accepted** and applied in `skills/` (the GPU-ს row keeps `GPU-ის` as an accepted
 variant). The `needs-review` tags for them are removed.
 
+## Correction (review, 2026-11-02)
+
+The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). Georgian ი-final loans take `-თ`, as in `ტაქსი → ტაქსით`, and `-თი` would read `ჩატჯიპიტითი`.
+- **Applied:** `-ით` and `-ად`, written the way Georgian media writes them (`OpenAI-ით`, `ChatGPT-ით`), in `data/latin_endings.json`, `latin-names.md`, `brands.md`, `cases.md` and the examples.
+- **Also correct:** `-თ` (`OpenAI-თ`). It is rare in the press.
+
 ## Open
 
 | file | current | question | next step |
 |---|---|---|---|
-| `skills/georgian-names-numbers/references/brands.md`, `cases.md` | `OpenAI-ის`, `ChatGPT-ის`, `Spotify-ის` but `Gemini-ს`, `Perplexity-ს`, `Midjourney-ს` | Genitive of names ending in an -i sound: `-ის` or `-ს`? | Antigravity prompt P6 (knowledge/kaeasy-antigravity-prompts.md in the hub) |
+| `skills/georgian-names-numbers/references/brands.md`, `cases.md` | `OpenAI-ის`, `ChatGPT-ის`, `Spotify-ის` but `Gemini-ს`, `Perplexity-ს`, `Midjourney-ს` | Genitive of names ending in an -i sound: `-ის` or `-ს`? | Settled by P6: `-ს` (`OpenAI-ს`); instrumental `-ით` (see Correction). `ka_lint` flags neither form | done |
 | `skills/georgian-natural-style/references/calques.md`, `lint.py` | `ბე-ემ-ვე` was both ✅ (brands.md) and ❌ (calques.md) | Settled: `ბე-ემ-ვე` is the established spoken form of BMW; `ka_lint` allows it | done |

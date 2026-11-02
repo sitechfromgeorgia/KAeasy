@@ -1,4 +1,13 @@
 {
-  "findings": [],
-  "fixed": "ყოველკვირეულ ბიულეტენში განვიხილავთ წიგნს \"Designing Data-Intensive Applications\".\nმიმოხილვა მოამზადა @giorgi_k-მ.\nმასალები და კოდის ნიმუშები ატვირთულია GitHub-ზე: https://github.com/sitech/newsletter-code.\nგამოიწერეთ ჩვენი ბლოგი და მიიღეთ სიახლეები პირველებმა! 🚀"
+  "findings": [
+    {
+      "check": "quotes",
+      "severity": "error",
+      "message": "ინგლისური ბრჭყალები → „…“",
+      "snippet": "ყოველკვირეულ ბიულეტენში განვიხილავთ წიგნს \"Designing Data-Intensive Applications\".⏎მიმოხილვა მოამზადა @giorgi_k-მ.⏎მასალები და…",
+      "start": 42,
+      "end": 81
+    }
+  ],
+  "fixed": "ყოველკვირეულ ბიულეტენში განვიხილავთ წიგნს „Designing Data-Intensive Applications“.\nმიმოხილვა მოამზადა @giorgi_k-მ.\nმასალები და კოდის ნიმუშები ატვირთულია GitHub-ზე: https://github.com/sitech/newsletter-code.\nგამოიწერეთ ჩვენი ბლოგი და მიიღეთ სიახლეები პირველებმა! 🚀"
 }

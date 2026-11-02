@@ -9,8 +9,8 @@ import re
 
 from .lint import TRANSLIT, TRANSLIT_RE
 
-# Spans the fixer must not change: HTML tags, fenced code, inline code, URLs and e-mail addresses.
-PROTECTED = re.compile(r"```.*?```|`[^`\n]*`|<[^>]+>|https?://\S+|www\.\S+|[\w.+-]+@[\w-]+\.[\w.]+", re.DOTALL)
+# Spans the fixer must not change: HTML tags, fenced code, inline code, <pre>/<code> blocks, URLs and e-mails.
+PROTECTED = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>|https?://\S+|www\.\S+|[\w.+-]+@[\w-]+\.[\w.]+", re.DOTALL)
 
 
 def fix_text(text: str) -> tuple[str, list[str]]:

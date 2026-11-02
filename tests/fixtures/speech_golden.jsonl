@@ -200,17 +200,17 @@
 {"written": "10:00 საათზე", "spoken": "ათ საათზე"}
 {"written": "11:00 საათზე", "spoken": "თერთმეტ საათზე"}
 {"written": "12:00 საათზე", "spoken": "თორმეტ საათზე"}
-{"written": "13:00 საათზე", "spoken": "პირველ საათზე"}
-{"written": "14:00 საათზე", "spoken": "ორ საათზე"}
-{"written": "15:00 საათზე", "spoken": "სამ საათზე"}
-{"written": "16:00 საათზე", "spoken": "ოთხ საათზე"}
-{"written": "17:00 საათზე", "spoken": "ხუთ საათზე"}
-{"written": "18:00 საათზე", "spoken": "ექვს საათზე"}
-{"written": "18:30 საათზე", "spoken": "ექვსის ნახევარზე"}
-{"written": "19:00 საათზე", "spoken": "შვიდ საათზე"}
-{"written": "20:00 საათზე", "spoken": "რვა საათზე"}
-{"written": "20:45 საათზე", "spoken": "ცხრას რომ თხუთმეტი აკლია"}
-{"written": "21:00 საათზე", "spoken": "ცხრა საათზე"}
+{"written": "13:00 საათზე", "spoken": "ცამეტ საათზე"}
+{"written": "14:00 საათზე", "spoken": "თოთხმეტ საათზე"}
+{"written": "15:00 საათზე", "spoken": "თხუთმეტ საათზე"}
+{"written": "16:00 საათზე", "spoken": "თექვსმეტ საათზე"}
+{"written": "17:00 საათზე", "spoken": "ჩვიდმეტ საათზე"}
+{"written": "18:00 საათზე", "spoken": "თვრამეტ საათზე"}
+{"written": "18:30 საათზე", "spoken": "თვრამეტ საათსა და ოცდაათ წუთზე"}
+{"written": "19:00 საათზე", "spoken": "ცხრამეტ საათზე"}
+{"written": "20:00 საათზე", "spoken": "ოც საათზე"}
+{"written": "20:45 საათზე", "spoken": "ოც საათსა და ორმოცდახუთ წუთზე"}
+{"written": "21:00 საათზე", "spoken": "ოცდაერთ საათზე"}
 {"written": "2020-2024 წლებში", "spoken": "ორი ათას ოციდან ორი ათას ოცდაოთხ წლამდე"}
 {"written": "2015-2020 წლებში", "spoken": "ორი ათას თხუთმეტიდან ორი ათას ოც წლამდე"}
 {"written": "2022-2026 წლებში", "spoken": "ორი ათას ოცდაორიდან ორი ათას ოცდაექვს წლამდე"}
@@ -246,15 +246,15 @@
 {"written": "v1.5", "spoken": "ვერსია ერთი წერტილი ხუთი"}
 {"written": "iOS 18.1", "spoken": "აი ოუ ეს თვრამეტი წერტილი ერთი"}
 {"written": "iOS 17.5", "spoken": "აი ოუ ეს ჩვიდმეტი წერტილი ხუთი"}
-{"written": "Android 15", "spoken": "ანდროიდ თხუთმეტი"}
-{"written": "Android 14", "spoken": "ანდროიდ თოთხმეტი"}
-{"written": "Windows 11", "spoken": "ვინდოუს თერთმეტი"}
-{"written": "Windows 10", "spoken": "ვინდოუს ათი"}
+{"written": "Android 15", "spoken": "ანდროიდი თხუთმეტი"}
+{"written": "Android 14", "spoken": "ანდროიდი თოთხმეტი"}
+{"written": "Windows 11", "spoken": "ვინდოუსი თერთმეტი"}
+{"written": "Windows 10", "spoken": "ვინდოუსი ათი"}
 {"written": "macOS 15", "spoken": "მაკ ოუ ეს თხუთმეტი"}
-{"written": "Python 3.12", "spoken": "პითონ სამი წერტილი თორმეტი"}
-{"written": "Python 3.11", "spoken": "პითონ სამი წერტილი თერთმეტი"}
+{"written": "Python 3.12", "spoken": "პაითონი სამი წერტილი თორმეტი"}
+{"written": "Python 3.11", "spoken": "პაითონი სამი წერტილი თერთმეტი"}
 {"written": "GPT-4", "spoken": "ჯი პი ტი ოთხი"}
-{"written": "Claude 3.5", "spoken": "კლოდ სამი წერტილი ხუთი"}
+{"written": "Claude 3.5", "spoken": "კლოდი სამი წერტილი ხუთი"}
 {"written": "Llama 3", "spoken": "ლამა სამი"}
 {"written": "ახალი GPU", "spoken": "ახალი ჯი პი იუ"}
 {"written": "სისტემის CPU", "spoken": "სისტემის სი პი იუ"}
@@ -311,11 +311,11 @@
 {"written": "Google-მა განაახლა", "spoken": "გუგლმა განაახლა"}
 {"written": "Google-ის ძიება", "spoken": "გუგლის ძიება"}
 {"written": "Google-ს ენდობიან", "spoken": "გუგლს ენდობიან"}
-{"written": "OpenAI-მ გამოუშვა", "spoken": "ოუფენეიაიმ გამოუშვა"}
-{"written": "OpenAI-ს მოდელი", "spoken": "ოუფენეიაის მოდელი"}
-{"written": "ChatGPT-მ უპასუხა", "spoken": "ჩატჯიპიტმა უპასუხა"}
-{"written": "ChatGPT-ს ვერსია", "spoken": "ჩატჯიპიტის ვერსია"}
-{"written": "ChatGPT-ზე მუშაობა", "spoken": "ჩატჯიპიტზე მუშაობა"}
+{"written": "OpenAI-მ გამოუშვა", "spoken": "ოუფენ ეი აიმ გამოუშვა"}
+{"written": "OpenAI-ს მოდელი", "spoken": "ოუფენ ეი აის მოდელი"}
+{"written": "ChatGPT-მ უპასუხა", "spoken": "ჩატ ჯი პი ტიმ უპასუხა"}
+{"written": "ChatGPT-ს ვერსია", "spoken": "ჩატ ჯი პი ტის ვერსია"}
+{"written": "ChatGPT-ზე მუშაობა", "spoken": "ჩატ ჯი პი ტიზე მუშაობა"}
 {"written": "Claude-მა დაწერა", "spoken": "კლოდმა დაწერა"}
 {"written": "Claude-ის პასუხი", "spoken": "კლოდის პასუხი"}
 {"written": "Gemini-მ შექმნა", "spoken": "ჯემინაიმ შექმნა"}
@@ -332,12 +332,12 @@
 {"written": "NVIDIA-ს ჩიპები", "spoken": "ენვიდიას ჩიპები"}
 {"written": "Intel-მა გამოუშვა", "spoken": "ინტელმა გამოუშვა"}
 {"written": "Intel-ის პროცესორი", "spoken": "ინტელის პროცესორი"}
-{"written": "AMD-მ გააუმჯობესა", "spoken": "ეიემდიმ გააუმჯობესა"}
-{"written": "AMD-ს გრაფიკა", "spoken": "ეიემდის გრაფიკა"}
+{"written": "AMD-მ გააუმჯობესა", "spoken": "ეი ემ დიმ გააუმჯობესა"}
+{"written": "AMD-ს გრაფიკა", "spoken": "ეი ემ დის გრაფიკა"}
 {"written": "Tesla-მ გაზარდა", "spoken": "ტესლამ გაზარდა"}
 {"written": "Tesla-ს აქციები", "spoken": "ტესლას აქციები"}
-{"written": "SpaceX-მა გაუშვა", "spoken": "სპეისექსმა გაუშვა"}
-{"written": "SpaceX-ის რაკეტა", "spoken": "სპეისექსის რაკეტა"}
+{"written": "SpaceX-მა გაუშვა", "spoken": "სპეის-იქსმა გაუშვა"}
+{"written": "SpaceX-ის რაკეტა", "spoken": "სპეის-იქსის რაკეტა"}
 {"written": "Samsung-მა შექმნა", "spoken": "სამსუნგმა შექმნა"}
 {"written": "Samsung-ის ტელეფონი", "spoken": "სამსუნგის ტელეფონი"}
 {"written": "Sony-მ დაანონსა", "spoken": "სონიმ დაანონსა"}
@@ -352,18 +352,18 @@
 {"written": "TikTok-ის ვიდეო", "spoken": "ტიკტოკის ვიდეო"}
 {"written": "Instagram-ზე გამოქვეყნება", "spoken": "ინსტაგრამზე გამოქვეყნება"}
 {"written": "Facebook-ზე გაზიარება", "spoken": "ფეისბუქზე გაზიარება"}
-{"written": "LinkedIn-ზე პოსტი", "spoken": "ლინქდინზე პოსტი"}
+{"written": "LinkedIn-ზე პოსტი", "spoken": "ლინკდინზე პოსტი"}
 {"written": "Discord-ზე საუბარი", "spoken": "დისკორდზე საუბარი"}
 {"written": "Slack-ში შეტყობინება", "spoken": "სლექში შეტყობინება"}
 {"written": "Telegram-ში ჩატი", "spoken": "ტელეგრამში ჩატი"}
-{"written": "GitHub-ზე აიტვირთა", "spoken": "გითჰაბზე აიტვირთა"}
+{"written": "GitHub-ზე აიტვირთა", "spoken": "გიტჰაბზე აიტვირთა"}
 {"written": "Stripe-ით გადახდა", "spoken": "სტრაიპით გადახდა"}
-{"written": "Cloudflare-მა დაბლოკა", "spoken": "კლაუდფლერმა დაბლოკა"}
+{"written": "Cloudflare-მა დაბლოკა", "spoken": "ქლაუდფლერმა დაბლოკა"}
 {"written": "Uber-ით მგზავრობა", "spoken": "უბერით მგზავრობა"}
-{"written": "TSMC-მ აწარმოა", "spoken": "ტიესემსიმ აწარმოა"}
-{"written": "ASML-მა დაამზადა", "spoken": "ეიესემელმა დაამზადა"}
+{"written": "TSMC-მ აწარმოა", "spoken": "ტი ეს ემ სიმ აწარმოა"}
+{"written": "ASML-მა დაამზადა", "spoken": "ეი ეს ემ ელმა დაამზადა"}
 {"written": "Nintendo-მ გამოუშვა", "spoken": "ნინტენდომ გამოუშვა"}
-{"written": "LG-მ წარადგინა", "spoken": "ელჯიმ წარადგინა"}
+{"written": "LG-მ წარადგინა", "spoken": "ელ ჯიმ წარადგინა"}
 {"written": "Dell-მა განაახლა", "spoken": "დელმა განაახლა"}
 {"written": "Lenovo-ს ლეპტოპი", "spoken": "ლენოვოს ლეპტოპი"}
 {"written": "60 კმ/სთ", "spoken": "სამოცი კილომეტრი საათში"}

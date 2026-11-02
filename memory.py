@@ -4,8 +4,10 @@ A JSONL file, one correction per line. Agents add a line with ka_learn when a hu
 Georgian; ka_mistakes returns the most frequent ones so a writer reads them before drafting.
 
 Location: $KAEASY_DATA_DIR/mistakes.jsonl. Point every profile at the same directory to share learning across the
-fleet (for example /root/.hermes/shared-knowledge/kaeasy). Without the variable it falls back to the Hermes
-per-plugin data dir, then to ./data next to this file (tests, local use).
+fleet (for example /root/.hermes/shared-knowledge/kaeasy). Without the variable it uses the fleet's shared
+directory when the plugin is installed as <hermes>/shared-plugins/kaeasy and <hermes>/shared-knowledge/kaeasy
+exists (the gateway does not pass a profile's .env to plugin code), then the Hermes per-plugin data dir, then
+./data next to this file (tests, local use).
 """
 from __future__ import annotations
 
@@ -28,6 +30,10 @@ def data_dir() -> Path:
     env = os.environ.get("KAEASY_DATA_DIR")
     if env:
         return Path(env)
+    here = Path(__file__).resolve().parent  # symlinks resolved: <hermes>/shared-plugins/kaeasy
+    shared = here.parent.parent / "shared-knowledge" / "kaeasy"
+    if here.parent.name == "shared-plugins" and shared.is_dir():
+        return shared
     try:
         from plugins.plugin_storage import plugin_data_dir  # Hermes host API
 

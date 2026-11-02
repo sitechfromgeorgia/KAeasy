@@ -39,6 +39,7 @@ Use the Georgian term in prose. The acronym may follow the first mention in pare
 | subscription | გამოწერა | |
 | receiver (radio) | მიმღები | ❌ `რეზივერი` |
 | price | ფასი | `ტარიფი` only when the product says so |
+| yield (chip production) | ვარგისი ჩიპების გამოსავლიანობა | `გამოსავლიანობა` alone reads as throughput; gloss once as `(yield)` |
 | smartphone | სმარტფონი | |
 | social network | სოციალური ქსელი | |
 | identifier (CVE-…, KB…) | written as is on screen | narration says `ხარვეზი` / `განახლება` |

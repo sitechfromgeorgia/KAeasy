@@ -47,6 +47,21 @@ The first 2-3 seconds must engage without misleading the viewer:
 - Present a concrete metric: `როგორ დაზოგა ამ გუნდმა კვირაში 15 საათი?`
 - Avoid deceptive hype words (`შოკი!`, `წარმოუდგენელი!`, `არ დაიჯერებთ!`).
 
+## Copy inside a design (poster, card, ad)
+
+A line on a graphic has no paragraph around it to rescue it, so one unclear phrase reads as a mistake. Run three
+checks on the final strings before rendering:
+1. **No literal English idioms.** `ბარათი თავს იხდის` (pays for itself) made Edo ask what it means. State the
+   mechanism instead: `გვერდმა ხარჯი 2,8 თვეში დააბრუნა`. Test: if someone who has not seen the brief asks
+   `რას ნიშნავს?`, it is a calque.
+2. **A supporting line has a finite verb.** A headline may be a fragment; a bullet may not.
+   ❌ `შაბლონი. ათეულობით ფაილი ტექსტამდე` ✅ `ტექსტამდე ათეულობით ფაილი იტვირთება`.
+3. **The verb fits the noun.** ❌ `ხარისხს ზომით აჩვენებს` ✅ `ხარისხს ზომით იძლევა`. Read the noun and verb pair
+   alone before trusting the sentence.
+
+When a graphic is built from a copy table, fix the table, never the rendered output. Otherwise the fix covers
+one card and the next build reverts it.
+
 ## Related skills
 
 - Social posts and video cards: `kaeasy:georgian-social`
