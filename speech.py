@@ -201,6 +201,12 @@ def is_acronym(word):
 CLOCK = {"": ("ი", True), "ის": ("ის", True), "დან": ("იდან", True), "ით": ("ით", True), "ს": ("ს", False),
          "ზე": ("ზე", False), "მდე": ("ამდე", False), "ამდე": ("ამდე", False), "ში": ("ში", False),
          "თვის": ("ისთვის", True)}
+# A time already says its own hour word, so "15:30 საათზე" must not say საათ twice: the clock takes the noun's
+# case and the noun is dropped (თხუთმეტ საათსა და ოცდაათ წუთზე, ათ საათზე).
+CLOCK_NOUN = {"საათი": "", "საათს": "ს", "საათის": "ის", "საათზე": "ზე", "საათში": "ში",
+              "საათიდან": "დან", "საათამდე": "ამდე", "საათისთვის": "თვის", "საათით": "ით"}
+
+TIME = re.compile(r"(?P<h>[01]?\d|2[0-3]):(?P<min>[0-5]\d)(?:-(?P<suf>[ა-ჿ]+))?")
 
 
 def clock(h, minute, suf=""):
@@ -230,7 +236,7 @@ def speak_token(core, next_word="", prev_word="", known=None):
     if m:
         rest = speak_token(m["rest"], next_word, prev_word, known)
         return rest and ("პლუს " if m["sign"] == "+" else "მინუს ") + rest
-    m = re.fullmatch(r"(?P<h>[01]?\d|2[0-3]):(?P<min>[0-5]\d)(?:-(?P<suf>[ა-ჿ]+))?", core)  # 06:00-დან, 15:30-მდე
+    m = TIME.fullmatch(core)  # 06:00-დან, 15:30-მდე
     if m:
         return clock(int(m["h"]), int(m["min"]), m["suf"] or "")
     m = re.fullmatch(r"(?P<w>.*[A-Za-z0-9.])-(?P<suf>[ა-ჿ]+)", core)  # NVIDIA-ს, AI-ს, GPU-ები, Storm-0940-მა
@@ -289,17 +295,41 @@ def speak_token(core, next_word="", prev_word="", known=None):
     return None
 
 
+def clock_nouns(toks):
+    """{time index: (case suffix, noun index)} where the next word repeats the time's own hour word.
+
+    "15:30 საათზე" is one time, not a time followed by another საათ: the clock takes the noun's case and the
+    noun token is dropped, keeping its trailing punctuation on the time ("15:30 საათზე," → "... წუთზე,")."""
+    out = {}
+    for i, tok in enumerate(toks[:-1]):
+        m, nxt = TOKEN.match(tok), TOKEN.match(toks[i + 1])
+        t = TIME.fullmatch(m["core"])
+        if t and not t["suf"] and not m["post"] and nxt["core"] in CLOCK_NOUN:
+            out[i] = (CLOCK_NOUN[nxt["core"]], i + 1)
+    return out
+
+
 def pairs(text, say=None):
     """[(display token, spoken text)] for every token of the narration (tokens()). say: the script's own
     spoken forms for names the lexicon doesn't know ({"ARTEX": "არტექსი"})."""
     toks, known = tokens(text), names(say)
     multi = multiword(toks, known)
+    clocks = clock_nouns(toks)
+    absorbed = {j for _, j in clocks.values()}  # words the time already says ("საათზე" after "15:30")
     out = []
     for i, tok in enumerate(toks):
+        if i in absorbed:  # keeps the pair for caption timing, the voice has already said it
+            out.append((tok, ""))
+            continue
         m = TOKEN.match(tok)
         nxt = toks[i + 1] if i + 1 < len(toks) else ""
         prev = TOKEN.match(toks[i - 1])["core"] if i else ""
-        spoken = multi.get(i) or speak_token(m["core"], nxt, prev, known)
+        if i in clocks:
+            suf, j = clocks[i]
+            h, _, minute = m["core"].partition(":")
+            spoken = clock(int(h), int(minute), suf) + TOKEN.match(toks[j])["post"]
+        else:
+            spoken = multi.get(i) or speak_token(m["core"], nxt, prev, known)
         out.append((tok, tok if spoken is None else m["pre"] + spoken + m["post"]))
     return out
 
@@ -326,7 +356,7 @@ def multiword(toks, known):
 
 
 def speech(text, say=None):
-    return " ".join(s for _, s in pairs(text, say))
+    return " ".join(s for _, s in pairs(text, say) if s)
 
 
 def unspoken(text, say=None):
