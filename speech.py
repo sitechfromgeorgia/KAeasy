@@ -347,8 +347,8 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(r"(?P<w>[A-Za-z]+)-?(?P<n>\d+)(?P<rest>[A-Za-z]*)", core)  # B300, GPT-5, M4
     if m and m["w"].isupper():
         return f'{spell(m["w"])} {cardinal(int(m["n"]))}' + (f' {spell(m["rest"])}' if m["rest"] else "")
-    if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი
-        return spell_name(core)
+    if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი, but RTX 5090 → არ ტი ექს (a model number follows)
+        return spell(core) if re.match(r"\d", TOKEN.match(next_word or "")["core"]) else spell_name(core)
     return None
 
 

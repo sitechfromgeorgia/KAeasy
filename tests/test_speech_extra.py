@@ -70,3 +70,8 @@ def test_v04_speech_fixes(text, want):
 ])
 def test_consonant_stem_takes_the_full_ending(token, want):
     assert speak_token(token) == want
+
+
+def test_acronym_before_a_model_number_keeps_the_bare_letter():
+    assert speech("RTX 20 სერია") == "არ ტი ექს ოცი სერია"
+    assert speech("ახალი RTX.") == "ახალი არ ტი ექსი."
