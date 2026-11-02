@@ -263,6 +263,31 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
     return out
 
 
+def check_json(data, fields: dict[str, str], strict: bool = False) -> list[Finding]:
+    """Lint every Georgian string in a JSON document in the mode its key maps to (a video script has "say" for
+    the voice next to on-screen text). fields: {key: mode or "skip"}, "*" is the default (article if missing).
+    Each finding's snippet starts with the JSON path; offsets are within that string."""
+    out: list[Finding] = []
+
+    def walk(x, path: str, key: str) -> None:
+        if isinstance(x, dict):
+            for k, v in x.items():
+                walk(v, f"{path}.{k}", k)
+        elif isinstance(x, list):
+            for i, v in enumerate(x):
+                walk(v, f"{path}[{i}]", key)
+        elif isinstance(x, str) and re.search(r"[ა-ჰ]", x):
+            mode = fields.get(key, fields.get("*", "article"))
+            if mode == "skip":
+                return
+            for f in check_text(x, mode=mode, strict=strict):
+                f.snippet = f"{path}: {f.snippet}"
+                out.append(f)
+
+    walk(data, "$", "")
+    return out
+
+
 def summary(findings: list[Finding]) -> str:
     if not findings:
         return "სუფთაა (0)"

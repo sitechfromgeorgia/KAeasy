@@ -1,8 +1,10 @@
 name: kaeasy
-version: 0.1.0
-description: "Kaeasy: Georgian (ka) writing skills for agents. Skills with references and examples, a zero-cost linter (ka_lint) and a shared mistakes memory (ka_learn / ka_mistakes). No LLM calls, no API keys."
+version: 0.3.0
+description: "Kaeasy: Georgian (ka) writing skills for agents. Skills with references and examples, a zero-cost linter and fixer (ka_lint / ka_fix), TTS speech text (ka_speech) and a shared mistakes memory (ka_learn / ka_mistakes). No LLM calls, no API keys."
 provides_tools:
   - ka_lint
+  - ka_fix
+  - ka_speech
   - ka_learn
   - ka_mistakes
 provides_hooks:
