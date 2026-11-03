@@ -109,7 +109,7 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative", "latin_ergative"}
+          "postposition_dative", "latin_ergative", "numeral_compound"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -214,6 +214,11 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                 if re.search(r"\d\s*-\s*\d*$", pre):  # range such as 2020-2024
                     continue
                 add("number_plural", "error", f"რიცხვის შემდეგ მხოლობითი: „{m.group(0)}“", m)
+
+    if on("numeral_compound"):
+        # Garbled year compounds such as „ოცდაოცდ ორი“ (2022) or „ოცდაოცის“ (2020): always an error.
+        for m in re.finditer(r"ოცდაოც", body):
+            add("numeral_compound", "error", "არასწორი რიცხვითი შენაერთი: „ოცდაოც...“ → „ორი ათას ოც...“", m)
 
     if on("percent"):
         for m in re.finditer(r"\b\d+(?:[.,]\d+)?\s+%", body):
