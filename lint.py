@@ -109,7 +109,7 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative", "latin_ergative", "numeral_compound"}
+          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -219,6 +219,13 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         # Garbled year compounds such as „ოცდაოცდ ორი“ (2022) or „ოცდაოცის“ (2020): always an error.
         for m in re.finditer(r"ოცდაოც", body):
             add("numeral_compound", "error", "არასწორი რიცხვითი შენაერთი: „ოცდაოც...“ → „ორი ათას ოც...“", m)
+
+    if on("legal_citation"):
+        # Article number and its part must never collapse into "NNN პირველი მუხლი".
+        # Prime articles (353¹) are a different offence from the base article (353).
+        for pat in (r"\b\d+(?:-ე)?\s+პირველ[ი]?\s+მუხლ", r"\b\d+(?:-ე)?\s+მუხლის\s+პირველ[ი]?\s+მუხლ"):
+            for m in re.finditer(pat, body):
+                add("legal_citation", "error", f"მუხლი და ნაწილი აერია: „{m.group(0)}“ → „NNN-ე მუხლის პირველი ნაწილი“ (პრიმა მუხლი ცალკეა: „NNN-ე პრიმა მუხლის პირველი ნაწილი“)", m)
 
     if on("percent"):
         for m in re.finditer(r"\b\d+(?:[.,]\d+)?\s+%", body):
