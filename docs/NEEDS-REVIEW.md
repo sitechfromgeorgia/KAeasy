@@ -40,7 +40,6 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 
 | Where | Question | Status |
 |---|---|---|
-| `georgia-companies.json`, `lexicon_ka.json` | PSP is spoken `პე ეს პე`: the written form is confirmed, the spoken one only likely | for Louie |
 | `georgia-companies.json`, `lexicon_ka.json` | BOG and GWP: full name or letters? No evidence found for how Georgians say them | for Louie |
 | `georgia-companies.json` | `m²` read `ემ კვადრატი`; `ვენდუ` may no longer exist; `ვანილა სქაი` is not in the gcaa.ge register | to check |
 | `speech.py` | `ასკ`: Administrative Procedure or Administrative Offences Code? It stays spelled as letters until a source settles it | to check |
