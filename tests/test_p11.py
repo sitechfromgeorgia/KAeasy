@@ -54,7 +54,7 @@ def test_lint_ordinal_date():
     ]
     for text in bad_examples:
         findings = lint.check_text(text, strict=True)
-        assert any(f.check == "ordinal_date" for f in findings), f"Failed to flag: {text}"
+        assert any(f.check in ("ordinal_date", "date_ordinal") for f in findings), f"Failed to flag: {text}"
 
     # True negatives (must NOT flag)
     good_examples = [
@@ -67,7 +67,7 @@ def test_lint_ordinal_date():
     ]
     for text in good_examples:
         findings = lint.check_text(text, strict=True)
-        assert not any(f.check == "ordinal_date" for f in findings), f"False positive on: {text}"
+        assert not any(f.check in ("ordinal_date", "date_ordinal") for f in findings), f"False positive on: {text}"
 
 
 def test_lint_wrong_name():

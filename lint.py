@@ -109,7 +109,8 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "ordinal_date", "wrong_name"}
+          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "date_ordinal",
+          "ordinal_date", "wrong_name"}
 
 COMPANIES_PATH = Path(__file__).resolve().parent / "data" / "glossary" / "georgia-companies.json"
 COMPANY_AVOID: dict[str, str] = {}
@@ -136,7 +137,7 @@ ORDINAL_DATE_RE = re.compile(
     r"(?:(?:[2-9]|\d{2,})-ე|მე-(?:[2-9]|\d{2,})(?:-ე)?|"
     r"მეორე|მესამე|მეოთხე|მეხუთე|მეექვსე|მეშვიდე|მერვე|მეცხრე|მეათე|"
     r"მეთერთმეტე|მეთორმეტე|მეცამეტე|მეთოთხმეტე|მეთხუთმეტე|მეთექვსმეტე|მეჩვიდმეტე|მეთვრამეტე|მეცხრამეტე|მეოცე|"
-    r"ოცდამე(?:ერთ|ორ|სამ|ოთხ|ხუთ|ექვს|შვიდ|რვ|ცხრ|ათ|თერთმეტ)ე)"
+    r"ოცდამე(?:ერთ|ორ|სამ|ოთხ|ხუთ|ექვს|შვიდ|რვ|ცხრ|ათ|თერთმეტ)ე|ოცდამე\w+)"
     r"(?:ს)?\s+(?:იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტო|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)[ა-ჰ]*(?![ა-ჰ])"
 )
 
@@ -249,6 +250,13 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         for m in re.finditer(r"ოცდაოც", body):
             add("numeral_compound", "error", "არასწორი რიცხვითი შენაერთი: „ოცდაოც...“ → „ორი ათას ოც...“", m)
 
+    if on("date_ordinal") or on("ordinal_date"):
+        # Dates take the cardinal day: „ორ ოქტომბერს“, not „მეორე ოქტომბერს“. Day 1 is ordinal: „პირველი“.
+        for m in ORDINAL_DATE_RE.finditer(body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            add("date_ordinal", "error", f"თარიღის დღე რიცხვითია, არა რიგითი: „{m.group(0)}“ → „ორ/სამ/... {m.group(0).split()[-1]}“", m)
+
     if on("legal_citation"):
         # Article number and its part must never collapse into "NNN პირველი მუხლი".
         # Prime articles (353¹) are a different offence from the base article (353).
@@ -348,12 +356,6 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
             right = LATIN_OTHER.get((cls, suf)) or LATIN_OTHER.get((group, suf))
             if right and on("latin_case"):
                 add("latin_case", "warn", f"„{m.group(0)}“ → „{name}-{right}“ (latin-names.md)", m)
-
-    if on("ordinal_date"):
-        for m in ORDINAL_DATE_RE.finditer(body):
-            if any(in_tag[m.start():m.end()]):
-                continue
-            add("ordinal_date", "error", f"თვის რიცხვი რაოდენობითია (არა რიგობითი): „{m.group(0)}“ (მხოლოდ 1-ია რიგობითი: „პირველი“)", m)
 
     if on("wrong_name"):
         for rx, pref in COMPANY_AVOID_PATTERNS:
