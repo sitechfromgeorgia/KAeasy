@@ -14,11 +14,19 @@ In Georgian legal and administrative writing, law titles are enclosed in Georgia
 | Ministerial order | `საქართველოს [დასახელება] მინისტრის N[ნომერი] ბრძანება` | `საქართველოს იუსტიციის მინისტრის N112 ბრძანება` |
 | Municipal decree | `[ქალაქის] მუნიციპალიტეტის საკრებულოს N[ნომერი] დადგენილება` | `თბილისის მუნიციპალიტეტის საკრებულოს N18 დადგენილება` |
 
-### Articles, paragraphs, and clauses:
-- Article: `მე-6 მუხლი`, `316-ე მუხლი`, `125-ე მუხლის მე-2 პუნქტი`
-- Paragraph / Clause: `პირველი პუნქტი`, `მე-3 ქვეპუნქტი`
-- Full citation example:
-  `„პერსონალურ მონაცემთა დაცვის შესახებ“ საქართველოს კანონის მე-6 მუხლის პირველი პუნქტის შესაბამისად...`
+### Articles, parts, paragraphs, and clauses:
+- **In Codes and Primary Laws**: Articles are divided into **ნაწილები** (Parts):
+  - `სამოქალაქო კოდექსის 316-ე მუხლის პირველი ნაწილი`
+  - `სისხლის სამართლის კოდექსის 180-ე მუხლის მე-2 ნაწილი`
+- **In Secondary Normative Acts (Government Decrees, Ministerial Orders)**: Articles are divided into **პუნქტები** (Paragraphs):
+  - `მთავრობის დადგენილების მე-3 მუხლის მე-2 პუნქტი`
+  - `მინისტრის ბრძანების პირველი პუნქტის „ბ“ ქვეპუნქტი`
+- **Prime Articles (პრიმა მუხლები)**:
+  - Prime articles (`353¹`, `126¹`) are distinct offences and articles:
+  - `სისხლის სამართლის კოდექსის 353¹-ე მუხლი` (spoken: `სამას ორმოცდამეცამეტე პრიმა მუხლი`)
+  - Subparts: `353¹-ე მუხლის მე-2 ნაწილი`
+- **Full citation example**:
+  - `„პერსონალურ მონაცემთა დაცვის შესახებ“ საქართველოს კანონის მე-6 მუხლის პირველი პუნქტის შესაბამისად...`
 
 ## 2. Institutional names and capitalization
 
@@ -31,6 +39,7 @@ In Georgian legal and administrative writing, law titles are enclosed in Georgia
 | `თბილისის მუნიციპალიტეტის მერია` | `თბილისის მუნიციპალიტეტის მერია` |
 | `საჯარო რეესტრის ეროვნული სააგენტო` | `საჯარო რეესტრის ეროვნული სააგენტო` |
 | `სახელმწიფო შესყიდვების სააგენტო` | `სახელმწიფო შესყიდვების სააგენტო` |
+| `აღსრულების ეროვნული ბიურო` | `აღსრულების ბიურო` |
 | `საქართველოს ფინანსთა სამინისტროს შემოსავლების სამსახური` | (no extra capitals) |
 
 ## 3. Terms of Service (TOS) and Privacy Policies

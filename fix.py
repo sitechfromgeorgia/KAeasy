@@ -49,6 +49,9 @@ def fix_text(text: str) -> tuple[str, list[str]]:
     # Dashes are banned in Georgian copy (Edo's rule, 2026-09-25): ranges get a hyphen, asides a spaced hyphen.
     sub(r"(?<=\d)[–—](?=\d)", "-", "dash")
     sub(r"\s*[–—]\s*", " - ", "dash")
+    # Ordinal suffix on day of month (22-ე ნოემბერს → 22 ნოემბერს; day 1 stays 1-ელი).
+    sub(r"\b([2-9]|\d{2,})-ე\s+((?:იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტო|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)[ა-ჰ]*)",
+        r"\1 \2", "ordinal_date")
 
     for ka, rx in TRANSLIT_RE.items():
         def latin(m: re.Match, ka: str = ka) -> str:

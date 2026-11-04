@@ -23,6 +23,7 @@ mistakes memory feeds every correction back to all agents.
 | `skills/georgian-business` | Commercial correspondence, invoices, B2B, email etiquette |
 | `skills/georgian-marketing` | Hype-free copy, CTAs, landing pages, campaigns |
 | `skills/georgian-official` | Official notices, legal citations, bureaucratic forms |
+| `skills/georgian-legal` | Legal text: citations (prime articles), Constitution, 9 codes, courts, confusable terms, contracts |
 | `skills/georgian-support` | Customer support, empathy, problem-resolution tone |
 | `skills/georgian-translation` | Translation protocol, false friends, localization |
 | `evals/` | 120 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |

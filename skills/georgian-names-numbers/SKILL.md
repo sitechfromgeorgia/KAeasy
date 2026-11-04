@@ -44,6 +44,7 @@ the rules and table in `references/latin-names.md` and `references/brands.md`.
 ## Dates
 
 `2026 წლის 15 ოქტომბერს` · `15 ოქტომბერს` · `2026 წელს` · `09:00 საათზე`. ❌ `October 15`, `15.10.2026 წ.` in prose.
+Day of the month is a cardinal, never an ordinal: `22 ნოემბერი`, `22 ნოემბერს` (❌ `22-ე`, `ოცდამეორე`). Only the first day is an ordinal: `1-ელი ნოემბერი`, `პირველ ნოემბერს`. Details: `references/dates-numbers.md`.
 
 ## Punctuation
 
@@ -66,4 +67,7 @@ the rules and table in `references/latin-names.md` and `references/brands.md`.
 - `references/glossary-sport.md`: sports disciplines, match states, refereeing, and positions without Russianisms.
 - `references/glossary-health.md`: clinical medicine, diagnostics, pharmacology, and healthcare terms.
 - `references/glossary-law.md`: legislation, judicial proceedings, contracts, and constitutional terms.
+- `references/glossary-georgia-companies.md`: 180+ Georgian companies, banks, utilities, and agencies with preferred, avoid, and spoken forms.
+- `references/dates-numbers.md`: comprehensive rules and 150+ examples for dates, months, cardinals, ordinals, time and units.
 - `examples/names-numbers-fixes.md`: wrong → right brand names, numbers, dates and punctuation.
+- `examples/dates-numbers-fixes.md`: wrong → right dates, ordinals and numeral expressions.

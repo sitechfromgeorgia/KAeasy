@@ -79,7 +79,8 @@ def test_glossaries_schema_and_counts():
         "crypto": 60,
         "sport": 60,
         "health": 60,
-        "law": 60,
+        "law": 200,
+        "georgia-companies": 150,
     }
     glossary_dir = ROOT / "data" / "glossary"
     ref_dir = ROOT / "skills" / "georgian-names-numbers" / "references"

@@ -35,6 +35,7 @@ rule wins.
 | Taglines, CTAs, landing page copy, ads, Shorts hooks | `kaeasy:georgian-marketing` |
 | Customer support in chat, email, comments, ticket closing | `kaeasy:georgian-support` |
 | Press releases, official statements, city/gov notices, TOS | `kaeasy:georgian-official` |
+| Legal text, citations, laws, court terms, contracts | `kaeasy:georgian-legal` |
 | Translating EN→KA or RU→KA (restructuring, idioms, names) | `kaeasy:georgian-translation` |
 | Buttons, labels, errors, statuses | `kaeasy:georgian-ui` |
 | Text that will be read aloud by TTS (`speech_text`) | `kaeasy:georgian-speech` |
