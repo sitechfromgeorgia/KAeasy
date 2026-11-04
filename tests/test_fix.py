@@ -17,6 +17,7 @@ from kaeasy import fix, lint
     ("ფასები 2020–2024 წლებში გაიზარდა.", "ფასები 2020-2024 წლებში გაიზარდა."),
     ("და მერე...", "და მერე…"),
     ("ფასი  გაიზარდა , ძალიან.", "ფასი გაიზარდა, ძალიან."),
+    ("შეხვედრა 22-ე ნოემბერს გაიმართება.", "შეხვედრა 22 ნოემბერს გაიმართება."),
 ])
 def test_fixes(text, want):
     fixed, changes = fix.fix_text(text)
@@ -32,6 +33,8 @@ def test_fixes(text, want):
     "საიტი https://example.com/path...end და მისამართი info@sitech.ge.",
     "```\nx = \"a\"  ...  — y\n```",
     "ვერსია 3.8 და iOS 18.1 გამოვიდა.",
+    "1-ელი ნოემბერი ოფიციალური დღეა.",
+    "მე-5 მუხლი ითვალისწინებს ჯარიმას.",
 ])
 def test_leaves_correct_or_protected_text_alone(text):
     assert fix.fix_text(text) == (text, [])

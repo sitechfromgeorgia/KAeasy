@@ -29,7 +29,7 @@ Examples of phonetic vs orthographic endings:
 ### Initialisms vs Acronyms
 
 - **Initialisms read as individual letters**: Follow the spoken sound of their **final letter**:
-  - Final letter ends in an -ი sound (B `/ბი/`, C `/სი/`, D `/დი/`, G `/ჯი/`, P `/პი/`, T `/ტი/`, V `/ვი/`, Z `/ზედი/`, I `/აი/`, Y `/უაი/`): `AMD` (დი → `i-sound`), `TSMC` (სი → `i-sound`), `LG` (ჯი → `i-sound`), `HP` (ფი → `i-sound`), `BYD` (დი → `i-sound`), `API` (აი → `i-sound`), `CLI` (აი → `i-sound`), `UI` (აი → `i-sound`), `IT` (აი-ტი → `i-sound`), `SSD` (დი → `i-sound`), `SDK` (კეი → `i-sound`).
+  - Final letter ends in an -ი sound (B `/ბი/`, C `/სი/`, D `/დი/`, G `/ჯი/`, P `/პი/`, T `/ტი/`, V `/ვი/`, Z `/ზედი/`, I `/აი/`, Y `/უაი/`): `AMD` (დი → `i-sound`), `TSMC` (სი → `i-sound`), `LG` (ჯი → `i-sound`), `HP` (ფი → `i-sound`), `BYD` (დი → `i-sound`), `API` (აი → `i-sound`), `CLI` (აი → `i-sound`), `UI` (აი → `i-sound`), `IT` (აი-თი → `i-sound`), `SSD` (დი → `i-sound`), `SDK` (კეი → `i-sound`).
   - Final letter ends in a consonant (F `/ეფ/`, L `/ელ/`, M `/ემ/`, N `/ენ/`, R `/არ/`, S `/ეს/`, X `/იქს/`): `IBM` (ემი → `consonant`), `ASML` (ელი → `consonant`), `ARM` (ემი → `consonant`), `iOS` (ესი → `consonant`), `macOS` (ესი → `consonant`), `LLM` (ემი → `consonant`), `RAM` (ემი → `consonant`), `URL` (ელი → `consonant`), `SQL` (ელი → `consonant`).
   - Final letter ends in an -უ sound (U `/იუ/`): `GPU` (იუ → `o-u`), `CPU` (იუ → `o-u`).
   - Final letter ends in an -ე sound (W `/ვე/`): `BMW` (ვე → `e`).

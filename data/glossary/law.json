@@ -479,5 +479,1582 @@
     "avoid": [],
     "latin": "trademark",
     "note": "Legally registered symbol, word, or logo identifying goods of a manufacturer."
+  },
+  {
+    "preferred": "საქართველოს სისხლის სამართლის კოდექსი",
+    "avoid": [
+      "სისხლის კოდექსი",
+      "კრიმინალური კოდექსი"
+    ],
+    "latin": "Criminal Code of Georgia",
+    "note": "Official code defining criminal offenses and penalties in Georgia (abbreviated სსკ; note ambiguity with Civil Code). Source: matsne.gov.ge/ka/document/view/16426."
+  },
+  {
+    "preferred": "საქართველოს სამოქალაქო კოდექსი",
+    "avoid": [
+      "გრაჟდანსკი კოდექსი"
+    ],
+    "latin": "Civil Code of Georgia",
+    "note": "Fundamental legal code regulating private property and personal non-property relationships (abbreviated სსკ). Source: matsne.gov.ge/ka/document/view/31702."
+  },
+  {
+    "preferred": "საქართველოს ადმინისტრაციულ სამართალდარღვევათა კოდექსი",
+    "avoid": [
+      "ადმინისტრაციული კოდექსი"
+    ],
+    "latin": "Code of Administrative Offences of Georgia",
+    "note": "Code regulating administrative violations and misdemeanor penalties (abbreviated ასკ). Source: matsne.gov.ge/ka/document/view/28216."
+  },
+  {
+    "preferred": "საქართველოს ზოგადი ადმინისტრაციული კოდექსი",
+    "avoid": [
+      "ზოგადი კოდექსი"
+    ],
+    "latin": "General Administrative Code of Georgia",
+    "note": "Code governing public administration, administrative proceedings and freedom of information (abbreviated სზაკ). Source: matsne.gov.ge/ka/document/view/16270."
+  },
+  {
+    "preferred": "საქართველოს სამოქალაქო საპროცესო კოდექსი",
+    "avoid": [
+      "სამოქალაქო პროცესი"
+    ],
+    "latin": "Civil Procedure Code of Georgia",
+    "note": "Code regulating judicial procedure in civil litigations (abbreviated სსპკ). Source: matsne.gov.ge/ka/document/view/29962."
+  },
+  {
+    "preferred": "საქართველოს სისხლის სამართლის საპროცესო კოდექსი",
+    "avoid": [
+      "კრიმინალური საპროცესო კოდექსი"
+    ],
+    "latin": "Criminal Procedure Code of Georgia",
+    "note": "Code governing criminal investigation, prosecution and trial procedures (abbreviated სსსკ). Source: matsne.gov.ge/ka/document/view/90034."
+  },
+  {
+    "preferred": "საქართველოს შრომის კოდექსი",
+    "avoid": [
+      "შრომის კანონი"
+    ],
+    "latin": "Labour Code of Georgia",
+    "note": "Organic law governing employment relationships, contracts and workers rights. Source: matsne.gov.ge/ka/document/view/1155567."
+  },
+  {
+    "preferred": "საქართველოს საგადასახადო კოდექსი",
+    "avoid": [
+      "ნალაგავოი კოდექსი"
+    ],
+    "latin": "Tax Code of Georgia",
+    "note": "Code establishing tax liability, rates and tax administration in Georgia. Source: matsne.gov.ge/ka/document/view/1043717."
+  },
+  {
+    "preferred": "საქართველოს საბაჟო კოდექსი",
+    "avoid": [
+      "ტამოჟნი კოდექსი"
+    ],
+    "latin": "Customs Code of Georgia",
+    "note": "Code regulating import, export and customs control in Georgia. Source: matsne.gov.ge/ka/document/view/4597648."
+  },
+  {
+    "preferred": "პერსონალურ მონაცემთა დაცვის შესახებ",
+    "avoid": [
+      "პერსონალური ინფორმაციის დაცვა"
+    ],
+    "latin": "Law of Georgia on Personal Data Protection",
+    "note": "Law regulating processing and storage of private individual data. Source: matsne.gov.ge/ka/document/view/5835942."
+  },
+  {
+    "preferred": "ეჭვმიტანილი",
+    "avoid": [
+      "პადოზრევაემი"
+    ],
+    "latin": "suspect",
+    "note": "Person suspected of crime before formal indictment/charges are filed. Distinct from ბრალდებული (the accused)."
+  },
+  {
+    "preferred": "გამამტყუნებელი განაჩენი",
+    "avoid": [
+      "ობვინიტელნი პრიგავორი"
+    ],
+    "latin": "conviction judgment / guilty verdict",
+    "note": "Criminal verdict establishing the guilt of the defendant and imposing sentencing."
+  },
+  {
+    "preferred": "გამამართლებელი განაჩენი",
+    "avoid": [
+      "აპრავდაწელნი პრიგავორი"
+    ],
+    "latin": "acquittal judgment / not-guilty verdict",
+    "note": "Criminal verdict finding the defendant not guilty."
+  },
+  {
+    "preferred": "სასამართლო განჩინება",
+    "avoid": [
+      "სუდებნი ოპრედელენიე"
+    ],
+    "latin": "court ruling / interim decision",
+    "note": "Court order resolving procedural motions without deciding the main case on merits."
+  },
+  {
+    "preferred": "სასამართლო გადაწყვეტილება",
+    "avoid": [
+      "სუდის რეშენიე"
+    ],
+    "latin": "court judgment / civil judgment",
+    "note": "Final judgment on merits in civil and administrative cases."
+  },
+  {
+    "preferred": "სასამართლო განაჩენი",
+    "avoid": [
+      "სუდებნი პრიგავორი"
+    ],
+    "latin": "court sentence / criminal verdict",
+    "note": "Judgment delivered strictly in a criminal trial."
+  },
+  {
+    "preferred": "დადგენილება",
+    "avoid": [
+      "პოსტანოვლენიე"
+    ],
+    "latin": "decree / administrative resolution",
+    "note": "Normative act issued by the Government of Georgia or investigative ruling by prosecutor/investigator."
+  },
+  {
+    "preferred": "განცხადება",
+    "avoid": [
+      "ზაიავლენიე"
+    ],
+    "latin": "application / petition",
+    "note": "Written application to a court or public authority; distinct from formal lawsuit (სარჩელი)."
+  },
+  {
+    "preferred": "საჩივარი",
+    "avoid": [
+      "ჟალობა"
+    ],
+    "latin": "complaint / administrative appeal",
+    "note": "Formal complaint challenging an act, decision or omission of an authority or lower court."
+  },
+  {
+    "preferred": "შესაგებელი",
+    "avoid": [
+      "ატზივი"
+    ],
+    "latin": "statement of defense / response to claim",
+    "note": "Written counter-statement and defense submitted by defendant in civil procedure."
+  },
+  {
+    "preferred": "შეგებებული სარჩელი",
+    "avoid": [
+      "ვსტრეჩნი ისკი"
+    ],
+    "latin": "counterclaim",
+    "note": "Independent claim brought by a defendant against the plaintiff in the same proceedings."
+  },
+  {
+    "preferred": "ვალდებულება",
+    "avoid": [
+      "აბიზატელობა"
+    ],
+    "latin": "obligation / commitment",
+    "note": "Duty of debtor to perform an action or abstain from it. Distinct from responsibility/liability (პასუხისმგებლობა)."
+  },
+  {
+    "preferred": "პასუხისმგებლობა",
+    "avoid": [
+      "ატვეტსტვენობა"
+    ],
+    "latin": "liability / responsibility",
+    "note": "Legal consequence of breaching obligations or committing unlawful acts."
+  },
+  {
+    "preferred": "ჯარიმა",
+    "avoid": [
+      "შტრაფი"
+    ],
+    "latin": "fine / administrative or criminal fine",
+    "note": "Statutory monetary penalty imposed by public authority or criminal court."
+  },
+  {
+    "preferred": "კანონქვემდებარე აქტი",
+    "avoid": [
+      "პაძაკონნი აქტი"
+    ],
+    "latin": "subordinate legal act / delegated legislation",
+    "note": "Executive order, decree or regulation issued on the basis of and for execution of a law."
+  },
+  {
+    "preferred": "ქონება",
+    "avoid": [
+      "იმოუშჩესტვო"
+    ],
+    "latin": "property / estate / assets",
+    "note": "Total aggregate of material things and intangible claims. Distinct from right of ownership (საკუთრება)."
+  },
+  {
+    "preferred": "საკუთრება",
+    "avoid": [
+      "სობსტვენობა"
+    ],
+    "latin": "ownership / title",
+    "note": "Legal right of exclusive possession, enjoyment and disposition over property."
+  },
+  {
+    "preferred": "მფლობელი",
+    "avoid": [
+      "ვლადელეცი"
+    ],
+    "latin": "possessor / holder",
+    "note": "Person having actual physical control or possession over a thing. Distinct from owner (მესაკუთრე)."
+  },
+  {
+    "preferred": "მესაკუთრე",
+    "avoid": [
+      "სობსტვენიკი"
+    ],
+    "latin": "owner / proprietor",
+    "note": "Legal titleholder of property with right of ownership."
+  },
+  {
+    "preferred": "სასჯელი",
+    "avoid": [
+      "ნაკაზანიე"
+    ],
+    "latin": "punishment / criminal sentence",
+    "note": "Measure of state coercion imposed strictly for a criminal offense."
+  },
+  {
+    "preferred": "სანქცია",
+    "avoid": [],
+    "latin": "sanction / penalty provision",
+    "note": "Statutory measure specifying adverse consequences of violating a legal rule."
+  },
+  {
+    "preferred": "ვადა",
+    "avoid": [
+      "სროკი"
+    ],
+    "latin": "term / period / duration",
+    "note": "Time interval established by law or contract. Distinct from limitation period (ხანდაზმულობა)."
+  },
+  {
+    "preferred": "ძალადაკარგული",
+    "avoid": [
+      "უტრატივში სილუ"
+    ],
+    "latin": "repealed / invalid (ex nunc)",
+    "note": "Normative act that has ceased to have legal effect from a certain date forward."
+  },
+  {
+    "preferred": "ბათილი",
+    "avoid": [
+      "ნედეისტვიტელნი"
+    ],
+    "latin": "null and void (ab initio)",
+    "note": "Legal act or contract devoid of legal validity from inception."
+  },
+  {
+    "preferred": "მსხვერპლი",
+    "avoid": [
+      "ჟერტვა"
+    ],
+    "latin": "victim (violence/trafficking)",
+    "note": "Specific status in domestic violence, human trafficking and human rights contexts."
+  },
+  {
+    "preferred": "დანაშაული",
+    "avoid": [
+      "პრესტუპლენიე"
+    ],
+    "latin": "crime / felony",
+    "note": "Unlawful act prohibited by the Criminal Code. Distinct from administrative offense (სამართალდარღვევა)."
+  },
+  {
+    "preferred": "სამართალდარღვევა",
+    "avoid": [
+      "პრავონარუშენიე"
+    ],
+    "latin": "offense / misdemeanor / administrative violation",
+    "note": "Unlawful act incurring administrative, civil or disciplinary liability."
+  },
+  {
+    "preferred": "დისციპლინური გადაცდომა",
+    "avoid": [
+      "დისციპლინარკა"
+    ],
+    "latin": "disciplinary infraction",
+    "note": "Breach of internal organizational or civil service duty."
+  },
+  {
+    "preferred": "იპოთეკა",
+    "avoid": [
+      "იპატეკა"
+    ],
+    "latin": "mortgage / hypothec",
+    "note": "Pledge of immovable property to secure monetary performance."
+  },
+  {
+    "preferred": "გირავნობა",
+    "avoid": [
+      "ზაკლად"
+    ],
+    "latin": "pledge / pawn / chattel mortgage",
+    "note": "Security interest over movable property or intangible claims."
+  },
+  {
+    "preferred": "საექსტრადიციო პატიმრობა",
+    "avoid": [
+      "ექსტრადიციული პატიმრობა"
+    ],
+    "latin": "extradition detention",
+    "note": "Detention ordered for the purpose of extraditing an individual to another sovereign state."
+  },
+  {
+    "preferred": "ბრალეულობა",
+    "avoid": [
+      "ვინა"
+    ],
+    "latin": "guilt / culpability / fault",
+    "note": "Mental state of intent (განზრახვა) or negligence (გაუფრთხილებლობა) in committing violation."
+  },
+  {
+    "preferred": "განზრახვა",
+    "avoid": [
+      "უმისელი"
+    ],
+    "latin": "intent / malice aforethought",
+    "note": "Subjective state where actor foresees and desires or consciously permits consequences."
+  },
+  {
+    "preferred": "გაუფრთხილებლობა",
+    "avoid": [
+      "ნეოსტოროჟნოსტი"
+    ],
+    "latin": "negligence / recklessness",
+    "note": "Failure to exercise reasonable care foreseen or expected by law."
+  },
+  {
+    "preferred": "ფორსმაჟორი",
+    "avoid": [
+      "ფორს-მაჟორი",
+      "ფორს მაჟორი"
+    ],
+    "latin": "force majeure / irresistible force",
+    "note": "Unforeseeable and unavoidable external circumstance exempting from liability. Written as one word."
+  },
+  {
+    "preferred": "დაუძლეველი ძალა",
+    "avoid": [
+      "ნეპრეოდოლიმი სილა"
+    ],
+    "latin": "act of God / unavoidable force",
+    "note": "Georgian statutory synonym for force majeure in Civil Code §398."
+  },
+  {
+    "preferred": "საქართველოს პოლიცია",
+    "avoid": [
+      "პოლიციური ორგანო"
+    ],
+    "latin": "Police of Georgia",
+    "note": "State law enforcement body within the Ministry of Internal Affairs (შსს)."
+  },
+  {
+    "preferred": "შინაგან საქმეთა სამინისტრო",
+    "avoid": [
+      "მვდ"
+    ],
+    "latin": "Ministry of Internal Affairs of Georgia",
+    "note": "Executive ministry responsible for public order, borders and police (შსს)."
+  },
+  {
+    "preferred": "საჯარო რეესტრის ეროვნული სააგენტო",
+    "avoid": [
+      "საჯარო რეესტრი"
+    ],
+    "latin": "National Agency of Public Registry",
+    "note": "State agency recording immovable property titles, corporate records, and liens."
+  },
+  {
+    "preferred": "საქართველოს ნოტარიუსთა პალატა",
+    "avoid": [
+      "ნოტარიალური პალატა"
+    ],
+    "latin": "Notary Chamber of Georgia",
+    "note": "Self-governing association of licensed notaries in Georgia."
+  },
+  {
+    "preferred": "საქართველოს იუსტიციის უმაღლესი საბჭო",
+    "avoid": [
+      "იუსტიციის საბჭო"
+    ],
+    "latin": "High Council of Justice of Georgia",
+    "note": "Constitutional body ensuring independence and appointment of common court judges."
+  },
+  {
+    "preferred": "საქართველოს იუსტიციის სამინისტრო",
+    "avoid": [
+      "იუსტიციის სამინისტრო"
+    ],
+    "latin": "Ministry of Justice of Georgia",
+    "note": "Executive ministry leading legal affairs, penitentiary system and public services."
+  },
+  {
+    "preferred": "საქართველოს სახალხო დამცველი",
+    "avoid": [
+      "ომბუდსმენი"
+    ],
+    "latin": "Public Defender of Georgia (Ombudsman)",
+    "note": "Independent constitutional official overseeing observance of human rights."
+  },
+  {
+    "preferred": "სპეციალური საგამოძიებო სამსახური",
+    "avoid": [
+      "საგამოძიებო სამსახური"
+    ],
+    "latin": "Special Investigation Service",
+    "note": "Independent state authority investigating crimes committed by public officials."
+  },
+  {
+    "preferred": "სახელმწიფო უსაფრთხოების სამსახური",
+    "avoid": [
+      "სგბ"
+    ],
+    "latin": "State Security Service of Georgia",
+    "note": "State intelligence and counter-terrorism agency (სუს)."
+  },
+  {
+    "preferred": "კომპენსაცია",
+    "avoid": [
+      "კომპენსირება"
+    ],
+    "latin": "compensation / indemnification",
+    "note": "Payment made to make amends for injury, loss or expropriated property."
+  },
+  {
+    "preferred": "ზიანის ანაზღაურება",
+    "avoid": [
+      "უბიტკების ანაზღაურება"
+    ],
+    "latin": "reparation / restitution of damages",
+    "note": "Legal remedy obligating tortfeasor or breaching party to restore losses."
+  },
+  {
+    "preferred": "მიუღებელი შემოსავალი",
+    "avoid": [
+      "უპუშჩენნი ვიგოდა"
+    ],
+    "latin": "lost profit / lucrum cessans",
+    "note": "Profit the aggrieved party would have gained if obligation had been duly performed."
+  },
+  {
+    "preferred": "პირდაპირი ზიანი",
+    "avoid": [
+      "პრამოი ზიანი"
+    ],
+    "latin": "direct damage / damnum emergens",
+    "note": "Direct real decrease or loss of an asset caused by breach."
+  },
+  {
+    "preferred": "სალიკვიდაციო მასა",
+    "avoid": [
+      "სალიკვიდაციო ქონება"
+    ],
+    "latin": "liquidation estate / insolvency estate",
+    "note": "Assets of debtor available for distribution to creditors in bankruptcy."
+  },
+  {
+    "preferred": "გადახდისუუნარობა",
+    "avoid": [
+      "ბანკროტობა"
+    ],
+    "latin": "insolvency / inability to pay",
+    "note": "Inability of debtor to meet matured pecuniary obligations."
+  },
+  {
+    "preferred": "გაკოტრება",
+    "avoid": [
+      "ბანკროტსტვო"
+    ],
+    "latin": "bankruptcy",
+    "note": "Court-ordered liquidation proceeding under Rehabilitation and Collective Satisfaction Law."
+  },
+  {
+    "preferred": "მოვალე",
+    "avoid": [
+      "დოლჟნიკი"
+    ],
+    "latin": "debtor / obligor",
+    "note": "Party legally bound to discharge a performance or debt to creditor."
+  },
+  {
+    "preferred": "კრედიტორი",
+    "avoid": [
+      "ზაიმოდავეცი"
+    ],
+    "latin": "creditor / obligee",
+    "note": "Party entitled to demand performance of obligation from debtor."
+  },
+  {
+    "preferred": "სოლიდარული პასუხისმგებლობა",
+    "avoid": [
+      "სოლიდარკა"
+    ],
+    "latin": "joint and several liability",
+    "note": "Liability where each co-debtor is responsible for full discharge of debt."
+  },
+  {
+    "preferred": "სუბსიდიური პასუხისმგებლობა",
+    "avoid": [
+      "სუბსიდიარული პასუხისმგებლობა"
+    ],
+    "latin": "subsidiary liability / secondary liability",
+    "note": "Liability arising only upon default or failure of the principal debtor."
+  },
+  {
+    "preferred": "ცესია",
+    "avoid": [
+      "მოთხოვნის გადაცემა"
+    ],
+    "latin": "assignment of claim / cession",
+    "note": "Contractual transfer of rights/claims from original creditor to third party."
+  },
+  {
+    "preferred": "ვალის გადაკისრება",
+    "avoid": [
+      "პერევოდ დოლგა"
+    ],
+    "latin": "assumption of debt",
+    "note": "Agreement by which a new debtor takes over an existing debt with creditor consent."
+  },
+  {
+    "preferred": "რეკვიზიცია",
+    "avoid": [
+      "ჩამორთმევა"
+    ],
+    "latin": "requisition",
+    "note": "Forcible taking of property by state for public need during emergency with compensation."
+  },
+  {
+    "preferred": "კონფისკაცია",
+    "avoid": [
+      "კონფისკაცია უსასყიდლოდ"
+    ],
+    "latin": "confiscation",
+    "note": "Uncompensated judicial forfeiture of crime instrumentalities or illegal assets to state."
+  },
+  {
+    "preferred": "ექსპროპრიაცია",
+    "avoid": [
+      "ექსპროპრიირება"
+    ],
+    "latin": "expropriation / eminent domain",
+    "note": "Constitutional taking of private property for pressing public need upon prior fair compensation."
+  },
+  {
+    "preferred": "სერვიტუტი",
+    "avoid": [
+      "სერვიტუტი მიწაზე"
+    ],
+    "latin": "servitude / easement",
+    "note": "Limited real right burdening a piece of real estate for benefit of another parcel."
+  },
+  {
+    "preferred": "უზუფრუქტი",
+    "avoid": [
+      "სარგებლობის უფლება"
+    ],
+    "latin": "usufruct",
+    "note": "Real right to use and gather fruits of another person property without altering its substance."
+  },
+  {
+    "preferred": "აღნაგობა",
+    "avoid": [
+      "შენების უფლება"
+    ],
+    "latin": "superficies / right of building",
+    "note": "Heritable and alienable right to have a construction on or beneath anothers land."
+  },
+  {
+    "preferred": "კეთილსინდისიერი შემძენი",
+    "avoid": [
+      "დობროსოვესტნი შემძენი"
+    ],
+    "latin": "bona fide purchaser / purchaser in good faith",
+    "note": "Buyer who acquires property for value without knowledge of defect in sellers title."
+  },
+  {
+    "preferred": "საკუთრების უფლების გადაცემა",
+    "avoid": [
+      "საკუთრების გადაცემა"
+    ],
+    "latin": "transfer of title / transfer of ownership",
+    "note": "Formal conveyance of ownership by agreement and delivery or public registry entry."
+  },
+  {
+    "preferred": "შრომითი ხელშეკრულება",
+    "avoid": [
+      "შრომითი დოგავორი"
+    ],
+    "latin": "employment contract",
+    "note": "Contract between employee and employer establishing employment terms and wages."
+  },
+  {
+    "preferred": "გამოსაცდელი ვადა",
+    "avoid": [
+      "ისპიტატელნი სროკი"
+    ],
+    "latin": "probationary period / trial period",
+    "note": "Initial employment period (up to 6 months) for evaluation of employee suitability."
+  },
+  {
+    "preferred": "კოლექტიური ხელშეკრულება",
+    "avoid": [
+      "კოლექტიური დოგავორი"
+    ],
+    "latin": "collective bargaining agreement",
+    "note": "Agreement concluded between employer and employee union regarding working conditions."
+  },
+  {
+    "preferred": "ზეგანაკვეთური სამუშაო",
+    "avoid": [
+      "სვერხუროჩნი"
+    ],
+    "latin": "overtime work",
+    "note": "Work performed beyond standard 40-hour work week, compensated at increased rate."
+  },
+  {
+    "preferred": "სამუშაოდან დათხოვნა",
+    "avoid": [
+      "სამსახურიდან გაგდება"
+    ],
+    "latin": "termination of employment / dismissal",
+    "note": "Lawful termination of employment contract initiated by employer on statutory grounds."
+  },
+  {
+    "preferred": "გაფიცვა",
+    "avoid": [
+      "ზაბასტოვკა"
+    ],
+    "latin": "strike",
+    "note": "Constitutional temporary collective stoppage of work by employees in labor dispute."
+  },
+  {
+    "preferred": "ლოკაუტი",
+    "avoid": [
+      "ლოკ-აუტი"
+    ],
+    "latin": "lockout",
+    "note": "Temporary suspension of work or closing of enterprise initiated by employer."
+  },
+  {
+    "preferred": "დისკრიმინაციის აკრძალვა",
+    "avoid": [
+      "დისკრიმინაციის არდაშვება"
+    ],
+    "latin": "prohibition of discrimination",
+    "note": "Equal protection principle enshrined in Constitution and Labor Code."
+  },
+  {
+    "preferred": "საქართველოს შრომის ინსპექციის სამსახური",
+    "avoid": [
+      "შრომის ინსპექცია"
+    ],
+    "latin": "Labor Inspection Service of Georgia",
+    "note": "State oversight LEPL supervising compliance with labor and safety standards."
+  },
+  {
+    "preferred": "საქართველოს კონკურენციისა და მომხმარებლის დაცვის სააგენტო",
+    "avoid": [
+      "კონკურენციის სააგენტო"
+    ],
+    "latin": "Georgian Competition and Consumer Agency",
+    "note": "State regulatory LEPL enforcing antitrust and consumer protection laws."
+  },
+  {
+    "preferred": "მომხმარებელთა უფლებების დაცვის შესახებ",
+    "avoid": [
+      "მომხმარებელთა დაცვა"
+    ],
+    "latin": "Law on the Protection of Consumer Rights",
+    "note": "Statute regulating consumer rights, warranties and unfair commercial practices."
+  },
+  {
+    "preferred": "საარბიტრაჟო შეთანხმება",
+    "avoid": [
+      "არბიტრაჟის შეთანხმება"
+    ],
+    "latin": "arbitration agreement / arbitration clause",
+    "note": "Agreement by parties to submit disputes to binding private arbitration."
+  },
+  {
+    "preferred": "საარბიტრაჟო გადაწყვეტილება",
+    "avoid": [
+      "არბიტრაჟის რეშენიე"
+    ],
+    "latin": "arbitral award",
+    "note": "Final decision rendered by arbitration tribunal enforceable through court."
+  },
+  {
+    "preferred": "მედიაცია",
+    "avoid": [
+      "შუამავლობა"
+    ],
+    "latin": "mediation",
+    "note": "Alternative dispute resolution process guided by a neutral mediator."
+  },
+  {
+    "preferred": "მორიგება",
+    "avoid": [
+      "მიროვაია"
+    ],
+    "latin": "settlement / compromise agreement",
+    "note": "Voluntary agreement of parties terminating litigation or dispute."
+  },
+  {
+    "preferred": "დავის გადაწყვეტა",
+    "avoid": [
+      "სპორის გადაწყვეტა"
+    ],
+    "latin": "dispute resolution",
+    "note": "Settlement of legal controversies through judicial, arbitral or negotiated processes."
+  },
+  {
+    "preferred": "სასამართლო განსჯადობა",
+    "avoid": [
+      "პოდსუდნოსტი"
+    ],
+    "latin": "jurisdiction and venue",
+    "note": "Legal authority of a particular court to hear and determine a specific case."
+  },
+  {
+    "preferred": "უწყება",
+    "avoid": [
+      "პავესტკა"
+    ],
+    "latin": "court summons / judicial notice",
+    "note": "Official notification summoning a party or witness to appear before a court."
+  },
+  {
+    "preferred": "დაუსწრებელი გადაწყვეტილება",
+    "avoid": [
+      "ზაოჩნი რეშენიე"
+    ],
+    "latin": "default judgment",
+    "note": "Judgment entered against a party who failed to appear or defend after due notice."
+  },
+  {
+    "preferred": "ლევან სამხარაულის სახელობის სასამართლო ექსპერტიზის ეროვნული ბიურო",
+    "avoid": [
+      "სამხარაულის ექსპერტიზა"
+    ],
+    "latin": "National Forensics Bureau named after Levan Samkharauli",
+    "note": "Official state forensic laboratory agency of Georgia."
+  },
+  {
+    "preferred": "ნორმატიული განმარტება",
+    "avoid": [
+      "ოფიციალური ტოლკოვანნიე"
+    ],
+    "latin": "normative interpretation / statutory interpretation",
+    "note": "Binding interpretation of a legal act issued by authorized organ."
+  },
+  {
+    "preferred": "იურიდიული ძალა",
+    "avoid": [
+      "იურიდიჩესკი სილა"
+    ],
+    "latin": "legal validity / force of law",
+    "note": "Capacity of a legal act to produce binding enforceable effects."
+  },
+  {
+    "preferred": "მოქმედების ვადა",
+    "avoid": [
+      "სროკ დეისტვია"
+    ],
+    "latin": "period of validity / term of operation",
+    "note": "Temporal duration during which a contract, license or act remains in effect."
+  },
+  {
+    "preferred": "შეწყვეტა",
+    "avoid": [
+      "პრეკრაშჩენიე"
+    ],
+    "latin": "termination / cessation",
+    "note": "Extinguishment of contractual or legal relationships."
+  },
+  {
+    "preferred": "მოშლა",
+    "avoid": [
+      "რასტოროჟენიე"
+    ],
+    "latin": "unilateral cancellation / rescission",
+    "note": "Unilateral repudiation of a continuing contract on statutory or agreed grounds."
+  },
+  {
+    "preferred": "გაბათილება",
+    "avoid": [
+      "ანულირება"
+    ],
+    "latin": "annulment / invalidation",
+    "note": "Declaration that an act or transaction has no legal force."
+  },
+  {
+    "preferred": "საკანონმდებლო ინიციატივა",
+    "avoid": [
+      "კანონმდებლობითი ინიციატივა"
+    ],
+    "latin": "legislative initiative",
+    "note": "Constitutional right to introduce a draft law in the Parliament of Georgia."
+  },
+  {
+    "preferred": "რატიფიკაცია",
+    "avoid": [
+      "რატიფიცირება"
+    ],
+    "latin": "ratification",
+    "note": "Parliamentary confirmation consenting to be bound by an international treaty."
+  },
+  {
+    "preferred": "დენონსაცია",
+    "avoid": [
+      "დენონსირება"
+    ],
+    "latin": "denunciation",
+    "note": "Official notification of withdrawal from an international treaty."
+  },
+  {
+    "preferred": "საქართველოს საკანონმდებლო მაცნე",
+    "avoid": [
+      "მაცნე"
+    ],
+    "latin": "Legislative Herald of Georgia (matsne.gov.ge)",
+    "note": "Official state gazette and digital repository of all normative acts of Georgia."
+  },
+  {
+    "preferred": "რეესტრის ამონაწერი",
+    "avoid": [
+      "ვიპისკა"
+    ],
+    "latin": "registry excerpt / excerpt from public registry",
+    "note": "Official certified extract evidencing title, corporate standing or encumbrances."
+  },
+  {
+    "preferred": "წესდება",
+    "avoid": [
+      "უსტავი"
+    ],
+    "latin": "charter / articles of association",
+    "note": "Constitutive document governing corporate structure and governance of legal entity."
+  },
+  {
+    "preferred": "დამფუძნებელი",
+    "avoid": [
+      "უჩრედიტელი"
+    ],
+    "latin": "founder / incorporator",
+    "note": "Person or entity that creates a legal entity or foundation."
+  },
+  {
+    "preferred": "პარტნიორი",
+    "avoid": [
+      "მეწილე"
+    ],
+    "latin": "partner / equity shareholder",
+    "note": "Owner of equity share in limited liability company (შპს) under Law on Entrepreneurs."
+  },
+  {
+    "preferred": "აქციონერი",
+    "avoid": [
+      "აქციონერი პირი"
+    ],
+    "latin": "shareholder / stockholder",
+    "note": "Owner of registered shares in a joint stock company (სს)."
+  },
+  {
+    "preferred": "ხელმძღვანელი პირი",
+    "avoid": [
+      "რუკავადიწელი"
+    ],
+    "latin": "director / governing officer",
+    "note": "Statutory representative holding managerial authority in legal entity."
+  },
+  {
+    "preferred": "სამეთვალყურეო საბჭო",
+    "avoid": [
+      "სამეთვალყურეო საბჭოს წევრები"
+    ],
+    "latin": "supervisory board",
+    "note": "Corporate oversight body supervising the management board in joint stock companies."
+  },
+  {
+    "preferred": "პარტნიორთა საერთო კრება",
+    "avoid": [
+      "საერთო კრება"
+    ],
+    "latin": "general meeting of partners / partners meeting",
+    "note": "Supreme governing organ of limited liability company."
+  },
+  {
+    "preferred": "აქციონერთა საერთო კრება",
+    "avoid": [
+      "აქციონერების კრება"
+    ],
+    "latin": "general meeting of shareholders",
+    "note": "Supreme decision-making body of joint stock company."
+  },
+  {
+    "preferred": "გადახდისუუნარობის მმართველი",
+    "avoid": [
+      "კონკურსნი მმართველი"
+    ],
+    "latin": "insolvency administrator / bankruptcy trustee",
+    "note": "Officer appointed by court to manage debtor estate in bankruptcy proceedings."
+  },
+  {
+    "preferred": "რეაბილიტაციის გეგმა",
+    "avoid": [
+      "სანაციის გეგმა"
+    ],
+    "latin": "rehabilitation plan / reorganization plan",
+    "note": "Court-approved restructuring scheme enabling insolvent business to recover."
+  },
+  {
+    "preferred": "კრედიტორთა რეესტრი",
+    "avoid": [
+      "კრედიტორების სია"
+    ],
+    "latin": "register of creditors",
+    "note": "Official court-verified schedule of valid creditor claims in insolvency."
+  },
+  {
+    "preferred": "უზრუნველყოფილი კრედიტორი",
+    "avoid": [
+      "ზალოგოვი კრედიტორი"
+    ],
+    "latin": "secured creditor",
+    "note": "Creditor holding collateral, pledge or mortgage security priority."
+  },
+  {
+    "preferred": "არაუზრუნველყოფილი კრედიტორი",
+    "avoid": [
+      "ჩვეულებრივი კრედიტორი"
+    ],
+    "latin": "unsecured creditor",
+    "note": "General creditor lacking collateral or security priority."
+  },
+  {
+    "preferred": "საკადასტრო კოდი",
+    "avoid": [
+      "კადასტრის ნომერი"
+    ],
+    "latin": "cadastral code",
+    "note": "Unique state identifier assigned to real estate parcel in public registry."
+  },
+  {
+    "preferred": "უძრავი ქონება",
+    "avoid": [
+      "ნედვიჟიმოეტ"
+    ],
+    "latin": "immovable property / real estate",
+    "note": "Land parcel and subsoil with attached buildings and permanently fixed objects."
+  },
+  {
+    "preferred": "მოძრავი ქონება",
+    "avoid": [
+      "დვიჟიმოეტ"
+    ],
+    "latin": "movable property / personal property",
+    "note": "Any material thing that is not real estate or attached to land."
+  },
+  {
+    "preferred": "არამატერიალური ქონებრივი სიკეთე",
+    "avoid": [
+      "არამატერიალური ქონება"
+    ],
+    "latin": "intangible property / incorporeal asset",
+    "note": "Claims and rights which can be transferred or alienated under Civil Code §152."
+  },
+  {
+    "preferred": "მემკვიდრეობა",
+    "avoid": [
+      "ნასლედსტვო"
+    ],
+    "latin": "inheritance / succession / estate",
+    "note": "Devolution of property of deceased person to heirs by will or law."
+  },
+  {
+    "preferred": "მამკვიდრებელი",
+    "avoid": [
+      "ნასლედადატელი"
+    ],
+    "latin": "decedent / testator",
+    "note": "Deceased person whose estate is subject to succession."
+  },
+  {
+    "preferred": "მემკვიდრე",
+    "avoid": [
+      "ნასლედნიკი"
+    ],
+    "latin": "heir / successor",
+    "note": "Person entitled to inherit property by statutory law or testament."
+  },
+  {
+    "preferred": "ანდერძი",
+    "avoid": [
+      "ზავეშჩანიე"
+    ],
+    "latin": "will / testament",
+    "note": "Formal unilateral legal declaration disposing of estate after death."
+  },
+  {
+    "preferred": "კანონით მემკვიდრეობა",
+    "avoid": [
+      "კანონიერი მემკვიდრეობა"
+    ],
+    "latin": "intestate succession / inheritance by law",
+    "note": "Succession determined by statutory kinship degrees in absence of will."
+  },
+  {
+    "preferred": "ანდერძით მემკვიდრეობა",
+    "avoid": [
+      "ანდერძული მემკვიდრეობა"
+    ],
+    "latin": "testate succession",
+    "note": "Succession governed by testator valid last will and testament."
+  },
+  {
+    "preferred": "სავალდებულო წილი",
+    "avoid": [
+      "ობიაზატელნი წილი"
+    ],
+    "latin": "forced share / statutory portion",
+    "note": "Minimum statutory portion of inheritance guaranteed to children, spouse and parents."
+  },
+  {
+    "preferred": "მემკვიდრეობის მიღება",
+    "avoid": [
+      "ნასლედსტვოს მიღება"
+    ],
+    "latin": "acceptance of inheritance",
+    "note": "Formal act by heir declaring acceptance of estate before notary within 6 months."
+  },
+  {
+    "preferred": "სამკვიდრო მოწმობა",
+    "avoid": [
+      "სამკვიდრო საბუთი"
+    ],
+    "latin": "certificate of inheritance",
+    "note": "Official notarial deed certifying rights of heir to estate."
+  },
+  {
+    "preferred": "ხარჯთაღრიცხვა",
+    "avoid": [
+      "სმეტა"
+    ],
+    "latin": "cost estimate / budget sheet",
+    "note": "Itemized financial projection of construction, service or transaction expenses."
+  },
+  {
+    "preferred": "მიღება-ჩაბარების აქტი",
+    "avoid": [
+      "აქტი პრიომკი"
+    ],
+    "latin": "acceptance act / handover-takeover certificate",
+    "note": "Deed signed by parties confirming delivery and acceptance of goods or completed works."
+  },
+  {
+    "preferred": "საგარანტიო ვადა",
+    "avoid": [
+      "გარანტიის სროკი"
+    ],
+    "latin": "warranty period / guarantee term",
+    "note": "Agreed timeframe during which seller or contractor warrants absence of defects."
+  },
+  {
+    "preferred": "ნაკლი",
+    "avoid": [
+      "დეფექტი საქონლის"
+    ],
+    "latin": "defect / non-conformity",
+    "note": "Material or legal flaw diminishing value or usability of purchased good."
+  },
+  {
+    "preferred": "უფლებრივი ნაკლი",
+    "avoid": [
+      "იურიდიული ნაკლი"
+    ],
+    "latin": "defect in title / legal encumbrance",
+    "note": "Third-party rights encumbering property not disclosed to buyer."
+  },
+  {
+    "preferred": "ნივთობრივი ნაკლი",
+    "avoid": [
+      "ფიზიკური ნაკლი"
+    ],
+    "latin": "material defect / physical flaw",
+    "note": "Physical divergence of delivered thing from contract specifications."
+  },
+  {
+    "preferred": "დათქმა",
+    "avoid": [
+      "აგავორკა"
+    ],
+    "latin": "reservation / clause / stipulation",
+    "note": "Specific qualifying contractual condition or legal exception."
+  },
+  {
+    "preferred": "გამონაკლისი",
+    "avoid": [
+      "ისკლიუჩენიე"
+    ],
+    "latin": "exception / derogation",
+    "note": "Specific exemption from general legal rule."
+  },
+  {
+    "preferred": "ნორმატიული წესი",
+    "avoid": [
+      "ნორმატივკა"
+    ],
+    "latin": "normative rule",
+    "note": "General binding legal standard established by competent authority."
+  },
+  {
+    "preferred": "გარემოებათა არსებითი შეცვლა",
+    "avoid": [
+      "ობსტოიატელებების შეცვლა"
+    ],
+    "latin": "material change of circumstances / clausula rebus sic stantibus",
+    "note": "Ground for contract adaptation or termination under Civil Code §398."
+  },
+  {
+    "preferred": "ორმხრივი ხელშეკრულება",
+    "avoid": [
+      "ორმხრივი დოგავორი"
+    ],
+    "latin": "bilateral contract / synallagmatic contract",
+    "note": "Contract where each party undertakes reciprocal obligations."
+  },
+  {
+    "preferred": "ერთმხრივი გარიგება",
+    "avoid": [
+      "ერთმხრივი სდელკა"
+    ],
+    "latin": "unilateral legal transaction",
+    "note": "Transaction requiring declaration of will by only one party (e.g. will, power of attorney)."
+  },
+  {
+    "preferred": "გარიგება",
+    "avoid": [
+      "სდელკა"
+    ],
+    "latin": "legal transaction / juridical act",
+    "note": "Declaration of will aimed at creating, altering or terminating civil rights and duties."
+  },
+  {
+    "preferred": "ნების გამოვლენა",
+    "avoid": [
+      "ვოლიაიზიავლენიე"
+    ],
+    "latin": "declaration of intention / manifestation of will",
+    "note": "External expression of party intent producing legal effect."
+  },
+  {
+    "preferred": "მოტყუებით დადებული გარიგება",
+    "avoid": [
+      "აფერა"
+    ],
+    "latin": "transaction entered under fraud or deceit",
+    "note": "Voidable transaction where consent was induced by intentional misrepresentation."
+  },
+  {
+    "preferred": "იძულებით დადებული გარიგება",
+    "avoid": [
+      "ძალდატანებითი გარიგება"
+    ],
+    "latin": "transaction entered under duress or coercion",
+    "note": "Voidable transaction where consent was procured through unlawful threat or force."
+  },
+  {
+    "preferred": "შეცდომით დადებული გარიგება",
+    "avoid": [
+      "შეცდომითი გარიგება"
+    ],
+    "latin": "transaction entered under essential mistake",
+    "note": "Voidable transaction entered under fundamental misconception of essential terms."
+  },
+  {
+    "preferred": "მოჩვენებითი გარიგება",
+    "avoid": [
+      "ფიქტიური გარიგება"
+    ],
+    "latin": "sham transaction / simulated transaction",
+    "note": "Null and void transaction concluded only for appearance without intent to produce effect."
+  },
+  {
+    "preferred": "თვალთმაქცური გარიგება",
+    "avoid": [
+      "შენიღბული გარიგება"
+    ],
+    "latin": "dissimulated transaction",
+    "note": "Null transaction concluded to cover up another intended transaction."
+  },
+  {
+    "preferred": "საზოგადოებრივი წესრიგი",
+    "avoid": [
+      "აბშჩესტვენი პორიადოკი"
+    ],
+    "latin": "public order / public policy / ordre public",
+    "note": "Fundamental legal order; transactions violating it are void under Civil Code §54."
+  },
+  {
+    "preferred": "ზნეობის საწინააღმდეგო გარიგება",
+    "avoid": [
+      "ამორალური გარიგება"
+    ],
+    "latin": "transaction contrary to public morals",
+    "note": "Transaction void for violating accepted standards of public decency and morality."
+  },
+  {
+    "preferred": "უფლებაუნარიანობა",
+    "avoid": [
+      "პრავოსპოსობნოსტი"
+    ],
+    "latin": "legal capacity / capacity to hold rights",
+    "note": "Capacity to have civil rights and duties, arising at birth and ending at death."
+  },
+  {
+    "preferred": "ქმედუნარიანობა",
+    "avoid": [
+      "დეესპოსობნოსტი"
+    ],
+    "latin": "capacity to act / legal competence",
+    "note": "Capacity of person by their own actions to acquire and exercise civil rights."
+  },
+  {
+    "preferred": "ქმედუუნარო პირი",
+    "avoid": [
+      "ნედეესპოსობნი"
+    ],
+    "latin": "incapacitated person / person under support",
+    "note": "Person declared legally unable to understand or manage their actions independently."
+  },
+  {
+    "preferred": "მხარდაჭერის მიმღები",
+    "avoid": [
+      "ქმედუუნარო"
+    ],
+    "latin": "support recipient",
+    "note": "Individual with psychosocial disability receiving court-appointed legal support."
+  },
+  {
+    "preferred": "მეურვე",
+    "avoid": [
+      "აპეკუნი"
+    ],
+    "latin": "guardian / custodian",
+    "note": "Person legally appointed to protect and represent minor under 7 or support recipient."
+  },
+  {
+    "preferred": "მზრუნველი",
+    "avoid": [
+      "პოპეჩიტელი"
+    ],
+    "latin": "curator / caregiver",
+    "note": "Person appointed to assist minor aged 10-18 in exercising legal transactions."
+  },
+  {
+    "preferred": "აღმსრულებელი",
+    "avoid": [
+      "ისპალნიწელი"
+    ],
+    "latin": "enforcement officer / executor",
+    "note": "Bailiff or officer executing court judgments under enforcement law."
+  },
+  {
+    "preferred": "კერძო აღმასრულებელი",
+    "avoid": [
+      "კერძო ისპალნიწელი"
+    ],
+    "latin": "private enforcement officer",
+    "note": "Licensed private professional authorized to enforce civil judgment debts."
+  },
+  {
+    "preferred": "აღსრულების ფურცელი",
+    "avoid": [
+      "ისპალნიწელნი ლისტი"
+    ],
+    "latin": "writ of execution / enforcement writ",
+    "note": "Judicial document mandating compulsory enforcement of court judgment."
+  },
+  {
+    "preferred": "სააღსრულებო წარმოება",
+    "avoid": [
+      "ისპალნიწელნი წარმოება"
+    ],
+    "latin": "enforcement proceedings",
+    "note": "Statutory process of compulsory execution of judgments and claims."
+  },
+  {
+    "preferred": "ყადაღა",
+    "avoid": [
+      "არეშტი"
+    ],
+    "latin": "attachment / sequestration / freezing order",
+    "note": "Legal seizure or prohibition on alienation of debtor assets or bank accounts."
+  },
+  {
+    "preferred": "ინკასო",
+    "avoid": [
+      "ინკასირება"
+    ],
+    "latin": "direct debit / collection order / incasso",
+    "note": "Compulsory deduction order issued on bank account to recover tax or debt."
+  },
+  {
+    "preferred": "აუქციონი",
+    "avoid": [
+      "აუქციონი საჯაროდ"
+    ],
+    "latin": "public auction",
+    "note": "Public forced sale of seized property to satisfy creditor judgments."
+  },
+  {
+    "preferred": "იძულებითი აუქციონი",
+    "avoid": [
+      "პრინუდიწელნი აუქციონი"
+    ],
+    "latin": "compulsory auction / judicial sale",
+    "note": "Foreclosure auction conducted by National Bureau of Enforcement or pledgee."
+  },
+  {
+    "preferred": "საკუთრების უფლების რეგისტრაცია",
+    "avoid": [
+      "საკუთრების გაფორმება"
+    ],
+    "latin": "registration of title / property registration",
+    "note": "Constitutive entry in public registry establishing real property ownership."
+  },
+  {
+    "preferred": "უძრავი ნივთის ნასყიდობის ხელშეკრულება",
+    "avoid": [
+      "ბინის ყიდვა-გაყიდვის დოგავორი"
+    ],
+    "latin": "real estate purchase agreement",
+    "note": "Written contract for alienation of real estate requiring public registry authentication."
+  },
+  {
+    "preferred": "ჩუქების ხელშეკრულება",
+    "avoid": [
+      "დარსტვენი"
+    ],
+    "latin": "deed of gift / donation contract",
+    "note": "Gratuitous transfer of property into ownership of another party with their consent."
+  },
+  {
+    "preferred": "ქირავნობის ხელშეკრულება",
+    "avoid": [
+      "ქირის დოგავორი"
+    ],
+    "latin": "lease agreement / tenancy contract",
+    "note": "Contract where lessor transfers temporary possession of property for rent."
+  },
+  {
+    "preferred": "იჯარის ხელშეკრულება",
+    "avoid": [
+      "არენდის დოგავორი"
+    ],
+    "latin": "commercial lease / agricultural lease (usufructuary lease)",
+    "note": "Lease of income-yielding property or land with right to gather fruits."
+  },
+  {
+    "preferred": "ლიზინგის ხელშეკრულება",
+    "avoid": [
+      "ლიზინგური დოგავორი"
+    ],
+    "latin": "leasing agreement / financial lease",
+    "note": "Finance lease contract where lessor purchases asset for lessee use with purchase option."
+  },
+  {
+    "preferred": "ფრანჩაიზინგის ხელშეკრულება",
+    "avoid": [
+      "ფრანშიზის დოგავორი"
+    ],
+    "latin": "franchise agreement",
+    "note": "Contract granting commercial license to use trademark, brand and business model."
+  },
+  {
+    "preferred": "ფაქტორინგის ხელშეკრულება",
+    "avoid": [
+      "ფაქტორინგული დოგავორი"
+    ],
+    "latin": "factoring agreement",
+    "note": "Financial agreement where business sells accounts receivable to a factor."
+  },
+  {
+    "preferred": "ნარდობის ხელშეკრულება",
+    "avoid": [
+      "პადრიადის დოგავორი"
+    ],
+    "latin": "contract for work and services / independent contractor contract",
+    "note": "Contract where contractor undertakes to perform work and client to pay agreed fee."
+  },
+  {
+    "preferred": "მომსახურების ხელშეკრულება",
+    "avoid": [
+      "უსლუგების დოგავორი"
+    ],
+    "latin": "service agreement",
+    "note": "Contract for provision of specified services against remuneration."
+  },
+  {
+    "preferred": "სესხის ხელშეკრულება",
+    "avoid": [
+      "ზაიმის დოგავორი"
+    ],
+    "latin": "loan agreement",
+    "note": "Contract transferring money or fungibles with duty to return same quantity."
+  },
+  {
+    "preferred": "საბანკო კრედიტის ხელშეკრულება",
+    "avoid": [
+      "კრედიტის დოგავორი"
+    ],
+    "latin": "bank credit agreement",
+    "note": "Loan agreement where bank disburses funds at interest and repayment terms."
+  },
+  {
+    "preferred": "თავდებობის ხელშეკრულება",
+    "avoid": [
+      "პარუჩიწელობა"
+    ],
+    "latin": "suretyship agreement / guarantee agreement",
+    "note": "Contract where surety undertakes to creditor to answer for principal debtor debt."
+  },
+  {
+    "preferred": "საბანკო გარანტია",
+    "avoid": [
+      "ბანკოვსკი გარანტია"
+    ],
+    "latin": "bank guarantee",
+    "note": "Irrevocable independent commitment of bank to pay beneficiary upon demand."
+  },
+  {
+    "preferred": "აკრედიტივი",
+    "avoid": [
+      "აკრედიტივი ბანკის"
+    ],
+    "latin": "letter of credit",
+    "note": "Banking payment arrangement guaranteeing seller payment upon compliant presentation."
+  },
+  {
+    "preferred": "საავტორო უფლებები",
+    "avoid": [
+      "ავტორსკი პრავა"
+    ],
+    "latin": "copyright",
+    "note": "Exclusive legal rights of authors over their literary, scientific and artistic works."
+  },
+  {
+    "preferred": "მომიჯნავე უფლებები",
+    "avoid": [
+      "სმეჟნი პრავა"
+    ],
+    "latin": "neighboring rights / related rights",
+    "note": "Rights protecting performers, phonogram producers and broadcasting organizations."
+  },
+  {
+    "preferred": "საქპატენტი",
+    "avoid": [
+      "პატენტის ბიურო"
+    ],
+    "latin": "Sakpatenti (National Intellectual Property Center of Georgia)",
+    "note": "National office administering patents, trademarks and intellectual property rights."
+  },
+  {
+    "preferred": "კონფიდენციალურობის შეთანხმება",
+    "avoid": [
+      "ენდიეი",
+      "საიდუმლოების ხელშეკრულება"
+    ],
+    "latin": "non-disclosure agreement / NDA",
+    "note": "Contract binding parties to keep proprietary and trade secrets confidential."
+  },
+  {
+    "preferred": "კომერციული საიდუმლოება",
+    "avoid": [
+      "კომერჩესკი ტაინა"
+    ],
+    "latin": "trade secret / commercial secret",
+    "note": "Confidential technical or financial information having commercial value."
+  },
+  {
+    "preferred": "ინსაიდერული ინფორმაცია",
+    "avoid": [
+      "ინსაიდერული ცნობები"
+    ],
+    "latin": "inside information / insider knowledge",
+    "note": "Non-public material price-sensitive information concerning listed securities."
+  },
+  {
+    "preferred": "ფულის გათეთრების წინააღმდეგ ბრძოლა",
+    "avoid": [
+      "ამლ"
+    ],
+    "latin": "anti-money laundering / AML",
+    "note": "Statutory framework preventing legalization of illicit income and terror financing."
+  },
+  {
+    "preferred": "საქართველოს ფინანსური მონიტორინგის სამსახური",
+    "avoid": [
+      "ფინანსური მონიტორინგი"
+    ],
+    "latin": "Financial Monitoring Service of Georgia (FMS)",
+    "note": "Financial intelligence unit receiving reports on suspicious transactions."
+  },
+  {
+    "preferred": "შემოსავლების სამსახური",
+    "avoid": [
+      "საგადასახადო ინსპექცია"
+    ],
+    "latin": "Revenue Service of Georgia",
+    "note": "Tax and customs administration authority under the Ministry of Finance."
+  },
+  {
+    "preferred": "საგადასახადო შემოწმება",
+    "avoid": [
+      "ნალაგავოი პროვერკა"
+    ],
+    "latin": "tax audit / tax inspection",
+    "note": "Official examination of taxpayer books and returns by Revenue Service."
+  },
+  {
+    "preferred": "საგადასახადო მოთხოვნა",
+    "avoid": [
+      "ნალაგავოი ტრებოვანიე"
+    ],
+    "latin": "tax demand notice / notice of tax assessment",
+    "note": "Administrative act assessing taxes, penalties and interest payable by taxpayer."
+  },
+  {
+    "preferred": "საგადასახადო გირავნობა",
+    "avoid": [
+      "საგადასახადო ზალოგი"
+    ],
+    "latin": "tax lien / statutory tax pledge",
+    "note": "State statutory security interest on taxpayer property securing tax debt."
+  },
+  {
+    "preferred": "საგადასახადო დავა",
+    "avoid": [
+      "საგადასახადო სპორი"
+    ],
+    "latin": "tax dispute",
+    "note": "Administrative or judicial challenge of Revenue Service tax assessments."
+  },
+  {
+    "preferred": "დავის განმხილველი საბჭო",
+    "avoid": [
+      "დავების საბჭო"
+    ],
+    "latin": "Dispute Resolution Council at the Ministry of Finance",
+    "note": "Appellate administrative body reviewing appeals against Revenue Service decisions."
   }
 ]

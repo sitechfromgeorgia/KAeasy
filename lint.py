@@ -109,7 +109,36 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation"}
+          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "ordinal_date", "wrong_name"}
+
+COMPANIES_PATH = Path(__file__).resolve().parent / "data" / "glossary" / "georgia-companies.json"
+COMPANY_AVOID: dict[str, str] = {}
+if COMPANIES_PATH.exists():
+    for _entry in json.loads(COMPANIES_PATH.read_text(encoding="utf-8")):
+        _pref = _entry.get("preferred", "")
+        _avoid = _entry.get("avoid")
+        if isinstance(_avoid, list):
+            for _a in _avoid:
+                if _a.strip():
+                    COMPANY_AVOID[_a.strip()] = _pref
+        elif isinstance(_avoid, str) and _avoid.strip():
+            for _a in _avoid.split(","):
+                if _a.strip():
+                    COMPANY_AVOID[_a.strip()] = _pref
+
+COMPANY_AVOID_PATTERNS = [
+    (re.compile(r"(?<![ა-ჰA-Za-z0-9])" + re.escape(a) + r"(?:მ|მა|ის|ს|ით|ზე|ში|ად|ამდე|იდან|თან)?(?![ა-ჰA-Za-z0-9])"), pref)
+    for a, pref in sorted(COMPANY_AVOID.items(), key=lambda x: len(x[0]), reverse=True)
+]
+
+ORDINAL_DATE_RE = re.compile(
+    r"(?<![ა-ჰ])(?<!ზედიზედ\s)"
+    r"(?:(?:[2-9]|\d{2,})-ე|მე-(?:[2-9]|\d{2,})(?:-ე)?|"
+    r"მეორე|მესამე|მეოთხე|მეხუთე|მეექვსე|მეშვიდე|მერვე|მეცხრე|მეათე|"
+    r"მეთერთმეტე|მეთორმეტე|მეცამეტე|მეთოთხმეტე|მეთხუთმეტე|მეთექვსმეტე|მეჩვიდმეტე|მეთვრამეტე|მეცხრამეტე|მეოცე|"
+    r"ოცდამე(?:ერთ|ორ|სამ|ოთხ|ხუთ|ექვს|შვიდ|რვ|ცხრ|ათ|თერთმეტ)ე)"
+    r"(?:ს)?\s+(?:იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტო|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)[ა-ჰ]*(?![ა-ჰ])"
+)
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -319,6 +348,19 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
             right = LATIN_OTHER.get((cls, suf)) or LATIN_OTHER.get((group, suf))
             if right and on("latin_case"):
                 add("latin_case", "warn", f"„{m.group(0)}“ → „{name}-{right}“ (latin-names.md)", m)
+
+    if on("ordinal_date"):
+        for m in ORDINAL_DATE_RE.finditer(body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            add("ordinal_date", "error", f"თვის რიცხვი რაოდენობითია (არა რიგობითი): „{m.group(0)}“ (მხოლოდ 1-ია რიგობითი: „პირველი“)", m)
+
+    if on("wrong_name"):
+        for rx, pref in COMPANY_AVOID_PATTERNS:
+            for m in rx.finditer(body):
+                if any(in_tag[m.start():m.end()]):
+                    continue
+                add("wrong_name", "error", f"არასწორი კომპანიის/ორგანიზაციის სახელი: „{m.group(0)}“ → „{pref}“", m)
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()

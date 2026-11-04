@@ -80,7 +80,35 @@ def ordinal(n):
         if r == 0:
             return "მე" + _drop_i(TWENTIES[q]) + "ე"
         return TWENTIES[q][:-1] + "და" + ("მეერთე" if r == 1 else ordinal(r))
-    return "მე" + _drop_i(cardinal(n)) + "ე" if " " not in cardinal(n) else cardinal(n)
+    if n < 1000:
+        q, r = divmod(n, 100)
+        head = ("" if q == 1 else _drop_i(SMALL[q])) + "ას"
+        if r == 0:
+            return "მე" + head + "ე"
+        tail = "მეერთე" if r == 1 else ordinal(r)
+        return head + " " + tail
+    for scale, stem in SCALES:
+        if n >= scale:
+            q, r = divmod(n, scale)
+            if scale == 1000 and q == 1:
+                head = "ათას"
+                if r == 0:
+                    return "მეათასე"
+            elif scale == 1000 and q == 2:
+                head = "ორი ათას"
+                if r == 0:
+                    return "მეორიათასე"
+            elif scale == 1000 and q < 20:
+                head = cardinal(q) + " ათას"
+                if r == 0:
+                    return "მე" + _drop_i(cardinal(q)) + "ათასე"
+            else:
+                head = cardinal(q) + " " + stem
+                if r == 0:
+                    return "მე" + _drop_i(head) + "ე" if " " not in head else head + "ე"
+            tail = "მეერთე" if r == 1 else ordinal(r)
+            return head + " " + tail
+    raise ValueError(n)
 
 
 def _drop_i(word):
@@ -257,6 +285,42 @@ def clock(h, minute, suf=""):
     return f"{num(h)} {first} და {num(minute)} წუთ{ending}"
 
 
+PRIME_NAMES = {"¹": "პრიმა", "²": "სეკუნდა", "³": "ტერცია", "⁴": "კვარტა"}
+
+MONTH_MDE = {
+    "იანვარი": "იანვრამდე", "იანვარს": "იანვრამდე",
+    "თებერვალი": "თებერვლამდე", "თებერვალს": "თებერვლამდე",
+    "მარტი": "მარტამდე", "მარტს": "მარტამდე",
+    "აპრილი": "აპრილამდე", "აპრილს": "აპრილამდე",
+    "მაისი": "მაისამდე", "მაისს": "მაისამდე",
+    "ივნისი": "ივნისამდე", "ივნისს": "ივნისამდე",
+    "ივლისი": "ივლისამდე", "ივლისს": "ივლისამდე",
+    "აგვისტო": "აგვისტომდე", "აგვისტოს": "აგვისტომდე",
+    "სექტემბერი": "სექტემბრამდე", "სექტემბერს": "სექტემბრამდე",
+    "ოქტომბერი": "ოქტომბრამდე", "ოქტომბერს": "ოქტომბრამდე",
+    "ნოემბერი": "ნოემბრამდე", "ნოემბერს": "ნოემბრამდე",
+    "დეკემბერი": "დეკემბრამდე", "დეკემბერს": "დეკემბრამდე",
+}
+
+GEO_EXPANSIONS = {
+    "სზაკ": "საქართველოს ზოგადი ადმინისტრაციული კოდექსი",
+    "სსსკ": "საქართველოს სისხლის სამართლის კოდექსი",
+    "სსპკ": "საქართველოს სისხლის სამართლის საპროცესო კოდექსი",
+    "ასკ": "საქართველოს ადმინისტრაციული საპროცესო კოდექსი",
+    "შსს": "შინაგან საქმეთა სამინისტრო",
+    "სუს": "სახელმწიფო უსაფრთხოების სამსახური",
+    "სებ": "საქართველოს ეროვნული ბანკი",
+}
+
+GEO_LETTERS = {
+    "ა": "ანი", "ბ": "ბე", "გ": "გე", "დ": "დე", "ე": "ე", "ვ": "ვე", "ზ": "ზე",
+    "თ": "თე", "ი": "ი", "კ": "კა", "ლ": "ელ", "მ": "ემ", "ნ": "ენ", "ო": "ო",
+    "პ": "პე", "ჟ": "ჟე", "რ": "ერ", "ს": "ეს", "ტ": "ტე", "უ": "უ", "ფ": "ფე",
+    "ქ": "ქე", "ღ": "ღე", "ყ": "ყა", "შ": "შა", "ჩ": "ჩე", "ც": "ცე", "ძ": "ძე",
+    "წ": "წე", "ჭ": "ჭე", "ხ": "ხა", "ჯ": "ჯე", "ჰ": "ჰე",
+}
+
+
 def speak_token(core, next_word="", prev_word="", known=None):
     """One token without surrounding punctuation → spoken form (None = keep as is).
     known: name → spoken nominative (names()); prev_word tells a version ("Opus 4.7") from a decimal."""
@@ -325,12 +389,37 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(rf"(?P<n>{NUM})\s?(?P<u>GB|TB|MB|GHz|km|W|nm)", core)
     if m:
         return number(m["n"]) + " " + UNITS[m["u"]] + "ი"
+    m = re.fullmatch(r"(?P<n>\d+)(?P<p>[¹²³⁴])(?:-(?P<suf>[ა-ჿ]+))?", core)  # 353¹-ე მუხლი
+    if m:
+        n_val = int(m["n"])
+        p_name = PRIME_NAMES[m["p"]]
+        suf = m["suf"]
+        if suf in ("ე", "ელი", "ლი", "ელ", "ლ") or (not suf and next_word.startswith("მუხლ")):
+            ord_word = ordinal(n_val)
+            return f"{ord_word} {p_name}"
+        if suf:
+            return f"{ordinal(n_val)} {attach(p_name, suf)}"
+        return f"{cardinal(n_val)} {p_name}"
     m = re.fullmatch(r"(?P<n>\d+)-(?P<o>ე|ელი|ლი|ელ|ლ)", core)  # 21-ე, 1-ელი, 1-ელ იანვარს
     if m:
-        return ordinal(int(m["n"])) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(int(m["n"])))
+        n_val = int(m["n"])
+        after = TOKEN.match(next_word or "")["core"]
+        if MONTHS.match(after):
+            if n_val == 1:
+                return ordinal(1) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(1))
+            card = cardinal(n_val)
+            return attributive(card, next_word) if GEO.search(next_word or "") else card
+        return ordinal(n_val) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(n_val))
     m = re.fullmatch(r"მე-(?P<n>\d+)(?:-ე)?", core)  # მე-2
     if m:
-        return ordinal(int(m["n"]))
+        n_val = int(m["n"])
+        after = TOKEN.match(next_word or "")["core"]
+        if MONTHS.match(after):
+            if n_val == 1:
+                return ordinal(1)
+            card = cardinal(n_val)
+            return attributive(card, next_word) if GEO.search(next_word or "") else card
+        return ordinal(n_val)
     m = re.fullmatch(rf"(?P<n>{NUM})-(?P<suf>[ა-ჿ]+)", core)  # 4-ჯერ, 2012-ში, 5-მა
     if m:
         return inflect(number(m["n"]), m["suf"])
@@ -349,6 +438,18 @@ def speak_token(core, next_word="", prev_word="", known=None):
         return f'{spell(m["w"])} {cardinal(int(m["n"]))}' + (f' {spell(m["rest"])}' if m["rest"] else "")
     if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი, but RTX 5090 → არ ტი ექს (a model number follows)
         return spell(core) if re.match(r"\d", TOKEN.match(next_word or "")["core"]) else spell_name(core)
+    m = re.fullmatch(r"(?P<w>[ა-ჰ]{2,6})-(?P<suf>[ა-ჿ]+)", core)  # სზაკ-ის, შსს-ს, სსკ-ის
+    if m:
+        w, suf = m["w"], m["suf"]
+        if w in GEO_EXPANSIONS:
+            return attach(GEO_EXPANSIONS[w], suf)
+        if w in ("სსკ", "შპს", "სს", "ტვ"):
+            spelled = " ".join(GEO_LETTERS.get(c, c) for c in w)
+            return attach(spelled, suf)
+    if core in GEO_EXPANSIONS:
+        return GEO_EXPANSIONS[core]
+    if core in ("სსკ", "შპს"):
+        return " ".join(GEO_LETTERS.get(c, c) for c in core)
     return None
 
 
@@ -392,6 +493,9 @@ def joined(toks):
         if r and nxt and nxt["core"] in RANGE_NOUNS:
             out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
             out[i + 1] = RANGE_NOUNS[nxt["core"]]
+        elif r and nxt and nxt["core"] in MONTH_MDE:
+            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
+            out[i + 1] = MONTH_MDE[nxt["core"]]
         if core == "+995":
             groups = []
             for c in cores[i + 1:i + 5]:

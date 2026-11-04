@@ -36,8 +36,9 @@ could not voice (`unspoken`) and any `ka_lint` findings left. Give it a `say` ma
   in the genitive and instrumental it keeps -ი (`ოცდათექვსმეტი პროცენტის`, `ოცდათექვსმეტი პროცენტით`).
 - A number with a suffix: `4-ჯერ` → `ოთხჯერ`, `8-დან` → `რვიდან`, `2012 წელს` → `ორი ათას თორმეტ წელს`,
   `40%-მდე` → `ორმოც პროცენტამდე`.
-- Ordinals: `მე-3` → `მესამე`, `მე-20 საუკუნე` → `მეოცე საუკუნე`.
-- Dates: `2026 წლის 15 ოქტომბერს` → `ორი ათას ოცდაექვსი წლის თხუთმეტ ოქტომბერს`.
+- Ordinals: `მე-3` → `მესამე`, `მე-20 საუკუნე` → `მეოცე საუკუნე`. Above 100: `180-ე მუხლი` → `ას მეოთხმოცე მუხლი` (not cardinal `ას ოთხმოცი`).
+- Dates: Day of the month is cardinal: `22 ნოემბერს` → `ოცდაორ ნოემბერს` (❌ `ოცდამეორე`). Only day 1 is ordinal: `1 ნოემბერს` → `პირველ ნოემბერს`. Full dates: `2026 წლის 22 ნოემბერს` → `ორი ათას ოცდაექვსი წლის ოცდაორ ნოემბერს`.
+- Legal primes: `353¹-ე მუხლი` → `სამას ორმოცდამეცამეტე პრიმა მუხლი`.
 - Identifiers (`CVE-2026-97631`, `KB5034441`) are never read: say `ხარვეზი` / `განახლება`.
 
 ## Latin names in Georgian letters
@@ -57,9 +58,10 @@ S ეს, T ტი, U იუ, V ვი, W დაბლიუ, X ექს, Y უ
 `%` → `პროცენტი` (with the case: `პროცენტით`), `$300` → `სამასი დოლარი`, `°C` → `გრადუსი`, `km` → `კილომეტრი`,
 `&` → `და`, `/` → rewrite the sentence.
 
-## Examples
+## Examples & References
 
-`examples/speech-fixes.md`: 60+ written to spoken speech text pairs (numbers, dates, percent, brands, acronyms).
+- `references/dates-numbers-speech.md`: comprehensive spoken dates, ordinals above 100, money, percent, and time.
+- `examples/speech-fixes.md`: 60+ written to spoken speech text pairs (numbers, dates, percent, brands, acronyms).
 
 ## Prosody
 
