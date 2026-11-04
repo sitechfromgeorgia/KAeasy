@@ -110,35 +110,45 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
           "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "date_ordinal",
-          "ordinal_date", "wrong_name"}
+          "wrong_name"}
 
 COMPANIES_PATH = Path(__file__).resolve().parent / "data" / "glossary" / "georgia-companies.json"
-COMPANY_AVOID: dict[str, str] = {}
+# `wrong` lists spellings that are never right (ტიბისი, ტელასი). `avoid` is advice for the writer and stays out of
+# the strict gate: it holds shortened forms and bare surnames that are correct when they name something else.
+COMPANY_WRONG: dict[str, str] = {}
 if COMPANIES_PATH.exists():
     for _entry in json.loads(COMPANIES_PATH.read_text(encoding="utf-8")):
-        _pref = _entry.get("preferred", "")
-        _avoid = _entry.get("avoid")
-        if isinstance(_avoid, list):
-            for _a in _avoid:
-                if _a.strip():
-                    COMPANY_AVOID[_a.strip()] = _pref
-        elif isinstance(_avoid, str) and _avoid.strip():
-            for _a in _avoid.split(","):
-                if _a.strip():
-                    COMPANY_AVOID[_a.strip()] = _pref
+        for _w in _entry.get("wrong", []):
+            COMPANY_WRONG[_w] = _entry["preferred"]
 
-COMPANY_AVOID_PATTERNS = [
-    (re.compile(r"(?<![ა-ჰA-Za-z0-9])" + re.escape(a) + r"(?:მ|მა|ის|ს|ით|ზე|ში|ად|ამდე|იდან|თან)?(?![ა-ჰA-Za-z0-9])"), pref)
-    for a, pref in sorted(COMPANY_AVOID.items(), key=lambda x: len(x[0]), reverse=True)
-]
+
+def _name_pattern(wrong: str) -> str:
+    """ტელასი → also ტელასმა, ტელასის; ტიბისი → also ტიბისიმ, ტიბისის."""
+    tail = r"(?:მ|მა|ის|ს|ით|თ|ზე|ში|თან|ად|დ|ამდე|მდე|იდან|დან|თვის|სთვის|ისთვის)"
+    forms = re.escape(wrong) + tail + "?"
+    if wrong.endswith("ი"):
+        forms += "|" + re.escape(wrong[:-1]) + tail
+    return r"(?<![ა-ჰA-Za-z0-9])(?:" + forms + r")(?![ა-ჰA-Za-z0-9])"
+
+
+COMPANY_WRONG_PATTERNS = [(re.compile(_name_pattern(w)), pref) for w, pref in
+                          sorted(COMPANY_WRONG.items(), key=lambda x: len(x[0]), reverse=True)]
+
+# A month in any case form, the same forms as speech.MONTHS (a test keeps them equal). Whole forms, not prefixes:
+# „მეორე მარტივი გზა“ and „მეორე მაისური“ are not dates.
+MONTH_FORM = (r"(?:(?:იანვარ|თებერვალ|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)(?:ი|ია|ს|ში|ზე)"
+              r"|(?:იანვრ|თებერვლ|სექტემბრ|ოქტომბრ|ნოემბრ|დეკემბრ)(?:ის|ით|ად|ამდე|იდან|ისთვის)"
+              r"|(?:მარტ|აპრილ|მაის|ივნის|ივლის)(?:ი|ია|ს|ის|ით|ად|ში|ზე|ამდე|იდან|ისთვის)"
+              r"|აგვისტო(?:ა|ს|თი|დ|ში|ზე|მდე|დან|სთვის)?)")
+MONTH_DAY = r"(?:[2-9]|[12]\d|3[01])"  # day 1 is ordinal („1-ელი ნოემბერი“), a year is not a day
 
 ORDINAL_DATE_RE = re.compile(
-    r"(?<![ა-ჰ])(?<!ზედიზედ\s)"
-    r"(?:(?:[2-9]|\d{2,})-ე|მე-(?:[2-9]|\d{2,})(?:-ე)?|"
+    r"(?<![ა-ჰ0-9])(?<!ზედიზედ\s)"
+    rf"(?:{MONTH_DAY}-ე|მე-{MONTH_DAY}(?:-ე)?|"
     r"მეორე|მესამე|მეოთხე|მეხუთე|მეექვსე|მეშვიდე|მერვე|მეცხრე|მეათე|"
     r"მეთერთმეტე|მეთორმეტე|მეცამეტე|მეთოთხმეტე|მეთხუთმეტე|მეთექვსმეტე|მეჩვიდმეტე|მეთვრამეტე|მეცხრამეტე|მეოცე|"
-    r"ოცდამე(?:ერთ|ორ|სამ|ოთხ|ხუთ|ექვს|შვიდ|რვ|ცხრ|ათ|თერთმეტ)ე|ოცდამე\w+)"
-    r"(?:ს)?\s+(?:იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტო|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)[ა-ჰ]*(?![ა-ჰ])"
+    r"ოცდამე\w+)"
+    rf"\s+{MONTH_FORM}(?![ა-ჰ])"
 )
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
@@ -250,7 +260,7 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         for m in re.finditer(r"ოცდაოც", body):
             add("numeral_compound", "error", "არასწორი რიცხვითი შენაერთი: „ოცდაოც...“ → „ორი ათას ოც...“", m)
 
-    if on("date_ordinal") or on("ordinal_date"):
+    if on("date_ordinal"):
         # Dates take the cardinal day: „ორ ოქტომბერს“, not „მეორე ოქტომბერს“. Day 1 is ordinal: „პირველი“.
         for m in ORDINAL_DATE_RE.finditer(body):
             if any(in_tag[m.start():m.end()]):
@@ -319,8 +329,8 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
             add("latin_in_speech", "error", f"„{m.group(0)}“: ხმის ტექსტში რიცხვი სიტყვებით", m)
 
     if mode == "speech" and on("russian_letter"):
-        # ბე-ემ-ვე is how Georgians say BMW (German letter names); it is the one established exception.
-        allowed = [range(a.start(), a.end()) for a in re.finditer(r"ბე[\s-]+ემ[\s-]+ვე", body)]
+        # Established forms, not Russian letter names for Latin ones: BMW, შპს, PSP, ტვ.
+        allowed = [range(a.start(), a.end()) for a in re.finditer(r"ბე[\s-]+ემ[\s-]+ვე|შე[\s-]+პე[\s-]+ეს|პე[\s-]+ეს[\s-]+პე|ტე[\s-]+ვე", body)]
         for m in re.finditer(r"(?<![ა-ჰ])(ტე|პე|ბე)(?![ა-ჰ])", body):
             if any(m.start() in r for r in allowed):
                 continue
@@ -358,7 +368,7 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                 add("latin_case", "warn", f"„{m.group(0)}“ → „{name}-{right}“ (latin-names.md)", m)
 
     if on("wrong_name"):
-        for rx, pref in COMPANY_AVOID_PATTERNS:
+        for rx, pref in COMPANY_WRONG_PATTERNS:
             for m in rx.finditer(body):
                 if any(in_tag[m.start():m.end()]):
                     continue

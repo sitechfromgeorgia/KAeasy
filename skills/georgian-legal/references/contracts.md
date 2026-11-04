@@ -21,12 +21,12 @@ A well-drafted Georgian contract comprises the following numbered sections:
 3. **მხარეთა უფლებები და მოვალეობები** (Rights and Obligations of the Parties):
    - Specific reciprocal duties and delivery schedules.
 4. **ღირებულება და ანგარიშსწორების წესი** (Price and Payment Terms):
-   - Price in GEL (mandatory for domestic contracts under the National Bank regulations) or foreign currency equivalent payable in national currency.
+   - Price in GEL or, unless a rule forbids it, foreign currency (Civil Code art. 383). Check current National Bank rules for the sector.
    - Payment method: `უნაღდო ანგარიშსწორებით, საბანკო ანგარიშზე გადარიცხვის გზით`.
 5. **მხარეთა პასუხისმგებლობა და პირგასამტეხლო** (Liability and Liquidated Damages):
    - Delay penalty: `ყოველ ვადაგადაცილებულ დღეზე შეუსრულებელი ვალდებულების 0,1%-ის ოდენობით`.
 6. **დაუძლეველი ძალა / ფორსმაჟორი** (Force Majeure):
-   - Exemption from liability under Civil Code §398 upon written notice within specified period (e.g. 5 days).
+   - Exemption from liability upon written notice within a specified period (e.g. 5 days). Civil Code art. 398 covers changed circumstances, not force majeure.
 7. **ხელშეკრულების მოქმედების ვადა და შეწყვეტა** (Term and Termination):
    - Entry into legal force upon signature; conditions for mutual or unilateral termination.
 8. **კონფიდენციალურობა** (Confidentiality):

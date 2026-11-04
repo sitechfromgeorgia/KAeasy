@@ -42,8 +42,8 @@ The judiciary of Georgia consists of the Constitutional Court and the System of 
 | **საქართველოს ნოტარიუსთა პალატა** | საქართველოს ნოტარიუსთა პალატა | Self-governing public chamber uniting all licensed notaries exercising state-delegated certification authority. |
 | **საქართველოს ადვოკატთა ასოციაცია** | საქართველოს ადვოკატთა ასოციაცია | Independent self-governing bar association uniting all licensed attorneys in Georgia. |
 | **საქართველოს იუსტიციის უმაღლესი საბჭო** | საქართველოს იუსტიციის უმაღლესი საბჭო | Constitutional body overseeing administration, appointments, qualification exams, and ethics of common court judges. |
-| **სპეციალური საგამოძიებო სამსახური** | სპეციალური საგამოძიებო სამსახური | Independent statutory service investigating official misconduct, ill-treatment, and crimes committed by law enforcement personnel. |
-| **პერსონალურ მონაცემთა დაცვის სამსახური** | პერსონალურ მონაცემთა დაცვის სამსახური | Independent supervisory authority overseeing privacy and data protection compliance in Georgia. |
+| **სპეციალური საგამოძიებო სამსახური** | სპეციალური საგამოძიებო სამსახური | **Abolished 1 July 2025** (matsne 4276790). Use only for past events. |
+| **პერსონალურ მონაცემთა დაცვის სამსახური** | პერსონალურ მონაცემთა დაცვის სამსახური | **Abolished 2 March 2026**; its functions passed to სახელმწიფო აუდიტის სამსახური (parliament.ge). Use only for past events. |
 
 ---
 

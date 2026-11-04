@@ -8,7 +8,13 @@
     ],
     "latin": "TBC",
     "note": "Leading Georgian financial brand. Decided by Louie: strictly 'თიბისი', never 'ტიბისი'. Source: tbcbank.ge.",
-    "spoken": "თიბისი"
+    "spoken": "თიბისი",
+    "wrong": [
+      "ტიბისი",
+      "თი-ბი-სი",
+      "ტი-ბი-სი",
+      "ტი ბი სი"
+    ]
   },
   {
     "preferred": "თიბისი ბანკი",
@@ -33,12 +39,14 @@
   {
     "preferred": "ლიბერთი ბანკი",
     "avoid": [
-      "ლიბერტი ბანკი",
-      "ლიბერტი"
+      "ლიბერტი ბანკი"
     ],
     "latin": "Liberty Bank",
-    "note": "Systemic retail bank in Georgia. Source: libertybank.ge.",
-    "spoken": "ლიბერთი ბანკი"
+    "note": "Systemic retail bank in Georgia, acquired by Basisbank (95.99%). Source: bb.ge, libertybank.ge.",
+    "spoken": "ლიბერთი ბანკი",
+    "wrong": [
+      "ლიბერტი ბანკი"
+    ]
   },
   {
     "preferred": "ბაზისბანკი",
@@ -68,7 +76,10 @@
     ],
     "latin": "Cartu Bank",
     "note": "Commercial bank in Georgia. Source: cartubank.ge.",
-    "spoken": "ქართუ ბანკი"
+    "spoken": "ქართუ ბანკი",
+    "wrong": [
+      "კარტუ ბანკი"
+    ]
   },
   {
     "preferred": "კრედო ბანკი",
@@ -76,7 +87,7 @@
       "კრედობანკი"
     ],
     "latin": "Credo Bank",
-    "note": "Microfinance and commercial bank. Source: credobank.ge.",
+    "note": "Microfinance and commercial bank. Source: credobank.ge. Bought FINCA Bank Georgia in 2021.",
     "spoken": "კრედო ბანკი"
   },
   {
@@ -99,13 +110,16 @@
     "spoken": "სილქ ბანკი"
   },
   {
-    "preferred": "ჰალიკ ბანკი საქართველო",
+    "preferred": "ხალიკ ბანკი საქართველო",
     "avoid": [
-      "ხალიკ ბანკი"
+      "ჰალიკ ბანკი"
     ],
     "latin": "Halyk Bank Georgia",
-    "note": "Subsidiary of Halyk Bank Kazakhstan. Source: halykbank.ge.",
-    "spoken": "ჰალიკ ბანკი საქართველო"
+    "note": "Subsidiary of Halyk Bank Kazakhstan. Source: LEI register.",
+    "spoken": "ხალიკ ბანკი საქართველო",
+    "wrong": [
+      "ჰალიკ ბანკი"
+    ]
   },
   {
     "preferred": "იშბანკი საქართველო",
@@ -123,16 +137,10 @@
     ],
     "latin": "Ziraat Bank Georgia",
     "note": "Subsidiary of Turkish Ziraat Bankasi. Source: ziraatbank.ge.",
-    "spoken": "ზირაათ ბანკი საქართველო"
-  },
-  {
-    "preferred": "ფინკა ბანკი საქართველო",
-    "avoid": [
-      "ფინკაბანკი"
-    ],
-    "latin": "FINCA Bank Georgia",
-    "note": "Financial institution in Georgia. Source: finca.ge.",
-    "spoken": "ფინკა ბანკი საქართველო"
+    "spoken": "ზირაათ ბანკი საქართველო",
+    "wrong": [
+      "ზირაატ ბანკი"
+    ]
   },
   {
     "preferred": "პეისერა საქართველო",
@@ -214,7 +222,10 @@
     ],
     "latin": "MagtiCom",
     "note": "Largest telecom operator in Georgia. Source: magticom.ge.",
-    "spoken": "მაგთიკომი"
+    "spoken": "მაგთიკომი",
+    "wrong": [
+      "მაგტიკომი"
+    ]
   },
   {
     "preferred": "მაგთი",
@@ -223,7 +234,10 @@
     ],
     "latin": "Magti",
     "note": "Short brand form of MagtiCom. Source: magticom.ge.",
-    "spoken": "მაგთი"
+    "spoken": "მაგთი",
+    "wrong": [
+      "მაგტი"
+    ]
   },
   {
     "preferred": "სილქნეტი",
@@ -233,7 +247,10 @@
     ],
     "latin": "Silknet",
     "note": "Major fixed, mobile and internet telecom operator. Source: silknet.com.",
-    "spoken": "სილქნეტი"
+    "spoken": "სილქნეტი",
+    "wrong": [
+      "სილკნეტი"
+    ]
   },
   {
     "preferred": "სელფი მობაილი",
@@ -256,9 +273,7 @@
   },
   {
     "preferred": "კავკასუს ონლაინი",
-    "avoid": [
-      "კავკასუს ონლაინ"
-    ],
+    "avoid": [],
     "latin": "Caucasus Online",
     "note": "Major telecommunications backbone operator in Georgia.",
     "spoken": "კავკასუს ონლაინი"
@@ -292,27 +307,21 @@
   },
   {
     "preferred": "კარფური",
-    "avoid": [
-      "კარფურ"
-    ],
+    "avoid": [],
     "latin": "Carrefour Georgia",
     "note": "Hypermarket and supermarket chain in Georgia operated by Majid Al Futtaim. Source: carrefour.ge.",
     "spoken": "კარფური"
   },
   {
     "preferred": "გუდვილი",
-    "avoid": [
-      "გუდვილ"
-    ],
+    "avoid": [],
     "latin": "Goodwill",
     "note": "Premium supermarket and hypermarket chain in Georgia. Source: goodwill.ge.",
     "spoken": "გუდვილი"
   },
   {
     "preferred": "სპარი",
-    "avoid": [
-      "სპარ"
-    ],
+    "avoid": [],
     "latin": "Spar Georgia",
     "note": "Supermarket chain franchise in Georgia. Source: spargeorgia.com.",
     "spoken": "სპარი"
@@ -365,9 +374,7 @@
   },
   {
     "preferred": "უნივერსამი",
-    "avoid": [
-      "უნივერსამ"
-    ],
+    "avoid": [],
     "latin": "Universam",
     "note": "Retail supermarket network. Source: universam.ge.",
     "spoken": "უნივერსამი"
@@ -428,9 +435,7 @@
   },
   {
     "preferred": "მოდუსი",
-    "avoid": [
-      "მოდუს"
-    ],
+    "avoid": [],
     "latin": "Modus",
     "note": "Building materials retail network. Source: modus.ge.",
     "spoken": "მოდუსი"
@@ -456,9 +461,7 @@
   },
   {
     "preferred": "ზუმერი",
-    "avoid": [
-      "ზუმერ"
-    ],
+    "avoid": [],
     "latin": "Zoommer",
     "note": "Consumer electronics, gadgets and mobile retail chain. Source: zoommer.ge.",
     "spoken": "ზუმერი"
@@ -483,18 +486,14 @@
   },
   {
     "preferred": "სმაილი",
-    "avoid": [
-      "სმაილ"
-    ],
+    "avoid": [],
     "latin": "Smiley",
     "note": "Electronics retailer in Georgia. Source: smiley.ge.",
     "spoken": "სმაილი"
   },
   {
     "preferred": "ბეკო საქართველო",
-    "avoid": [
-      "ბეკო"
-    ],
+    "avoid": [],
     "latin": "Beko Georgia",
     "note": "Home appliances retail network. Source: beko.ge.",
     "spoken": "ბეკო საქართველო"
@@ -502,8 +501,7 @@
   {
     "preferred": "ვისოლი",
     "avoid": [
-      "ვისოლ პეტროლიუმი",
-      "ვისოლ"
+      "ვისოლ პეტროლიუმი"
     ],
     "latin": "Wissol",
     "note": "Major Georgian fuel retail brand. Source: wissol.ge.",
@@ -512,39 +510,38 @@
   {
     "preferred": "გალფი",
     "avoid": [
-      "გულფი",
-      "გალფ"
+      "გულფი"
     ],
     "latin": "Gulf Georgia",
     "note": "Major gas station network in Georgia operated by Sun Petroleum Georgia. Source: gulf.ge.",
-    "spoken": "გალფი"
+    "spoken": "გალფი",
+    "wrong": [
+      "გულფი"
+    ]
   },
   {
-    "preferred": "როუმპეტროლ საქართველო",
+    "preferred": "რომპეტროლი",
     "avoid": [
-      "რომპეტროლი",
-      "რომპეტროლ"
+      "როუმპეტროლი"
     ],
     "latin": "Rompetrol Georgia",
     "note": "Fuel retail network in Georgia. Source: rompetrol.ge.",
-    "spoken": "როუმპეტროლ საქართველო"
+    "spoken": "რომპეტროლი",
+    "wrong": [
+      "როუმპეტროლი",
+      "როუმპეტროლ საქართველო"
+    ]
   },
   {
     "preferred": "სოკარ ჯორჯია პეტროლეუმი",
-    "avoid": [
-      "სოკარი",
-      "სოკარ"
-    ],
+    "avoid": [],
     "latin": "Socar Georgia Petroleum",
     "note": "Fuel retail and oil products distributor. Source: sgp.ge.",
     "spoken": "სოკარ ჯორჯია პეტროლეუმი"
   },
   {
     "preferred": "ლუკოილ ჯორჯია",
-    "avoid": [
-      "ლუკოილი",
-      "ლუკოილ"
-    ],
+    "avoid": [],
     "latin": "Lukoil Georgia",
     "note": "Fuel retail station operator in Georgia. Source: lukoil.ge.",
     "spoken": "ლუკოილ ჯორჯია"
@@ -582,13 +579,15 @@
     ],
     "latin": "Telasi",
     "note": "Electricity distribution company of Tbilisi. Source: telasi.ge.",
-    "spoken": "თელასი"
+    "spoken": "თელასი",
+    "wrong": [
+      "ტელასი"
+    ]
   },
   {
     "preferred": "ენერგო-პრო ჯორჯია",
     "avoid": [
-      "ენერგო პრო ჯორჯია",
-      "ენერგო-პრო"
+      "ენერგო პრო ჯორჯია"
     ],
     "latin": "Energo-Pro Georgia",
     "note": "Electricity distribution and generation company across regions of Georgia. Source: energo-pro.ge.",
@@ -629,13 +628,14 @@
     ],
     "latin": "Telmico",
     "note": "Tbilisi Electricity Supply Company. Source: telmico.ge.",
-    "spoken": "თელმიკო"
+    "spoken": "თელმიკო",
+    "wrong": [
+      "ტელმიკო"
+    ]
   },
   {
     "preferred": "ეპ ჯორჯია მიწოდება",
-    "avoid": [
-      "ეპ ჯორჯია"
-    ],
+    "avoid": [],
     "latin": "EP Georgia Supply",
     "note": "Electricity supply company for regions. Source: epgeorgia.ge.",
     "spoken": "ეპ ჯორჯია მიწოდება"
@@ -651,9 +651,7 @@
   },
   {
     "preferred": "საქართველოს სახელმწიფო ელექტროსისტემა",
-    "avoid": [
-      "სსე"
-    ],
+    "avoid": [],
     "latin": "Georgian State Electrosystem",
     "note": "Electricity transmission system operator (GSE). Source: gse.com.ge.",
     "spoken": "საქართველოს სახელმწიფო ელექტროსისტემა"
@@ -678,9 +676,7 @@
   },
   {
     "preferred": "ჯორჯიან ეარვეისი",
-    "avoid": [
-      "აირზენა"
-    ],
+    "avoid": [],
     "latin": "Georgian Airways",
     "note": "Flag carrier airline of Georgia. Source: georgian-airways.com.",
     "spoken": "ჯორჯიან ეარვეისი"
@@ -691,7 +687,7 @@
       "ვანილა სკაი"
     ],
     "latin": "Vanilla Sky",
-    "note": "Domestic passenger airline service operator in Georgia. Source: vanillasky.ge.",
+    "note": "Domestic passenger airline service operator in Georgia. Source: vanillasky.ge. needs-review: not in the gcaa.ge carrier register when checked.",
     "spoken": "ვანილა სქაი"
   },
   {
@@ -768,21 +764,17 @@
   },
   {
     "preferred": "ავერსი",
-    "avoid": [
-      "ავერს"
-    ],
+    "avoid": [],
     "latin": "Aversi",
     "note": "Major pharmaceutical and healthcare network in Georgia. Source: aversi.ge.",
     "spoken": "ავერსი"
   },
   {
     "preferred": "პსპ",
-    "avoid": [
-      "პე-ეს-პე"
-    ],
+    "avoid": [],
     "latin": "PSP",
-    "note": "Major pharmacy chain and pharma manufacturer in Georgia. Source: psp.ge.",
-    "spoken": "პსპ"
+    "note": "Major pharmacy chain and pharma manufacturer in Georgia. Source: psp.ge. Written პსპ, also პე-ეს-პე in business names.",
+    "spoken": "პე ეს პე"
   },
   {
     "preferred": "ჯიპისი",
@@ -806,27 +798,21 @@
   },
   {
     "preferred": "ევექსი",
-    "avoid": [
-      "ევექს"
-    ],
+    "avoid": [],
     "latin": "Evex",
     "note": "Healthcare corporation operating hospitals and clinics. Source: evex.ge.",
     "spoken": "ევექსი"
   },
   {
     "preferred": "თოდუას კლინიკა",
-    "avoid": [
-      "თოდუა"
-    ],
+    "avoid": [],
     "latin": "Todua Clinic",
     "note": "High-tech medical diagnostic and oncology center. Source: todua.ge.",
     "spoken": "თოდუას კლინიკა"
   },
   {
     "preferred": "ღუდუშაურის კლინიკა",
-    "avoid": [
-      "ღუდუშაური"
-    ],
+    "avoid": [],
     "latin": "Gudushauri Clinic",
     "note": "National Medical Center in Tbilisi. Source: gudushauri.ge.",
     "spoken": "ღუდუშაურის კლინიკა"
@@ -842,9 +828,7 @@
   },
   {
     "preferred": "ბოკერიას კლინიკა",
-    "avoid": [
-      "ბოკერია"
-    ],
+    "avoid": [],
     "latin": "Bokeria Clinic",
     "note": "Tbilisi cardiovascular and multi-specialty medical center. Source: bokeria.ge.",
     "spoken": "ბოკერიას კლინიკა"
@@ -860,27 +844,21 @@
   },
   {
     "preferred": "თათიშვილის კლინიკა",
-    "avoid": [
-      "თათიშვილი"
-    ],
+    "avoid": [],
     "latin": "Tatishvili Clinic",
     "note": "Medical and diagnostic center network. Source: tatishvili.ge.",
     "spoken": "თათიშვილის კლინიკა"
   },
   {
     "preferred": "ინგოროყვას კლინიკა",
-    "avoid": [
-      "ინგოროყვა"
-    ],
+    "avoid": [],
     "latin": "Ingorokva Clinic",
     "note": "Neurosurgery and high technology medical center in Tbilisi.",
     "spoken": "ინგოროყვას კლინიკა"
   },
   {
     "preferred": "არქიმედეს კლინიკა",
-    "avoid": [
-      "არქიმედე"
-    ],
+    "avoid": [],
     "latin": "Archimedes Clinic",
     "note": "Regional clinic network in Samegrelo and Imereti.",
     "spoken": "არქიმედეს კლინიკა"
@@ -905,27 +883,21 @@
   },
   {
     "preferred": "ჩაჩავას კლინიკა",
-    "avoid": [
-      "ჩაჩავა"
-    ],
+    "avoid": [],
     "latin": "Chachava Clinic",
     "note": "Historic maternity and reproductive medicine clinic. Source: chachava.ge.",
     "spoken": "ჩაჩავას კლინიკა"
   },
   {
     "preferred": "ჟორდანიას კლინიკა",
-    "avoid": [
-      "ჟორდანია"
-    ],
+    "avoid": [],
     "latin": "Zhordania Clinic",
     "note": "Institute of human reproduction and IVF. Source: zhordaniaclinic.ge.",
     "spoken": "ჟორდანიას კლინიკა"
   },
   {
     "preferred": "ალდაგი",
-    "avoid": [
-      "ალდაგ"
-    ],
+    "avoid": [],
     "latin": "Aldagi",
     "note": "Pioneer non-life insurance company in Georgia. Source: aldaghi.ge.",
     "spoken": "ალდაგი"
@@ -959,18 +931,14 @@
   },
   {
     "preferred": "არდი",
-    "avoid": [
-      "არდი დაზღვევა"
-    ],
+    "avoid": [],
     "latin": "Ardi Insurance",
     "note": "Universal insurance company in Georgia. Source: ardi.ge.",
     "spoken": "არდი"
   },
   {
     "preferred": "უნისონი",
-    "avoid": [
-      "უნისონ"
-    ],
+    "avoid": [],
     "latin": "Unison Insurance",
     "note": "Insurance provider in Georgia. Source: unison.ge.",
     "spoken": "უნისონი"
@@ -986,9 +954,7 @@
   },
   {
     "preferred": "ევროინსი საქართველო",
-    "avoid": [
-      "ევროინსი"
-    ],
+    "avoid": [],
     "latin": "Euroins Georgia",
     "note": "Non-life insurance company (part of Euroins Insurance Group). Source: euroins.ge.",
     "spoken": "ევროინსი საქართველო"
@@ -1004,12 +970,10 @@
   },
   {
     "preferred": "პსპ დაზღვევა",
-    "avoid": [
-      "პე-ეს-პე დაზღვევა"
-    ],
+    "avoid": [],
     "latin": "PSP Insurance",
     "note": "Health insurance arm of PSP Group. Source: pspinsurance.ge.",
-    "spoken": "პსპ დაზღვევა"
+    "spoken": "პე ეს პე დაზღვევა"
   },
   {
     "preferred": "ტაო",
@@ -1021,14 +985,11 @@
     "spoken": "ტაო"
   },
   {
-    "preferred": "ემკვადრატი",
-    "avoid": [
-      "მ2",
-      "მ-კვადრატი"
-    ],
+    "preferred": "m²",
+    "avoid": [],
     "latin": "m2 Real Estate",
-    "note": "Major real estate development company in Georgia. Source: m2.ge.",
-    "spoken": "ემკვადრატი"
+    "note": "Major real estate developer, written m² in its own branding. needs-review: spoken form from press headlines. Source: m2.ge.",
+    "spoken": "ემ კვადრატი"
   },
   {
     "preferred": "არქი",
@@ -1041,9 +1002,7 @@
   },
   {
     "preferred": "ანაგი",
-    "avoid": [
-      "ანაგ"
-    ],
+    "avoid": [],
     "latin": "Anagi Construction",
     "note": "Leading civil construction company in Georgia. Source: anagi.ge.",
     "spoken": "ანაგი"
@@ -1068,9 +1027,7 @@
   },
   {
     "preferred": "იორკ თაუერსი",
-    "avoid": [
-      "იორკ თაუერ"
-    ],
+    "avoid": [],
     "latin": "York Towers",
     "note": "International real estate developer in Georgia. Source: yorktowers.com.",
     "spoken": "იორკ თაუერსი"
@@ -1095,9 +1052,7 @@
   },
   {
     "preferred": "მეტროპოლი",
-    "avoid": [
-      "მეტროპოლ"
-    ],
+    "avoid": [],
     "latin": "Metropol",
     "note": "Large-scale residential real estate development. Source: metropol.ge.",
     "spoken": "მეტროპოლი"
@@ -1131,9 +1086,7 @@
   },
   {
     "preferred": "ბალავარი",
-    "avoid": [
-      "ბალავარ"
-    ],
+    "avoid": [],
     "latin": "Balavari",
     "note": "Construction and real estate developer. Source: balavari.ge.",
     "spoken": "ბალავარი"
@@ -1148,17 +1101,15 @@
     "spoken": "ბიქეი ქონსთრაქშენი"
   },
   {
-    "preferred": "ვოლტ საქართველო",
+    "preferred": "ვოლტი",
     "avoid": [],
     "latin": "Wolt Georgia",
-    "note": "Food and retail delivery platform operator in Georgia. Source: wolt.com.",
-    "spoken": "ვოლტ საქართველო"
+    "note": "Food and retail delivery platform. Source: bm.ge usage.",
+    "spoken": "ვოლტი"
   },
   {
     "preferred": "გლოვო საქართველო",
-    "avoid": [
-      "გლოვო"
-    ],
+    "avoid": [],
     "latin": "Glovo Georgia",
     "note": "On-demand courier and delivery platform. Source: glovoapp.com.",
     "spoken": "გლოვო საქართველო"
@@ -1169,7 +1120,7 @@
       "ვენდუ ჯი"
     ],
     "latin": "Vendoo",
-    "note": "Georgian e-commerce marketplace (part of TBC ecosystem). Source: vendoo.ge.",
+    "note": "needs-review: vendoo.ge now redirects to mymarket.ge, so the brand may be gone.",
     "spoken": "ვენდუ"
   },
   {
@@ -1219,18 +1170,14 @@
   },
   {
     "preferred": "ლინეატი საქართველო",
-    "avoid": [
-      "ლინეატ"
-    ],
+    "avoid": [],
     "latin": "Lineate Georgia",
     "note": "Global custom software engineering firm hub. Source: lineate.com.",
     "spoken": "ლინეატი საქართველო"
   },
   {
     "preferred": "ექსადელი საქართველო",
-    "avoid": [
-      "ექსადელ"
-    ],
+    "avoid": [],
     "latin": "Exadel Georgia",
     "note": "Global digital software development services center. Source: exadel.com.",
     "spoken": "ექსადელი საქართველო"
@@ -1246,20 +1193,16 @@
   },
   {
     "preferred": "ფლიტი",
-    "avoid": [
-      "ფლიტ"
-    ],
+    "avoid": [],
     "latin": "Flitt",
-    "note": "Delivery and logistics platform in Georgia. Source: flitt.ge.",
+    "note": "Payment platform from TBC. Source: flitt.com.",
     "spoken": "ფლიტი"
   },
   {
-    "preferred": "იუნიფეი",
-    "avoid": [
-      "უნიფეი"
-    ],
+    "preferred": "უნიფეი",
+    "avoid": [],
     "latin": "UniPAY",
-    "note": "Electronic wallet and merchant checkout gateway. Source: unipay.com.",
+    "note": "Electronic wallet and merchant checkout gateway. Written უნიფეი in Georgian press. Source: bankofgeorgia.ge.",
     "spoken": "იუნიფეი"
   },
   {
@@ -1315,13 +1258,11 @@
     "spoken": "იმედი"
   },
   {
-    "preferred": "ტელეკომპანია პირველი",
-    "avoid": [
-      "ტვ პირველი"
-    ],
+    "preferred": "ტვ პირველი",
+    "avoid": [],
     "latin": "TV Pirveli",
-    "note": "News and current affairs television broadcaster. Source: tvpirveli.ge.",
-    "spoken": "ტელეკომპანია პირველი"
+    "note": "News and current affairs television broadcaster. Source: netgazeti.ge usage.",
+    "spoken": "ტე ვე პირველი"
   },
   {
     "preferred": "ფორმულა",
@@ -1338,17 +1279,16 @@
       "მთავარი-არხი"
     ],
     "latin": "Mtavari Arkhi",
-    "note": "National television and media network. Source: mtavari.tv.",
+    "note": "Former national television channel, off air since May 2025. Source: civil.ge/archives/684878.",
     "spoken": "მთავარი არხი"
   },
   {
     "preferred": "საქართველოს პირველი არხი",
     "avoid": [
-      "1tv",
-      "საზოგადოებრივი მაუწყებელი"
+      "1tv"
     ],
     "latin": "1TV / Georgian Public Broadcaster",
-    "note": "Public service broadcaster of Georgia. Source: 1tv.ge.",
+    "note": "Public service broadcaster of Georgia. Source: 1tv.ge. საზოგადოებრივი მაუწყებელი is the institution that runs it.",
     "spoken": "საქართველოს პირველი არხი"
   },
   {
@@ -1379,13 +1319,13 @@
     "spoken": "პუბლიკა"
   },
   {
-    "preferred": "სამოქალაქო საქართველო",
+    "preferred": "სივილ საქართველო",
     "avoid": [
       "სივილ ჯორჯია"
     ],
     "latin": "Civil.ge",
-    "note": "Daily multilingual news bulletin by UNAG. Source: civil.ge.",
-    "spoken": "სამოქალაქო საქართველო"
+    "note": "Daily multilingual news bulletin by UNAG. Source: una.ge/civil_ge.",
+    "spoken": "სივილ საქართველო"
   },
   {
     "preferred": "ბიემჯი",
@@ -1452,18 +1392,14 @@
   },
   {
     "preferred": "ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი",
-    "avoid": [
-      "თსუ"
-    ],
+    "avoid": [],
     "latin": "Ivane Javakhishvili Tbilisi State University",
     "note": "First and largest university in the South Caucasus (TSU). Source: tsu.ge.",
     "spoken": "ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი"
   },
   {
     "preferred": "ილიას სახელმწიფო უნივერსიტეტი",
-    "avoid": [
-      "ილიაუნი"
-    ],
+    "avoid": [],
     "latin": "Ilia State University",
     "note": "Research and higher education university in Tbilisi. Source: iliauni.edu.ge.",
     "spoken": "ილიას სახელმწიფო უნივერსიტეტი"
@@ -1488,27 +1424,21 @@
   },
   {
     "preferred": "თავისუფალი უნივერსიტეტი",
-    "avoid": [
-      "თბილისის თავისუფალი უნივერსიტეტი"
-    ],
+    "avoid": [],
     "latin": "Free University of Tbilisi",
     "note": "Private university founded by Kakha Bendukidze. Source: freeuni.edu.ge.",
     "spoken": "თავისუფალი უნივერსიტეტი"
   },
   {
     "preferred": "აგრარული უნივერსიტეტი",
-    "avoid": [
-      "საქართველოს აგრარული უნივერსიტეტი"
-    ],
+    "avoid": [],
     "latin": "Agricultural University of Georgia",
     "note": "Private agricultural and natural science university. Source: agruni.edu.ge.",
     "spoken": "აგრარული უნივერსიტეტი"
   },
   {
     "preferred": "კავკასიის უნივერსიტეტი",
-    "avoid": [
-      "კავკასიის უნი"
-    ],
+    "avoid": [],
     "latin": "Caucasus University",
     "note": "Private university in Tbilisi (CU). Source: cu.edu.ge.",
     "spoken": "კავკასიის უნივერსიტეტი"
@@ -1542,9 +1472,7 @@
   },
   {
     "preferred": "ალტე უნივერსიტეტი",
-    "avoid": [
-      "ალტე"
-    ],
+    "avoid": [],
     "latin": "Alte University",
     "note": "Private university in Tbilisi (formerly Tbilisi Open University). Source: alte.edu.ge.",
     "spoken": "ალტე უნივერსიტეტი"
@@ -1596,9 +1524,7 @@
   },
   {
     "preferred": "სემეკი",
-    "avoid": [
-      "სემეკ"
-    ],
+    "avoid": [],
     "latin": "GNERC",
     "note": "Georgian National Energy and Water Supply Regulatory Commission. Source: gnerc.org.",
     "spoken": "სემეკი"
@@ -1650,9 +1576,7 @@
   },
   {
     "preferred": "დაცული ტერიტორიების სააგენტო",
-    "avoid": [
-      "დაცული ტერიტორიები"
-    ],
+    "avoid": [],
     "latin": "Agency of Protected Areas",
     "note": "State authority managing national parks and reserves. Source: apa.gov.ge.",
     "spoken": "დაცული ტერიტორიების სააგენტო"
@@ -1695,18 +1619,14 @@
   },
   {
     "preferred": "საქართველოს სტატისტიკის ეროვნული სამსახური",
-    "avoid": [
-      "საქსტატი"
-    ],
+    "avoid": [],
     "latin": "National Statistics Office of Georgia (Geostat)",
     "note": "Official national statistical agency of Georgia. Source: geostat.ge.",
     "spoken": "საქართველოს სტატისტიკის ეროვნული სამსახური"
   },
   {
     "preferred": "საქსტატი",
-    "avoid": [
-      "საქსტატ"
-    ],
+    "avoid": [],
     "latin": "Geostat",
     "note": "Approved short form of the National Statistics Office. Source: geostat.ge.",
     "spoken": "საქსტატი"

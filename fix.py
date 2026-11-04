@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import re
 
-from .lint import TRANSLIT, TRANSLIT_RE
+from .lint import MONTH_DAY, MONTH_FORM, TRANSLIT, TRANSLIT_RE
 
 # Spans the fixer must not change: HTML tags, fenced code, inline code, <pre>/<code> blocks, URLs and e-mails.
 PROTECTED = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>|https?://\S+|www\.\S+|[\w.+-]+@[\w-]+\.[\w.]+", re.DOTALL)
@@ -49,9 +49,9 @@ def fix_text(text: str) -> tuple[str, list[str]]:
     # Dashes are banned in Georgian copy (Edo's rule, 2026-09-25): ranges get a hyphen, asides a spaced hyphen.
     sub(r"(?<=\d)[–—](?=\d)", "-", "dash")
     sub(r"\s*[–—]\s*", " - ", "dash")
-    # Ordinal suffix on day of month (22-ე ნოემბერს → 22 ნოემბერს; day 1 stays 1-ელი).
-    sub(r"\b([2-9]|\d{2,})-ე\s+((?:იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტო|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)[ა-ჰ]*)",
-        r"\1 \2", "ordinal_date")
+    # Ordinal day of month: 22-ე ნოემბრის, მე-22 ნოემბერს → 22 ნოემბერს. Day 1 stays 1-ელი.
+    sub(rf"(?<![\w-])(?:მე-)?({MONTH_DAY})-ე\s+({MONTH_FORM})(?![ა-ჰ])", r"\1 \2", "ordinal_date")
+    sub(rf"(?<![\w-])მე-({MONTH_DAY})\s+({MONTH_FORM})(?![ა-ჰ])", r"\1 \2", "ordinal_date")
 
     for ka, rx in TRANSLIT_RE.items():
         def latin(m: re.Match, ka: str = ka) -> str:

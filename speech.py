@@ -41,7 +41,12 @@ UNIT_WORDS = {"₾": "ლარი", "$": "დოლარი", "€": "ევ�
               "ჰც": "ჰერცი", "ვ": "ვოლტი", "°C": "გრადუსი", "°": "გრადუსი"}
 UNIT_RE = re.compile("(?P<u>" + "|".join(re.escape(u) for u in sorted(UNIT_WORDS, key=len, reverse=True))
                      + r")(?:-(?P<suf>[ა-ჿ]+))?")
-MONTHS = re.compile(r"^(იანვ|თებერვ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტ|სექტემბ|ოქტომბ|ნოემბ|დეკემბ)")
+# A month in any case form. Whole forms, not prefixes: მარტივი and მაისური are not months.
+MONTHS = re.compile(
+    r"^(?:(?:იანვარ|თებერვალ|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)(?:ი|ია|ს|ში|ზე)"
+    r"|(?:იანვრ|თებერვლ|სექტემბრ|ოქტომბრ|ნოემბრ|დეკემბრ)(?:ის|ით|ად|ამდე|იდან|ისთვის)"
+    r"|(?:მარტ|აპრილ|მაის|ივნის|ივლის)(?:ი|ია|ს|ის|ით|ად|ში|ზე|ამდე|იდან|ისთვის)"
+    r"|აგვისტო(?:ა|ს|თი|დ|ში|ზე|მდე|დან|სთვის)?)$")
 # Counted nouns that take the -მდე of a range (10-15 წუთი → ათიდან თხუთმეტ წუთამდე), as nominative → -მდე form.
 RANGE_NOUNS = {"წამი": "წამამდე", "წუთი": "წუთამდე", "საათი": "საათამდე", "დღე": "დღემდე", "კვირა": "კვირამდე",
                "თვე": "თვემდე", "წელი": "წლამდე", "წლებში": "წლამდე", "პროცენტი": "პროცენტამდე", "ლარი": "ლარამდე",
@@ -105,7 +110,7 @@ def ordinal(n):
             else:
                 head = cardinal(q) + " " + stem
                 if r == 0:
-                    return "მე" + _drop_i(head) + "ე" if " " not in head else head + "ე"
+                    return "მე" + stem + "ე" if q == 1 else head + "ე"
             tail = "მეერთე" if r == 1 else ordinal(r)
             return head + " " + tail
     raise ValueError(n)
@@ -160,7 +165,7 @@ def spell_name(latin):
 
 def root_i(latin):
     """Does the spoken name end in a root ი that stays before an ending (Sony, Gemini, AMD), not a nominative ი?"""
-    if is_acronym(latin):
+    if is_acronym(latin) and SOUND.get(latin) != "consonant":  # BOG → საქართველოს ბანკმა, not ბანკიმ
         return LETTERS[latin[-1].upper()][-1] == "ი"
     return SOUND.get(latin) == "i-sound" or latin[-1:].lower() in ("i", "y")
 
@@ -285,40 +290,55 @@ def clock(h, minute, suf=""):
     return f"{num(h)} {first} და {num(minute)} წუთ{ending}"
 
 
-PRIME_NAMES = {"¹": "პრიმა", "²": "სეკუნდა", "³": "ტერცია", "⁴": "კვარტა"}
+# The law knows one word, პრიმ, plus a digit (organic law on normative acts, 16.11): 353¹, 144³.
+PRIME_NAMES = {"¹": "პრიმა", "²": "პრიმა ორი", "³": "პრიმა სამი", "⁴": "პრიმა ოთხი"}
 
+# 10-14 ოქტომბერს / ოქტომბრის → ათიდან თოთხმეტ ოქტომბრამდე.
 MONTH_MDE = {
-    "იანვარი": "იანვრამდე", "იანვარს": "იანვრამდე",
-    "თებერვალი": "თებერვლამდე", "თებერვალს": "თებერვლამდე",
-    "მარტი": "მარტამდე", "მარტს": "მარტამდე",
-    "აპრილი": "აპრილამდე", "აპრილს": "აპრილამდე",
-    "მაისი": "მაისამდე", "მაისს": "მაისამდე",
-    "ივნისი": "ივნისამდე", "ივნისს": "ივნისამდე",
-    "ივლისი": "ივლისამდე", "ივლისს": "ივლისამდე",
+    **{full + e: short + "ამდე" for full, short in (("იანვარ", "იანვრ"), ("თებერვალ", "თებერვლ"),
+                                                    ("სექტემბერ", "სექტემბრ"), ("ოქტომბერ", "ოქტომბრ"),
+                                                    ("ნოემბერ", "ნოემბრ"), ("დეკემბერ", "დეკემბრ"))
+       for e in ("ი", "ს")},
+    **{short + "ის": short + "ამდე" for short in ("იანვრ", "თებერვლ", "სექტემბრ", "ოქტომბრ", "ნოემბრ", "დეკემბრ")},
+    **{m + e: m + "ამდე" for m in ("მარტ", "აპრილ", "მაის", "ივნის", "ივლის") for e in ("ი", "ს", "ის")},
     "აგვისტო": "აგვისტომდე", "აგვისტოს": "აგვისტომდე",
-    "სექტემბერი": "სექტემბრამდე", "სექტემბერს": "სექტემბრამდე",
-    "ოქტომბერი": "ოქტომბრამდე", "ოქტომბერს": "ოქტომბრამდე",
-    "ნოემბერი": "ნოემბრამდე", "ნოემბერს": "ნოემბრამდე",
-    "დეკემბერი": "დეკემბრამდე", "დეკემბერს": "დეკემბრამდე",
 }
 
 GEO_EXPANSIONS = {
     "სზაკ": "საქართველოს ზოგადი ადმინისტრაციული კოდექსი",
-    "სსსკ": "საქართველოს სისხლის სამართლის კოდექსი",
-    "სსპკ": "საქართველოს სისხლის სამართლის საპროცესო კოდექსი",
-    "ასკ": "საქართველოს ადმინისტრაციული საპროცესო კოდექსი",
+    "სასკ": "საქართველოს ადმინისტრაციული საპროცესო კოდექსი",
     "შსს": "შინაგან საქმეთა სამინისტრო",
     "სუს": "სახელმწიფო უსაფრთხოების სამსახური",
     "სებ": "საქართველოს ეროვნული ბანკი",
 }
 
+GEO_ADJECTIVES = {"ეროვნული", "ზოგადი", "ადმინისტრაციული"}  # expand() makes these agree with the noun
+# Read as letters. სსკ and სსსკ name different codes in civil and criminal decisions, ასკ is not settled either,
+# so a guess could read out the wrong code. Text meant for speech writes the code's full name.
+GEO_SPELLED = ("სსკ", "სსსკ", "ასკ", "შპს", "სს")
+
 GEO_LETTERS = {
-    "ა": "ანი", "ბ": "ბე", "გ": "გე", "დ": "დე", "ე": "ე", "ვ": "ვე", "ზ": "ზე",
+    "ა": "ა", "ბ": "ბე", "გ": "გე", "დ": "დე", "ე": "ე", "ვ": "ვე", "ზ": "ზე",
     "თ": "თე", "ი": "ი", "კ": "კა", "ლ": "ელ", "მ": "ემ", "ნ": "ენ", "ო": "ო",
     "პ": "პე", "ჟ": "ჟე", "რ": "ერ", "ს": "ეს", "ტ": "ტე", "უ": "უ", "ფ": "ფე",
-    "ქ": "ქე", "ღ": "ღე", "ყ": "ყა", "შ": "შა", "ჩ": "ჩე", "ც": "ცე", "ძ": "ძე",
+    "ქ": "ქე", "ღ": "ღე", "ყ": "ყა", "შ": "შე", "ჩ": "ჩე", "ც": "ცე", "ძ": "ძე",
     "წ": "წე", "ჭ": "ჭე", "ხ": "ხა", "ჯ": "ჯე", "ჰ": "ჰე",
 }
+
+
+def month_day(n, next_word):
+    """The day before a month is a cardinal, only the first is ordinal: ოცდაორ ნოემბერს, პირველ ნოემბერს."""
+    word = ordinal(1) if n == 1 else cardinal(n)
+    return attributive(word, next_word) if GEO.search(next_word or "") else word
+
+
+def expand(abbr, suf):
+    """სებ-მა → საქართველოს ეროვნულმა ბანკმა: an adjective agrees with the noun that takes the ending."""
+    *head, noun = GEO_EXPANSIONS[abbr].split()
+    form = "მა" if suf in ("მ", "მა") else "" if suf in ("ს", "ზე", "ში", "თან", "ად", "დ", "მდე", "ამდე") else None
+    if form is not None:
+        head = [w[:-1] + form if w in GEO_ADJECTIVES else w for w in head]
+    return " ".join([*head, attach(noun, "მა" if suf == "მ" else suf)])
 
 
 def speak_token(core, next_word="", prev_word="", known=None):
@@ -405,20 +425,14 @@ def speak_token(core, next_word="", prev_word="", known=None):
         n_val = int(m["n"])
         after = TOKEN.match(next_word or "")["core"]
         if MONTHS.match(after):
-            if n_val == 1:
-                return ordinal(1) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(1))
-            card = cardinal(n_val)
-            return attributive(card, next_word) if GEO.search(next_word or "") else card
+            return month_day(n_val, next_word)
         return ordinal(n_val) if m["o"] in ("ე", "ელი", "ლი") else _drop_i(ordinal(n_val))
     m = re.fullmatch(r"მე-(?P<n>\d+)(?:-ე)?", core)  # მე-2
     if m:
         n_val = int(m["n"])
         after = TOKEN.match(next_word or "")["core"]
         if MONTHS.match(after):
-            if n_val == 1:
-                return ordinal(1)
-            card = cardinal(n_val)
-            return attributive(card, next_word) if GEO.search(next_word or "") else card
+            return month_day(n_val, next_word)
         return ordinal(n_val)
     m = re.fullmatch(rf"(?P<n>{NUM})-(?P<suf>[ა-ჿ]+)", core)  # 4-ჯერ, 2012-ში, 5-მა
     if m:
@@ -442,13 +456,12 @@ def speak_token(core, next_word="", prev_word="", known=None):
     if m:
         w, suf = m["w"], m["suf"]
         if w in GEO_EXPANSIONS:
-            return attach(GEO_EXPANSIONS[w], suf)
-        if w in ("სსკ", "შპს", "სს", "ტვ"):
-            spelled = " ".join(GEO_LETTERS.get(c, c) for c in w)
-            return attach(spelled, suf)
+            return expand(w, suf)
+        if w in GEO_SPELLED:
+            return attach(" ".join(GEO_LETTERS.get(c, c) for c in w), suf)
     if core in GEO_EXPANSIONS:
         return GEO_EXPANSIONS[core]
-    if core in ("სსკ", "შპს"):
+    if core in GEO_SPELLED:
         return " ".join(GEO_LETTERS.get(c, c) for c in core)
     return None
 

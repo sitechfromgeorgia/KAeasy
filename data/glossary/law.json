@@ -21,9 +21,7 @@
   },
   {
     "preferred": "კანონპროექტი",
-    "avoid": [
-      "კანონის პროექტი"
-    ],
+    "avoid": [],
     "latin": "draft law / legislative bill",
     "note": "Draft text submitted for legislative consideration. Written as one word."
   },
@@ -266,8 +264,7 @@
   {
     "preferred": "განაჩენი",
     "avoid": [
-      "პრიგავორი",
-      "გადაწყვეტილება"
+      "პრიგავორი"
     ],
     "latin": "verdict / criminal sentence",
     "note": "'პრიგავორი' is a Russianism. In criminal law, use 'განაჩენი', not 'გადაწყვეტილება'."
@@ -389,7 +386,7 @@
     "note": "Scientific or technical investigation ordered by court or investigator."
   },
   {
-    "preferred": "ნივთმტკიცება",
+    "preferred": "ნივთიერი მტკიცებულება",
     "avoid": [
       "ვეშდოკი"
     ],
@@ -519,7 +516,7 @@
       "სამოქალაქო პროცესი"
     ],
     "latin": "Civil Procedure Code of Georgia",
-    "note": "Code regulating judicial procedure in civil litigations (abbreviated სსპკ). Source: matsne.gov.ge/ka/document/view/29962."
+    "note": "Code regulating judicial procedure in civil litigations (სსსკ in civil decisions). Source: matsne.gov.ge/ka/document/view/29962."
   },
   {
     "preferred": "საქართველოს სისხლის სამართლის საპროცესო კოდექსი",
@@ -551,7 +548,7 @@
       "ტამოჟნი კოდექსი"
     ],
     "latin": "Customs Code of Georgia",
-    "note": "Code regulating import, export and customs control in Georgia. Source: matsne.gov.ge/ka/document/view/4597648."
+    "note": "Code regulating import, export and customs control in Georgia. Source: matsne.gov.ge/ka/document/view/4598501."
   },
   {
     "preferred": "პერსონალურ მონაცემთა დაცვის შესახებ",
@@ -559,7 +556,7 @@
       "პერსონალური ინფორმაციის დაცვა"
     ],
     "latin": "Law of Georgia on Personal Data Protection",
-    "note": "Law regulating processing and storage of private individual data. Source: matsne.gov.ge/ka/document/view/5835942."
+    "note": "Law regulating processing and storage of private individual data. Source: matsne.gov.ge/ka/document/view/5827307."
   },
   {
     "preferred": "ეჭვმიტანილი",
@@ -567,7 +564,7 @@
       "პადოზრევაემი"
     ],
     "latin": "suspect",
-    "note": "Person suspected of crime before formal indictment/charges are filed. Distinct from ბრალდებული (the accused)."
+    "note": "Everyday and media word for a suspect, not a Criminal Procedure Code term: the code uses ბრალდებული (CrPC 3.19)."
   },
   {
     "preferred": "გამამტყუნებელი განაჩენი",
@@ -846,7 +843,7 @@
       "ნეპრეოდოლიმი სილა"
     ],
     "latin": "act of God / unavoidable force",
-    "note": "Georgian statutory synonym for force majeure in Civil Code §398."
+    "note": "Term of Civil Code arts. 132, 666, 779. Art. 398 covers changed circumstances, not force majeure."
   },
   {
     "preferred": "საქართველოს პოლიცია",
@@ -866,9 +863,7 @@
   },
   {
     "preferred": "საჯარო რეესტრის ეროვნული სააგენტო",
-    "avoid": [
-      "საჯარო რეესტრი"
-    ],
+    "avoid": [],
     "latin": "National Agency of Public Registry",
     "note": "State agency recording immovable property titles, corporate records, and liens."
   },
@@ -910,7 +905,7 @@
       "საგამოძიებო სამსახური"
     ],
     "latin": "Special Investigation Service",
-    "note": "Independent state authority investigating crimes committed by public officials."
+    "note": "Abolished 1 July 2025 (matsne 4276790). Use only for past events."
   },
   {
     "preferred": "სახელმწიფო უსაფრთხოების სამსახური",
@@ -1010,9 +1005,7 @@
   },
   {
     "preferred": "ცესია",
-    "avoid": [
-      "მოთხოვნის გადაცემა"
-    ],
+    "avoid": [],
     "latin": "assignment of claim / cession",
     "note": "Contractual transfer of rights/claims from original creditor to third party."
   },
@@ -1121,7 +1114,7 @@
     "note": "Work performed beyond standard 40-hour work week, compensated at increased rate."
   },
   {
-    "preferred": "სამუშაოდან დათხოვნა",
+    "preferred": "შრომითი ხელშეკრულების შეწყვეტა",
     "avoid": [
       "სამსახურიდან გაგდება"
     ],
@@ -1169,7 +1162,7 @@
     "note": "State regulatory LEPL enforcing antitrust and consumer protection laws."
   },
   {
-    "preferred": "მომხმარებელთა უფლებების დაცვის შესახებ",
+    "preferred": "მომხმარებლის უფლებების დაცვის შესახებ",
     "avoid": [
       "მომხმარებელთა დაცვა"
     ],
@@ -1306,17 +1299,13 @@
   },
   {
     "preferred": "რატიფიკაცია",
-    "avoid": [
-      "რატიფიცირება"
-    ],
+    "avoid": [],
     "latin": "ratification",
     "note": "Parliamentary confirmation consenting to be bound by an international treaty."
   },
   {
     "preferred": "დენონსაცია",
-    "avoid": [
-      "დენონსირება"
-    ],
+    "avoid": [],
     "latin": "denunciation",
     "note": "Official notification of withdrawal from an international treaty."
   },
@@ -1694,10 +1683,10 @@
       "შენიღბული გარიგება"
     ],
     "latin": "dissimulated transaction",
-    "note": "Null transaction concluded to cover up another intended transaction."
+    "note": "Null transaction concluded to cover up another one; the rules of the covered transaction apply (Civil Code art. 56.2)."
   },
   {
-    "preferred": "საზოგადოებრივი წესრიგი",
+    "preferred": "საჯარო წესრიგი",
     "avoid": [
       "აბშჩესტვენი პორიადოკი"
     ],
@@ -1734,13 +1723,11 @@
       "ნედეესპოსობნი"
     ],
     "latin": "incapacitated person / person under support",
-    "note": "Person declared legally unable to understand or manage their actions independently."
+    "note": "Person without capacity to act. Civil Code art. 12: adults receiving support are not treated as incapable."
   },
   {
     "preferred": "მხარდაჭერის მიმღები",
-    "avoid": [
-      "ქმედუუნარო"
-    ],
+    "avoid": [],
     "latin": "support recipient",
     "note": "Individual with psychosocial disability receiving court-appointed legal support."
   },
@@ -1758,7 +1745,7 @@
       "პოპეჩიტელი"
     ],
     "latin": "curator / caregiver",
-    "note": "Person appointed to assist minor aged 10-18 in exercising legal transactions."
+    "note": "Person appointed to assist a minor aged 7-18 in legal transactions (Civil Code art. 1277)."
   },
   {
     "preferred": "აღმსრულებელი",
@@ -1777,7 +1764,7 @@
     "note": "Licensed private professional authorized to enforce civil judgment debts."
   },
   {
-    "preferred": "აღსრულების ფურცელი",
+    "preferred": "სააღსრულებო ფურცელი",
     "avoid": [
       "ისპალნიწელნი ლისტი"
     ],
@@ -2050,7 +2037,7 @@
     "note": "Administrative or judicial challenge of Revenue Service tax assessments."
   },
   {
-    "preferred": "დავის განმხილველი საბჭო",
+    "preferred": "დავების განხილვის საბჭო",
     "avoid": [
       "დავების საბჭო"
     ],
