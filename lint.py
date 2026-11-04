@@ -109,7 +109,7 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 # Mechanical, near-zero false positives. A publish gate should block on these only.
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
-          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation"}
+          "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "date_ordinal"}
 
 # Rules that do not apply to a mode. Speech text is read aloud: brands are spelled in Georgian letters there.
 MODE_SKIP = {
@@ -219,6 +219,13 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         # Garbled year compounds such as „ოცდაოცდ ორი“ (2022) or „ოცდაოცის“ (2020): always an error.
         for m in re.finditer(r"ოცდაოც", body):
             add("numeral_compound", "error", "არასწორი რიცხვითი შენაერთი: „ოცდაოც...“ → „ორი ათას ოც...“", m)
+
+    if on("date_ordinal"):
+        # Dates take the cardinal day: „ორ ოქტომბერს“, not „მეორე ოქტომბერს“.
+        months = r"(იანვარ|თებერვალ|მარტ|აპრილ|მაის|ივნის|ივლის|აგვისტ|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)"
+        ordinals = r"(მეორე|მესამე|მეოთხე|მეხუთე|მეექვსე|მეშვიდე|მერვე|მეცხრე|მეათე|მეთერთმეტე|მეთორმეტე|მეცამეტე|მეთოთხმეტე|მეთხუთმეტე|მეთექვსმეტე|მეჩვიდმეტე|მეთვრამეტე|მეცხრამეტე|მეოცე|ოცდამე\w+)"
+        for m in re.finditer(r"\b" + ordinals + r"\s+" + months, body):
+            add("date_ordinal", "error", f"თარიღის დღე რიცხვითია, არა რიგითი: „{m.group(0)}“ → „ორ/სამ/... {m.group(1)}“", m)
 
     if on("legal_citation"):
         # Article number and its part must never collapse into "NNN პირველი მუხლი".
