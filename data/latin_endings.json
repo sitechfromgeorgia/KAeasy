@@ -88,6 +88,8 @@
   },
   "names": {
     "Microsoft": "consonant",
+    "BOG": "consonant",
+    "GWP": "consonant",
     "Apple": "consonant",
     "Google": "consonant",
     "OpenAI": "i-sound",

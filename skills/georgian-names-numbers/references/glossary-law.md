@@ -27,7 +27,7 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | Constitution | **კონსტიტუცია** | — | Supreme law of Georgia: 'საქართველოს კონსტიტუცია'. |
 | legislation | **კანონმდებლობა** | `ზაკონოდატელობა` | 'ზაკონოდატელობა' is a Russianism; correct Georgian is 'კანონმდებლობა'. |
 | law / statute | **კანონი** | — | Legal enactment passed by Parliament and signed by President. |
-| draft law / legislative bill | **კანონპროექტი** | `კანონის პროექტი` | Draft text submitted for legislative consideration. Written as one word. |
+| draft law / legislative bill | **კანონპროექტი** | — | Draft text submitted for legislative consideration. Written as one word. |
 | normative act | **ნორმატიული აქტი** | — | Legal act containing binding rules of general conduct. |
 | individual legal act | **ინდივიდუალური სამართლებრივი აქტი** | — | Act addressed to a specifically determined person or entity. |
 | code of law | **კოდექსი** | — | Systematic codification of laws (e.g. სამოქალაქო კოდექსი, სისხლის სამართლის კოდექსი). |
@@ -63,7 +63,7 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | compensation of damages | **ზარალის ანაზღაურება** | — | Remedy restoring claimant to the economic position had damage not occurred. |
 | moral / non-pecuniary damage | **მორალური ზიანი** | — | Compensation for physical pain, mental suffering, or injury to reputation. |
 | liquidated damages / penalty | **პირგასამტეხლო** | `ნეუსტოიკა` | 'ნეუსტოიკა' is a Russianism; correct Georgian is 'პირგასამტეხლო'. |
-| verdict / criminal sentence | **განაჩენი** | `პრიგავორი`, `გადაწყვეტილება` | 'პრიგავორი' is a Russianism. In criminal law, use 'განაჩენი', not 'გადაწყვეტილება'. |
+| verdict / criminal sentence | **განაჩენი** | `პრიგავორი` | 'პრიგავორი' is a Russianism. In criminal law, use 'განაჩენი', not 'გადაწყვეტილება'. |
 | judgment / court decision (civil/admin) | **გადაწყვეტილება** | `რეშენიე` | 'რეშენიე' is a Russianism. In civil/administrative cases, court renders 'გადაწყვეტილება'. |
 | court ruling / order | **განჩინება** | `ოპრედელენიე` | 'ოპრედელენიე' is a Russianism; correct Georgian is 'განჩინება'. |
 | measure of restraint / preventive measure | **აღკვეთის ღონისძიება** | — | Pre-trial procedural constraint applied to criminal accused (bail, detention). |
@@ -80,7 +80,7 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | witness | **მოწმე** | `სვიდეტელი` | 'სვიდეტელი' is a Russianism; correct Georgian is 'მოწმე'. |
 | testimony / deposition | **ჩვენება** | `პაკაზანიე` | 'პაკაზანიე' is a Russianism; in judicial procedure, witness testimony is 'ჩვენება'. |
 | forensic expert examination | **სასამართლო ექსპერტიზა** | — | Scientific or technical investigation ordered by court or investigator. |
-| physical evidence | **ნივთმტკიცება** | `ვეშდოკი` | 'ვეშდოკი' is a Russianism; correct Georgian is 'ნივთმტკიცება'. |
+| physical evidence | **ნივთიერი მტკიცებულება** | `ვეშდოკი` | 'ვეშდოკი' is a Russianism; correct Georgian is 'ნივთმტკიცება'. |
 | evidence / proof | **მტკიცებულება** | `დოკაზატელობა` | 'დოკაზატელობა' is a Russianism; correct Georgian is 'მტკიცებულება'. |
 | burden of proof | **მტკიცების ტვირთი** | — | Duty placed upon a civil party to establish factual allegations. |
 | presumption of innocence | **უდანაშაულობის პრეზუმფცია** | — | Fundamental constitutional principle that one is innocent until proven guilty. |
@@ -98,13 +98,13 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | Civil Code of Georgia | **საქართველოს სამოქალაქო კოდექსი** | `გრაჟდანსკი კოდექსი` | Fundamental legal code regulating private property and personal non-property relationships (abbreviated სსკ). Source: matsne.gov.ge/ka/document/view/31702. |
 | Code of Administrative Offences of Georgia | **საქართველოს ადმინისტრაციულ სამართალდარღვევათა კოდექსი** | `ადმინისტრაციული კოდექსი` | Code regulating administrative violations and misdemeanor penalties (abbreviated ასკ). Source: matsne.gov.ge/ka/document/view/28216. |
 | General Administrative Code of Georgia | **საქართველოს ზოგადი ადმინისტრაციული კოდექსი** | `ზოგადი კოდექსი` | Code governing public administration, administrative proceedings and freedom of information (abbreviated სზაკ). Source: matsne.gov.ge/ka/document/view/16270. |
-| Civil Procedure Code of Georgia | **საქართველოს სამოქალაქო საპროცესო კოდექსი** | `სამოქალაქო პროცესი` | Code regulating judicial procedure in civil litigations (abbreviated სსპკ). Source: matsne.gov.ge/ka/document/view/29962. |
+| Civil Procedure Code of Georgia | **საქართველოს სამოქალაქო საპროცესო კოდექსი** | `სამოქალაქო პროცესი` | Code regulating judicial procedure in civil litigations (სსსკ in civil decisions). Source: matsne.gov.ge/ka/document/view/29962. |
 | Criminal Procedure Code of Georgia | **საქართველოს სისხლის სამართლის საპროცესო კოდექსი** | `კრიმინალური საპროცესო კოდექსი` | Code governing criminal investigation, prosecution and trial procedures (abbreviated სსსკ). Source: matsne.gov.ge/ka/document/view/90034. |
 | Labour Code of Georgia | **საქართველოს შრომის კოდექსი** | `შრომის კანონი` | Organic law governing employment relationships, contracts and workers rights. Source: matsne.gov.ge/ka/document/view/1155567. |
 | Tax Code of Georgia | **საქართველოს საგადასახადო კოდექსი** | `ნალაგავოი კოდექსი` | Code establishing tax liability, rates and tax administration in Georgia. Source: matsne.gov.ge/ka/document/view/1043717. |
-| Customs Code of Georgia | **საქართველოს საბაჟო კოდექსი** | `ტამოჟნი კოდექსი` | Code regulating import, export and customs control in Georgia. Source: matsne.gov.ge/ka/document/view/4597648. |
-| Law of Georgia on Personal Data Protection | **პერსონალურ მონაცემთა დაცვის შესახებ** | `პერსონალური ინფორმაციის დაცვა` | Law regulating processing and storage of private individual data. Source: matsne.gov.ge/ka/document/view/5835942. |
-| suspect | **ეჭვმიტანილი** | `პადოზრევაემი` | Person suspected of crime before formal indictment/charges are filed. Distinct from ბრალდებული (the accused). |
+| Customs Code of Georgia | **საქართველოს საბაჟო კოდექსი** | `ტამოჟნი კოდექსი` | Code regulating import, export and customs control in Georgia. Source: matsne.gov.ge/ka/document/view/4598501. |
+| Law of Georgia on Personal Data Protection | **პერსონალურ მონაცემთა დაცვის შესახებ** | `პერსონალური ინფორმაციის დაცვა` | Law regulating processing and storage of private individual data. Source: matsne.gov.ge/ka/document/view/5827307. |
+| suspect | **ეჭვმიტანილი** | `პადოზრევაემი` | Everyday and media word for a suspect, not a Criminal Procedure Code term: the code uses ბრალდებული (CrPC 3.19). |
 | conviction judgment / guilty verdict | **გამამტყუნებელი განაჩენი** | `ობვინიტელნი პრიგავორი` | Criminal verdict establishing the guilt of the defendant and imposing sentencing. |
 | acquittal judgment / not-guilty verdict | **გამამართლებელი განაჩენი** | `აპრავდაწელნი პრიგავორი` | Criminal verdict finding the defendant not guilty. |
 | court ruling / interim decision | **სასამართლო განჩინება** | `სუდებნი ოპრედელენიე` | Court order resolving procedural motions without deciding the main case on merits. |
@@ -139,15 +139,15 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | intent / malice aforethought | **განზრახვა** | `უმისელი` | Subjective state where actor foresees and desires or consciously permits consequences. |
 | negligence / recklessness | **გაუფრთხილებლობა** | `ნეოსტოროჟნოსტი` | Failure to exercise reasonable care foreseen or expected by law. |
 | force majeure / irresistible force | **ფორსმაჟორი** | `ფორს-მაჟორი`, `ფორს მაჟორი` | Unforeseeable and unavoidable external circumstance exempting from liability. Written as one word. |
-| act of God / unavoidable force | **დაუძლეველი ძალა** | `ნეპრეოდოლიმი სილა` | Georgian statutory synonym for force majeure in Civil Code §398. |
+| act of God / unavoidable force | **დაუძლეველი ძალა** | `ნეპრეოდოლიმი სილა` | Term of Civil Code arts. 132, 666, 779. Art. 398 covers changed circumstances, not force majeure. |
 | Police of Georgia | **საქართველოს პოლიცია** | `პოლიციური ორგანო` | State law enforcement body within the Ministry of Internal Affairs (შსს). |
 | Ministry of Internal Affairs of Georgia | **შინაგან საქმეთა სამინისტრო** | `მვდ` | Executive ministry responsible for public order, borders and police (შსს). |
-| National Agency of Public Registry | **საჯარო რეესტრის ეროვნული სააგენტო** | `საჯარო რეესტრი` | State agency recording immovable property titles, corporate records, and liens. |
+| National Agency of Public Registry | **საჯარო რეესტრის ეროვნული სააგენტო** | — | State agency recording immovable property titles, corporate records, and liens. |
 | Notary Chamber of Georgia | **საქართველოს ნოტარიუსთა პალატა** | `ნოტარიალური პალატა` | Self-governing association of licensed notaries in Georgia. |
 | High Council of Justice of Georgia | **საქართველოს იუსტიციის უმაღლესი საბჭო** | `იუსტიციის საბჭო` | Constitutional body ensuring independence and appointment of common court judges. |
 | Ministry of Justice of Georgia | **საქართველოს იუსტიციის სამინისტრო** | `იუსტიციის სამინისტრო` | Executive ministry leading legal affairs, penitentiary system and public services. |
 | Public Defender of Georgia (Ombudsman) | **საქართველოს სახალხო დამცველი** | `ომბუდსმენი` | Independent constitutional official overseeing observance of human rights. |
-| Special Investigation Service | **სპეციალური საგამოძიებო სამსახური** | `საგამოძიებო სამსახური` | Independent state authority investigating crimes committed by public officials. |
+| Special Investigation Service | **სპეციალური საგამოძიებო სამსახური** | `საგამოძიებო სამსახური` | Abolished 1 July 2025 (matsne 4276790). Use only for past events. |
 | State Security Service of Georgia | **სახელმწიფო უსაფრთხოების სამსახური** | `სგბ` | State intelligence and counter-terrorism agency (სუს). |
 | compensation / indemnification | **კომპენსაცია** | `კომპენსირება` | Payment made to make amends for injury, loss or expropriated property. |
 | reparation / restitution of damages | **ზიანის ანაზღაურება** | `უბიტკების ანაზღაურება` | Legal remedy obligating tortfeasor or breaching party to restore losses. |
@@ -160,7 +160,7 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | creditor / obligee | **კრედიტორი** | `ზაიმოდავეცი` | Party entitled to demand performance of obligation from debtor. |
 | joint and several liability | **სოლიდარული პასუხისმგებლობა** | `სოლიდარკა` | Liability where each co-debtor is responsible for full discharge of debt. |
 | subsidiary liability / secondary liability | **სუბსიდიური პასუხისმგებლობა** | `სუბსიდიარული პასუხისმგებლობა` | Liability arising only upon default or failure of the principal debtor. |
-| assignment of claim / cession | **ცესია** | `მოთხოვნის გადაცემა` | Contractual transfer of rights/claims from original creditor to third party. |
+| assignment of claim / cession | **ცესია** | — | Contractual transfer of rights/claims from original creditor to third party. |
 | assumption of debt | **ვალის გადაკისრება** | `პერევოდ დოლგა` | Agreement by which a new debtor takes over an existing debt with creditor consent. |
 | requisition | **რეკვიზიცია** | `ჩამორთმევა` | Forcible taking of property by state for public need during emergency with compensation. |
 | confiscation | **კონფისკაცია** | `კონფისკაცია უსასყიდლოდ` | Uncompensated judicial forfeiture of crime instrumentalities or illegal assets to state. |
@@ -174,13 +174,13 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | probationary period / trial period | **გამოსაცდელი ვადა** | `ისპიტატელნი სროკი` | Initial employment period (up to 6 months) for evaluation of employee suitability. |
 | collective bargaining agreement | **კოლექტიური ხელშეკრულება** | `კოლექტიური დოგავორი` | Agreement concluded between employer and employee union regarding working conditions. |
 | overtime work | **ზეგანაკვეთური სამუშაო** | `სვერხუროჩნი` | Work performed beyond standard 40-hour work week, compensated at increased rate. |
-| termination of employment / dismissal | **სამუშაოდან დათხოვნა** | `სამსახურიდან გაგდება` | Lawful termination of employment contract initiated by employer on statutory grounds. |
+| termination of employment / dismissal | **შრომითი ხელშეკრულების შეწყვეტა** | `სამსახურიდან გაგდება` | Lawful termination of employment contract initiated by employer on statutory grounds. |
 | strike | **გაფიცვა** | `ზაბასტოვკა` | Constitutional temporary collective stoppage of work by employees in labor dispute. |
 | lockout | **ლოკაუტი** | `ლოკ-აუტი` | Temporary suspension of work or closing of enterprise initiated by employer. |
 | prohibition of discrimination | **დისკრიმინაციის აკრძალვა** | `დისკრიმინაციის არდაშვება` | Equal protection principle enshrined in Constitution and Labor Code. |
 | Labor Inspection Service of Georgia | **საქართველოს შრომის ინსპექციის სამსახური** | `შრომის ინსპექცია` | State oversight LEPL supervising compliance with labor and safety standards. |
 | Georgian Competition and Consumer Agency | **საქართველოს კონკურენციისა და მომხმარებლის დაცვის სააგენტო** | `კონკურენციის სააგენტო` | State regulatory LEPL enforcing antitrust and consumer protection laws. |
-| Law on the Protection of Consumer Rights | **მომხმარებელთა უფლებების დაცვის შესახებ** | `მომხმარებელთა დაცვა` | Statute regulating consumer rights, warranties and unfair commercial practices. |
+| Law on the Protection of Consumer Rights | **მომხმარებლის უფლებების დაცვის შესახებ** | `მომხმარებელთა დაცვა` | Statute regulating consumer rights, warranties and unfair commercial practices. |
 | arbitration agreement / arbitration clause | **საარბიტრაჟო შეთანხმება** | `არბიტრაჟის შეთანხმება` | Agreement by parties to submit disputes to binding private arbitration. |
 | arbitral award | **საარბიტრაჟო გადაწყვეტილება** | `არბიტრაჟის რეშენიე` | Final decision rendered by arbitration tribunal enforceable through court. |
 | mediation | **მედიაცია** | `შუამავლობა` | Alternative dispute resolution process guided by a neutral mediator. |
@@ -197,8 +197,8 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | unilateral cancellation / rescission | **მოშლა** | `რასტოროჟენიე` | Unilateral repudiation of a continuing contract on statutory or agreed grounds. |
 | annulment / invalidation | **გაბათილება** | `ანულირება` | Declaration that an act or transaction has no legal force. |
 | legislative initiative | **საკანონმდებლო ინიციატივა** | `კანონმდებლობითი ინიციატივა` | Constitutional right to introduce a draft law in the Parliament of Georgia. |
-| ratification | **რატიფიკაცია** | `რატიფიცირება` | Parliamentary confirmation consenting to be bound by an international treaty. |
-| denunciation | **დენონსაცია** | `დენონსირება` | Official notification of withdrawal from an international treaty. |
+| ratification | **რატიფიკაცია** | — | Parliamentary confirmation consenting to be bound by an international treaty. |
+| denunciation | **დენონსაცია** | — | Official notification of withdrawal from an international treaty. |
 | Legislative Herald of Georgia (matsne.gov.ge) | **საქართველოს საკანონმდებლო მაცნე** | `მაცნე` | Official state gazette and digital repository of all normative acts of Georgia. |
 | registry excerpt / excerpt from public registry | **რეესტრის ამონაწერი** | `ვიპისკა` | Official certified extract evidencing title, corporate standing or encumbrances. |
 | charter / articles of association | **წესდება** | `უსტავი` | Constitutive document governing corporate structure and governance of legal entity. |
@@ -245,18 +245,18 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | transaction entered under duress or coercion | **იძულებით დადებული გარიგება** | `ძალდატანებითი გარიგება` | Voidable transaction where consent was procured through unlawful threat or force. |
 | transaction entered under essential mistake | **შეცდომით დადებული გარიგება** | `შეცდომითი გარიგება` | Voidable transaction entered under fundamental misconception of essential terms. |
 | sham transaction / simulated transaction | **მოჩვენებითი გარიგება** | `ფიქტიური გარიგება` | Null and void transaction concluded only for appearance without intent to produce effect. |
-| dissimulated transaction | **თვალთმაქცური გარიგება** | `შენიღბული გარიგება` | Null transaction concluded to cover up another intended transaction. |
-| public order / public policy / ordre public | **საზოგადოებრივი წესრიგი** | `აბშჩესტვენი პორიადოკი` | Fundamental legal order; transactions violating it are void under Civil Code §54. |
+| dissimulated transaction | **თვალთმაქცური გარიგება** | `შენიღბული გარიგება` | Null transaction concluded to cover up another one; the rules of the covered transaction apply (Civil Code art. 56.2). |
+| public order / public policy / ordre public | **საჯარო წესრიგი** | `აბშჩესტვენი პორიადოკი` | Fundamental legal order; transactions violating it are void under Civil Code §54. |
 | transaction contrary to public morals | **ზნეობის საწინააღმდეგო გარიგება** | `ამორალური გარიგება` | Transaction void for violating accepted standards of public decency and morality. |
 | legal capacity / capacity to hold rights | **უფლებაუნარიანობა** | `პრავოსპოსობნოსტი` | Capacity to have civil rights and duties, arising at birth and ending at death. |
 | capacity to act / legal competence | **ქმედუნარიანობა** | `დეესპოსობნოსტი` | Capacity of person by their own actions to acquire and exercise civil rights. |
-| incapacitated person / person under support | **ქმედუუნარო პირი** | `ნედეესპოსობნი` | Person declared legally unable to understand or manage their actions independently. |
-| support recipient | **მხარდაჭერის მიმღები** | `ქმედუუნარო` | Individual with psychosocial disability receiving court-appointed legal support. |
+| incapacitated person / person under support | **ქმედუუნარო პირი** | `ნედეესპოსობნი` | Person without capacity to act. Civil Code art. 12: adults receiving support are not treated as incapable. |
+| support recipient | **მხარდაჭერის მიმღები** | — | Individual with psychosocial disability receiving court-appointed legal support. |
 | guardian / custodian | **მეურვე** | `აპეკუნი` | Person legally appointed to protect and represent minor under 7 or support recipient. |
-| curator / caregiver | **მზრუნველი** | `პოპეჩიტელი` | Person appointed to assist minor aged 10-18 in exercising legal transactions. |
+| curator / caregiver | **მზრუნველი** | `პოპეჩიტელი` | Person appointed to assist a minor aged 7-18 in legal transactions (Civil Code art. 1277). |
 | enforcement officer / executor | **აღმსრულებელი** | `ისპალნიწელი` | Bailiff or officer executing court judgments under enforcement law. |
 | private enforcement officer | **კერძო აღმასრულებელი** | `კერძო ისპალნიწელი` | Licensed private professional authorized to enforce civil judgment debts. |
-| writ of execution / enforcement writ | **აღსრულების ფურცელი** | `ისპალნიწელნი ლისტი` | Judicial document mandating compulsory enforcement of court judgment. |
+| writ of execution / enforcement writ | **სააღსრულებო ფურცელი** | `ისპალნიწელნი ლისტი` | Judicial document mandating compulsory enforcement of court judgment. |
 | enforcement proceedings | **სააღსრულებო წარმოება** | `ისპალნიწელნი წარმოება` | Statutory process of compulsory execution of judgments and claims. |
 | attachment / sequestration / freezing order | **ყადაღა** | `არეშტი` | Legal seizure or prohibition on alienation of debtor assets or bank accounts. |
 | direct debit / collection order / incasso | **ინკასო** | `ინკასირება` | Compulsory deduction order issued on bank account to recover tax or debt. |
@@ -290,4 +290,4 @@ This glossary standardizes legal, judicial, procedural, and constitutional terms
 | tax demand notice / notice of tax assessment | **საგადასახადო მოთხოვნა** | `ნალაგავოი ტრებოვანიე` | Administrative act assessing taxes, penalties and interest payable by taxpayer. |
 | tax lien / statutory tax pledge | **საგადასახადო გირავნობა** | `საგადასახადო ზალოგი` | State statutory security interest on taxpayer property securing tax debt. |
 | tax dispute | **საგადასახადო დავა** | `საგადასახადო სპორი` | Administrative or judicial challenge of Revenue Service tax assessments. |
-| Dispute Resolution Council at the Ministry of Finance | **დავის განმხილველი საბჭო** | `დავების საბჭო` | Appellate administrative body reviewing appeals against Revenue Service decisions. |
+| Dispute Resolution Council at the Ministry of Finance | **დავების განხილვის საბჭო** | `დავების საბჭო` | Appellate administrative body reviewing appeals against Revenue Service decisions. |

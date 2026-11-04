@@ -12,9 +12,9 @@ Source:
 ## 1. Status of Persons in Legal Proceedings
 
 ### `ეჭვმიტანილი` vs `ბრალდებული` vs `მსჯავრდებული` vs `გამართლებული`
-- **ეჭვმიტანილი** (Suspect): A person under suspicion during initial investigative measures before official charges are laid.
-- **ბრალდებული** (The Accused / Indicted): A person against whom the prosecutor has issued a formal decree of indictment (*ბრალდების დადგენილება*).
-- **მსჯავრდებული** (Convict): A person found guilty by a final court verdict (*გამამტყუნებელი განაჩენი*) and sentenced.
+- **ეჭვმიტანილი** (Suspect): Everyday and media word. It is not a term of the Criminal Procedure Code, which uses `ბრალდებული` from the start.
+- **ბრალდებული** (The Accused): A person against whom there is a reasonable suspicion of a crime (CrPC 3.19). The prosecutor charges by a `ბრალდების შესახებ დადგენილება` (CrPC 169.2).
+- **მსჯავრდებული** (Convict): A person against whom a court issued a guilty verdict (*გამამტყუნებელი განაჩენი*, CrPC 3.8). The definition does not require the verdict to be final.
 - **გამართლებული** (Acquitted): A person cleared of all criminal charges by an acquittal verdict (*გამამართლებელი განაჩენი*).
 - ❌ `პროკურატურამ ეჭვმიტანილს ბრალი წარუდგინა.`
 - ✅ `პროკურატურამ პირს ბრალი წარუდგინა და მან ბრალდებულის სტატუსი მიიღო.`
@@ -91,7 +91,7 @@ Source:
 - ❌ `კანონი 2025 წელს ბათილად გამოცხადდა ახალი კანონის მიღებით.`
 - ✅ `კანონი ძალადაკარგულად გამოცხადდა ახალი კანონის ამოქმედების შემდეგ.`
 - ❌ `თაღლითობით დადებული გარიგება ძალადაკარგულია.`
-- ✅ `მოტყუებით დადებული გარიგება ბათილია.`
+- ✅ `მოტყუებით დადებული გარიგება საცილოა.` (voidable on demand, Civil Code arts. 59.2, 81)
 
 ### `ვადა` vs `ხანდაზმულობა`
 - **ვადა** (Term / Duration / Period): Timeframe for performance or validity established by statute or contract.

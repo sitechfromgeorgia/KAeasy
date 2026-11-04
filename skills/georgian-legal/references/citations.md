@@ -26,10 +26,10 @@ In Georgian, when citing a specific rule, the larger unit precedes the smaller u
 - ❌ `180-ე მუხლის პირველი მუხლი` (repetition error; flagged by `legal_citation` rule)
 
 ### Codes vs Decrees: `ნაწილი` vs `პუნქტი`
-- In **Codes and Primary Laws** (კოდექსი, კანონი): Articles are divided into **ნაწილები** (Parts), designated by Arabic numerals:
+- In **Codes** (კოდექსი): Articles are divided into **ნაწილები** (Parts), designated by Arabic numerals (organic law on normative acts, 16.7):
   - `მუხლი 180. თაღლითობა`
   - `1. თაღლითობა, ესე იგი...` → `180-ე მუხლის პირველი ნაწილი`
-- In **Government Decrees and Ministerial Orders** (დადგენილება, ბრძანება): Articles are divided into **პუნქტები** (Paragraphs):
+- In **Laws, Government Decrees and Ministerial Orders** (კანონი, დადგენილება, ბრძანება): Articles are divided into **პუნქტები** (Paragraphs):
   - `მთავრობის დადგენილების მე-3 მუხლის მე-2 პუნქტი`
 - Sub-divisions of parts or paragraphs are designated by Georgian alphabet letters in quotes:
   - `„ა“ ქვეპუნქტი`, `„ბ“ ქვეპუნქტი`, `„გ“ ქვეპუნქტი`
@@ -39,9 +39,7 @@ In Georgian, when citing a specific rule, the larger unit precedes the smaller u
 ## 2. Prime Articles (პრიმა მუხლები)
 
 When a new article is inserted between existing numbered articles without renumbering the entire code, it receives a numerical superscript index (or Latin-derived denomination):
-- `¹` = **პრიმა** (first additional article, e.g. `353¹`)
-- `²` = **სეკუნდა** (second additional article, e.g. `126²`)
-- `³` = **ტერცია** (third additional article, e.g. `144³`)
+- The law knows one word: **პრიმ** plus a digit (organic law on normative acts, 16.11). `353¹` is read `პრიმა`, `144³` is read `პრიმა სამი`.
 
 ### Why Prime Articles Matter
 A prime article constitutes an entirely separate statutory offense or rule:
@@ -51,13 +49,14 @@ Conflating `353` and `353¹` is a severe legal error that misidentifies the char
 
 ### Writing and Speaking Prime Articles
 - **Written Forms**:
-  - `353¹-ე მუხლი` (preferred with superscript)
+  - `353¹ მუხლი` (the form the codes use)
+  - `353¹-ე მუხლი` (also common)
   - `353-ე პრიმა მუხლი` (written in words)
   - `მუხლი 353¹`
 - **Spoken Form for TTS (`speech_text`)**:
   - `353¹-ე მუხლი` → `სამას ორმოცდამეცამეტე პრიმა მუხლი`
   - `353¹-ე მუხლის მე-2 ნაწილი` → `სამას ორმოცდამეცამეტე პრიმა მუხლის მეორე ნაწილი`
-  - `126²-ე მუხლი` → `ას ოცდამეექვსე სეკუნდა მუხლი`
+  - `144³ მუხლი` → `ას ორმოცდამეოთხე პრიმა სამი მუხლი`
 
 ---
 

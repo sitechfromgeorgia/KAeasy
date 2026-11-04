@@ -226,3 +226,18 @@ The golden run found 151 mismatches in `ka_speech`.
   - 12-hour time (`ექვსის ნახევარზე`): news TTS keeps 24-hour time;
   - `ანდროიდ`/`ვინდოუს`/`პითონ` without ი, and `ჩატჯიპიტმა`: the spoken forms Shorts approved by listening win, and so does the -ი sound class;
   - letter spacing (`ეიემდი` vs `ეი ემ დი`).
+
+## 4. P11 review (2026-11-04)
+
+The P11 tests passed, but they were written with the code. Cases outside them found the bugs below. `tests/test_p11_review.py` keeps them fixed.
+
+| Tool | Bug | Fix |
+|---|---|---|
+| `ka_lint` | `wrong_name` used the glossary's `avoid` column in the strict gate. It flagged 230 declined forms of correct names (`საქსტატის`, `ვისოლმა`), bare surnames (`ჟორდანია`, `არქიმედე`) and `მ2`. | The gate reads a new, short `wrong` list. `avoid` stays advice. |
+| `ka_lint` | `date_ordinal` missed shortened stems (`ოცდამეორე ნოემბრის`) and matched non-months (`მეორე მარტივი გზა`, `მეორე მაისური`). | `MONTH_FORM` lists whole case forms. |
+| `ka_fix` | `მე-22-ე ნოემბერს` was half fixed, `2024-ე ნოემბერი` lost its ending, shortened stems were skipped. | Days limited to 2-31, the same month forms. |
+| `ka_speech` | `სსსკ` was read as the Criminal Code and `სსპკ` as the Criminal Procedure Code. | Ambiguous abbreviations are read as letters. See the note below. |
+| `ka_speech` | `BOG-მა` → `ბანკიმ`, `სებ-მა` → `ეროვნული ბანკმა`, `მე-1 ივნისს` → `პირველი ივნისს`, `შპს` → `შა პე ეს` (failed its own `russian_letter` rule), `1000000-ე`, `2-ე მარტივი` read as a date. | Fixed. |
+
+`სსკ` and `სსსკ` mean different codes in civil and criminal decisions, so no code can pick one. Text meant for speech writes the full name.
+

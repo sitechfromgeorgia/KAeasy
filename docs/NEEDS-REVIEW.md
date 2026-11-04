@@ -35,3 +35,15 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 | `skills/georgian-names-numbers/references/brands.md`, `cases.md` | `OpenAI-ის`, `ChatGPT-ის`, `Spotify-ის` but `Gemini-ს`, `Perplexity-ს`, `Midjourney-ს` | Genitive of names ending in an -i sound: `-ის` or `-ს`? | Settled by P6: `-ს` (`OpenAI-ს`); instrumental `-ით` (see Correction). `ka_lint` flags neither form | done |
 | `skills/georgian-natural-style/references/calques.md`, `lint.py` | `ბე-ემ-ვე` was both ✅ (brands.md) and ❌ (calques.md) | Settled: `ბე-ემ-ვე` is the established spoken form of BMW; `ka_lint` allows it | done |
 | `skills/georgian-names-numbers/references/latin-names.md`, `speech.py` | `T` in letter table is `ტი`, but TBC is `თიბისი` | Letter `T` mapping in acronyms: should English `T` default to `თ` or `ტ` in acronyms? Evidence across 10+ acronyms shows `ტ` dominates in international tech acronyms (`TCP` → `ტი-სი-პი`, `TLS` → `ტი-ელ-ესი`, `TSMC` → `ტი-ეს-ემ-სი`, `TNT` → `ტი-ენ-ტი`, `TV` → `ტი-ვი`, `TB` → `ტი-ბი`), while `თ` is specific to local Georgian brands rooted in Georgian words (`TBC` → `თიბისი`, `Telasi` → `თელასი`, `TTC` → `თბილისის სატრანსპორტო კომპანია`). Recommendation: keep `T: ტი` in the global letter table and route local exceptions via `data/lexicon_ka.json` and `data/glossary/georgia-companies.json`. | for Louie |
+
+## P11 review: still open (2026-11-04)
+
+| Where | Question | Status |
+|---|---|---|
+| `georgia-companies.json`, `lexicon_ka.json` | PSP is spoken `პე ეს პე`: the written form is confirmed, the spoken one only likely | for Louie |
+| `georgia-companies.json`, `lexicon_ka.json` | BOG and GWP: full name or letters? No evidence found for how Georgians say them | for Louie |
+| `georgia-companies.json` | `m²` read `ემ კვადრატი`; `ვენდუ` may no longer exist; `ვანილა სქაი` is not in the gcaa.ge register | to check |
+| `speech.py` | `ასკ`: Administrative Procedure or Administrative Offences Code? It stays spelled as letters until a source settles it | to check |
+| `speech.py`, `citations.md` | `144³` read `პრიმა სამი`: the law gives `პრიმ` plus a digit, usage in court was not checked | to check |
+| `courts-institutions.md` | Bar association, appeal courts and Gurjaani court details: the sources could not be opened | not verified |
+
