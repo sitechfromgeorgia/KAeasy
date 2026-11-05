@@ -506,7 +506,8 @@ def joined(toks):
             out[i], out[i + 1] = head, last
         r = re.fullmatch(r"(?P<a>\d+)[–-](?P<b>\d+)", core)
         if r and nxt and nxt["core"] in RANGE_NOUNS:
-            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
+            end = r["a"][:2] + r["b"] if len(r["a"]) == 4 and len(r["b"]) == 2 else r["b"]  # 2025-26 წლებში
+            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(end)))
             out[i + 1] = RANGE_NOUNS[nxt["core"]]
         elif r and nxt and nxt["core"] in MONTH_MDE:
             out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))

@@ -17,3 +17,13 @@ from kaeasy import speech
 ])
 def test_acronym_endings(written, spoken):
     assert speech.speech(written) == spoken
+
+
+@pytest.mark.parametrize(("written", "spoken"), [
+    ("2025-26 წლებში", "ორი ათას ოცდახუთიდან ორი ათას ოცდაექვს წლამდე"),
+    ("1990-95 წლებში", "ათას ცხრაას ოთხმოცდაათიდან ათას ცხრაას ოთხმოცდათხუთმეტ წლამდე"),
+    ("2016-2019 წლებში", "ორი ათას თექვსმეტიდან ორი ათას ცხრამეტ წლამდე"),
+    ("10-15 წუთი", "ათიდან თხუთმეტ წუთამდე"),
+])
+def test_year_range_keeps_the_century(written, spoken):
+    assert speech.speech(written) == spoken
