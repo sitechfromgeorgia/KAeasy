@@ -106,7 +106,7 @@ For the complete 7-case paradigm, postpositions, and 200+ name dictionary, see `
 | 54 | TSMC | TSMC-მ | TSMC-ს | TSMC-ს | ტი-ეს-ემ-სი |
 | 55 | ASML | ASML-მა | ASML-ის | ASML-ს | ეი-ეს-ემ-ელი |
 | 56 | ARM | ARM-მა | ARM-ის | ARM-ს | არმი |
-| 57 | Broadcom | Broadcom-მა | Broadcom-ის | Broadcom-ს | ბროუდკომი |
+| 57 | Broadcom | Broadcom-მა | Broadcom-ის | Broadcom-ს | ბროდკომი |
 | 58 | Cisco | Cisco-მ | Cisco-ს | Cisco-ს | სისკო |
 | 59 | GitHub | GitHub-მა | GitHub-ის | GitHub-ს | გითჰაბი |
 | 60 | GitLab | GitLab-მა | GitLab-ის | GitLab-ს | გითლაბი |

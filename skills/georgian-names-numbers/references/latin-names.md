@@ -175,7 +175,7 @@ A comprehensive reference of 282 Latin names across AI companies and models, soc
 | TSMC | i-sound | TSMC-მ | TSMC-ს | TSMC-ს | TSMC-ით | TSMC-ში | TSMC-ები | ტი-ეს-ემ-სი |
 | ASML | consonant | ASML-მა | ASML-ს | ASML-ის | ASML-ით | ASML-ში | ASML-ები | ეი-ეს-ემ-ელი |
 | ARM | consonant | ARM-მა | ARM-ს | ARM-ის | ARM-ით | ARM-ში | ARM-ები | არმი |
-| Broadcom | consonant | Broadcom-მა | Broadcom-ს | Broadcom-ის | Broadcom-ით | Broadcom-ში | Broadcom-ები | ბროუდკომი |
+| Broadcom | consonant | Broadcom-მა | Broadcom-ს | Broadcom-ის | Broadcom-ით | Broadcom-ში | Broadcom-ები | ბროდკომი |
 | Cisco | o-u | Cisco-მ | Cisco-ს | Cisco-ს | Cisco-თი | Cisco-ში | Cisco-ები | სისკო |
 | GitHub | consonant | GitHub-მა | GitHub-ს | GitHub-ის | GitHub-ით | GitHub-ში | GitHub-ები | გითჰაბი |
 | GitLab | consonant | GitLab-მა | GitLab-ს | GitLab-ის | GitLab-ით | GitLab-ში | GitLab-ები | გითლაბი |
