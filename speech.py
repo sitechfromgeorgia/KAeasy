@@ -180,7 +180,8 @@ def attach(nominative, suf, keep_i=False):
     if nominative.endswith("ი") and len(last) > 1 and last[-2] not in VOWELS and not keep_i:
         return nominative[:-1] + {"მდე": "ამდე", "დან": "იდან", "თვის": "ისთვის", "დ": "ად"}.get(suf, suf)  # ტამდე
     if nominative[-1] in VOWELS:  # research table: vowel stems don't truncate (ტესლამ, ტესლას, ენვიდიას)
-        return nominative + {"ის": "ს", "მა": "მ", "ით": "თ" if nominative[-1] == "ი" else "თი", "ად": "დ"}.get(suf, suf)
+        return nominative + {"ის": "ს", "მა": "მ", "ით": "თ" if nominative[-1] == "ი" else "თი", "ად": "დ",
+                              "ი": ""}.get(suf, suf)  # AMD-ი → ეი ემ დი: a vowel stem has no nominative ი
     return nominative + suf
 
 
@@ -450,8 +451,9 @@ def speak_token(core, next_word="", prev_word="", known=None):
     m = re.fullmatch(r"(?P<w>[A-Za-z]+)-?(?P<n>\d+)(?P<rest>[A-Za-z]*)", core)  # B300, GPT-5, M4
     if m and m["w"].isupper():
         return f'{spell(m["w"])} {cardinal(int(m["n"]))}' + (f' {spell(m["rest"])}' if m["rest"] else "")
-    if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი, but RTX 5090 → არ ტი ექს (a model number follows)
-        return spell(core) if re.match(r"\d", TOKEN.match(next_word or "")["core"]) else spell_name(core)
+    if is_acronym(core):  # AI, GPU, AMD, TSMC; SMS → ეს ემ ესი, but a following word keeps the bare letters:
+        # RTX 5090 → არ ტი ექს, VPN დანამატი → ვი პი ენ დანამატი (usually a modifier; a subject takes ი in writing)
+        return spell(core) if next_word and re.match(r"[\dა-ჰ]", TOKEN.match(next_word)["core"]) else spell_name(core)
     m = re.fullmatch(r"(?P<w>[ა-ჰ]{2,6})-(?P<suf>[ა-ჿ]+)", core)  # სზაკ-ის, შსს-ს, სსკ-ის
     if m:
         w, suf = m["w"], m["suf"]
@@ -476,7 +478,7 @@ def pairs(text, say=None):
         m = TOKEN.match(tok)
         nxt = toks[i + 1] if i + 1 < len(toks) else ""
         prev = TOKEN.match(toks[i - 1])["core"] if i else ""
-        spoken = multi.get(i) or speak_token(m["core"], nxt, prev, known)
+        spoken = multi.get(i) or speak_token(m["core"], "" if m["post"] else nxt, prev, known)  # a comma ends the phrase
         out.append((tok, tok if spoken is None else m["pre"] + spoken + m["post"]))
     return out
 
@@ -504,7 +506,8 @@ def joined(toks):
             out[i], out[i + 1] = head, last
         r = re.fullmatch(r"(?P<a>\d+)[–-](?P<b>\d+)", core)
         if r and nxt and nxt["core"] in RANGE_NOUNS:
-            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
+            end = r["a"][:2] + r["b"] if len(r["a"]) == 4 and len(r["b"]) == 2 else r["b"]  # 2025-26 წლებში
+            out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(end)))
             out[i + 1] = RANGE_NOUNS[nxt["core"]]
         elif r and nxt and nxt["core"] in MONTH_MDE:
             out[i] = inflect(cardinal(int(r["a"])), "დან") + " " + stem(cardinal(int(r["b"])))
