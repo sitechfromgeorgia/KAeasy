@@ -110,7 +110,7 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
           "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "date_ordinal",
-          "wrong_name"}
+          "wrong_name", "negation"}
 
 COMPANIES_PATH = Path(__file__).resolve().parent / "data" / "glossary" / "georgia-companies.json"
 # `wrong` lists spellings that are never right (ტიბისი, ტელასი). `avoid` is advice for the writer and stays out of
@@ -373,6 +373,22 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                 if any(in_tag[m.start():m.end()]):
                     continue
                 add("wrong_name", "error", f"არასწორი კომპანიის/ორგანიზაციის სახელი: „{m.group(0)}“ → „{pref}“", m)
+
+    if on("negation"):
+        for m in re.finditer(r"(?<![ა-ჰ])(ვერცერთ[ა-ჰ]*|არცერთ[ა-ჰ]*)([^,.;:!?\n\r]*?(?<![ა-ჰ])(არ|ვერ)(?![ა-ჰ]))", body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            add("negation", "error", "ვერცერთი/არცერთი თავად უარყოფითია, ზმნას არ არ სჭირდება", m)
+
+    if on("negation_split") or on("split_negation"):
+        for m in re.finditer(r"(?<![ა-ჰ])(ვერც|არც)\s+ერთი(?![ა-ჰ])", body):
+            if any(in_tag[m.start():m.end()]):
+                continue
+            after = body[m.end():m.end() + 30]
+            # Exception: when ერთი is a numeral (e.g. contrasted with another number: არც ერთი და არც ორი)
+            if re.match(r"^\s+(?:და|ან|თუ)\s+(?:(?:არც|ვერც)\s+)?(?:ორი|სამი|ოთხი)", after):
+                continue
+            add("negation_split", "warn", f"„{m.group(0)}“ → „{m.group(1)}ერთი“ (ერთად წერა)", m)
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()

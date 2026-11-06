@@ -378,6 +378,18 @@
     "reference": "Samsung-მა განაცხადა, რომ ბოლო ორ კვარტალში 3-ნანომეტრიანი ჩიპების წარმოების ეფექტიანობა 15%-ით გაიზარდა. მწარმოებელი მობილური ჩიპსეტების დამპროექტებლებისგან ახალი შეკვეთების მიღებას იმედოვნებს."
   },
   {
+    "id": "news_031",
+    "category": "news_rewrite",
+    "mode": "article",
+    "prompt": "Rewrite this news paragraph into Georgian: The committee reviewed both proposals on Friday, but neither was approved. A spokesperson confirmed that neither project met the technical specifications.",
+    "typical_mistakes": [
+      "Adding a redundant negative particle after არცერთი or ვერცერთი (არცერთი არ დამტკიცდა instead of არცერთი დამტკიცდა).",
+      "Writing არც ერთი or ვერც ერთი split instead of single-word spelling.",
+      "Using double negation with a positive verb form when არცერთი already conveys the negation."
+    ],
+    "reference": "პარასკევს კომიტეტმა ორივე წინადადება განიხილა, თუმცა არცერთი დამტკიცდა. პრესსპიკერმა დაადასტურა, რომ ტექნიკურ მოთხოვნებს ვერცერთი პროექტი აკმაყოფილებდა."
+  },
+  {
     "id": "headline_001",
     "category": "headline",
     "mode": "article",

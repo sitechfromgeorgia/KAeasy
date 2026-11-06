@@ -26,7 +26,7 @@ mistakes memory feeds every correction back to all agents.
 | `skills/georgian-legal` | Legal text: citations (prime articles), Constitution, 9 codes, courts, confusable terms, contracts |
 | `skills/georgian-support` | Customer support, empathy, problem-resolution tone |
 | `skills/georgian-translation` | Translation protocol, false friends, localization |
-| `evals/` | 120 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |
+| `evals/` | 121 offline benchmark tasks (news rewrite, headline, Shorts hook, UI error) with mistake checklists & scoring |
 | `ka_lint` tool | Mechanical checks, modes `article / social / ui / speech`, `strict` for publish gates, `fields` for JSON scripts (`{"say": "speech", "*": "social"}`) |
 | `ka_fix` tool | Fixes what strict lint flags and a machine can fix: quotes, brand hyphens, transliterated brands, decimal comma, dashes, spacing. Never grammar |
 | `ka_speech` tool | Written Georgian → TTS text: numbers with case, halves, times, ranges, money, units, phone numbers, versions, brands (`data/lexicon_ka.json`, endings by `data/latin_endings.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
@@ -57,7 +57,7 @@ python lint.py --file draft.md --mode social --summary
 
 ## Evals ($0)
 
-`evals/tasks.json` has 120 tasks; `evals/score.py` scores answers offline. `evals/run_opencode.py --n 5` runs 20
+`evals/tasks.json` has 121 tasks; `evals/score.py` scores answers offline. `evals/run_opencode.py --n 5` runs 20
 of them through a free opencode model with and without Kaeasy and writes `evals/RESULTS.md` (40 requests; it stops
 when the free quota, shared with SiTech Shorts, is used up).
 
@@ -75,7 +75,7 @@ uv run --with ruff ruff check .
 
 ## Evals Benchmark
 
-See [`evals/README.md`](evals/README.md) for the 120-task benchmark and zero-cost offline scoring utility:
+See [`evals/README.md`](evals/README.md) for the 121-task benchmark and zero-cost offline scoring utility:
 
 ```bash
 # Inspect a task prompt, reference answer, and mistake checklist
@@ -92,3 +92,7 @@ See `AGENTS.md` for the rules of the repo (how to add a rule or an example witho
 The linter and the first rules come from the SiTech fleet's `ge_ka_lint.py`, `GEORGIAN-STYLE.md` and the
 `georgian-copy-quality` skill, plus the SiTech Shorts rulebook (K1-K22), `normalize_ka.py`, its lexicon and
 review edits.
+
+## Changelog
+
+- **0.5.3**: Added `negation` lint & auto-fix rule for `ვერცერთი`/`არცერთი` (inherent negation takes positive verb without `არ`/`ვერ`), `negation_split` warning for split spelling, grammar docs, and eval task `news_031`.
