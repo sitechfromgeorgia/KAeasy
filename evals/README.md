@@ -1,6 +1,6 @@
 # Georgian Agent Writing Evals (`evals/`)
 
-This directory contains **120 short Georgian writing tasks** reflecting the exact tasks Hermes agents execute daily.
+This directory contains **121 short Georgian writing tasks** reflecting the exact tasks Hermes agents execute daily.
 Each task includes the prompt, the linter evaluation mode, a checklist of mistakes weak models typically make on it, and a verified gold-standard reference answer.
 
 > [!IMPORTANT]
@@ -10,11 +10,11 @@ Each task includes the prompt, the linter evaluation mode, a checklist of mistak
 
 ## Benchmark Composition
 
-The 120 tasks are divided equally across 4 core production categories (30 tasks each):
+The 121 tasks are divided across 4 core production categories:
 
 | Category | Task IDs | Linter Mode | Description | Key Focus |
 |---|---|---|---|---|
-| **News Rewrite** | `news_001` – `news_030` | `article` | Short English news paragraphs (tech, science, finance, local events) to rewrite into natural Georgian | Ergative case (`-მა`), numbers + singular, hyphenated Latin brands, no calques, no AI filler |
+| **News Rewrite** | `news_001` – `news_031` | `article` | Short English news paragraphs (tech, science, finance, local events) to rewrite into natural Georgian | Ergative case (`-მა`), numbers + singular, hyphenated Latin brands, no calques, no AI filler, negation concord |
 | **Headline** | `headline_001` – `headline_030` | `article` | Event and product summaries to condense into punchy Georgian news headlines | **No trailing period**, active voice, actor in ergative, no vague clickbait |
 | **Shorts Hook** | `shorts_001` – `shorts_030` | `social` | 3-second opening video hooks (6–14 words) for vertical shorts/reels | Consistent `შენ` register, no formulaic YouTube openers, active finite verbs |
 | **UI Error** | `ui_001` – `ui_030` | `ui` | System errors, form validations, empty states, and dialog prompts | "What happened + what to do" (მიზეზი + გამოსავალი), helpful tone, period at end |

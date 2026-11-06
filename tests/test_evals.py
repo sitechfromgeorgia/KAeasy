@@ -21,7 +21,7 @@ def test_evals_files_exist():
 
 def test_evals_task_count_and_distribution():
     tasks = json.loads(TASKS_FILE.read_text(encoding="utf-8"))
-    assert len(tasks) == 120
+    assert len(tasks) == 121
 
     categories = {}
     ids = set()
@@ -39,7 +39,7 @@ def test_evals_task_count_and_distribution():
         assert len(t["reference"].strip()) > 5
 
     assert categories == {
-        "news_rewrite": 30,
+        "news_rewrite": 31,
         "headline": 30,
         "shorts_hook": 30,
         "ui_error": 30
@@ -63,7 +63,7 @@ def test_every_reference_answer_lints_clean_in_strict_mode(tid, category, mode, 
 
 def test_score_tool_roundtrip():
     tasks = score.load_tasks()
-    assert len(tasks) == 120
+    assert len(tasks) == 121
 
     # Score reference answer for news_001
     task = tasks["news_001"]

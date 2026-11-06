@@ -218,3 +218,12 @@ Harmonize the particle with the pronoun:
 - `არავინ არ იცის` / `არაფერი არ მინახავს` (all `არ-`)
 - `ვერავინ ვერ გაიგო` / `ვერაფერი ვერ ვნახე` (all `ვერ-`)
 - ❌ `*არავინ ვერ გაიგო` (discordant mixture).
+
+### ვერცერთი და არცერთი
+Unlike the **არავინ** type (`არავინ`, `არაფერი`, `არსად`), which requires negative concord (`არავინ არ იცის`),
+the forms **ვერცერთი** and **არცერთი** inherently contain negation. Therefore, the verb used with them is in the
+**positive form**, and a second negative particle (`არ`, `ვერ`) is **not** added.
+
+- **Orthography**: House style requires single-word spelling: `ვერცერთი` and `არცერთი`. Do not write them split (`*ვერც ერთი`, `*არც ერთი`), except when `ერთი` is a numeral (e.g. `ვერც ერთ ღამეს`).
+- ✅ `ვერცერთი შესრულდა.` (❌ `*ვერცერთი არ შესრულდა.`)
+- ✅ `არცერთი მოვიდა.` (❌ `*არცერთი არ მოვიდა.`)

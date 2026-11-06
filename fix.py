@@ -52,6 +52,8 @@ def fix_text(text: str) -> tuple[str, list[str]]:
     # Ordinal day of month: 22-ე ნოემბრის, მე-22 ნოემბერს → 22 ნოემბერს. Day 1 stays 1-ელი.
     sub(rf"(?<![\w-])(?:მე-)?({MONTH_DAY})-ე\s+({MONTH_FORM})(?![ა-ჰ])", r"\1 \2", "ordinal_date")
     sub(rf"(?<![\w-])მე-({MONTH_DAY})\s+({MONTH_FORM})(?![ა-ჰ])", r"\1 \2", "ordinal_date")
+    # Forms ვერცერთი and არცერთი inherently contain negation; remove redundant არ or ვერ before the verb.
+    sub(r"(?<![ა-ჰ])(ვერცერთ[ა-ჰ]*|არცერთ[ა-ჰ]*)([^,.;:!?\n\r]*?)\s+(?:არ|ვერ)\s+", r"\1\2 ", "negation")
 
     for ka, rx in TRANSLIT_RE.items():
         def latin(m: re.Match, ka: str = ka) -> str:

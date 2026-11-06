@@ -47,6 +47,8 @@ def checks(text, **kw):
     ("353 მუხლის პირველი მუხლი არ არსებობს.", "legal_citation"),
     ("მეორე ოქტომბერს დაიწყო.", "date_ordinal"),
     ("ოცდამეცხრე ნოემბერს გაგრძელდება.", "date_ordinal"),
+    ("ვერცერთი არ შესრულდა.", "negation"),
+    ("არცერთი არ მოვიდა.", "negation"),
 ])
 def test_detects(text, check):
     assert check in checks(text)
@@ -79,6 +81,10 @@ def test_detects(text, check):
     "შოთას შესახებ დაწერეს.",
     "მეტროს შესახებ სტატია გამოქვეყნდა.",
     "Meta-ს შესახებ ინფორმაცია გავრცელდა.",
+    "ვერცერთი შესრულდა.",
+    "არცერთი მოვიდა.",
+    "არავინ არ იცის.",
+    "არავინ არ იცის პასუხი.",
 ])
 def test_clean(text):
     assert lint.check_text(text) == []
@@ -234,3 +240,37 @@ def test_latin_name_endings(text, check, want):
 ])
 def test_latin_name_endings_clean(text):
     assert [f for f in lint.check_text(text) if f.check.startswith("latin_")] == []
+
+
+def test_negation_and_split():
+    # Both incorrect sentences trigger the error
+    f1 = lint.check_text("ვერცერთი არ შესრულდა.")
+    assert any(f.check == "negation" and f.severity == "error" for f in f1)
+    assert any("ვერცერთი/არცერთი თავად უარყოფითია, ზმნას არ არ სჭირდება" in f.message for f in f1)
+
+    f2 = lint.check_text("არცერთი არ მოვიდა.")
+    assert any(f.check == "negation" and f.severity == "error" for f in f2)
+    assert any("ვერცერთი/არცერთი თავად უარყოფითია, ზმნას არ არ სჭირდება" in f.message for f in f2)
+
+    # Both correct sentences are clean
+    assert lint.check_text("ვერცერთი შესრულდა.") == []
+    assert lint.check_text("არცერთი მოვიდა.") == []
+
+    # არავინ არ იცის is still clean and unchanged
+    assert lint.check_text("არავინ არ იცის.") == []
+    assert lint.check_text("არავინ არ იცის პასუხი.") == []
+
+    # Strict mode includes negation
+    assert "negation" in checks("ვერცერთი არ შესრულდა.", strict=True)
+    assert "negation" in checks("არცერთი არ მოვიდა.", strict=True)
+
+    # Separate warning for split spelling: ვერც ერთი and არც ერთი
+    w1 = lint.check_text("არც ერთი მოვიდა.")
+    assert any(f.check == "negation_split" and f.severity == "warn" for f in w1)
+
+    w2 = lint.check_text("ვერც ერთი შესრულდა.")
+    assert any(f.check == "negation_split" and f.severity == "warn" for f in w2)
+
+    # Exception: when ერთი is a numeral, e.g. ვერც ერთ ღამეს
+    w3 = lint.check_text("ვერც ერთ ღამეს არ უძინია.")
+    assert not any(f.check == "negation_split" for f in w3)

@@ -508,3 +508,5 @@ Each line: ❌ wrong, ✅ right, rule. Read them before writing; copy the right 
 - ❌ არ იდარდო, პრობლემას მოვაგვარებთ. ✅ ნუ დარდობ, პრობლემას მოვაგვარებთ. (prohibition: ნუ დარდობ)
 - ❌ კომპანიამ კრიზისს არ გაუძლო და გაკოტრდა. ✅ კომპანიამ კრიზისს ვერ გაუძლო და გაკოტრდა. (inability to withstand: ვერ გაუძლო)
 - ❌ არავინ იცოდა სიმართლე. ✅ არავინ არ იცოდა სიმართლე. (double negation concord)
+- ❌ ვერცერთი არ შესრულდა. ✅ ვერცერთი შესრულდა. (ვერცერთი inherently contains negation, verb takes positive form)
+- ❌ არცერთი არ მოვიდა. ✅ არცერთი მოვიდა. (არცერთი inherently contains negation, verb takes positive form)
