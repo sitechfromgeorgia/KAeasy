@@ -66,7 +66,7 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 - It is a past participle plus იქნა or იქნება. It forms one-person perfective verbs only, so it has no present-subseries forms, and it serves animate and inanimate subjects alike. It is used mostly for verbs that do not easily form a simple passive, but it is spreading to verbs that do, so both occur: დალაგებულ იქნა / დალაგდა. (Peikrishvili §124; Kvachadze §34)
 - Before the auxiliary the participle is bare (stem form, no -ი); after it, the participle takes the nominative -ი: ✅ გაღებულ იქნა, იქნა გაღებული, გაგზავნილ იქნა, მოტანილ იქნა; ❌ გაღებული იქნა. (Peikrishvili §124, §131 point 5; Kvachadze §34)
 - A participle with -ი plus იყო or იქნება is a different construction, a compound predicate naming a state; it takes იყო, not იქნა: ✅ თანხა გაღებული იყო (state), ✅ თანხა გაღებულ იქნება (passive); ❌ თანხა გაღებული იქნა. (Kvachadze §34)
-- These rules say how to write the construction when it is used. For news and business copy Kaeasy still prefers the active voice or a simple passive (syntax.md §3).
+- These rules say how to write the construction when it is used. For news and business copy KAeasy still prefers the active voice or a simple passive (syntax.md §3).
 
 ---
 

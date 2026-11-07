@@ -1,4 +1,4 @@
-"""Kaeasy Hermes plugin: Georgian writing skills, a zero-cost linter and a shared mistakes memory.
+"""KAeasy Hermes plugin: Georgian writing skills, a zero-cost linter and a shared mistakes memory.
 
 Registers every skills/<name>/SKILL.md as `kaeasy:<name>`, five tools (ka_lint, ka_fix, ka_speech, ka_learn,
 ka_mistakes) and a

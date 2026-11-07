@@ -49,9 +49,9 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 
 ## Book review: for Louie (2026-11-07)
 
-The rules added in v0.6.0 come from four books. Where a book disagreed with an existing Kaeasy rule, the rule stayed until Louie decided. All 14 rows are now decided (2026-11-07). Louie decided the four numeral rows and the `ჩვენთაგანი` row, and said that otherwise the books show what is correct, so the other rows follow the book.
+The rules added in v0.6.0 come from four books. Where a book disagreed with an existing KAeasy rule, the rule stayed until Louie decided. All 14 rows are now decided (2026-11-07). Louie decided the four numeral rows and the `ჩვენთაგანი` row, and said that otherwise the books show what is correct, so the other rows follow the book.
 
-| Where | Kaeasy said | The book says | Source | Decision (2026-11-07) |
+| Where | KAeasy said | The book says | Source | Decision (2026-11-07) |
 |---|---|---|---|---|
 | `syntax.md` §7 | Negative concord is primary | Doubling the negative is optional | Kvachadze §12 | Book: both correct, doubling the common form; lint flags neither |
 | `syntax.md` §1 | `ნეტავ`, `ნეტა` | `ნეტავი`, `ნეტა` | Kvachadze §20 | Book: `ნეტავ`, `ნეტავი`, `ნეტა` all correct |
@@ -65,7 +65,7 @@ The rules added in v0.6.0 come from four books. Where a book disagreed with an e
 | `dates-numbers.md` | `ერთნახევარი`, `ორნახევარი` | `ოთხ-ნახევარი`, `ტონა-ნახევარი` | Peikrishvili §56, §59 | Louie: numbers one word (`ოთხნახევარი`), units hyphenated (`კილო-ნახევარი`) |
 | `dates-numbers.md` | `ას მეერთე`, spaced | `ასმეერთე`, one word | Peikrishvili §59 | Louie: spaced, as now |
 | `dates-numbers.md`, `lint.py` | `1-ელი`, `100-ე` | `1-ლი`, `მე-100` | Peikrishvili §59 | Louie: `1-ლი`; `1-ელი` and `100-ე` are strict lint errors |
-| not in Kaeasy | | `ჩვენთაგანი`, `თქვენთაგანი` are wrong, though common in print | Peikrishvili §41 | Louie: advice in `ka_lint` (`dated_form`), not strict |
+| not in KAeasy | | `ჩვენთაგანი`, `თქვენთაგანი` are wrong, though common in print | Peikrishvili §41 | Louie: advice in `ka_lint` (`dated_form`), not strict |
 | `noun-stems.md` §2 | Syncope before ი after რ, ლ, მ, ნ and a rare დ | Also rarely before other consonants: `ბეჭედი`, `ხოხობი`, `ნიჩაბი` | Peikrishvili §25 | Book: added |
 
 Also decided: Peikrishvili writes `მე-` first when an ordinal's parts are joined without `და`, which could mean `მე-101` rather than `101-ე`. The book gives no example above 100. Louie confirmed `101-ე` (2026-11-07), as *matsne.gov.ge* writes it, so `101-ე` and `180-ე` stay.
@@ -85,7 +85,7 @@ book disagrees with one of Louie's decisions, Louie decided on 2026-11-07 (asked
 |---|---|---|
 | `clauses.md` §2, `particles-adverbs.md` | `რამეთუ` for "because": Kvachadze §180 calls it Old Georgian, Peikrishvili §189 accepts it | Louie 2026-11-07: fully correct |
 | `cases.md` | First noun before `და`: Peikrishvili §13 requires `მთასა და ბარს`, Kvachadze §141 says "usually" | Louie 2026-11-07: both correct, `-სა` preferred |
-| `punctuation.md`, `dates-numbers.md` | Rough quantity: the book writes a spaced dash (`20 — 30`); Kaeasy writes ranges with a plain hyphen (`10-14`) | Edo's rule bans `—` and `–` in published copy, so the hyphen stays; `punctuation.md` now says so above its dash rules |
+| `punctuation.md`, `dates-numbers.md` | Rough quantity: the book writes a spaced dash (`20 — 30`); KAeasy writes ranges with a plain hyphen (`10-14`) | Edo's rule bans `—` and `–` in published copy, so the hyphen stays; `punctuation.md` now says so above its dash rules |
 | `agreement.md`, `verb-classes.md` | Plural things: Kvachadze §8, §56 accepts both verb numbers; Louie's news rule (2026-11-02) keeps the singular | Louie 2026-11-07: `ფასები გაიზარდა`, the rule stands |
 | `case-use.md` | `დაპირდა`: Chikobava writes it without `ჰ-`; Louie's rule keeps `ჰ-` | `ჰ-` kept |
 | `case-use.md` | Duration `ორი წელიწადი`: Kvachadze calls the nominative not the literary norm in one place and lists it in another | dative preferred, nominative not ❌ |

@@ -1,4 +1,4 @@
-"""Before/after eval: does Kaeasy make a free model write better Georgian? ($0, opencode free models.)
+"""Before/after eval: does KAeasy make a free model write better Georgian? ($0, opencode free models.)
 
 Runs N tasks from tasks.json twice through `opencode run`: once with only the task, once with the
 kaeasy:georgian-writing SKILL and the task's sibling SKILL in front of it. Scores both with score.py (ka_lint
@@ -86,7 +86,7 @@ def report(tasks: list[dict], model: str) -> str:
     for label in ("base", "kaeasy"):
         preds = json.loads((OUT / f"{label}.json").read_text(encoding="utf-8"))
         res[label] = score.score_batch({k: v for k, v in preds.items() if k in index and v}, index)
-    lines = [f"# Kaeasy eval: {model}", "", f"{time.strftime('%Y-%m-%d')} · {len(tasks)} tasks · ka_lint strict",
+    lines = [f"# KAeasy eval: {model}", "", f"{time.strftime('%Y-%m-%d')} · {len(tasks)} tasks · ka_lint strict",
              "", "| category | base clean | kaeasy clean |", "|---|---|---|"]
     empty = {"clean": 0, "total": 0}
     for c in sorted({t["category"] for t in tasks}):
@@ -100,7 +100,7 @@ def report(tasks: list[dict], model: str) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Kaeasy before/after eval on a free opencode model")
+    ap = argparse.ArgumentParser(description="KAeasy before/after eval on a free opencode model")
     ap.add_argument("--n", type=int, default=5, help="tasks per category")
     ap.add_argument("--model", default="opencode/deepseek-v4.1-flash-free")
     ap.add_argument("--timeout", type=int, default=420)

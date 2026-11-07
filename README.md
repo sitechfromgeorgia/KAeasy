@@ -1,4 +1,4 @@
-# Kaeasy
+# KAeasy
 
 Georgian (ქართული) writing skills for AI agents. A [Hermes Agent](https://hermes-agent.nousresearch.com/docs)
 plugin that helps cheap models (DeepSeek, GLM, gemma) write Georgian that a native editor would publish.
@@ -44,7 +44,7 @@ and are not listed in `<available_skills>`, which is why the hook exists. Disabl
 ## Install on a Hermes host
 
 ```bash
-git clone https://github.com/sitechfromgeorgia/kaeasy /root/.hermes/shared-plugins/kaeasy
+git clone https://github.com/sitechfromgeorgia/KAeasy /root/.hermes/shared-plugins/kaeasy
 ln -s /root/.hermes/shared-plugins/kaeasy /root/.hermes/profiles/<profile>/plugins/kaeasy
 # enable it for the profile (hermes plugins enable kaeasy, or plugins.enabled in config.yaml), then restart
 # the gateway and check:  hermes plugins list
@@ -63,7 +63,7 @@ python lint.py --file draft.md --mode social --summary
 ## Evals ($0)
 
 `evals/tasks.json` has 121 tasks; `evals/score.py` scores answers offline. `evals/run_opencode.py --n 5` runs 20
-of them through a free opencode model with and without Kaeasy and writes `evals/RESULTS.md` (40 requests; it stops
+of them through a free opencode model with and without KAeasy and writes `evals/RESULTS.md` (40 requests; it stops
 when the free quota, shared with SiTech Shorts, is used up).
 
 ## Seed the memory
@@ -100,6 +100,7 @@ review edits.
 
 ## Changelog
 
+- **0.7.2**: The name is written KAeasy (repo renamed to `sitechfromgeorgia/KAeasy`; the plugin id stays `kaeasy`).
 - **0.7.1**: Louie's answers to the round-2 questions: `რამეთუ` (= `რადგან`) is correct; `მთასა და ბარს` is preferred, `მთას და ბარს` is not an error; `რაც არ უნდა მოხდეს` is preferred; `ფასები გაიზარდა` stays the news rule; `T` in acronyms stays `ტ`; `BOG` is read `საქართველოს ბანკი` and `GWP` `ჯივიპი`. `punctuation.md` notes that Edo's no-dash rule governs published copy.
 - **0.7.0**: Round 2 of the book rules. The 187 cards left out of 0.6.0 were held back mostly because the books are old; Louie decided the books decide, so 138 were rechecked by Opus against the page images (132 kept) and 157 were written into the grammar, style and support references. Fixes found on the way: `არავინ იცის` and `არ იდარდო` were wrongly marked ❌ in `grammar-fixes.md`; `ნუ` takes the present or future, not the optative; native `-ძე` surnames truncate (`ჭელიძის`). New `wrong_form`: `ჩემს მიერ` → `ჩემ მიერ`; new advice: `ჩემსკენ` → `ჩემკენ`.
 - **0.6.0**: Rules from four Georgian grammar books (Peikrishvili, Kvachadze, Chikobava, Khalvashi), in the writer's own words with the source. New references: `case-use`, `adjectives-pronouns`, `verb-forms`, `clauses`, `punctuation`, `particles-adverbs`. New checks: `wrong_form` (strict, exact forms from `data/wrong_forms.json`) and `dated_form` (advice). All 14 book-review points are decided (`docs/NEEDS-REVIEW.md`): the first is written `1-ლი`, whole hundreds `მე-100`, and `ორი ათას` keeps its nominative, all three strict; `ჩვენთაგანი` gets advice; `რომ` may be dropped after wish and necessity; subject-verb-object is a usual order. Speech now reads ordinals with case endings (`1-ლში`, `21-ეზე`).

@@ -204,7 +204,7 @@ def test_speech_golden_targets_lint_clean():
 def run_standalone():
     """Standalone diagnostic runner for adversarial and speech fixtures."""
     print("=" * 70)
-    print("Kaeasy Fixture Test Runner")
+    print("KAeasy Fixture Test Runner")
     print("=" * 70)
 
     print(f"\n1. Adversarial Fixtures ({len(ADVERSARIAL_FIXTURES)} files):")

@@ -2,7 +2,7 @@
 
 This reference defines how written numbers, dates, ordinals, time, percent, and currencies are normalized into spoken Georgian (`speech_text`) for TTS engines (Gemini TTS, Azure Speech, Edge-TTS, Piper).
 
-Source: SiTech Shorts `normalize_ka.py` and Kaeasy `speech.py` specification.
+Source: SiTech Shorts `normalize_ka.py` and KAeasy `speech.py` specification.
 
 ---
 

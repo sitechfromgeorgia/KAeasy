@@ -42,7 +42,7 @@ series: `ყველა` singular, `ყველანი` plural.
 - `-ები` subject naming things: no firm rule, both numbers are common. A singular verb is frequent, above all with
   passive verbs: ✅ `ხეები დგას`, `მთები ინგრეოდა`, `ფოთლები ეყარა`. Plural is usual when the thing acts like a living
   agent: ✅ `მთებმა დახუჭეს თვალები`. Do not "correct" a singular verb after things. (Kvachadze §8, §56)
-  In news copy Kaeasy keeps the singular for things (`ფასები გაიზარდა`), and a plural verb for organizations
+  In news copy KAeasy keeps the singular for things (`ფასები გაიზარდა`), and a plural verb for organizations
   acting as agents (`კომპანიებმა განაცხადეს`): Louie's decision of 2026-11-02, confirmed 2026-11-07 (`ფასები` is
   already plural, so `ფასები გაიზარდა`), see `verb-classes.md` Pitfall 4.
 - A verb with its own plural stem takes it after living beings and the singular stem after things:

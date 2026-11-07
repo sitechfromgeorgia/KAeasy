@@ -40,7 +40,7 @@ output, or the next build reverts it.
 ## Gate
 
 `ka_lint` with `mode: social`, `strict: true`. For Shorts the pipeline's own `ka_check.py` (rules K1-K22 in
-`shorts/ka_style.md`) also runs; Kaeasy and that rulebook must agree. If they differ, report it.
+`shorts/ka_style.md`) also runs; KAeasy and that rulebook must agree. If they differ, report it.
 
 ## Examples
 

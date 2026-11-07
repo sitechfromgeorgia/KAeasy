@@ -28,7 +28,7 @@ Chikobava, General Linguistics (1946). Kvachadze and Chikobava reflect the liter
   form, active in meaning. The subject is nominative in every series, and the person and the thing are both
   dative; the cases do not change. A nominative thing, with or without an ergative subject, is wrong in
   literary Georgian. Peikrishvili notes that living speech treats the უყვება type as transitive (მოუყვა მან მას
-  ის); write the nominative subject. Chikobava spells დაპირდა without ჰ; Kaeasy keeps the ჰ- in standard copy
+  ის); write the nominative subject. Chikobava spells დაპირდა without ჰ; KAeasy keeps the ჰ- in standard copy
   (Louie's decision). Example: შვილს საჩუქარს დაჰპირდა · ზაქრო ამ ამბავს მოუყვა · დავითი მოუყვა სიმონს ამბავს ·
   ❌ ზაქრომ ეს ამბავი მოუყვა · ❌ დავითმა მოუყვა სიმონს ამბავი · ❌ ჯვარი დაჰპირდნენ.
   (Kvachadze §51; Chikobava §56; Peikrishvili §114)

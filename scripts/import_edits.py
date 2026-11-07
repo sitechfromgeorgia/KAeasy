@@ -1,4 +1,4 @@
-"""Seed the Kaeasy mistakes memory from SiTech Shorts review edits (data/edits.jsonl on the hub).
+"""Seed the KAeasy mistakes memory from SiTech Shorts review edits (data/edits.jsonl on the hub).
 
 Each Shorts edit line looks like "wrong → right (K5, K9)", where K-codes are rules from the Shorts ka_style.md.
 Only language rules are imported. Factual ones (K10 qualifiers, K14 quotes, K15 numbers, K20 say-map) are about
@@ -18,7 +18,7 @@ import re
 import sys
 from pathlib import Path
 
-# Shorts ka_style.md rule → Kaeasy memory category. Missing codes are skipped: facts (K10, K14, K15), the say map
+# Shorts ka_style.md rule → KAeasy memory category. Missing codes are skipped: facts (K10, K14, K15), the say map
 # (K20) and layout or sentence length (K8, K9, K13), which say nothing about Georgian itself.
 K_CATEGORY = {
     "K1": "style", "K2": "style", "K3": "calque", "K4": "verb", "K5": "case", "K6": "agreement",
