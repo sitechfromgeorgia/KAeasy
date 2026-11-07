@@ -197,7 +197,7 @@ In Georgian grammar (Shanidze, *Grammar of Georgian*, §151; confirmed by *matsn
 - **Ordinals in digits** (Peikrishvili §59): if the spoken word starts with `მე-`, write `მე-` and then the digits:
   `მე-5`, `მე-40`, `მე-100`, `მე-1000`. Otherwise write the digits and then `-ე`: `21-ე`, `30-ე`, `101-ე`, `180-ე`.
   The first is `1-ლი`, and its case forms keep the hyphen: `1-ლ ნოემბერს`, `1-ლში`. `ka_lint` flags `1-ელი` and
-  `100-ე` (Louie confirmed `1-ლი`, 2026-11-07).
+  `100-ე` (Louie confirmed `1-ლი` and `101-ე`, 2026-11-07).
 - **Spacing**: Peikrishvili writes a compound ordinal as one word (`ასმეერთე`). Kaeasy keeps it spaced, like the
   cardinals and *matsne.gov.ge*: `ას მეერთე`, `ორი ათას ოცდამეექვსე` (decided by Louie, 2026-11-07).
 - **The multiplier of ათასი stays nominative** in every case (Peikrishvili §59): `ორი ათასი კაცი`,

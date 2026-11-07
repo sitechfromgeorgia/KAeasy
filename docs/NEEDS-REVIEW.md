@@ -68,7 +68,7 @@ The rules added in v0.6.0 come from four books. Where a book disagreed with an e
 | not in Kaeasy | | `ჩვენთაგანი`, `თქვენთაგანი` are wrong, though common in print | Peikrishvili §41 | Louie: advice in `ka_lint` (`dated_form`), not strict |
 | `noun-stems.md` §2 | Syncope before ი after რ, ლ, მ, ნ and a rare დ | Also rarely before other consonants: `ბეჭედი`, `ხოხობი`, `ნიჩაბი` | Peikrishvili §25 | Book: added |
 
-Still open from the book: Peikrishvili writes `მე-` first when an ordinal's parts are joined without `და`, which could mean `მე-101` rather than `101-ე`. The book gives no example above 100, so Kaeasy keeps `101-ე`, `180-ე` as *matsne.gov.ge* writes them.
+Also decided: Peikrishvili writes `მე-` first when an ordinal's parts are joined without `და`, which could mean `მე-101` rather than `101-ე`. The book gives no example above 100. Louie confirmed `101-ე` (2026-11-07), as *matsne.gov.ge* writes it, so `101-ე` and `180-ე` stay.
 
 Applied, because they are errors of fact:
 - `noun-stems.md`: the `-ა` of a stem drops before plural `-ებ-`; the file said it stays. The example forms were already right.
