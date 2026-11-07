@@ -128,3 +128,6 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   - Separately, a footnote says an `-ები` plural is not typical of literary Georgian for the demonstratives;
     `ესეები`, `ეგეები`, `მაგეები` are attested only rarely, in 18th-19th century writers. (Peikrishvili §62, §72.9,
     §72.10, §72.12)
+  - `ჩვენ` and `თქვენ` are plural already, so `-გან` joins them with no plural `-თა-`: ✅ `ჩვენგანი`,
+    `თქვენგანი`, `ჩვენგან`; ❌ `ჩვენთაგანი`, `თქვენთაგანი`. The `-თა-` forms are common in print, so `ka_lint` gives
+    advice, not an error. (Peikrishvili §41; decided by Louie, 2026-11-07)

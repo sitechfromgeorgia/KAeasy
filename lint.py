@@ -157,7 +157,7 @@ MONTH_FORM = (r"(?:(?:იანვარ|თებერვალ|სექტ�
               r"|(?:იანვრ|თებერვლ|სექტემბრ|ოქტომბრ|ნოემბრ|დეკემბრ)(?:ის|ით|ად|ამდე|იდან|ისთვის)"
               r"|(?:მარტ|აპრილ|მაის|ივნის|ივლის)(?:ი|ია|ს|ის|ით|ად|ში|ზე|ამდე|იდან|ისთვის)"
               r"|აგვისტო(?:ა|ს|თი|დ|ში|ზე|მდე|დან|სთვის)?)")
-MONTH_DAY = r"(?:[2-9]|[12]\d|3[01])"  # day 1 is ordinal („1-ელი ნოემბერი“), a year is not a day
+MONTH_DAY = r"(?:[2-9]|[12]\d|3[01])"  # day 1 is ordinal („1-ლი ნოემბერი“), a year is not a day
 
 ORDINAL_DATE_RE = re.compile(
     r"(?<![ა-ჰ0-9])(?<!ზედიზედ\s)"
@@ -420,7 +420,7 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         if on("wrong_form"):
             forms("wrong_form", "error", WRONG_FORMS_RE, WRONG_FORMS, "არასწორი ფორმა")
         if on("dated_form"):
-            forms("dated_form", "warn", DATED_FORMS_RE, DATED_FORMS, "მოძველებული ფორმა")
+            forms("dated_form", "warn", DATED_FORMS_RE, DATED_FORMS, "უმჯობესი ფორმა")
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()

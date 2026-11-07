@@ -48,6 +48,8 @@ when an inflectional suffix starting with a vowel (`-ის`, `-ით`, `-ა�
   - Elision of **-ო-** (pure drop): `ფოთოლი` → `ფოთლის`, `ფოთლით`, `ფოთლები`
   - Alternation of **-ო-** with **-ვ-**: `მინდორი` → `მინდვრის`, `მინდვრით`, `მინდვრები`; `ნიგოზი` → `ნიგვზის`
   - Elision before **-დ-**: `ბეჭედი` → `ბეჭდის`, `ბეჭდით`, `ბეჭდები`
+  - Rarely before other consonants too, such as **ბ**: `ხოხობი` → `ხოხბის`, `ნიჩაბი` → `ნიჩბის`, and `ნაბადი` →
+    `ნაბდის` (Peikrishvili §25)
 
 ### Which forms drop the stem vowel (Peikrishvili §25)
 - A shortening noun loses a stem vowel in the singular genitive, instrumental and adverbial and throughout the `-ებ-` plural, that is, before `-ის`, `-ით`, `-ად` and `-ებ`. The stem stays whole in the nominative, ergative, dative and vocative and in the `-ნ`/`-თ` plural: `ხმალი`, `ხმალს` · `ხმლის` · `ხმლები`.

@@ -10,12 +10,16 @@ Singular noun and singular verb after: digits, number words, `რამდენ
 | 12 კომპანიები | 12 კომპანია |
 | რამდენიმე ექსპერტები ფიქრობენ | რამდენიმე ექსპერტი ფიქრობს |
 | ბევრმა მომხმარებლებმა დაწერეს | ბევრმა მომხმარებელმა დაწერა |
-| ორ ათას ადამიანებს | ორ ათას ადამიანს |
+| ორ ათას ადამიანებს | ორი ათას ადამიანს |
 | ყველა მომხმარებელს აქვთ | ყველა მომხმარებელს აქვს |
 
-`ყველა` + singular noun is the norm (`ყველა მომხმარებელი`), but the verb may be plural when the meaning is
-"all of them" (`ყველამ თქვა`, `ყველა მოვიდა`). With `ყველა` + singular noun the verb is singular:
-✅ `ყველა მომხმარებელმა განაცხადა`, ❌ `ყველა მომხმარებელმა განაცხადეს` (decided 2026-11-02).
+Before `ათასი` the number stays nominative in every case: `ორი ათას ადამიანს`, not `ორ ათას` (Peikrishvili §59;
+Louie confirmed 2026-11-07).
+
+`ყველა` takes a singular verb, also when it means "all of them": `ყველა მოვიდა`, `ყველამ თქვა`,
+❌ `ყველა მოვიდნენ`. The plural verb goes with `ყველანი`: `ყველანი მოვიდნენ` (Kvachadze §55). With `ყველა` +
+singular noun the verb is singular too: ✅ `ყველა მომხმარებელმა განაცხადა`, ❌ `ყველა მომხმარებელმა განაცხადეს`
+(decided 2026-11-02).
 
 When `ყველა` (or `ყველაფერი`, `ყოველივე`, `ყველგან`) sums up a series, it plays the same role as the items and
 takes their case (dative items, dative `ყველას`). The verb takes its number from the summing word, not from the

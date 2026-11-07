@@ -15,12 +15,16 @@ Used for open, real conditions in the present or future. The verb in the conditi
 **indicative mood** (მყოფადი or აწმყო), never optative:
 - ✅ `თუ სისტემა განახლდება, სერვისი უფრო სწრაფად იმუშავებს.`
 - ❌ `*თუ სისტემა განახლდეს ...` (do not use the optative after `თუ` for real conditions)
+- The aorist is normal after `თუ` when it points to the future (Kvachadze §182):
+  ✅ `თუ ხვალ წვიმა მოვიდა, შეხვედრა გადაიდება.`
 
-### Subjunctive Requirement: `რომ` + Optative (II კავშირებითი)
-Subordinate clauses expressing necessity, desire, advice, or possibility require `რომ` followed by the **optative**:
+### Optative After Necessity and Wish (`რომ` Optional)
+Subordinate clauses expressing necessity, desire, advice, or possibility take the **optative**:
 - ✅ `მნიშვნელოვანია, რომ კომპანიამ დროულად მიიღოს ზომები.`
 - ✅ `საჭიროა, რომ გუნდმა წესები დაიცვას.`
 - ❌ `*მნიშვნელოვანია, რომ კომპანია დროულად მიიღებს ზომებს.` (indicative is wrong here)
+- `რომ` may be left out, and usually is when the verb is optative (Kvachadze §186):
+  ✅ `ვთხოვეთ, ანგარიში დროულად გამოგზავნოს.`
 
 ### Counterfactual Conditions (არარეალური / შეუსრულებელი პირობა)
 Expresses hypothetical conditions in the past that did not happen.
@@ -28,9 +32,11 @@ Structure: **`რომ` + Pluperfect (II თურმეობითი)** in t
 or Pluperfect in the main clause:
 - ✅ `დროულად რომ გაეკეთებინა, შეცდომა არ მოხდებოდა.`
 - ✅ `ადრე რომ მოსულიყვნენ, პრეზენტაციას მოუსმენდნენ.`
-- ❌ `*თუ დროულად გააკეთა, შეცდომა არ მოხდებოდა.` (English "if he did" calqued with `თუ` sounds unnatural)
+- ❌ `*თუ დროულად გააკეთა, შეცდომა არ მოხდებოდა.` (an unreal past condition needs `რომ` + pluperfect; `თუ` +
+  aorist is fine only for a real, future condition, see above)
 
-### Wishes and Regrets: `ნეტავ` / `ნეტა`
+### Wishes and Regrets: `ნეტავ`, `ნეტავი` / `ნეტა`
+All three are correct; both books give `ნეტავი` with the short `ნეტა` (Kvachadze §20, Peikrishvili §191).
 - Realizable future wish: `ნეტავ` + **Optative** (II კავშირებითი):
   - ✅ `ნეტავ ყველაფერი კარგად დასრულდეს.`
 - Unfulfilled past wish: `ნეტავ` + **Pluperfect** (II თურმეობითი):
@@ -58,6 +64,8 @@ Georgian conveys reported speech differently from Western European languages:
 3. **Particle `-თქო`** (1st Person Message via Intermediary):
    - Used when a speaker instructs someone to deliver their words to a 3rd party:
    - `უთხარი, ხვალ დილით მოვიდეს-თქო.`
+   - The message can also be worded for the final hearer, in the second person (Kvachadze §194):
+     `უთხარი, ხვალ დილით მოდი-თქო.`
    - ❌ `*მან მითხრა, რომ მოვალ-თქო` → ✅ `მან მითხრა, მოვალო.`
 
 ### News Style: Clean Subordinate Clauses
@@ -135,6 +143,10 @@ Participles modifying nouns decline like consonant-stem adjectives:
 > - ✅ `გამოქვეყნებულმა სტატიებმა` (❌ `*გამოქვეყნებულებმა სტატიებმა`)
 > - ✅ `დამზადებულ პროდუქტებს` (❌ `*დამზადებულებს პროდუქტებს`)
 > - ✅ `ახლად დანიშნულმა მინისტრებმა` (❌ `*ახლად დანიშნულებმა მინისტრებმა`)
+>
+> This holds for a modifier before its noun, which is the ordinary order. An adjective placed after a plural noun,
+> as in folk or poetic style, may take `-ებ-` or stay singular: `თუშები თეჭიანები`, `ქუჩებს პატარებს`
+> (Kvachadze §105).
 
 ---
 
@@ -143,11 +155,12 @@ Participles modifying nouns decline like consonant-stem adjectives:
 Georgian word order is pragmatically oriented: **Topic** (known context) → **Focus** (new/emphasized information)
 → **Verb**.
 
-### Neutral Order in News: SOV (Subject - Object - Verb)
-Neutral, unmarked declarative sentences place the verb at the end:
+### Usual Orders with a Subject and an Object
+Subject-object-verb is the most neutral order. Subject-verb-object and object-subject-verb are also usual, so
+subject-verb-object is not a calque (Kvachadze §133-134):
 - ✅ `კომპანიამ ახალი პროდუქტი წარადგინა.`
-- ❌ `კომპანიამ წარადგინა ახალი პროდუქტი.` (calqued English SVO order leaves the sentence feeling unresolved
-  at the end of a paragraph, unless the object carries an extended relative clause).
+- ✅ `კომპანიამ წარადგინა ახალი პროდუქტი.`
+- ✅ `ახალი პროდუქტი კომპანიამ წარადგინა.` (puts the stress on who did it)
 
 ### Placement of Question Words
 Question words (`ვინ`, `რა`, `სად`, `როდის`, `რატომ`, `როგორ`) **strictly precede the verb**:
@@ -279,17 +292,16 @@ Georgian possesses three distinct negative particles:
   - ✅ `არ დაუშვათ შეცდომა!`
 
 ### Double Negation (Negative Concord)
-Unlike English, where double negatives are forbidden, Georgian **requires concord** between negative pronouns/adverbs
-and negative verb particles:
+Unlike English, where double negatives are forbidden, Georgian usually **doubles** the negation: a negative
+pronoun or adverb with a negative particle on the verb. This is the common form in modern literary Georgian:
 - ✅ `არავინ არ იცის პასუხი.`
 - ✅ `არაფერი არ უთქვამს.`
 - ✅ `არსად არ წავსულვარ.`
 
-> [!NOTE]
-> `needs-review: single negation with negative pronouns`
-> Forms with single negation (`არავინ იცის`, `არაფერი მითქვამს`) are increasingly common in modern journalistic style
-> and are accepted by contemporary grammars. However, the traditional literary standard prefers full concord
-> (`არავინ არ იცის`, `არაფერი არ მითქვამს`).
+Single negation is also correct: the second particle only strengthens the negation and is optional
+(Kvachadze §12). `ka_lint` flags neither form:
+- ✅ `არავინ იცის პასუხი.`
+- ✅ `არაფერი უთქვამს.`
 
 ### Negative Harmony
 Harmonize the particle with the pronoun:
@@ -298,7 +310,7 @@ Harmonize the particle with the pronoun:
 - ❌ `*არავინ ვერ გაიგო` (discordant mixture).
 
 ### ვერცერთი და არცერთი
-Unlike the **არავინ** type (`არავინ`, `არაფერი`, `არსად`), which requires negative concord (`არავინ არ იცის`),
+Unlike the **არავინ** type (`არავინ`, `არაფერი`, `არსად`), which usually doubles the negation (`არავინ არ იცის`),
 the forms **ვერცერთი** and **არცერთი** inherently contain negation. Therefore, the verb used with them is in the
 **positive form**, and a second negative particle (`არ`, `ვერ`) is **not** added.
 

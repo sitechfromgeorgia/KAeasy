@@ -1,6 +1,30 @@
 {
-  "_about": "Exact wrong spellings, as whole words or fixed phrases. `error` joins the strict gate, so a form goes there only if it is never correct in modern Georgian. `warn` holds forms that are old, literary or a matter of register. Text inside „…“ is not checked. Sources: Peikrishvili 2010, Kvachadze 1988, Chikobava 1946.",
+  "_about": "Exact wrong spellings, as whole words or fixed phrases. `error` joins the strict gate, so a form goes there only if it is never correct in modern Georgian. `warn` holds forms that are old, literary, a matter of register, or common in print though the books call them wrong. Text inside „…“ is not checked. Sources: Peikrishvili 2010, Kvachadze 1988, Chikobava 1946; numerals and ჩვენგანი decided by Louie 2026-11-07.",
   "error": {
+    "1-ელი": "1-ლი",
+    "1-ელ": "1-ლ",
+    "1-ელმა": "1-ლმა",
+    "1-ელის": "1-ლის",
+    "1-ელს": "1-ლს",
+    "1-ელით": "1-ლით",
+    "1-ელში": "1-ლში",
+    "100-ე": "მე-100",
+    "200-ე": "მე-200",
+    "300-ე": "მე-300",
+    "400-ე": "მე-400",
+    "500-ე": "მე-500",
+    "600-ე": "მე-600",
+    "700-ე": "მე-700",
+    "800-ე": "მე-800",
+    "900-ე": "მე-900",
+    "1000-ე": "მე-1000",
+    "ორ ათას": "ორი ათას",
+    "სამ ათას": "სამი ათას",
+    "ოთხ ათას": "ოთხი ათას",
+    "ხუთ ათას": "ხუთი ათას",
+    "ექვს ათას": "ექვსი ათას",
+    "შვიდ ათას": "შვიდი ათას",
+    "ათ ათას": "ათი ათას",
     "წლეები": "წლები",
     "წლეებს": "წლებს",
     "წლეების": "წლების",
@@ -60,6 +84,10 @@
     "რამეთუ": "რადგან",
     "უკეთუ": "თუ",
     "შეურაცხყოფა გაუკეთა": "შეურაცხყოფა მიაყენა",
-    "ხანს შემდეგ": "ხნის შემდეგ"
+    "ხანს შემდეგ": "ხნის შემდეგ",
+    "ჩვენთაგანი": "ჩვენგანი",
+    "თქვენთაგანი": "თქვენგანი",
+    "ჩვენთაგან": "ჩვენგან",
+    "თქვენთაგან": "თქვენგან"
   }
 }
