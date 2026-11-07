@@ -6,6 +6,10 @@ Source:
 - Constitution of Georgia, Chapter Six (Judicial Power)
 - Organic Law of Georgia on Common Courts (*საერთო სასამართლოების შესახებ*)
 - Organic Law of Georgia on the Prosecution Service (*პროკურატურის შესახებ*)
+- High Council of Justice decision No. 3 of 16 June 2020 (matsne 4897597): the two appeal courts (Tbilisi,
+  Kutaisi) and the district courts; `გურჯაანის რაიონული სასამართლო` serves Gurjaani, Lagodekhi and Kvareli
+  (checked 2026-11-07)
+- Law of Georgia on Lawyers, Art. 20 (matsne 15472): the name `საქართველოს ადვოკატთა ასოციაცია`
 
 ---
 
