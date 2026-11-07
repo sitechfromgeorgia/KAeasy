@@ -41,10 +41,10 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 | Where | Question | Status |
 |---|---|---|
 | `georgia-companies.json`, `lexicon_ka.json` | BOG and GWP: full name or letters? No evidence found for how Georgians say them | for Louie |
-| `georgia-companies.json` | `m²` read `ემ კვადრატი`; `ვენდუ` may no longer exist; `ვანილა სქაი` is not in the gcaa.ge register | to check |
-| `speech.py` | `ასკ`: Administrative Procedure or Administrative Offences Code? It stays spelled as letters until a source settles it | to check |
-| `speech.py`, `citations.md` | `144³` read `პრიმა სამი`: the law gives `პრიმ` plus a digit, usage in court was not checked | to check |
-| `courts-institutions.md` | Bar association, appeal courts and Gurjaani court details: the sources could not be opened | not verified |
+| `georgia-companies.json` | `m²` read `ემ კვადრატი`; `ვენდუ` may no longer exist; `ვანილა სქაი` is not in the gcaa.ge register | `m²`: Louie confirmed `ემ კვადრატი` (2026-11-07). `ვენდუ`: vendoo.ge redirects to mymarket.ge, noted. `ვანილა სქაი`: gcaa.ge has no public operator list, still open |
+| `speech.py` | `ასკ`: Administrative Procedure or Administrative Offences Code? It stays spelled as letters until a source settles it | Searched 2026-11-07: no law or decision found that defines `ასკ`. It stays spelled as letters; text for speech writes the code's full name |
+| `speech.py`, `citations.md` | `144³` read `პრიმა სამი`: the law gives `პრიმ` plus a digit, usage in court was not checked | Searched 2026-11-07: no written-out reading found anywhere; the dictionary has the noun `პრიმა`. The current reading stays |
+| `courts-institutions.md` | Bar association, appeal courts and Gurjaani court details: the sources could not be opened | Done 2026-11-07: all three confirmed on matsne (Law on Lawyers Art. 20; High Council of Justice decision No. 3 of 2020) |
 
 
 ## Book review: for Louie (2026-11-07)

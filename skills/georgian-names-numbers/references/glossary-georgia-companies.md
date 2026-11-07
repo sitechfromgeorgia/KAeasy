@@ -120,7 +120,7 @@ Table of 180+ companies, state institutions, utilities, banks, universities and 
 | Irao Insurance | **ირაო** | `ირაო დაზღვევა` | `ირაო` | Vienna Insurance Group member in Georgia. Source: irao.ge. |
 | PSP Insurance | **პსპ დაზღვევა** | — | `პე ეს პე დაზღვევა` | Health insurance arm of PSP Group. Source: pspinsurance.ge. |
 | Tao Insurance | **ტაო** | `ტაო დაზღვევა` | `ტაო` | Insurance company in Georgia. Source: tao.ge. |
-| m2 Real Estate | **m²** | — | `ემ კვადრატი` | Major real estate developer, written m² in its own branding. needs-review: spoken form from press headlines. Source: m2.ge. |
+| m2 Real Estate | **m²** | — | `ემ კვადრატი` | Major real estate developer, written m² in its own branding. Spoken form confirmed by Louie (2026-11-07). Source: m2.ge. |
 | Archi | **არქი** | `არჩი` | `არქი` | Largest residential real estate developer in Georgia. Source: archi.ge. |
 | Anagi Construction | **ანაგი** | — | `ანაგი` | Leading civil construction company in Georgia. Source: anagi.ge. |
 | Redix | **რედიქსი** | `რედიკსი` | `რედიქსი` | Real estate investment and hospitality developer. Source: redix.ge. |
@@ -136,7 +136,7 @@ Table of 180+ companies, state institutions, utilities, banks, universities and 
 | BK Construction | **ბიქეი ქონსთრაქშენი** | `ბკ ქონსთრაქშენი` | `ბიქეი ქონსთრაქშენი` | Major civil building contractor in Georgia. Source: bk.ge. |
 | Wolt Georgia | **ვოლტი** | — | `ვოლტი` | Food and retail delivery platform. Source: bm.ge usage. |
 | Glovo Georgia | **გლოვო საქართველო** | — | `გლოვო საქართველო` | On-demand courier and delivery platform. Source: glovoapp.com. |
-| Vendoo | **ვენდუ** | `ვენდუ ჯი` | `ვენდუ` | needs-review: vendoo.ge now redirects to mymarket.ge, so the brand may be gone. |
+| Vendoo | **ვენდუ** | `ვენდუ ჯი` | `ვენდუ` | vendoo.ge redirects to mymarket.ge (TNET), so the brand now lives on as მაიმარკეტი (checked 2026-11-07). Keep for older texts; current texts name მაიმარკეტი. |
 | Extra.ge | **ექსტრა.ჯი** | `ექსტრა ჯი` | `ექსტრა წერტილი ჯი` | Largest Georgian online marketplace. Source: extra.ge. |
 | Tnet | **თინეთი** | `თი-ნეთი` | `თინეთი` | Largest digital ecosystem in Georgia (tnet.ge, mymarket, myauto, myhome, biletebi). Source: tnet.ge. |
 | Space International | **სფეის საერთაშორისო** | `სფეის ბანკი` | `სფეის საერთაშორისო` | Digital banking fintech arm of TBC. Source: space.ge. |
