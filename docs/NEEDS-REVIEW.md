@@ -34,13 +34,13 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 |---|---|---|---|
 | `skills/georgian-names-numbers/references/brands.md`, `cases.md` | `OpenAI-ის`, `ChatGPT-ის`, `Spotify-ის` but `Gemini-ს`, `Perplexity-ს`, `Midjourney-ს` | Genitive of names ending in an -i sound: `-ის` or `-ს`? | Settled by P6: `-ს` (`OpenAI-ს`); instrumental `-ით` (see Correction). `ka_lint` flags neither form | done |
 | `skills/georgian-natural-style/references/calques.md`, `lint.py` | `ბე-ემ-ვე` was both ✅ (brands.md) and ❌ (calques.md) | Settled: `ბე-ემ-ვე` is the established spoken form of BMW; `ka_lint` allows it | done |
-| `skills/georgian-names-numbers/references/latin-names.md`, `speech.py` | `T` in letter table is `ტი`, but TBC is `თიბისი` | Letter `T` mapping in acronyms: should English `T` default to `თ` or `ტ` in acronyms? Evidence across 10+ acronyms shows `ტ` dominates in international tech acronyms (`TCP` → `ტი-სი-პი`, `TLS` → `ტი-ელ-ესი`, `TSMC` → `ტი-ეს-ემ-სი`, `TNT` → `ტი-ენ-ტი`, `TV` → `ტი-ვი`, `TB` → `ტი-ბი`), while `თ` is specific to local Georgian brands rooted in Georgian words (`TBC` → `თიბისი`, `Telasi` → `თელასი`, `TTC` → `თბილისის სატრანსპორტო კომპანია`). Recommendation: keep `T: ტი` in the global letter table and route local exceptions via `data/lexicon_ka.json` and `data/glossary/georgia-companies.json`. | for Louie |
+| `skills/georgian-names-numbers/references/latin-names.md`, `speech.py` | `T` in letter table is `ტი`, but TBC is `თიბისი` | Letter `T` mapping in acronyms: should English `T` default to `თ` or `ტ` in acronyms? Evidence across 10+ acronyms shows `ტ` dominates in international tech acronyms (`TCP` → `ტი-სი-პი`, `TLS` → `ტი-ელ-ესი`, `TSMC` → `ტი-ეს-ემ-სი`, `TNT` → `ტი-ენ-ტი`, `TV` → `ტი-ვი`, `TB` → `ტი-ბი`), while `თ` is specific to local Georgian brands rooted in Georgian words (`TBC` → `თიბისი`, `Telasi` → `თელასი`, `TTC` → `თბილისის სატრანსპორტო კომპანია`). Recommendation: keep `T: ტი` in the global letter table and route local exceptions via `data/lexicon_ka.json` and `data/glossary/georgia-companies.json`. | Louie 2026-11-07: keep `ტ` (`ტი-ვი`), local brands keep their `თ` (`თიბისი`) |
 
 ## P11 review: still open (2026-11-04)
 
 | Where | Question | Status |
 |---|---|---|
-| `georgia-companies.json`, `lexicon_ka.json` | BOG and GWP: full name or letters? No evidence found for how Georgians say them | for Louie |
+| `georgia-companies.json`, `lexicon_ka.json` | BOG and GWP: full name or letters? No evidence found for how Georgians say them | Louie 2026-11-07: `BOG` is read `საქართველოს ბანკი`; `GWP` is read `ჯივიპი` (the full name is also correct) |
 | `georgia-companies.json` | `m²` read `ემ კვადრატი`; `ვენდუ` may no longer exist; `ვანილა სქაი` is not in the gcaa.ge register | `m²`: Louie confirmed `ემ კვადრატი` (2026-11-07). `ვენდუ`: vendoo.ge redirects to mymarket.ge, noted. `ვანილა სქაი`: gcaa.ge has no public operator list, still open |
 | `speech.py` | `ასკ`: Administrative Procedure or Administrative Offences Code? It stays spelled as letters until a source settles it | Searched 2026-11-07: no law or decision found that defines `ასკ`. It stays spelled as letters; text for speech writes the code's full name |
 | `speech.py`, `citations.md` | `144³` read `პრიმა სამი`: the law gives `პრიმ` plus a digit, usage in court was not checked | Searched 2026-11-07: no written-out reading found anywhere; the dictionary has the noun `პრიმა`. The current reading stays |
@@ -79,14 +79,14 @@ The rule cards that were left out because the modern norm is unclear are kept ou
 ## Book rules, round 2: for Louie (2026-11-07)
 
 Round 2 brought back the cards left out of 0.6.0 (see README 0.7.0). Where the books disagree with each other, or a
-book disagrees with one of Louie's decisions, nothing is marked as an error until Louie decides:
+book disagrees with one of Louie's decisions, Louie decided on 2026-11-07 (asked one by one in chat):
 
 | Where | Question | Now |
 |---|---|---|
-| `clauses.md` §2, `particles-adverbs.md` | `რამეთუ` for "because": Kvachadze §180 calls it Old Georgian, Peikrishvili §189 accepts it | advice: prefer `რადგან(აც)` |
-| `cases.md` | First noun before `და`: Peikrishvili §13 requires `მთასა და ბარს`, Kvachadze §141 says "usually" | both written, each with its source |
-| `punctuation.md`, `dates-numbers.md` | Rough quantity: the book writes a spaced dash (`20 — 30`); Kaeasy writes ranges with a plain hyphen (`10-14`) | both kept, different scope |
-| `agreement.md`, `verb-classes.md` | Plural things: Kvachadze §8, §56 accepts both verb numbers; Louie's news rule (2026-11-02) keeps the singular | Louie's rule stands for news; the book's rule for other text |
+| `clauses.md` §2, `particles-adverbs.md` | `რამეთუ` for "because": Kvachadze §180 calls it Old Georgian, Peikrishvili §189 accepts it | Louie 2026-11-07: fully correct |
+| `cases.md` | First noun before `და`: Peikrishvili §13 requires `მთასა და ბარს`, Kvachadze §141 says "usually" | Louie 2026-11-07: both correct, `-სა` preferred |
+| `punctuation.md`, `dates-numbers.md` | Rough quantity: the book writes a spaced dash (`20 — 30`); Kaeasy writes ranges with a plain hyphen (`10-14`) | Edo's rule bans `—` and `–` in published copy, so the hyphen stays; `punctuation.md` now says so above its dash rules |
+| `agreement.md`, `verb-classes.md` | Plural things: Kvachadze §8, §56 accepts both verb numbers; Louie's news rule (2026-11-02) keeps the singular | Louie 2026-11-07: `ფასები გაიზარდა`, the rule stands |
 | `case-use.md` | `დაპირდა`: Chikobava writes it without `ჰ-`; Louie's rule keeps `ჰ-` | `ჰ-` kept |
 | `case-use.md` | Duration `ორი წელიწადი`: Kvachadze calls the nominative not the literary norm in one place and lists it in another | dative preferred, nominative not ❌ |
-| `syntax.md` §7 | `რაც არ უნდა მოხდეს`: Kvachadze §183 counts the `არ` a mistake, though it is very common | ❌ in the reference only, no lint |
+| `syntax.md` §7 | `რაც არ უნდა მოხდეს`: Kvachadze §183 counts the `არ` a mistake, though it is very common | Louie 2026-11-07: the form with `არ` is preferred; without `არ` also correct |

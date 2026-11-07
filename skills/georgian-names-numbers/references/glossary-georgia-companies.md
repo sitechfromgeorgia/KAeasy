@@ -73,7 +73,7 @@ Table of 180+ companies, state institutions, utilities, banks, universities and 
 | Tbilisi Energy | **თბილისი ენერჯი** | `ყაზტრანსგაზი`, `ყაზტრანსგაზ-თბილისი` | `თბილისი ენერჯი` | Natural gas distribution network operator in Tbilisi. Source: te.ge. |
 | Telasi | **თელასი** | `ტელასი`, `ტელასი` | `თელასი` | Electricity distribution company of Tbilisi. Source: telasi.ge. |
 | Energo-Pro Georgia | **ენერგო-პრო ჯორჯია** | `ენერგო პრო ჯორჯია` | `ენერგო-პრო ჯორჯია` | Electricity distribution and generation company across regions of Georgia. Source: energo-pro.ge. |
-| Georgian Water and Power | **ჯორჯიან უოთერ ენდ ფაუერი** | `ჟვპ`, `ჯვპ` | `ჯორჯიან უოთერ ენდ ფაუერი` | Water utility providing water supply in Tbilisi (GWP). Source: gwp.ge. |
+| Georgian Water and Power | **ჯორჯიან უოთერ ენდ ფაუერი** | `ჟვპ`, `ჯვპ` | `ჯივიპი` | Water utility providing water supply in Tbilisi (GWP). Said `ჯივიპი`; the full name is also correct (Louie, 2026-11-07). Source: gwp.ge. |
 | Rustavi Water | **რუსთავის წყალი** | `რუსთავწყალი` | `რუსთავის წყალი` | Water supply utility for the city of Rustavi. Source: rwc.ge. |
 | Mtskheta Water | **მცხეთის წყალი** | `მცხეთაწყალი` | `მცხეთის წყალი` | Water utility for Mtskheta municipality. Source: mwc.ge. |
 | Telmico | **თელმიკო** | `ტელმიკო`, `ტელმიკო` | `თელმიკო` | Tbilisi Electricity Supply Company. Source: telmico.ge. |
