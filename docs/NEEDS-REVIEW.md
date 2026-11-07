@@ -46,3 +46,30 @@ The -ი sound row above said `-თი` for the instrumental (`OpenAI-თი`). 
 | `speech.py`, `citations.md` | `144³` read `პრიმა სამი`: the law gives `პრიმ` plus a digit, usage in court was not checked | to check |
 | `courts-institutions.md` | Bar association, appeal courts and Gurjaani court details: the sources could not be opened | not verified |
 
+
+## Book review: for Louie (2026-11-07)
+
+The rules added in v0.6.0 come from four books. Where a book disagrees with an existing Kaeasy rule, the existing rule stays until Louie decides. The two applied changes are listed last.
+
+| Where | Kaeasy says | The book says | Source |
+|---|---|---|---|
+| `syntax.md` §7 | Negative concord is primary | Doubling the negative is optional | Kvachadze §12 |
+| `syntax.md` §1 | `ნეტავ`, `ნეტა` | `ნეტავი`, `ნეტა`, probably dated | Kvachadze §20 |
+| `agreement.md` | `ყველა` may take a plural verb for "all of them" | Singular verb only | Kvachadze §55 |
+| `syntax.md` §4 | Adjectives never take `-ებ-` | A following adjective may, as in poetry | Kvachadze §105 |
+| `syntax.md` §5 | Subject-verb-object is an unresolved calque | One of three usual orders | Kvachadze §133-134 |
+| `syntax.md` §1 | `თუ` + aorist is a calque | Normal when the aorist has a future meaning | Kvachadze §182 |
+| `syntax.md` §1 | Wish and necessity clauses need `რომ` | `რომ` is often dropped | Kvachadze §186 |
+| `syntax.md` §2 | Relayed `-თქო` uses the third-person optative | Its two examples use the second person | Kvachadze §194 |
+| `agreement.md` | `ორ ათას ადამიანს` | `ორი ათას კაცს` | Peikrishvili §59 |
+| `dates-numbers.md` | `ერთნახევარი`, `ორნახევარი` | `ოთხ-ნახევარი`, `ტონა-ნახევარი` | Peikrishvili §56, §59 |
+| `dates-numbers.md` | `ას მეერთე`, spaced | `ასმეერთე`, one word | Peikrishvili §59 |
+| `dates-numbers.md`, `lint.py` | `1-ელი`, `100-ე` | `1-ლი`, `მე-100` | Peikrishvili §59 |
+| not in Kaeasy | | `ჩვენთაგანი`, `თქვენთაგანი` are wrong, though common in print | Peikrishvili §41 |
+| `noun-stems.md` §2 | Syncope before ი after რ, ლ, მ, ნ and a rare დ | Also rarely before other consonants: `ბეჭედი`, `ხოხობი`, `ნიჩაბი` | Peikrishvili |
+
+Applied, because they are errors of fact:
+- `noun-stems.md`: the `-ა` of a stem drops before plural `-ებ-`; the file said it stays. The example forms were already right.
+- `agreement.md`, `syntax.md`: no comma before `რომ` when it sits inside its own clause (`შენ რომ მოხვიდე, გავიხარებ`).
+
+The rule cards that were left out because the modern norm is unclear are kept outside the repo, in `_rules/` next to the books.

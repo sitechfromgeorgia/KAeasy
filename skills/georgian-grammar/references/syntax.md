@@ -2,6 +2,7 @@
 
 This reference covers Georgian sentence structure beyond case alignment: complex clauses, word order,
 conditionals, reported speech, active vs passive voice, masdars, punctuation, and negation.
+Coordinate clauses, subordinate clauses and more on reported speech are in `clauses.md`.
 
 ---
 
@@ -103,6 +104,11 @@ Do not substitute synthetic verbs with empty noun-verb collocations:
 - ❌ `პროექტის განხორციელება მოხდა` → ✅ `პროექტი განხორციელდა` (or `პროექტი განახორციელეს`).
 - ❌ `განცხადება გაკეთდა მინისტრის მიერ` → ✅ `მინისტრმა განცხადება გააკეთა`.
 
+Another wrong light-verb pairing: `შეურაცხყოფა` goes with `მიაყენა`, not `გაუკეთა`. The book calls
+`შეურაცხყოფა გაუკეთა` a fault of style, not of syntax: the words fit in form but not in meaning
+(Chikobava §56):
+- ✅ `შეურაცხყოფა მიაყენა` (❌ `შეურაცხყოფა გაუკეთა`)
+
 ---
 
 ## 4. Masdar and Participles (მასდარი და მიმღეობა)
@@ -157,6 +163,65 @@ The negation particle must immediately precede the verb. Nothing should split th
 
 ---
 
+### Word Order Is Relatively Free
+Georgian word order is relatively free, not fully free. In a simple sentence with a subject, a direct object and a verb,
+all six orders keep each word's role, because in modern Georgian a word's form, not its place, decides its function.
+Reordering then adds only a stylistic colour. Order is a comparatively weak syntactic tool in Georgian but a very
+important and widely used stylistic one. So the verb-medial order above is a style preference, not an error
+(Kvachadze §4):
+- ✅ `მასწავლებელმა წიგნი მოიტანა`
+- ✅ `მასწავლებელმა მოიტანა წიგნი`
+
+Limits: some words have a firm place, and moving words can change which word a modifier attaches to, or leave no
+sentence at all (Kvachadze §4).
+
+### A Moved Modifier Can Attach to the Next Word
+If a modifier is moved after its noun with its form unchanged, it loses its link with that noun and attaches to the
+next word. In the book's sentence the adjective `პატარა` defines the subject `გოგომ`; moved after the subject with
+its form unchanged, it would attach to the next word `ჩაფით` (Kvachadze §4):
+- ✅ `პატარა გოგომ ჩაფით წყალი მოარბენინა`
+
+### Attributes, Objects and Adverbials Before Their Head
+- An attribute usually stands before the word it defines (Kvachadze §129).
+- A plain object or adverbial tied to a verbal noun or participle (not only to a predicate) usually stands before it
+  and generally cannot be separated from it. When both accompany it, the adverbial usually stands next to it and the
+  plain object before the adverbial. A plain object or adverbial also usually precedes an adjective or adverb it is
+  tied to (Kvachadze §129, §131):
+  - ✅ `ღრუბლებისაგან სანახევროდ დაფარული მზე`
+
+### Order With a One-Participant Verb (subject and verb only)
+Subject-verb and verb-subject are both possible, so verb-final is not obligatory here. The order is not fixed: the
+verb is mostly last, more rarely in the middle, and still more rarely first. The verb can also stand first or last
+when the subject is extended with dependent words (Kvachadze §132):
+- ✅ `ღამე დადგა`
+- ✅ `დადგა ღამე`
+
+Time and purpose adverbials usually stand before the verb, and it is also frequent for the time adverbial to open the
+clause, followed by the subject, with the verb at the end. Narrow exception: with a two-person intransitive verb in
+subject-verb-indirect object order, adverbials usually stand before the verb, but a purpose adverbial is mostly at
+the end (Kvachadze §132, §133):
+- ✅ `ალიონზე ცა მოიწმინდა`
+- ✅ `ფრინველები გასაფრენად ემზადებოდნენ`
+
+### Order With a Three-Participant Verb (subject, direct object, indirect object)
+In principle 24 orders are possible, some natural and widespread, others rare. In a declarative sentence the more
+widespread ones begin with the subject or the indirect object, with the verb last or in the middle. Having the direct
+object or the verb first is rare and occurs only in particular cases. Both object orders after the subject occur.
+Non-main members usually go before the indirect object or the verb, or open the sentence. The verb's position leads
+the word order, and logical stress matters for where the main members go (Kvachadze §135):
+- ✅ `ვანომ დედას წერილი მისწერა`
+- ✅ `ვანომ წერილი დედას მისწერა`
+
+### Adverbials in a Clause Without a Subject
+The verb is usually last, with the adverbial before it. With a manner adverbial plus a place or time adverbial, the
+manner adverbial stands next to the verb and the other opens the clause. With all three, time, place, manner, verb is
+the usual, natural order, though place may also come first and time second. An adverbial can rarely follow the verb,
+but the orders above are more natural. In a clause with a one-person verb and a subject there is no fixed order for
+place and time adverbials (Kvachadze §130, §132):
+- ✅ `გუშინ ტყეში ძალიან ბნელოდა`
+
+---
+
 ## 6. Commas and Coordination (სასვენი ნიშნები)
 
 ### Always a Comma Before Subordinating and Adversative Conjunctions
@@ -165,6 +230,19 @@ Place a comma before: **რომ, რომელიც, რადგან, �
 - ✅ `კომპანია, რომელიც ბაზარზე ლიდერია, ახალ სერვისს უშვებს.`
 - ✅ `სერვისი გაითიშა, რადგან სერვერი გადაიტვირთა.`
 - ✅ `ჩვენ ვცადეთ, მაგრამ ვერ მოვასწარით.`
+
+Exception: no comma stands before `რომ` when `რომ` sits inside its own clause:
+- ✅ `შენ რომ მოხვიდე, გავიხარებ.`
+
+### End Marks Follow the Sentence Type
+- A declarative sentence ends with a period (Kvachadze §14).
+- Every kind of interrogative sentence ends with a question mark (Kvachadze §18).
+- A command usually ends with an exclamation mark, but one meant to be said in a calm, narrative tone takes a period
+  (Kvachadze §19).
+- An exclamatory sentence always takes the exclamation mark, however varied its feeling. A sentence that both asks and
+  exclaims takes both marks (Kvachadze §20).
+- The closing mark also applies to one-word sentences (Kvachadze §2).
+- ✅ `ვინ მოვიდა?` · ✅ `კარი გააღე!` · ✅ `აქ დამელოდე.` · ✅ `რა ლამაზი სახლია!` · ✅ `მართლა წავიდა?!`
 
 ### No Comma Before `და` in Simple Coordination
 Do not place a comma before `და` when connecting coordinated words, phrases, or homogenous verbs sharing the subject:
@@ -227,3 +305,71 @@ the forms **ვერცერთი** and **არცერთი** inherently 
 - **Orthography**: House style requires single-word spelling: `ვერცერთი` and `არცერთი`. Do not write them split (`*ვერც ერთი`, `*არც ერთი`), except when `ერთი` is a numeral (e.g. `ვერც ერთ ღამეს`).
 - ✅ `ვერცერთი შესრულდა.` (❌ `*ვერცერთი არ შესრულდა.`)
 - ✅ `არცერთი მოვიდა.` (❌ `*არცერთი არ მოვიდა.`)
+
+### More Negative Forms: ნურ- Pronouns and აღარ, ვეღარ, ნუღარ
+The book lists six negative particles (`არ`, `ვერ`, `ნუ`, `აღარ`, `ვეღარ`, `ნუღარ`) and names `არ`, `ვერ` and `ნუ` as
+Georgian's three negative particles, one of which is contained in each negative pronoun and adverb. Pronouns have
+`არ-`, `ვერ-` and `ნურ-` forms (`არავინ`, `ვერავინ`, `ნურავინ`; `არაფერი`, `ვერაფერი`, `ნურაფერი`). The adverb lists
+in the book are samples, not full sets: `ნურსად` also occurs (Kvachadze §12, §19):
+- ✅ `ნურავინ` · ✅ `ნურაფერი` · ✅ `ვეღარ` · ✅ `ნურსად`
+
+---
+
+## 8. Postpositions and Case (თანდებულები)
+
+A postposition is added to a noun's case form, supplies extra meaning, and through it the noun links to another word.
+Each postposition calls for a particular case stem of its noun.
+
+- `-თან` calls for the dative; `-კენ` and `-თვის` for the genitive; `-მდის` or its parallel form `-მდე` for the
+  adverbial case (the adverbial `-დ` drops). The list is not complete. The word `წინ`, an uninflected word, also has
+  the noun before it in the genitive. For `-თან` the genitive, adverbial and instrumental forms are not possible
+  (Chikobava §53):
+  - ✅ `ძმასთან` · ✅ `სკოლისაკენ` · ✅ `სკოლისათვის` · ✅ `ქალაქამდე` · ✅ `სახლის წინ`
+  - ❌ `ძმისთან` · ❌ `ძმადთან` · ❌ `ძმითთან`
+- Do not treat as an error the trace of the Old Georgian genitive with `თანა` that remains in modern verbal-noun
+  phrases with the particle `-ვე`: `ამის მიღებისთანავე` (Chikobava §53, n. 2).
+- A noun cannot take `-კენ` on its nominative, ergative, dative or instrumental form (Kvachadze §9):
+  - ✅ `კალოებისკენ` (❌ `კალოებსკენ`) · ✅ `ქალაქისკენ`
+- `გარშემო` is an adverb, a full word that can stand alone as an adverbial of place. It takes a noun in the genitive
+  only when used with a postposition's meaning. This is not direct government: the true head is the verb, which
+  governs the noun through the postposition (Kvachadze §9):
+  - ✅ `იის გარშემო`
+- `-ზე`, `-ში`, `-თან` on the dative each show a different place relation: `-ზე` on the surface, `-ში` inside,
+  `-თან` nearby. The bare dative `მაგიდას` cannot carry those meanings with the verb `იდო` (Kvachadze §4):
+  - ✅ `მაგიდაზე` · ✅ `მაგიდაში` · ✅ `მაგიდასთან`
+
+---
+
+## 9. Simple Sentence Types (მარტივი წინადადება)
+
+### Verbs Used Without a Subject
+- Impersonal verbs naming natural phenomena, in the 3rd person singular, are usually used with no subject. Some are
+  always subjectless (`ცივა`, `თბილა`, `ცხელა`); others (such as `თოვს`, `წვიმს`) rarely appear with a subject. In
+  figurative use one of these verbs can now and then take a human noun as subject (Kvachadze §125):
+  - ✅ `ცივა` · ✅ `ბნელა` · ✅ `წვიმს` · ✅ `თოვს` · ✅ `თოვლი თოვს` (with a subject, rare)
+- Verbs for the health state and bodily processes of a person or animal are especially often used without a subject;
+  a subject occurs only rarely with this type. Some forms of the possibility type ("can do") and the mood type
+  ("feels like doing") are also used without a subject (Kvachadze §125):
+  - ✅ `მცივა` · ✅ `მცხელა` · ✅ `მახველებს` · ✅ `წაისვლება` · ✅ `ეცინება` · ✅ `ეტირება`
+
+### Implied 1st and 2nd Person Pronouns
+When the 1st and 2nd person pronouns (`მე`, `ჩვენ`, `შენ`, `თქვენ`) are only understood, as subject and object, the
+sentence is still complete, provided no other member is missing (Kvachadze §124):
+- ✅ `დაგინახე` · ✅ `ხვალ მოსკოვს მივდივარ`
+
+### Nominal Sentence
+A nominal sentence names a thing or event without asserting anything about it. Its one main member is a noun in the
+nominative (singular or plural), and no predicate is stated or implied. It is always affirmative, and may be bare or
+extended with a modifier. It occurs mostly in literature, for describing nature and for sudden, fast-changing events.
+It is sometimes preceded by pointing words such as `აი`, `აჰა`, `ჰაი`, `ჰა`. Titles of works and names of
+institutions, shops and streets resemble it, though a title can also contain a predicate (Kvachadze §128):
+- ✅ `უდაბნო. საღამო.` · ✅ `მკრთალი სინათლე.` · ✅ `აჰა სადგურიც!` · ✅ `ჰაი ტყე, ჰაი წისქვილი`
+
+### A Transitive Verb's Form Sets the Cases of Its Nouns
+The book points out that with the same two nouns the case changes with the verb form of a transitive verb (its
+example is `აქებს`): present with a nominative subject and a dative object, aorist with an ergative subject and a
+nominative object, perfect with a dative subject and a nominative object. With another kind of verb the page shows no
+such change: the subject stays nominative across the three forms of `იზრდება`, and across those of `ემალება`, where the
+second noun also stays dative. The page describes this; it does not give a command (Chikobava §57):
+- ✅ `დავითი აქებს სიმონს` · ✅ `დავითმა აქო სიმონი` · ✅ `დავითს უქია სიმონი` · ✅ `დავითი ემალება სიმონს` ·
+  ✅ `დავითი დაემალა სიმონს`
