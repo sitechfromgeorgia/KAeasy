@@ -64,7 +64,8 @@ with a nominative subject (❌ `კომპანია გაზარდა �
   Organizations acting as agents take the plural like animate subjects: ✅ `კომპანიებმა განაცხადეს`,
   `ბანკებმა გაზარდეს` (decided 2026-11-02).
 - Indirect objects show up inside the verb: `მომხმარებელს ელფოსტა გაუგზავნა` ("sent to the user");
-  `მომხმარებლებს გაუგზავნა` (plural object, same verb form is fine in the 3rd person).
+  `მომხმარებლებს გაუგზავნა` (plural object, same verb form is fine in the 3rd person). A plural 3rd-person
+  indirect object is usually unmarked on the verb; a rare `-თ` form is in `person-markers.md` §3. (Peikrishvili §78)
 
 ## 5. Version vowels (ი-, უ-, ა-)
 
@@ -82,6 +83,7 @@ Refinements from the book (full tests in `verb-forms.md`):
 
 - The objective marker is `უ-` only when the indirect object (the recipient) is 3rd person. With a 1st or 2nd person recipient the marker is `ი-`, the same as the subjective version: `მიწერს` (for me), `გიწერს` (for you), `უწერს` (for him). (Peikrishvili §134-135)
 - In series III the `ი-` and `უ-` of a transitive verb carry no "for someone" meaning: `აკეთებს`, `იკეთებს` and `უკეთებს` all give the one perfect `გაუკეთებია`. So `დაუწერია` and `აუშენებია` do not imply a beneficiary. (Peikrishvili §137, §161)
+- Write every vowel when a version vowel meets the same vowel: ✅ `ააშენა`, `გააანალიზა`, `გააადვილა`, `მიითვისა`, `გაუუქმა`; ❌ `გაანალიზა`, `გაადვილა`. (Peikrishvili §139)
 
 ## 6. Verbs that always take a dative subject
 
@@ -104,3 +106,10 @@ In inversion the real subject is shown by the object's person sign and the real 
 ## 8. Conjunctive
 
 - The conjunctive form is often, not always, used in a dependent clause, and in this use the conjunctions `რომ` and `რათა` are present with it or are understood. The rule runs from the conjunctive to the clause, not the reverse: it does not say that every clause with `რომ` takes the conjunctive. The conjunctive screeves can express all three times, but the mood is not as rich in forms as the indicative. The book's conjunctive forms, for now, future and past: `წერდეს`, `დაწეროს`, `დაეწეროს`. (Peikrishvili §88)
+- Unreal condition (an action that would have happened had a condition been met): the condition clause, as a rule the subordinate one, takes the pluperfect; the result clause, as a rule the main one, takes the conditional, rarely the imperfect or the aorist. The two clauses come together. Scholars dispute only whether these are separate moods, not which forms are used. Example: `ყოფილიყო … გავგრილდებოდი`, `რომ დაგერეკა, მოვიდოდი`. More in `syntax.md` §1. (Peikrishvili §90-§91)
+
+## 9. Commands and prohibitions
+
+- Modern Georgian has no imperative screeve of its own. A 2nd-person command uses the aorist form, so it looks like the past indicative; only the future reference tells them apart: `დაწერე!`. Rarely a command addresses the 1st person plural or the 3rd person, with the optative: `წავიდეთ`, `წაიღოს`. (Peikrishvili §89)
+- A prohibition is `არ` + optative, or `ნუ` + present or future; the book pairs `ნუ` only with those indicative forms: ✅ `არ გააკეთო!`, `არ წახვიდე!`, `ნუ წერ!`, `ნუ დაწერ!`, `ნუ დახატავ!`; ❌ `ნუ გააკეთო!`. (Peikrishvili §89; Kvachadze §12, §19)
+- needs-review: the books give no 1st-person plural example with `ნუ` (such as `ნუ წავიდეთ`), so this rule does not settle that case.

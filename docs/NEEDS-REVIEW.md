@@ -75,3 +75,18 @@ Applied, because they are errors of fact:
 - `agreement.md`, `syntax.md`: no comma before `რომ` when it sits inside its own clause (`შენ რომ მოხვიდე, გავიხარებ`).
 
 The rule cards that were left out because the modern norm is unclear are kept outside the repo, in `_rules/` next to the books.
+
+## Book rules, round 2: for Louie (2026-11-07)
+
+Round 2 brought back the cards left out of 0.6.0 (see README 0.7.0). Where the books disagree with each other, or a
+book disagrees with one of Louie's decisions, nothing is marked as an error until Louie decides:
+
+| Where | Question | Now |
+|---|---|---|
+| `clauses.md` §2, `particles-adverbs.md` | `რამეთუ` for "because": Kvachadze §180 calls it Old Georgian, Peikrishvili §189 accepts it | advice: prefer `რადგან(აც)` |
+| `cases.md` | First noun before `და`: Peikrishvili §13 requires `მთასა და ბარს`, Kvachadze §141 says "usually" | both written, each with its source |
+| `punctuation.md`, `dates-numbers.md` | Rough quantity: the book writes a spaced dash (`20 — 30`); Kaeasy writes ranges with a plain hyphen (`10-14`) | both kept, different scope |
+| `agreement.md`, `verb-classes.md` | Plural things: Kvachadze §8, §56 accepts both verb numbers; Louie's news rule (2026-11-02) keeps the singular | Louie's rule stands for news; the book's rule for other text |
+| `case-use.md` | `დაპირდა`: Chikobava writes it without `ჰ-`; Louie's rule keeps `ჰ-` | `ჰ-` kept |
+| `case-use.md` | Duration `ორი წელიწადი`: Kvachadze calls the nominative not the literary norm in one place and lists it in another | dative preferred, nominative not ❌ |
+| `syntax.md` §7 | `რაც არ უნდა მოხდეს`: Kvachadze §183 counts the `არ` a mistake, though it is very common | ❌ in the reference only, no lint |

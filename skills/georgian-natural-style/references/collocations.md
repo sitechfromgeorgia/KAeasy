@@ -128,7 +128,7 @@ When drafting or editing, align abstract nouns with their natural verbal domain:
 
 ---
 
-## 3. Book rules: word choice and connectors
+## 3. Book rules: word choice, style and connectors
 
 Rules from Chikobava (1946) reflect the literary norm of its time.
 
@@ -138,6 +138,12 @@ No two words mean exactly the same; true synonyms are a fiction. A difference al
 - Attitude: `მეუღლე` carries a respect that `ცოლი` lacks. Range: the book calls `მოსწავლე` wider than `მოწაფე` (its sample phrase with a university is dated, since today that person is a `სტუდენტი`).
 
 (Chikobava §65)
+
+### Pick the word whose attitude fits the situation
+Words for the same event can show different attitudes of the speaker, so choose the one you mean. For a death, `გარდაიცვალა` shows respect, `მოკვდა` states the fact without respect or insult, `თქვენი ჭირი წაიღო` shows the speaker does not grieve, and `ჩაძაღლდა` shows contempt. Arrival verbs vary the same way. A courteous word in a hostile or mocking setting sounds unpleasant, and writers use that mismatch on purpose for irony or satire.
+- ✅ `გარდაიცვალა` (respect) · `მოკვდა` (neutral) · `ჩაძაღლდა` (contempt) · `მობრძანდა` · `მოვიდა` · `მოჩანჩალდა` · `მოეთრა`
+
+(Chikobava §60, §64)
 
 ### Steps go with გადადგმა, not განხორციელება
 An aim can be carried out (`განხორციელება`), while of steps one says `გადადგა`. The book faults a board that carries out a series of steps. This is one example of the wider point for non-literary prose: the words of an expression must suit each other in meaning.
@@ -156,6 +162,12 @@ An aim can be carried out (`განხორციელება`), while of 
 - ✅ `შვიდი ან ათი თემი` · ❌ `შვიდი ანუ ათი თემი`
 
 (Chikobava §73, with footnote 1)
+
+### Avoid echoing a word in the next sentence
+Repeating a word, or the same root, in two neighbouring sentences reads as clumsy style even when the meaning is exact. A paragraph, a chapter and a whole text work as one unit, so a word used in one sentence limits how the next can be built. The book's one example is `პირველი` followed by `პირველად`; it does not discuss deliberate repetition, nor repeating a noun to remove ambiguity (`ai-filler.md`).
+- ❌ `… პირველი მწერალია. იგი პირველად შეეხო …`
+
+(Chikobava §73)
 
 ### Strong words used habitually for ordinary things go weak
 People say exaggerating words about ordinary, everyday events to make a bigger effect, but the real event does not live up to what was promised, so the higher the expectation, the smaller the impression. If this becomes habitual, the word is blunted and ends up describing something quite ordinary. This is a description, not a prescription; the practical advice that follows is to save such words for cases that fit them.

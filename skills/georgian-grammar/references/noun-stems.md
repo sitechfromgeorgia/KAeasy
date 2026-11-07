@@ -15,7 +15,7 @@ and in the case of syncope, critically before the plural suffix **`-ებ-`**.
 ## 1. Truncation (კვეცა)
 
 ### Rules & Mechanics
-- **Truncating Vowels (-ა and -ე)**: Nouns whose stem ends in **-ა** or **-ე** drop this final vowel before case endings starting with a vowel (`-ის`, `-ით`, `-ად`):
+- **Truncating Vowels (-ა and -ე)**: Nouns whose stem ends in **-ა** or **-ე** drop this final vowel before case endings starting with a vowel (`-ის`, `-ით`, `-ად`); most personal names do not (see "Personal names ending in a vowel" below):
   - `კომპანია` → Gen: `კომპანიის` (from `კომპანი-` + `-ის`, avoiding hiatus ❌ `კომპანიაის`), Inst: `კომპანიით`, Adv: `კომპანიად`
   - `მთავრობა` → Gen: `მთავრობის`, Inst: `მთავრობით`, Adv: `მთავრობად`
   - `მოწაფე` → Gen: `მოწაფის`, Inst: `მოწაფით`, Adv: `მოწაფედ`
@@ -27,12 +27,19 @@ and in the case of syncope, critically before the plural suffix **`-ებ-`**.
     `ხე` → `ხეები`, `მოწაფეები`, `დღეები`, `მზეები`.
   - Only a noun whose stem really ends in **-ე** gets the double ე. Do not copy the pattern by analogy in `წელი` and `კვირა`, whose stems do not end in -ე: `ხეები`, `დღეები`, `წლები`, `კვირები` (❌ `წლეები`, `კვირეები`). (Peikrishvili §32.5)
 - **Adverbial -დ**: the sign of the adverbial is only the consonant `-დ`, and truncation comes only from endings that begin with a vowel, so `-დ` goes on the whole stem: `ზღვად`, `ხედ`. The double-change nouns (section 3) differ: their adverbial reuses the contracted, truncated stem of the genitive and instrumental by analogy, and because that stem ends in a consonant the sign is `-ად`: `ფანჯრად`, `მოყვრად` (❌ `მოყვარედ`). The page credits this explanation to G. Ialamidze. (Peikrishvili §27, §28)
-- **Non-Truncating Vowels (-ო and -უ)**:
-  - Stems ending in **-ო** and **-უ** do **not** truncate in modern literary Georgian:
-    - Genitive ending is **`-ს`**: `სააგენტოს`, `ბიუროს`, `მეტროს`, `წყაროს`, `ფოტოს`, `ინტერვიუს`
-    - Instrumental ending is **`-თი`**: `სააგენტოთი`, `ბიუროთი`, `მეტროთი`, `წყაროთი`
+- **Non-Truncating Vowels (-ო, -უ and -ი)**:
+  - Stems ending in **-ო**, **-უ** and **-ი** do **not** truncate in modern literary Georgian; the genitive and instrumental endings lose their vowel instead (Peikrishvili §29):
+    - Genitive ending is **`-ს`**: `სააგენტოს`, `ბიუროს`, `მეტროს`, `წყაროს`, `ფოტოს`, `ინტერვიუს`, `რუს`. The book adds that an ი sometimes follows it: `წყაროსი`.
+    - Instrumental ending is **`-თი`**: `სააგენტოთი`, `ბიუროთი`, `მეტროთი`, `წყაროთი`, `რუთი` (❌ `მეტროთ`). Only a stem in -ი takes bare **`-თ`**: `ჩაით`, `ტრამვაით`.
     - Plural suffix attaches directly: `სააგენტოები`, `ბიუროები`, `მეტროები`, `წყაროები`
   - Two exceptions among -ო nouns: `დრო` takes the full endings `-ის` / `-ით` (`დროის`), and `ღვინო` truncates in the singular (`-ის`, `-ით`: `ღვინის`) but keeps -ო in the plural (`ღვინოები`). (Peikrishvili §29, §33)
+
+### Personal names ending in a vowel (Peikrishvili §27, §29)
+- Most names keep their final vowel: genitive `-ს`, instrumental `-თ(ი)`, adverbial `-დ`. This covers first names and surnames in -ა (also -ია, -უა, -ვა), first names in -ე, foreign surnames in -ე and diminutives in -ა: `შოთას`, `ივანეს`, `ნონათი`, `გივით`.
+- Kinship words in -ა (`დედა`, `ბებია`) keep the vowel only when used as a name; as common nouns they truncate: `დედის`.
+- In the -ები plural some -ა names drop the -ა: `ლეჟავები`, `დანელიები`.
+- Native Georgian surnames in -ძე or -ე are the exception: they truncate, as common nouns do: `ჭელიძის`, `მენაბდის`.
+- In the literary norm a name's vocative is the bare stem (`ნონა!`); see `references/cases.md`, Vocative.
 
 ---
 
@@ -76,6 +83,12 @@ A select group of high-frequency native nouns undergo **both** changes: they dro
 - `ფანჯარა` → Gen: `ფანჯრის`, Inst: `ფანჯრით`, Plural: `ფანჯრები`
 - `ქარხანა` → Gen: `ქარხნის`, Inst: `ქარხნით`, Plural: `ქარხნები`
 - `ბეგარა` → Gen: `ბეგრის`, Inst: `ბეგრით`, Plural: `ბეგრები`
+
+Both vowels drop in the genitive, instrumental and adverbial singular (adverbial `-ად`) and in every case of the
+`-ები` plural; the nominative, ergative, dative and singular vocative keep the full stem: `ფანჯრის`, `მოყვრად`,
+`ქვეყნები`, `მარჯვნის`, `პეპლით`, `ფანჯარამ` (❌ `მოყვარედ`). The book's members, by final vowel (Peikrishvili §28):
+- in -ა: `ქვეყანა`, `ქარხანა`, `ფანჯარა`, `ბეგარა`, `ტომარა`, `პეპელა`, `პეპერა`, `წიფელა`, `წურბელა`, `მარჯვენა`, `მარცხენა`
+- in -ე: `მოყვარე`, `მხარე`, `სიმწარე`
 
 ---
 

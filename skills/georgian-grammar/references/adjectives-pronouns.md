@@ -1,6 +1,7 @@
 # Adjectives, pronouns and numerals
 
-Sources: Peikrishvili, Georgian Morphology; Kvachadze, Modern Georgian Syntax (1988).
+Sources: Peikrishvili, Georgian Morphology; Kvachadze, Modern Georgian Syntax (1988); Chikobava, General
+Linguistics (1946).
 Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of their time.
 
 ## Degrees of adjectives
@@ -18,6 +19,21 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   nouns to express approximation or resemblance ("a sort of a ..."): `მოპოეტო`, `წაპოეტო`. The book counts this as
   an independent degree, less developed than the higher degree, but some scholars do not treat it as a degree
   category at all, because it has no object of comparison. (Peikrishvili §44, §46, §47)
+- Irregular higher degree: `კარგი` → `უკეთესი` (built on the stem of `კეთილი`), `ცუდი` → `უარესი`, `პატარა` →
+  `უმცირესი` (weaker degree `მომცრო`), `ხნიერი` → `უხნესი` rather than the expected `უხნიერესი`. `ხუცესი` was once
+  a higher-degree form itself and now takes `უხუცესი`. The regular `უკარგესი` and `უცუდესი` are sometimes met too.
+  (Peikrishvili §47)
+
+## Adjective formation
+
+- The suffix `-ურ-` becomes `-ულ-` when the stem contains `რ`: `მეგობრულად` (stem `მეგობრ-`, which has also lost a
+  vowel). A stem with no `რ` keeps `-ურ-`: `ამხანაგურად`, `ძმურად`, `მეზობლურად`. The book shows the change on this
+  one word; the common `ქართული` and `რუსული` follow the same pattern. (Chikobava §32)
+- "Without X" and "not X": Georgian uses `უ-` and `არა-`, each in its own place. In the book's samples, adjectives
+  meaning "having something" (`-იანი`, `-იერი`) pair with `უ-...-ო` (`უქუდო`, `უგზო`, `უნაყოფო`); participles pair
+  with `უ-...-ელი`, with `უ-` after the preverb (`აუშენებელი`, `დაუწერელი`); plain adjectives take `არა-`, written
+  attached (`არამაღალი`, `არაგრძელი`). The book gives samples only and no exact boundary, so do not mark either
+  prefix wrong on this basis. (Chikobava §66)
 
 ## Modifier and noun
 
@@ -32,21 +48,38 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   `წითელი ბურთი`, `წითელმა ბურთმა`, `წითელ ბურთს`, `წითელი ბურთის`, `წითელი ბურთით`, `წითელ ბურთად`,
   `წითელო ბურთო`; plural: `წითელმა ბურთებმა`, `წითელ ბურთებს`, `წითელი ბურთების`, `წითელნი ბურთნი`.
   Keeping `-ი` in every case (❌ `დიდი სახლს`, ❌ `დიდი სახლად`) is the book's "vulgar" type, dialectal and not
-  acceptable in the literary language. §50.2 adds an exception in the dative for modifiers derived from
-  instrumental or adverbial forms. (Peikrishvili §49, §50)
+  acceptable in the literary language. (Peikrishvili §49, §50)
+- Exception in the dative: a consonant-stem modifier built from an instrumental or adverbial case form
+  (`დროებითი`, `შემთხვევითი`, `გულადი`) usually takes `-ს` in the dative. Without it the word can be read as an
+  adverb with the verb (`დროებით`, "temporarily"): ✅ `დროებითს მთავრობას`, `შემთხვევითს მოვლენას`,
+  `გულადს კაცს`; open to misreading: `დროებით მთავრობას შეუთანხმდნენ`. (Peikrishvili §50.2)
+- The "full" type, with an ending on the modifier in every case (`-მა`; `-ს` in the dative and adverbial; `-ის` in
+  the genitive and instrumental; `-ო`), was the old Georgian pattern. The book says it is still sometimes used
+  beside the main, transitional type above, and that style is what justifies it: after Machavariani, the full type
+  is raised, marked style and the transitional type ordinary neutral style, each correct in its place. Neutral
+  style does not use the full form. Transitional: `ჩემი აზრით`, `დიდი ამბით`; raised style: `ჩემის აზრით`,
+  `დიდის ამბით`; not in neutral style: `დიდის დანით`. (Peikrishvili §49)
 - Vowel-final modifier right before its noun, in the direct order and not separated from it: no ending in any case
   and no number agreement, even in the `-ნ-` plural. Only the noun declines. `პატარა ოთახი`, `პატარა ოთახმა`,
-  `პატარა ოთახს`, `პატარა ოთახის`, `პატარა ოთახები`, `პატარა ოთახნი`. This describes the modifier in its
-  attributive role, not an adjective standing alone as a noun. (Peikrishvili §50.5)
+  `პატარა ოთახს`, `პატარა ოთახის`, `პატარა ოთახები`, `პატარა ოთახნი`, `კოხტა წიგნით`. This describes the
+  modifier in its attributive role, not an adjective standing alone as a noun. (Peikrishvili §50.5; Chikobava §57)
 - Separated or postposed modifier: if one or more words stand between modifier and noun, or the order is reversed
   so that the modifier comes after the noun, it carries the case ending in every case, whether its stem ends in a
   consonant or a vowel. In the reversed order the stem also shrinks as when the adjective stands alone: `წითლის`,
   `წითლით`, `წითლად`, `პატარის`, `პატარით`. In the reversed order it agrees in the plural only in the `-ნ-` and
   `-თ-` plurals; agreement in the `-ები` plural is met only rarely, as an exception, as in Vazha's
   `მთები თავჩაჩქნიანები`. The book quotes Chikobava that the reversed order is rare in modern Georgian. A
-  genitive modifier follows a different pattern in the reversed order (§51.3).
+  genitive modifier follows a different pattern in the reversed order (§51.3). After a noun with `-ში`, `-ზე` or
+  `-თან`, a postposed attribute repeats the postposition, and a postposed possessive with a dative noun takes the
+  double dative (`ჩემსას`).
   `ბურთის წითლის`, `ბურთმა წითელმა`, `ოთახს პატარას`, `ოთახის პატარის`, `მინდორს მწვანეს`, `ბურთნი წითელნი`,
-  `მთათა მაღალთა`; separated: `შაქრიანს ... სიტყვას`, `მწვანეს ... ფოთოლს`. (Peikrishvili §48, §50, §52)
+  `მთათა მაღალთა`, `ველს მშვენიერსა`, `ღამეში ბნელში`, `ტკივილებს ჩემსას`; separated: `შაქრიანს ... სიტყვას`,
+  `მწვანეს ... ფოთოლს`. (Peikrishvili §48, §50, §52; Kvachadze §101, §105, §106)
+- Modifier before a noun with `-ვით`: `-ვით` joins the nominative (`ლომივით`) or the dative (`ბრბოსავით`). Before
+  the `-ივით` form the book's examples show the attribute as a bare stem (`დაჭრილ დათვივით`), and a demonstrative
+  takes its short stem (`ამ კაცივით`, not `ეს`). Before the `-სავით` form the book calls a nominative attribute
+  unjustified in literary Georgian; keep it bare, as before any dative noun: ✅ `გაფანტულ ბრბოსავით`;
+  ❌ `გაფანტული ბრბოსავით`. (Kvachadze §104, §115)
 - A noun used as a modifier before another noun normally declines as an adjective does (bare in the dative and
   adverbial, `-ი` in the genitive and instrumental): `ურემი შეშა`, `ურემ შეშას`, `ურემი შეშის`, `ურემი შეშით`. If
   the modifier is a word for a profession, post or rank, it keeps its ending in the nominative, ergative and
@@ -75,6 +108,11 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
 
 ## Pronouns
 
+- Personal pronouns `მე`, `შენ`, `ჩვენ`, `თქვენ` have one form for the nominative, ergative and dative; in the
+  genitive `მე` becomes `ჩემ`. In the genitive they always carry a postposition, joined to the bare stem with no
+  `-ს`: ✅ `ჩემთვის`, `ჩემკენ`, `ჩემ მიერ`, `თქვენ მიერ`; ❌ `ჩემს მიერ`, `ჩვენს მიერ`, `ჩემსკენ`. They have no
+  instrumental or adverbial of their own; the possessive fills these (`ჩემით`, `შენად`). In address, `შე` and
+  `თქვე` go with a noun: `შე კაი კაცო`. (Peikrishvili §61, §72.4)
 - Demonstratives: with a nominative noun use `ეს`, `ეგ`, `ის`. With a noun in any other case the shortened stems
   `ამ`, `მაგ`, `იმ` stand before it with no ending and do not agree with it in number; the noun carries the case:
   `ეს წიგნი`, `ამ წიგნმა`, `ამ წიგნს`. One exception: a nominative noun with `-ვით` also takes the shortened stem
@@ -88,6 +126,9 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
 - `რა` declines like a stem-truncating noun: `რა`, `რამ`, `რას`, `რის`, `რით`, `რად`, with the `-ა` dropped in the
   genitive and instrumental. Unlike `ვინ` it has a plural: `რაები` through the cases, and `რანი` as a nominative
   only. It has no vocative as a rule, though a footnote says one can rarely be met. (Peikrishvili §63)
+- `ვინ?` is asked about a person, and also about gods and, in general, personified beings; every other noun,
+  animals included, answers `რა?` (unlike European languages, where "who" covers any living being): `ვინ? ქალი`,
+  `ბავშვი`, `ღმერთი`; `რა? წიგნი`, `ჩიტი`. Animate versus inanimate is a separate grouping. (Peikrishvili §11)
 - As question words for a subject: `ვინ` is used when the subject names a human; it began as an ergative form and
   later passed into the nominative, so `ვინ` serves nominative and ergative, and `ვის` the dative. `რა` has a
   distinct form in all three cases: `რა`, `რამ`, `რას`. It is not limited to lifeless things. `ვინ წერს?`,
@@ -128,6 +169,10 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   - Separately, a footnote says an `-ები` plural is not typical of literary Georgian for the demonstratives;
     `ესეები`, `ეგეები`, `მაგეები` are attested only rarely, in 18th-19th century writers. (Peikrishvili §62, §72.9,
     §72.10, §72.12)
+  - `ერთი და იგივე` with a noun: only `ერთი` takes the case ending; the second part has no ending and is `იგივე` in
+    the nominative, `იმავე` in every other case. Standing alone, both parts decline. ✅ `ერთი და იგივე ამბავი`,
+    `ერთმა და იმავე ამბავმა`, `ერთსა და იმავე ამბავს`, `ერთისა და იმავე ამბის`; alone: `ერთმა და იმავემ`;
+    ❌ `ერთსა და იგივე ამბავს`. (Peikrishvili §72.6)
   - `ჩვენ` and `თქვენ` are plural already, so `-გან` joins them with no plural `-თა-`: ✅ `ჩვენგანი`,
     `თქვენგანი`, `ჩვენგან`; ❌ `ჩვენთაგანი`, `თქვენთაგანი`. The `-თა-` forms are common in print, so `ka_lint` gives
     advice, not an error. (Peikrishvili §41; decided by Louie, 2026-11-07)

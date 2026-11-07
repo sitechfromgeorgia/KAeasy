@@ -22,12 +22,19 @@ Georgian distinguishes **Subject Person Markers** (სუბიექტურ�
 | **3rd sg** (he/she/it) | `-ს`, `-ა`, `-ო` | `ჰ-`, `ს-`, `∅-` | `წერს`, `დაწერა`, `თქვას` | `ჰკითხა`, `სთხოვა`, `მისწერა` |
 | **3rd pl** (they) | `-ენ`, `-ან`, `-ეს`, `-ნენ` | `ჰ-`, `ს-`, `∅-` | `წერენ`, `დაწერეს` | `ჰკითხეს`, `სთხოვეს`, `მისწერეს` |
 
+Book note on the 2nd-person subject: besides zero, the book lists `ჰ-` (before ბ ფ პ გ ქ კ ყ), `ს-` (before დ თ ტ ძ
+ც წ ჯ ჩ ჭ) and `ხ-`. `ჰ-` and `ს-` are now almost unused and the literary norm no longer requires them, so the bare
+verb is correct; `ხ-` stays only in `ხარ`, `მოხვედი`, `მოხვალ`. No prefix appears with a 1st-person object or in the
+imperative. ✅ `გალობ` (also `ჰგალობ`), `დებ` (also `სდებ`), `ხარ`, `მოხვალ`, `მხატავ`, `დაწერე`. This is about the
+2nd-person subject only: the 3rd-person object prefixes `ჰ-` / `ს-` of §4 stay in standard copy. (Peikrishvili §77)
+
 ---
 
 ## 2. Prefix Slot Competition (პირის ნიშანთა შეწყობა)
 
-A verb root in Georgian has only **one prefix slot** for person. When both the subject and the object require
-a prefix, they cannot co-occur.
+A verb root in Georgian has only **one prefix slot** for a 1st or 2nd person marker. When the subject `ვ-` and an
+object `მ-`, `გ-` or `გვ-` would both need it, they cannot co-occur. A 3rd-person object prefix is different: the
+book records `ვ-` and `ჰ-` / `ს-` together in one form (`ვჰკითხე`, see §6). (Peikrishvili §79, point 8)
 
 > [!IMPORTANT]
 > **The Object Prefix Wins:** In any clash between a subject prefix (`ვ-`) and an object prefix (`მ-`, `გ-`, `გვ-`),
@@ -68,6 +75,15 @@ When combined with 3rd person subjects (he/she/they), pay close attention to who
 > In colloquial Georgian, `-თ` is sometimes added to 3rd person plural verbs when addressing a plural object
 > (`მათ თქვენ მოგწერესთ`). In standard literary and news Georgian, the literary norm is `მათ თქვენ მოგწერეს`
 > without stacking `-თ` onto the 3rd person plural suffix `-ეს`.
+
+### Book rules: plural 3rd-person objects and dative subjects
+- A plural 3rd-person indirect object is usually not shown on the verb: `ჰკითხა მათ`. Rarely the suffix `-თ` marks
+  it: `ედგათ მათ`. The book calls this a clear tendency, seen in documents from the 16th-17th centuries on and now
+  noticeable in living speech and the literary language; Old Georgian marked this plural every time. It is a
+  different case from `-თ` stacked on `-ეს` in the note above. (Peikrishvili §78)
+- In verbs of potential, involuntary action or feeling (`ემჩატება`, `ემღერება`, `შემოეფშვნება`), the dative noun is
+  the subject. When that dative person is plural, the verb shows it with `-თ`, not with the 3rd-plural ending `-იან`
+  (a footnote credits B. Jorbenadze): ✅ `ემჩატება მას`, `ემჩატებათ მათ`; ❌ `ემჩატებიან მას ისინი`. (Peikrishvili §84)
 
 ### The Crucial Distinction Table
 Master these distinct forms:
@@ -152,6 +168,10 @@ Appears:
    - ❌ `გაცნობთ` / `გაცნობ` → ✅ `გაცნობებთ` / `გაგაცნობთ`
    - ❌ `შეგატყობინებ` → ✅ `შეგატყობინებთ`
    - ❌ `მოგწერა` (referring to a message to the client) → ✅ `მოგწერათ`
+5. **Same Consonant Twice Is Not Double Marking:**
+   - When the stem begins with the same consonant as the object prefix, write both: `მ-` + მ gives მმ, `გ-` + გ
+     gives გგ, `გვ-` + გვ gives გვგვ. Do not merge them (Peikrishvili §79, points 4-6):
+   - ✅ `მმალავს`, `მმარხავს`, `გგონია`, `გგზავნის`, `მოგვგვარა` · ❌ `შენ გონია`
 
 ---
 
@@ -160,6 +180,8 @@ Appears:
 - Write the 1st-person subject sign ვ- even where it is not heard: it is not pronounced before the vowels უ and ო or before the consonant ვ, but it has to be written all the same. ✅ `ვუთხარი`, `ვოცნებობ`, `ვვარჯიშობ` (when the speaker is "I"). (Peikrishvili §79, point 1)
 - In მოვედი and მოვალ the regular pattern would give a doubled ვ (მოვვედი, მოვვალ), but the 2nd person kept the Old Georgian marker ხ (მოხვედი, მოხვალ), so 1st and 2nd person are distinct anyway and the language easily lost the 1st-person ვ- prefix. ✅ `მოვედი`, `მოვალ`, `მოხვედი`, `მოხვალ`. The book records rare doubled forms in the written language (მოვვედი, შევვლე), for example in ვეფხისტყაოსანი. (Peikrishvili §77)
 - The 1st person can be marked twice: once by the ვ- person sign and once by the auxiliary verb (the final -ვარ). These are regular forms and must not be "corrected": ✅ `ვშობილვარ`, `გავუგზავნივარ`, `ვზივარ`, `მივრბივარ`, `ვწერივარ`. This is not the "double prefix marking" of section 5, which is about two prefixes. (Peikrishvili §77)
+- When a 1st-person subject and a 3rd-person object prefix both appear in one form, modern Georgian as a rule puts the subject sign first: `ვ-`, then `ჰ-` / `ს-` (Old Georgian had the reverse order). Example: `ვჰკითხე`, `მოვსტაცე`. This is about order only; on writing `ჰ-` / `ს-` at all, see §4. (Peikrishvili §79, point 8)
+- A compound verb is a noun plus an auxiliary, most often ცემა, ყოფა or ღება. Only the auxiliary inflects; the noun part stays as is. The parts usually stand side by side, but another word can come between them: `პატივს სცემს`, `ყურად უნდა ეღოთ`. For the 1st person the book reports parallel forms in use and cites G. Shalamberidze: `ვ-` goes only on the auxiliary, as in Old Georgian. ✅ `უარვყოფ`, `უარყოფ`, `უარყოფს`, `სრულყოფს`; ❌ `ვუარვყოფ` (in Shalamberidze's view). (Peikrishvili §155)
 
 ## 7. Book rules: object prefixes that must not appear
 
