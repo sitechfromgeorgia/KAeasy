@@ -1,7 +1,7 @@
 """Offline scoring tool for Georgian evals.
 
 Zero API calls, zero network, zero LLM calls.
-Evaluates model outputs against Kaeasy's deterministic linter (ka_lint) and task-specific mistake checklists.
+Evaluates model outputs against KAeasy's deterministic linter (ka_lint) and task-specific mistake checklists.
 
 Usage:
   # Score a single output manually:
@@ -93,7 +93,7 @@ def score_batch(predictions: dict[str, str], tasks: dict[str, dict], strict: boo
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Deterministic offline evaluator for Kaeasy Georgian evals.")
+    parser = argparse.ArgumentParser(description="Deterministic offline evaluator for KAeasy Georgian evals.")
     parser.add_argument("--task", help="Task ID to evaluate (e.g. news_001, headline_005).")
     parser.add_argument("--text", help="Model candidate text to score.")
     parser.add_argument("--file", help="Path to JSON file containing predictions: {\"task_id\": \"output\", ...}.")

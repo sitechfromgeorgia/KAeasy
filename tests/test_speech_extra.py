@@ -1,4 +1,4 @@
-"""ka_speech cases added in Kaeasy (test_speech.py is the Shorts port and stays in sync with it)."""
+"""ka_speech cases added in KAeasy (test_speech.py is the Shorts port and stays in sync with it)."""
 import pytest
 from kaeasy import lint
 from kaeasy.speech import speak_token, speech

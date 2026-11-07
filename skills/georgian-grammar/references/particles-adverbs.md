@@ -18,7 +18,7 @@ Rules from Kvachadze (1988) reflect the literary norm of its time.
   Example: ✅ `ხანდახან`, `თანდათან`, `დროდადრო` · ✅ `დიდხანს`, `ცალმხრივ`. (Peikrishvili §179)
 - Write "how many times" adverbs as one word: `ჯერ` joins the stem of a numeral or of some pronouns, and a
   numeral drops its final `-ი` (`ორი` → `ორჯერ`). An ordinal stem also takes it and keeps its `-ე`. (With digits
-  Kaeasy writes `4-ჯერ`; see georgian-names-numbers.)
+  KAeasy writes `4-ჯერ`; see georgian-names-numbers.)
   Example: ✅ `ორჯერ`, `სამჯერ`, `ბევრჯერ`, `რამდენჯერ`, `იმდენჯერ`, `ოცდამეორეჯერ` · ❌ `რამდენ ჯერ`.
   (Kvachadze §81)
 

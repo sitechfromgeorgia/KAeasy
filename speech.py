@@ -3,7 +3,7 @@
 Base-20 cardinals with the case on the noun (36%-ის → ოცდათექვსმეტი პროცენტის), a numeral before a dative or
 postpositional noun loses its final ი (2012 წელს → ორი ათას თორმეტ წელს), ordinals მე-…-ე, versions
 (Opus 4.7 → ოთხი წერტილი შვიდი), currencies and units. Latin names come from data/lexicon_ka.json (approved), then
-the caller's own "say" map, then names learned earlier (lexicon_learned.json in the Kaeasy data dir); letter
+the caller's own "say" map, then names learned earlier (lexicon_learned.json in the KAeasy data dir); letter
 acronyms are spelled (GPU → ჯი პი იუ). Screen text keeps the Latin name; only the voice gets Georgian letters.
 
 This file is the source. SiTech Shorts vendors it unchanged as shorts/normalize_ka.py, with lexicon_ka.json and
@@ -25,7 +25,7 @@ LETTERS = {"A": "ეი", "B": "ბი", "C": "სი", "D": "დი", "E": "ი
            "J": "ჯეი", "K": "ქეი", "L": "ელ", "M": "ემ", "N": "ენ", "O": "ოუ", "P": "პი", "Q": "ქიუ", "R": "არ",
            "S": "ეს", "T": "ტი", "U": "იუ", "V": "ვი", "W": "დაბლიუ", "X": "ექს", "Y": "უაი", "Z": "ზედ"}
 HERE = pathlib.Path(__file__).resolve().parent
-# Kaeasy keeps the JSON in data/; the vendored copy in SiTech Shorts keeps it next to this file.
+# KAeasy keeps the JSON in data/; the vendored copy in SiTech Shorts keeps it next to this file.
 DATA = HERE / "data" if (HERE / "data" / "lexicon_ka.json").exists() else HERE
 WORDS = json.loads((DATA / "lexicon_ka.json").read_text(encoding="utf-8"))["words"]  # approved spoken forms
 # Sound class of a Latin name's ending (latin-names.md). "i-sound" names keep their ი before an ending: სონიმ, სონის.
@@ -34,7 +34,7 @@ VOWELS = "აეიოუ"
 CURRENCY = {"$": "დოლარ", "€": "ევრო", "₾": "ლარ", "£": "ფუნტ"}
 UNITS = {"GB": "გიგაბაიტ", "TB": "ტერაბაიტ", "MB": "მეგაბაიტ", "GHz": "გიგაჰერც", "km": "კილომეტრ", "W": "ვატ",
          "nm": "ნანომეტრ"}
-# Symbols and Georgian unit abbreviations written as their own word after a number (Kaeasy addition): 10 ₾, 5 კმ.
+# Symbols and Georgian unit abbreviations written as their own word after a number (KAeasy addition): 10 ₾, 5 კმ.
 UNIT_WORDS = {"₾": "ლარი", "$": "დოლარი", "€": "ევრო", "£": "ფუნტი", "კმ/სთ": "კილომეტრი საათში",
               "მბ/წმ": "მეგაბაიტი წამში", "კმ": "კილომეტრი", "მ": "მეტრი", "სმ": "სანტიმეტრი", "მმ": "მილიმეტრი",
               "კგ": "კილოგრამი", "გ": "გრამი", "ლ": "ლიტრი", "მბ": "მეგაბაიტი", "გბ": "გიგაბაიტი", "ტბ": "ტერაბაიტი",
@@ -191,7 +191,7 @@ def number(text):
     text = text.replace(",", "") if re.fullmatch(r"\d{1,3}(,\d{3})+", text) else text
     if "." in text or ("," in text and not text.endswith(",")):
         whole, frac = re.split(r"[.,]", text, maxsplit=1)
-        if frac == "5" and int(whole) < 20:  # 1,5 → ერთნახევარი, 0,5 → ნახევარი (Kaeasy addition)
+        if frac == "5" and int(whole) < 20:  # 1,5 → ერთნახევარი, 0,5 → ნახევარი (KAeasy addition)
             return (stem(cardinal(int(whole))) if int(whole) else "") + "ნახევარი"
         return f"{cardinal(int(whole))} მთელი {cardinal(int(frac))} {DENOMINATORS.get(len(frac), 'მეათასედი')}"
     return cardinal(int(text))
@@ -271,7 +271,7 @@ def is_acronym(word):
     return bool(re.fullmatch(r"[A-Z]{2,4}", word)) and word not in ("OK",)
 
 
-# Noun endings after a time (საათ, წუთ) and whether the numeral before it keeps its ი (Kaeasy addition).
+# Noun endings after a time (საათ, წუთ) and whether the numeral before it keeps its ი (KAeasy addition).
 CLOCK = {"": ("ი", True), "ის": ("ის", True), "დან": ("იდან", True), "ით": ("ით", True), "ს": ("ს", False),
          "ზე": ("ზე", False), "მდე": ("ამდე", False), "ამდე": ("ამდე", False), "ში": ("ში", False),
          "თვის": ("ისთვის", True)}
@@ -351,7 +351,7 @@ def speak_token(core, next_word="", prev_word="", known=None):
     known = WORDS if known is None else known
     if core in known:
         return known[core]
-    m = re.fullmatch(r"(?P<sign>[+−-])(?P<rest>\d.*)", core)  # -1-დან, +1-მდე (Kaeasy addition)
+    m = re.fullmatch(r"(?P<sign>[+−-])(?P<rest>\d.*)", core)  # -1-დან, +1-მდე (KAeasy addition)
     if m:
         rest = speak_token(m["rest"], next_word, prev_word, known)
         return rest and ("პლუს " if m["sign"] == "+" else "მინუს ") + rest
@@ -365,7 +365,7 @@ def speak_token(core, next_word="", prev_word="", known=None):
         if not base:
             return None
         return attach(base, suf, root_i(w)) if ENDING.fullmatch(suf) else base + " " + suf  # AI-აგენტები: compound
-    m = re.fullmatch(r"v(?P<n>\d+(?:\.\d+)+)", core)  # v3.8 → ვერსია სამი წერტილი რვა (Kaeasy addition)
+    m = re.fullmatch(r"v(?P<n>\d+(?:\.\d+)+)", core)  # v3.8 → ვერსია სამი წერტილი რვა (KAeasy addition)
     if m:
         return "ვერსია " + version(m["n"])
     m = re.fullmatch(r"(?P<a>[A-Z])2(?P<b>[A-Z])", core)  # B2B → ბი თუ ბი
@@ -497,7 +497,7 @@ def _digits(group):
 
 
 def joined(toks):
-    """{token index: spoken} where a number and the next word are read together (Kaeasy addition): a time before
+    """{token index: spoken} where a number and the next word are read together (KAeasy addition): a time before
     საათი (18:30 საათზე → თვრამეტ საათსა და ოცდაათ | წუთზე), a range before a counted noun (10-15 წუთი →
     ათიდან თხუთმეტ | წუთამდე) and a +995 phone number read in groups. The next token keeps its own slot."""
     cores = [TOKEN.match(t) for t in toks]

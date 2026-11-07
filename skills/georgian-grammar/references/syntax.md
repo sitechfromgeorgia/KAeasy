@@ -394,9 +394,9 @@ differ between clauses is in `clauses.md` §1 (Kvachadze §163):
 ### "No Matter What" Clauses: `რაც არ უნდა`
 A "no matter what / who / where / how" clause opens with a relative word (`რაც`, `რასაც`, `ვინც`, `ვისაც`, `სადაც`,
 `როგორც` and others) plus `უნდა`; `გინდ` sometimes replaces `უნდა`, and the main clause may add `მაინც`. The verb is
-in the subjunctive (or II თურმეობითი). Kaeasy prefers the form with `არ`, the one Georgian writers use (Louie,
+in the subjunctive (or II თურმეობითი). KAeasy prefers the form with `არ`, the one Georgian writers use (Louie,
 2026-11-07). The form without `არ` is also correct; Kvachadze §183 prefers it and counts the `არ` a mistake, a view
-Kaeasy does not follow. Other concessive clauses are in `clauses.md` §2:
+KAeasy does not follow. Other concessive clauses are in `clauses.md` §2:
 - ✅ `რაც არ უნდა მოხდეს, წავალ` · ✅ `სადაც არ უნდა იყოს, მაინც ვიპოვი`
 - ✅ `რაც უნდა მოხდეს, წავალ` (also correct)
 

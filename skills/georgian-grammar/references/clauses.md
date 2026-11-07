@@ -334,7 +334,7 @@ Georgian. `თუკი` and `უკეთუ` are rare today; `როს` and `
 (Kvachadze §177, §179, §182):
 - ✅ `მოვედი, რომ გნახო` · ✅ `წავედი, რადგანაც გვიან იყო`
 - `რამეთუ` in the sense of `რადგან` is fully correct in modern Georgian (Peikrishvili §189; Louie, 2026-11-07):
-  ✅ `წავედი, რამეთუ გვიან იყო`. Kvachadze §180 calls it Old Georgian; Kaeasy does not follow that view.
+  ✅ `წავედი, რამეთუ გვიან იყო`. Kvachadze §180 calls it Old Georgian; KAeasy does not follow that view.
 
 ### Result Clauses
 A result clause has a fixed place: normally the main clause comes first and the result clause second, and it can only

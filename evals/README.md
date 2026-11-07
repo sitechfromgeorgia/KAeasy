@@ -19,7 +19,7 @@ The 121 tasks are divided across 4 core production categories:
 | **Shorts Hook** | `shorts_001` – `shorts_030` | `social` | 3-second opening video hooks (6–14 words) for vertical shorts/reels | Consistent `შენ` register, no formulaic YouTube openers, active finite verbs |
 | **UI Error** | `ui_001` – `ui_030` | `ui` | System errors, form validations, empty states, and dialog prompts | "What happened + what to do" (მიზეზი + გამოსავალი), helpful tone, period at end |
 
-All tasks are stored in [`evals/tasks.json`](file:///d:/MyStaff/Kaeasy/evals/tasks.json).
+All tasks are stored in [`evals/tasks.json`](file:///d:/MyStaff/KAeasy/evals/tasks.json).
 
 ---
 
@@ -59,15 +59,15 @@ uv run python evals/score.py --inspect news_001
 
 Or read `evals/tasks.json` directly.
 
-### Step 2: Test Baseline vs Kaeasy Skill
+### Step 2: Test Baseline vs KAeasy Skill
 
-To measure the improvement provided by Kaeasy:
+To measure the improvement provided by KAeasy:
 
 1. **Baseline run (No skill):**
    Provide only the `prompt` to the model with standard instructions:
    > "You are an assistant. Answer the user prompt directly in high-quality Georgian."
 
-2. **Kaeasy-assisted run (With skill):**
+2. **KAeasy-assisted run (With skill):**
    Include the relevant skill instructions from `skills/` (e.g. `skills/georgian-writing/SKILL.md` and the sibling skill `georgian-news`, `georgian-social`, or `georgian-ui`) in the model's system prompt or context.
 
 ### Step 3: Collect Output
@@ -129,7 +129,7 @@ Weak models frequently pass shallow regexes but fail on Georgian morphosyntax. C
 
 ## Using `evals/score.py`
 
-Kaeasy includes a dedicated offline scoring script [`evals/score.py`](file:///d:/MyStaff/Kaeasy/evals/score.py).
+KAeasy includes a dedicated offline scoring script [`evals/score.py`](file:///d:/MyStaff/KAeasy/evals/score.py).
 
 ### Scoring a Single Output Interactively
 
