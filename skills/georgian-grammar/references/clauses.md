@@ -328,14 +328,13 @@ different verb forms. Four patterns (Kvachadze §180):
 - ✅ `სცემენ, რომ გამოამტვრიონ` (present main clause, optative) · ✅ `მისთვის მინდა, რომ მსახურებდეს` (present
   subjunctive) · ✅ `მივხურე, რომ არ შეჰყოლოდნენ` (past goal)
 
-### Prefer რომ to Bookish რათა, and რადგანაც to Old რამეთუ
+### Prefer რომ to Bookish რათა
 For purpose, `რომ` is the common link; `რათა` is typical of bookish language and fairly rare in modern literary
-Georgian. `რამეთუ` belongs to Old Georgian: it fits old-style quotations, but the book calls using it freely in place
-of `რადგანაც` unjustified. `თუკი` and `უკეთუ` are rare today; `როს` and `ოდეს` ("when") turn up rarely, mostly in
-poetry (Kvachadze §177, §179, §180, §182):
-- ✅ `მოვედი, რომ გნახო` · ✅ `წავედი, რადგანაც გვიან იყო` (preferred to `რამეთუ` in modern copy)
-- needs-review: Peikrishvili §189 (`particles-adverbs.md`) accepts revived `რამეთუ` in the sense of `რადგან`, so the
-  two books differ. Until Louie decides, `რამეთუ` is advice, not an error.
+Georgian. `თუკი` and `უკეთუ` are rare today; `როს` and `ოდეს` ("when") turn up rarely, mostly in poetry
+(Kvachadze §177, §179, §182):
+- ✅ `მოვედი, რომ გნახო` · ✅ `წავედი, რადგანაც გვიან იყო`
+- `რამეთუ` in the sense of `რადგან` is fully correct in modern Georgian (Peikrishvili §189; Louie, 2026-11-07):
+  ✅ `წავედი, რამეთუ გვიან იყო`. Kvachadze §180 calls it Old Georgian; Kaeasy does not follow that view.
 
 ### Result Clauses
 A result clause has a fixed place: normally the main clause comes first and the result clause second, and it can only

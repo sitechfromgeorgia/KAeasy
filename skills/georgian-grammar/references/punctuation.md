@@ -219,6 +219,10 @@ Kvachadze is from 1988, so its rules reflect the literary norm of that time.
 
 ## Dash
 
+Kaeasy house style (Edo's rule, 2026-09-25): copy that agents publish uses no `—` or `–`, and `ka_lint` flags
+them as errors. Write a comma, a colon or a hyphen instead. The rules below describe where the literary norm puts a
+dash; use them to read and quote Georgian, and to choose the comma or colon that replaces it.
+
 - A dash is written where a predicate has been omitted, and where the verbal part of a compound predicate (the
   linking verb) has been omitted. All the book's examples are parallel statements, with the dash in a later part
   and the missing word understood from an earlier part; it gives no example of a bare "X — Y" sentence with no
