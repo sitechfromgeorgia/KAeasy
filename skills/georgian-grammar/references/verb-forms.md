@@ -11,6 +11,10 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 
 ### The fifteen preverbs
 - Modern Georgian has 15 preverbs. Nine are simple: მი, მო, ა, და, გა, ჩა, შე, წა, გადა. Six are compound: ამო, ჩამო, შემო, წამო, გამო, გადმო. A compound is a simple preverb plus მო (შე+მო gives შემო). Example: შემოვიდა, გადმოვიდა. (Peikrishvili §93)
+- The old preverbs გან, აღ, წარ, შთა, გარდა were simplified to გა, ა, წა, ჩა, გადა. Literary Georgian still uses the old forms, mostly in words of archaic or elevated style: keep them there. Rarely an old and a new form make two different words, so the choice changes the meaning. Example: განთავისუფლება, შთაგონება, წარდგენა, გარდაქმნა; pairs აღზრდა / აზრდა, აღდგომა / ადგომა, განახლება / გაახლება. (Peikrishvili §93)
+
+### Direction: მო points toward the speaker
+- Following A. Shanidze, the book splits preverbs by orientation: მო, ამო, შემო, წამო, ჩამო, გამო, გადმო point toward the speaker; მი, ა, და, გა, ჩა, გადა (and შე) point away. The pairs: ა/ამო up, გა/გამო out, შე/შემო in, გადა/გადმო across, წა/წამო forward. და has lost its partner (დამო is dead). ჩა shows two directions at once: in and down. Example: ავიდა / ამოვიდა, გავიდა / გამოვიდა, შევიდა / შემოვიდა, გადავიდა / გადმოვიდა. (Peikrishvili §94)
 
 ### Preverb and aspect
 - A preverb is the general means of expressing perfective aspect. As a rule a verb with a preverb is perfective and one without is imperfective: დავხატე is perfective, ვხატე imperfective. Perfective shows an action as finished or certain to finish; imperfective shows the process as unfinished. (Peikrishvili §94)
@@ -35,7 +39,7 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 
 ### Spelling the preverb
 - Write the literary vowel of the preverb, not the dialect vowel. Dialects can change it (წე- for წა-, შა- for შე-); the book calls this unacceptable in the literary language: წავიდა, not წევიდა; შეიყრებიან, not შაიყრებიან. (Peikrishvili §96, point 1)
-- Keep both vowels. When a verb is formed from a word that begins with ა and takes the preverb ა or a preverb ending in ა, two ა stand side by side: გაადვილდა, გაახლდა. When a verb begins with ე and takes the preverb შე, two ე stand side by side: შეეშინდა, შეეპარა. The book gives only these two cases. (Peikrishvili §96, points 2-3)
+- Keep both vowels. When a verb is formed from a word that begins with ა and takes the preverb ა or a preverb ending in ა, two ა stand side by side: გაადვილდა, გაახლდა. When a verb begins with ე and takes the preverb შე, two ე stand side by side: შეეშინდა, შეეპარა. §96 gives only these two cases; doubled vowels with a version marker are in §3 below. (Peikrishvili §96, points 2-3)
 - In syllable division, neither the person marker nor the first consonant of the stem stays with the preverb: შე-სრულდა, და-ვხატე, not შეს-რულდა, დავ-ხატე. The page speaks of syllable division (დამარცვლა), not of line ends. (Peikrishvili §96, point 4)
 - Never split a preverb. Write გან- whole and put the following ა after it, not between გა and ნ: განახორციელა, განათავისუფლა, განავითარა, not გაანხორციელა, გაანთავისუფლა, გაანვითარა. This is not about the compound preverbs (simple preverb plus მო). (Peikrishvili §96, point 5)
 - In forms without a preverb, the final consonant of გან, აღ or წარ (ნ, ღ, რ) must not remain: ახორციელებს, ავითარებს, ადგენს, ზრდის, not ანხორციელებს, ანვითარებს, არდგენს, ღზრდის. (Peikrishvili §96, point 6)
@@ -54,6 +58,16 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 - When an ე- passive takes the preverb შე-, two ე meet: შეეჩვია, შეეპარა. When that ე- passive is built from a word that itself begins with ე, three ე meet: ეჭვი → ეეჭვება → შეეეჭვა. (Peikrishvili §131, points 2-3)
 - When a stem ends in the consonant დ and the passive suffix -დ- is added, two დ result: დიდდება, გაგულადდა. (Peikrishvili §131, point 4)
 
+### Static passives (the წერია type)
+- Static passives (გდია, ყრია, წერია) are few. They take no preverb and form no aspect. Only the present screeve has its own forms: the 1st and 2nd person add -ვარ / -ხარ, and the 3rd person ends in -ია (except აკრავს, ხურავს, უჭირავს; living speech also says აკრია, უჭერია). There is no imperfect or present subjunctive: the future subseries and series II and III borrow the matching dynamic ე- passive, without a preverb. Example: ვწერივარ, წერიხარ, წერია, ხატია (= დახატული არის). (Peikrishvili §122)
+- In living speech some mediopassive verbs take this static -ია ending (წევს → წვია, უყვარს → უყვარია), and a footnote says აკრავს, ხურავს, უჭირავს drift the same way. The book records this as spoken usage, not as an error, but its paradigm has the -ს forms, so use those in standard writing. Standard: წევს, დგას, დევს, უყვარს, სძულს, აკრავს. Spoken: წვია, დგია, დვია, უყვარია, სძულია, აკრია. (Peikrishvili §122)
+
+### Descriptive (periphrastic) passive: participle + იქნა / იქნება
+- It is a past participle plus იქნა or იქნება. It forms one-person perfective verbs only, so it has no present-subseries forms, and it serves animate and inanimate subjects alike. It is used mostly for verbs that do not easily form a simple passive, but it is spreading to verbs that do, so both occur: დალაგებულ იქნა / დალაგდა. (Peikrishvili §124; Kvachadze §34)
+- Before the auxiliary the participle is bare (stem form, no -ი); after it, the participle takes the nominative -ი: ✅ გაღებულ იქნა, იქნა გაღებული, გაგზავნილ იქნა, მოტანილ იქნა; ❌ გაღებული იქნა. (Peikrishvili §124, §131 point 5; Kvachadze §34)
+- A participle with -ი plus იყო or იქნება is a different construction, a compound predicate naming a state; it takes იყო, not იქნა: ✅ თანხა გაღებული იყო (state), ✅ თანხა გაღებულ იქნება (passive); ❌ თანხა გაღებული იქნა. (Kvachadze §34)
+- These rules say how to write the construction when it is used. For news and business copy Kaeasy still prefers the active voice or a simple passive (syntax.md §3).
+
 ---
 
 ## 3. Version
@@ -68,6 +82,9 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 - A transitive verb has no version in series III: the ი- and უ- of the first evidential (perfect) are functionless, because აკეთებს, იკეთებს and უკეთებს all give the one form გაუკეთებია. Example: დაუწერია, გაუკეთებია. (Peikrishvili §137, §161)
 - On the traditional view, a verb with no contrasting version form is versionless. Such a verb can look like one version, but its ა-, ი- or უ- is functionless (credited to Shanidze). Example: აქვს, იცის, უყვარს. (Peikrishvili §138)
 - The first perfect starts from the static passive present with objective version, without any version meaning here: დაუწერია, აუშენებია. (Peikrishvili §161)
+
+### Doubled vowels in version forms
+- Write every vowel when a version vowel meets the same vowel. A neutral ა- form from a noun that starts with ა has two ა (აახლებს). A preverb that is or ends in ა, plus the ა- marker, gives two ა (ააშენა, გააგზავნა); if the root also starts with ა, three (გააადვილა, გააანალიზა). The preverb მი- plus subjective ი- gives two ი (მიითვისა). The უ- marker before a stem that starts with უ gives two უ (უუთოვებს, უუმჯობესებს, გაუუქმა). ❌ გაანალიზა, გაადვილა. The passive გაადვილდა (§1) has no ა- marker, so it keeps two ა. (Peikrishvili §139, points 1-4)
 
 ---
 
@@ -86,6 +103,8 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 - A verb with the suffix ებ adds -ინ after the theme marker in the second evidential and in the third subjunctive (both series III). The forms without ნ, in -ია and -იოს, are wrong: გამეკეთებინა, გამეკეთებინოს, not გამეკეთებია, გამეკეთებიოს. (Peikrishvili §152, point 6)
 - Where both exist, the long pluperfect and subjunctive with ებ are the literary norm. In Old Georgian, active verbs built the second pluperfect and the third subjunctive only on the passive aorist and second subjunctive. Modern Georgian sometimes also bases them on the first-perfect form with its thematic marker, which gives parallel short and long forms (short გაეკეთა beside long გაეკეთებინა). The page says the form with the marker ებ is today's literary norm. This does not make every verb long: the forms for the verb წერ are დამეწერა and დამეწეროს, with no ებ. Example: გაეკეთებინა, გაეკეთებინოს. (Peikrishvili §161)
 - Perfect and pluperfect forms with the suffix ნ (the უყიდნია type) are not accepted in the literary language: ❌ უყიდნია, გაუტაცნია, მოუმატნია, ეყიდნა, მოემატნა. A. Shanidze's view: the ნ arose to separate active forms from similar passive ones (active უცხოვრებია, passive უცხოვრნია) and then spread by analogy from the passive into active verbs. A footnote gives other scholars' views of its origin. (Peikrishvili §161)
+- Verbs with no theme marker add nothing. One-theme verbs, and verbs that alternate ე/ი in the stem, take no theme marker, so do not add ავ: ✅ წერს, ტეხს, ვგლეჯ, ვგრეხ; ❌ წერავს, ტეხავს, ვგლეჯავ, ვგლიჯავ. In their first and second evidential no ნ follows the stem: ✅ დამიწერია, დამეწერა; ❌ დამიწერნია, დამეწერნა. (Peikrishvili §152, points 2, 3, 5)
+- Keep ებ where it belongs: another theme marker sometimes turns up in its place. ✅ აპირებს, ჭიკჭიკებს; ❌ აპირობს, ჭიკჭიკობს. (Peikrishvili §152, point 4)
 - Two-person dynamic passive verbs build the second pluperfect and the third subjunctive organically: in place of an auxiliary verb they take the extension ოდ, followed by the screeve marker. In these two screeves verbs with the suffix ევ lose the ვ in front of that ოდ: გაჰქცეოდა, გაჰქცეოდეს. The form გაჰქცევია has no ოდ, so its ვ stays. (Peikrishvili §162)
 
 ---
@@ -101,6 +120,7 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 
 - For the great majority of verbs, the masdar is made by adding the suffix ა to the present/future stem without any stem extension. To get that stem, take off the markers of person, number and screeve, the extension, and the affixes that form version and voice. The page calls this the norm for modern Georgian. Example: შენება (from აშენებს), მზადება (from ემზადება). (Peikrishvili §168)
 - Before the masdar ა, the thematic ი is cut off. The thematic suffixes ავ and ამ lose only their vowel ა, so their ვ or მ stays in the masdar. Example: შლა (from შლის), ხატვა (from ხატავს), ბმა (from ა-ბ-ამ-ს). (Peikrishvili §168)
+- If the stem of an ავ-verb ends in ნ, რ or ლ, the ვ moves into the stem in the masdar and becomes an infix: კვლა (from კლავს), კვრა (from კრავს), ხვნა (from ხნავს). The book words this for any such stem, but all its examples have a vowelless root; apply it only to those (needs-review for roots with a vowel). (Peikrishvili §168)
 - Besides plain ა, the page names three further types. Some intransitive verbs show an infix ომ before the masdar ა (ჯდომა, სხდომა). In others an infix ოლ is inserted at the same point (ბრძოლა, წოლა). The third type inserts a suffix ნ before ა, especially in stems ending in ვ (თხოვნა, პოვნა). A footnote gives A. Chikobava's view that ომ and ოლ form the verb stem and do not form the masdar. The remnants of old masdar formation (ილ, ს-ა, სი-ილ, სი-ულ) are a separate group. (Peikrishvili §168)
 - The masdar declines for case, but no ებ plural is formed from it. If it passes fully into the class of nouns and breaks its link with the verb, it does take ებ, and the page then counts such words as nouns: განცხადებები, კითხვები, სხდომები. (Peikrishvili §167)
 - Whether the masdar has a plural at all is disputed: A. Shanidze is cited as saying it has no number, and I. Imnaishvili as objecting, with forms in -ანი. The author adds that such ნ plurals do occur, rarely and mostly in writing. (Peikrishvili §167)
@@ -112,6 +132,7 @@ Short rules are in `verbs.md`, `verb-classes.md` and `person-markers.md`. This f
 - Active participle (the action of the verb's subject): built on the theme of the first series. Its formatives are მ-, მ-...-ელ and მა-...-ელ, of which მ- is the main one; in the page's examples a preverb stands before them. Example: დამწერი, მშენებელი, დამაარსებელი. (Peikrishvili §170)
 - Some active participles were formed with მ-...-არ (ალ), but such words are now treated as nouns naming a profession (მხატვარი, მწერალი). A few others are formed in their own way, such as მსაჯული and მეტყველი. (Peikrishvili §170)
 - The active participle shows its thematic marker everywhere except in verbs with the marker ი. If a verb with ავ or ამ takes the suffix ელ in the participle, that marker loses its vowel ა. Example: დამბმელი (from ა-ბ-ამ-ს), მშლელი (from შლის), მკვლელი (from კლავს). (Peikrishvili §170)
+- Past passive participle: three ways, the prefix ნა- (sometimes with -არ), the suffix -ილ or -ულ, or მ-...-არ/-ალ on a simple stem. Some verbs have both a ნა- form and an -ილ/-ულ form; for such pairs the book says the ნა- type prevails today, the reverse of Old Georgian, and calls neither form wrong. It does not say when -ილ or -ულ is used. Example: ნაწერი, ნაჩუქარი, დაწერილი, დამალული, გამხმარი, გამშრალი; pair დანაწერი / დაწერილი. (Peikrishvili §171)
 - Future passive participle: the affix სა- or the pair სა-...-ელ, with the preverb before სა-. Example: დასაწერი, გასატეხი, დასაშლელი. (Peikrishvili §171)
 - Negative passive participle: the prefix უ- together with the suffix ელ, or the prefix უ- alone, with the preverb in front of უ-. Among medial-voice participles, the page gives negative forms only for the stem ვალ. Example: დაუწერელი, გაუთლელი, დაუხატავი. (Peikrishvili §171)
 - Medial-voice participles are less settled than active and passive ones (A. Shanidze): some verbs have none, verbs of one type can differ, and one root can have two forms. (Peikrishvili §172)

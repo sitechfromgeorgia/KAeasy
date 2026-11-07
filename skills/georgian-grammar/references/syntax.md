@@ -48,6 +48,13 @@ Formed with `იმისთვის, რომ`, `იმ მიზნით, �
 - ✅ `იმისთვის, რომ პროექტმა წარმატებას მიაღწიოს, გუნდური მუშაობაა საჭირო.`
 - ❌ `*რათა ხარვეზები გამოსწორდება` (indicative forbidden after `რათა`)
 
+### Particles on a Verb Predicate; the Moods After `უნდა`
+Particles can join a simple verb predicate: `ნუ` and `არ` make command forms (see §7); `შეიძლება`, `იქნებ`, `ეგებ`
+add possibility or a guess; `თურმე` marks an event the speaker did not witness; `ხოლმე` a repeated action. One verb
+can carry several particles. Some particles go with one mood only: `უნდა` takes the I or II subjunctive
+(I/II კავშირებითი), or the II თურმეობითი standing in for the III subjunctive (Kvachadze §29):
+- ✅ `მოდის ხოლმე` · ✅ `უნდა წერდეს` · ✅ `უნდა დაწეროს` · ✅ `უნდა დაეწერა`
+
 ---
 
 ## 2. Reported Speech (ირიბი ნათქვამი)
@@ -82,6 +89,14 @@ In formal news, avoid stacking the colloquial clitic `-ო` on every word. Use a
 > - Reported speech: ✅ `მან თქვა, რომ დაკავებულია.` (Preserved present tense!).
 > - ❌ `*მან თქვა, რომ დაკავებული იყო.` (Calqued past tense falsely implies he was busy then and is no longer busy).
 > - ✅ `ავტორმა აღნიშნა, რომ სტატია მზადაა.` (❌ `*მზად იყო`).
+
+### Word Order in the Author's Words
+Before direct speech, the author's words usually put the subject before the verb (the reverse is rare, mostly in
+poetry); an indirect object may stand on either side of the verb. After the speech or inside it, the verb comes before
+the subject: usually verb, indirect object, subject, sometimes verb, subject, indirect object. Exception: in a tag for
+someone who answers a question with a question, the subject usually comes first (Kvachadze §195):
+- ✅ `ნინომ თქვა: „მოვალ“` · ✅ `— მოვალ, — თქვა ნინომ`
+- ✅ `— სად იყავი? — ჰკითხა შვილს დედამ` · ✅ `— შენ? — ახლა მე ვკითხე`
 
 ---
 
@@ -156,17 +171,33 @@ Georgian word order is pragmatically oriented: **Topic** (known context) → **F
 → **Verb**.
 
 ### Usual Orders with a Subject and an Object
-Subject-object-verb is the most neutral order. Subject-verb-object and object-subject-verb are also usual, so
+Transitive verb (subject + direct object): subject-object-verb, subject-verb-object and object-subject-verb are the
+three usual orders; the other three occur only rarely. Subject-object-verb is the most neutral, and
 subject-verb-object is not a calque (Kvachadze §133-134):
 - ✅ `კომპანიამ ახალი პროდუქტი წარადგინა.`
 - ✅ `კომპანიამ წარადგინა ახალი პროდუქტი.`
 - ✅ `ახალი პროდუქტი კომპანიამ წარადგინა.` (puts the stress on who did it)
 
+Two-person intransitive verb (subject + indirect object): subject-object-verb and object-subject-verb are the most
+widespread; next come the verb-medial orders (subject-verb-object, object-verb-subject); verb-first orders are rare,
+mostly in poetry (Kvachadze §133-134):
+- ✅ `ბავშვი დედას მიეხუტა` · ✅ `დედას ბავშვი მიეხუტა`
+
 ### Placement of Question Words
-Question words (`ვინ`, `რა`, `სად`, `როდის`, `რატომ`, `როგორ`) **strictly precede the verb**:
+A question word usually opens the sentence, and its partner comes straight after it: the verb, when the question
+word is a subject or object pronoun or a question adverb (`ვინ`, `რა`, `სად`, `როდის`, `რატომ`, `როგორ`); the noun,
+when a question pronoun modifies a noun. The question word may also stand later, after a subject, object or
+adverbial, but its partner still follows it directly: nothing comes between a question word and its verb
+(Kvachadze §16):
+- ✅ `როდის წავიდა ბავშვი?` · ✅ `ბავშვი როდის წავიდა?` · ✅ `რომელი წიგნი წაიკითხე?`
 - ✅ `ეს ამბავი როდის მოხდა?` (❌ `*როდის ეს ამბავი მოხდა?`)
 - ✅ `შენ სად მუშაობ?` (❌ `*სად შენ მუშაობ?`)
 - ✅ `კომპანიამ პრეზენტაცია რატომ გადადო?` (❌ `*რატომ კომპანიამ გადადო პრეზენტაცია?`)
+
+In a yes/no question about a member other than the verb, that member stands right before the verb and carries the
+logical stress, while the question intonation falls on the verb's last syllable. Putting another word in that slot
+changes what is asked (Kvachadze §18):
+- ✅ `წერილი მან გამოგზავნა?` (was it he?) · ✅ `მან წერილი გამოგზავნა?` (was it a letter?)
 
 ### Placement of Negation Particles (`არ`, `ვერ`)
 The negation particle must immediately precede the verb. Nothing should split the particle from the verb:
@@ -185,8 +216,8 @@ important and widely used stylistic one. So the verb-medial order above is a sty
 - ✅ `მასწავლებელმა წიგნი მოიტანა`
 - ✅ `მასწავლებელმა მოიტანა წიგნი`
 
-Limits: some words have a firm place, and moving words can change which word a modifier attaches to, or leave no
-sentence at all (Kvachadze §4).
+Limits: some words have a firm place (such as an adverbial or plain object before a verbal noun, below), and moving
+words can change which word a modifier attaches to, or leave no sentence at all (Kvachadze §4).
 
 ### A Moved Modifier Can Attach to the Next Word
 If a modifier is moved after its noun with its form unchanged, it loses its link with that noun and attaches to the
@@ -196,11 +227,20 @@ its form unchanged, it would attach to the next word `ჩაფით` (Kvachadz
 
 ### Attributes, Objects and Adverbials Before Their Head
 - An attribute usually stands before the word it defines (Kvachadze §129).
+- With two or three attributes before a noun, a numeral or pronoun usually comes first, then the adjectives or
+  participles; each earlier attribute modifies the noun together with the later ones. With one adjective and one
+  genitive noun, either may stand next to the noun, but a genitive tightly bound to the noun stays directly before it
+  (Kvachadze §102):
+  - ✅ `ორი პატარა ბოკვერი` · ✅ `ჩვენი პატარა მდინარე` · ✅ `ერთი შავი საზარელი ობობა`
+  - ✅ `დაწყვეტილი ტელეფონის მავთულები` · ✅ `ვაზის შეყვითლებული ფოთლები`
 - A plain object or adverbial tied to a verbal noun or participle (not only to a predicate) usually stands before it
   and generally cannot be separated from it. When both accompany it, the adverbial usually stands next to it and the
   plain object before the adverbial. A plain object or adverbial also usually precedes an adjective or adverb it is
   tied to (Kvachadze §129, §131):
   - ✅ `ღრუბლებისაგან სანახევროდ დაფარული მზე`
+- When the verbal noun is itself a sentence member, this is one of the firm places in Georgian word order: as a rule
+  its adverbial, and likewise its plain object, comes first (Kvachadze §4):
+  - ✅ `სანადიროდ წასვლა გადაწყვიტა` (❌ `წასვლა სანადიროდ გადაწყვიტა`)
 
 ### Order With a One-Participant Verb (subject and verb only)
 Subject-verb and verb-subject are both possible, so verb-final is not obligatory here. The order is not fixed: the
@@ -233,6 +273,21 @@ but the orders above are more natural. In a clause with a one-person verb and a 
 place and time adverbials (Kvachadze §130, §132):
 - ✅ `გუშინ ტყეში ძალიან ბნელოდა`
 
+### Coordinated Members
+Put coordinated members side by side. Placing one member before a shared word and adding the other after it with
+`და` is, in the book's view, not characteristic of Georgian; it says the same of a verb set between coordinated
+subjects, and calls splitting coordinated direct objects around the verb unnatural (Kvachadze §139, §140, §142):
+- ✅ `სუფთად და კოხტად ჩაცმულნი` (❌ `სუფთად ჩაცმულნი და კოხტად`)
+- ✅ `მიდიოდა და მიიმღეროდა`
+- ❌ `ჩაი მოიტანეს, ნამცხვარი, ხილეული`
+
+Rarely, one shared member (usually the predicate) takes several members of different kinds as if they were one
+series, joined by `და`, another conjunction or none: adverbs or question words of different types (time and place,
+purpose and manner), sometimes with a pronoun subject or object. Joining a manner adverb in `-ად` to a predicative
+attribute is improper: give the manner word the predicative form too (Kvachadze §148):
+- ✅ `მარად და ყველგან` · ✅ `როდის და საიდან` · ✅ `ვინ, საიდან და რისთვის`
+- ✅ `სხვანაირი მოვდივარ — ნაცემი` (❌ `სხვანაირად მოვდივარ — ნაცემი`)
+
 ---
 
 ## 6. Commas and Coordination (სასვენი ნიშნები)
@@ -244,8 +299,10 @@ Place a comma before: **რომ, რომელიც, რადგან, �
 - ✅ `სერვისი გაითიშა, რადგან სერვერი გადაიტვირთა.`
 - ✅ `ჩვენ ვცადეთ, მაგრამ ვერ მოვასწარით.`
 
-Exception: no comma stands before `რომ` when `რომ` sits inside its own clause:
+Exceptions: no comma stands before `რომ` when `რომ` sits inside its own clause, or after emphatic `სწორედ`,
+`მართლა`, `მართლაც` (Kvachadze §182, §185; more in `punctuation.md`):
 - ✅ `შენ რომ მოხვიდე, გავიხარებ.`
+- ✅ `სწორედ რომ გვიანია.`
 
 ### End Marks Follow the Sentence Type
 - A declarative sentence ends with a period (Kvachadze §14).
@@ -283,13 +340,15 @@ Georgian possesses three distinct negative particles:
 | **ნუ** | Negative imperative | Prohibition, plea, or direct warning | `ნუ ნერვიულობ!` (Don't worry!)<br>`ნუ წაშლი!` (Don't delete!) |
 
 ### Prohibitions: `ნუ` vs `არ`
-- **Immediate Prohibition / Advice / Plea**: Use `ნუ` with present or optative:
+A prohibition is `ნუ` + present or future, or `არ` + optative. `ნუ` does not take the optative, and `არ` does not
+take the present (Peikrishvili §89; Kvachadze §12, §19; more in `verbs.md` §9):
+- **`ნუ` + present or future**: advice, a plea, a warning:
   - ✅ `ნუ ნერვიულობ, ყველაფერი მოგვარდება.`
-  - ✅ `ნუ დარდობ!`
-  - ❌ `*არ ნერვიულობ` (calqued Russian/English error).
-- **Categorical Order / Regulatory Command**: Use `არ` + Optative:
+  - ✅ `ნუ დარდობ!` · ✅ `ნუ წაშლი!` · ✅ `ნუ დაწერ!`
+  - ❌ `*არ ნერვიულობ` (calqued Russian/English error) · ❌ `ნუ გააკეთო!`
+- **`არ` + optative**: also a prohibition, common in orders and notices:
   - ✅ `არ შეეხოთ მოწყობილობას!`
-  - ✅ `არ დაუშვათ შეცდომა!`
+  - ✅ `არ დაუშვათ შეცდომა!` · ✅ `არ იდარდო!`
 
 ### Double Negation (Negative Concord)
 Unlike English, where double negatives are forbidden, Georgian usually **doubles** the negation: a negative
@@ -317,6 +376,29 @@ the forms **ვერცერთი** and **არცერთი** inherently 
 - **Orthography**: House style requires single-word spelling: `ვერცერთი` and `არცერთი`. Do not write them split (`*ვერც ერთი`, `*არც ერთი`), except when `ერთი` is a numeral (e.g. `ვერც ერთ ღამეს`).
 - ✅ `ვერცერთი შესრულდა.` (❌ `*ვერცერთი არ შესრულდა.`)
 - ✅ `არცერთი მოვიდა.` (❌ `*არცერთი არ მოვიდა.`)
+
+### Negative Series and Clauses: `არც … არც`
+In a negative series, repeat `-ც` on the negative particle before each item: `არც — არც`, `აღარც` (or `აღარც — არც`),
+`ვერც — ვერც`, `ნურც — ნურც`. Sometimes `და` also stands before the last item, which keeps its own particle. A verb
+placed before the series keeps its plain particle (`არ`, `აღარ`, `ვერ`, `ნუ`); a verb after the series no longer
+needs one, though one `ვერც` example in the book still has `ვერ` on the verb (Kvachadze §139):
+- ✅ `არ მიყვარს არც ზამთარი, არც ზაფხული` · ✅ `არც ზამთარი მიყვარს, არც ზაფხული`
+- ✅ `ნუ მოუშვებ ნურც ქორს, ნურც ალალს`
+
+Negative coordinate clauses repeat the `-ც` particles (`არც`, `ვერც`, `ნურც`, `აღარც`, `ვეღარც`) in each clause; they
+both join the clauses and strengthen the negation, and `და` may stand between the clauses or not. In every example the
+book gives, the verbs carry no extra `არ`, `ვერ` or `ნუ`; it states no rule about adding one. That the particles may
+differ between clauses is in `clauses.md` §1 (Kvachadze §163):
+- ✅ `არც დარეკა, არც მოგვწერა` · ✅ `არც ვჭამე, არც დავლიე` · ✅ `ვეღარც ვნახე, აღარც დავურეკე`
+
+### No `არ` in "No Matter What" Clauses
+A "no matter what / who / where / how" clause opens with a relative word (`რაც`, `რასაც`, `ვინც`, `ვისაც`, `სადაც`,
+`როგორც` and others) plus `უნდა`; `გინდ` sometimes replaces `უნდა`, and the main clause may add `მაინც`. The verb is
+in the subjunctive (or II თურმეობითი) and stays affirmative: `არ` does not go with `უნდა` in this meaning. The book
+notes that `არ` is used fairly often and counts it a mistake. Other concessive clauses are in `clauses.md` §2
+(Kvachadze §183):
+- ✅ `რაც უნდა მოხდეს, წავალ` · ✅ `სადაც უნდა იყოს, მაინც ვიპოვი`
+- ❌ `რაც არ უნდა მოხდეს`
 
 ### More Negative Forms: ნურ- Pronouns and აღარ, ვეღარ, ნუღარ
 The book lists six negative particles (`არ`, `ვერ`, `ნუ`, `აღარ`, `ვეღარ`, `ნუღარ`) and names `არ`, `ვერ` and `ნუ` as
@@ -369,6 +451,27 @@ When the 1st and 2nd person pronouns (`მე`, `ჩვენ`, `შენ`, `�
 sentence is still complete, provided no other member is missing (Kvachadze §124):
 - ✅ `დაგინახე` · ✅ `ხვალ მოსკოვს მივდივარ`
 
+### A Member Named Just Before Is Left Out
+When a clause of a complex sentence, or a sentence after another, lacks a member that the clause or sentence before
+it makes clear, leave the member out: it is understood, and the book calls restoring it stylistically unjustified. The
+understood member may even stand in a different case from the one it had where it was named. Such incomplete
+sentences are usual especially in dialogue, in questions and answers alike (Kvachadze §124):
+- ✅ `გოგო კართან იდგა და ციოდა` (`გოგოს` understood)
+- ❌ `გოგო კართან იდგა და გოგოს ციოდა`
+
+This holds when the reference is clear; where a gap or pronoun could point to two things, repeat the noun
+(`agreement.md`).
+
+### Generalized Person ("Anyone")
+For an action true of everyone rather than a particular person, use a verb whose person is read as general. Usually
+this is the 2nd person singular (rarely plural); in two- and three-person verbs it may be the subject or the indirect
+object. Do not add the matching pronoun: the book, quoting Shanidze, says it should not be added, though it sometimes
+is. Rarely a 1st person plural verb carries the same meaning. So does a 3rd person plural verb in the present (rarely
+the future) with a habitual sense, and then no subject is stated (Kvachadze §127; for the 3rd person plural with an
+unknown agent see §3):
+- ✅ `რასაც დასთეს, მასვე მომკი` (❌ `რასაც შენ დასთეს, მასვე მომკი`)
+- ✅ `თვალით ვხედავთ, ყურით ვისმენთ` · ✅ `საძირკვლიდან იწყებენ`
+
 ### Nominal Sentence
 A nominal sentence names a thing or event without asserting anything about it. Its one main member is a noun in the
 nominative (singular or plural), and no predicate is stated or implied. It is always affirmative, and may be bare or
@@ -385,3 +488,10 @@ such change: the subject stays nominative across the three forms of `იზრ�
 second noun also stays dative. The page describes this; it does not give a command (Chikobava §57):
 - ✅ `დავითი აქებს სიმონს` · ✅ `დავითმა აქო სიმონი` · ✅ `დავითს უქია სიმონი` · ✅ `დავითი ემალება სიმონს` ·
   ✅ `დავითი დაემალა სიმონს`
+
+### Compound Predicate
+A compound predicate is a nominal part (usually a noun or participle) plus a linking verb such as `არის`. The nominal
+part carries the meaning; the linking verb ties it to the subject and carries series, person, number, tense and mood,
+so it agrees with the subject (plural `არიან` with plural `ისინი`). Sometimes the linking verb is left out, and the
+book's examples then put a dash where it would stand; the dash rules are in `punctuation.md` (Kvachadze §30):
+- ✅ `ისინი კარგი ექიმები არიან` · ✅ `ის — ექიმი, მე — მასწავლებელი`

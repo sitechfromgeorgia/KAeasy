@@ -1,7 +1,7 @@
 # Adverbs, postpositions, conjunctions and particles
 
-Source: Peikrishvili, Georgian Morphology.
-Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of their time; this file uses neither.
+Sources: Peikrishvili, Georgian Morphology; Kvachadze, Modern Georgian Syntax.
+Rules from Kvachadze (1988) reflect the literary norm of its time.
 
 ## Adverb endings: თ or დ
 
@@ -16,6 +16,11 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   Example: ✅ `ნელ-ნელა`, `მთა-მთა` · ✅ `აქა-იქ`, `დილა-საღამოს`. (Peikrishvili §179)
 - Write as one word, with no hyphen, adverbs joined by the conjunction და and compound (fused) adverbs.
   Example: ✅ `ხანდახან`, `თანდათან`, `დროდადრო` · ✅ `დიდხანს`, `ცალმხრივ`. (Peikrishvili §179)
+- Write "how many times" adverbs as one word: `ჯერ` joins the stem of a numeral or of some pronouns, and a
+  numeral drops its final `-ი` (`ორი` → `ორჯერ`). An ordinal stem also takes it and keeps its `-ე`. (With digits
+  Kaeasy writes `4-ჯერ`; see georgian-names-numbers.)
+  Example: ✅ `ორჯერ`, `სამჯერ`, `ბევრჯერ`, `რამდენჯერ`, `იმდენჯერ`, `ოცდამეორეჯერ` · ❌ `რამდენ ჯერ`.
+  (Kvachadze §81)
 
 ## Postpositions: bound or separate
 
@@ -45,6 +50,14 @@ Rules from Kvachadze (1988) and Chikobava (1946) reflect the literary norm of th
   ✅ `ხუთიც`, `რამე`, `სადღა` (fused). (Peikrishvili §190)
 - Fixed particles always come before the word (`ნუ`, `არ`, `ვერ`) or always come after it (`მე`, `ვე`, `ღა`,
   `ცა`, `ოდე`). The place of some, such as `თურმე`, is free. (Peikrishvili §190)
+- Command sentences are short and often carry a particle that strengthens the command or adds a nuance: `დაე`
+  (short `დე`), `აბა`, `ბარემ`, `მო` (`მოდი`) and others. In the book's examples `დაე`/`დე` goes with a
+  third-person subjunctive, `მოდი` with a first-person plural ("let's"), `ბარემ` with a plain imperative.
+  Example: ✅ `დაე მოვიდეს!` · ✅ `აბა, წავიდეთ!` · ✅ `ბარემ ისიც მოიტანე!` · ✅ `მოდი ვითამაშოთ!`.
+  (Kvachadze §19)
+- `მცა` lives on, in the literary language and the dialects, only in a few set phrases, mainly blessings and
+  curses (the book cites N. Kotinov); it lost its Old Georgian function when the aspect system changed. Do not use
+  it as a free particle in new sentences; keep it to an established formula. (Peikrishvili §194)
 
 ### -ო, -თქო, -მეთქი: whose words
 

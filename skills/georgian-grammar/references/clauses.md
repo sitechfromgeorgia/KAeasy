@@ -20,12 +20,23 @@ straight after `მაგრამ` when the second clause drops its subject, an
 - ✅ `დაგვიანდა, მაგრამ მაინც მოვიდა`
 - ✅ `ყველამ სთხოვა, მაგრამ ნიკა მაინც არ დარჩა`
 
+### ხოლო: a Milder Contrast, More Written
+`ხოლო` also always opens the second clause and sets it against the first, but less sharply than `მაგრამ`: the second
+clause reports nothing unexpected given the first. `მაგრამ` is the most widespread contrast word, while `ხოლო` and
+`კი` belong more to the written language. The book's examples have a comma before `ხოლო`, and the second clause often
+points back to a word of the first (Kvachadze §165):
+- ✅ `მე დავრჩი, ხოლო ის წავიდა`
+- ✅ `დედა სახლშია, ხოლო მამა სამსახურში`
+
 ### Contrastive კი Follows the Stressed Word
 Contrastive `კი` is close to `ხოლო` in function, but it never begins the second clause. It comes after the word or
 words that carry the logical stress, mostly the subject and less often another clause member. `კი` sometimes appears
-in a clause already linked by `და`, `მაგრამ` or `ხოლო`, but the book calls pairing it with a second contrast
-conjunction unjustified, because one is enough (Kvachadze §165):
+in a clause already joined by `მაგრამ` or `ხოლო`; the book calls such use of two contrast conjunctions unjustified,
+because one is enough. Use either the conjunction or `კი`. The page also shows `კი` after `და` but gives no verdict on
+that pair (Kvachadze §165):
 - ✅ `მე დავრჩები, შენ კი წახვალ`
+- ✅ `მე დავრჩი, შენ კი წახვედი` · ✅ `მე დავრჩი, ხოლო შენ წახვედი`
+- ❌ `მე დავრჩი, ხოლო შენ კი წახვედი` · ❌ `დავრჩი, მაგრამ შენ კი წახვედი`
 
 ### თუ as "Or" in Alternative Questions
 `თუ` is sometimes used as a separating conjunction, and in that use it gives the parts of a coordinate sentence a
@@ -33,6 +44,16 @@ question meaning. `თუ` also sometimes joins certain dependent clauses, and t
 (Kvachadze §164):
 - ✅ `ნიკა წავიდა თუ დარჩა?`
 - ✅ `არ ვიცი, მოვა თუ არა`
+
+### Alternative Conjunctions Are Usually Repeated
+Separating conjunctions usually recur across the parts of a coordinate sentence. `ან` is sometimes found alone, which
+is not an error, but is usually repeated: `ან … ან`, `ან … ანდა`, `ან … ან არადა`, `ან … ან კიდევ`; the first `ან` is
+sometimes left out. `ხან` is always repeated and marks alternation in time, across two or more clauses. Any `ხან`
+after the first can be strengthened with `კი`, `-ც` or `კიდევ`, and `და` can also stand between the clauses. The first
+`ხან` need not open its clause; it then stands before the word that carries the logical stress. `გინდ … გინდ` and
+`თუნდ … თუნდ` are used repeated, mean the same, and say that one of the named options is to be picked
+(Kvachadze §164):
+- ✅ `ან დარეკე, ან მომწერე` · ✅ `ხან მღეროდა, ხან ტიროდა` · ✅ `გინდ დღეს წადი, გინდ ხვალ`
 
 ### The -ც Negatives in Coordinated Clauses May Differ
 Negative coordinate sentences repeat the `-ც` particles (`არც`, `ვერც`, `ნურც`, `აღარც`, `ვეღარც`), and the parts
@@ -66,6 +87,22 @@ cause-and-result type `და` is sometimes left out; the book's example then ha
 (Kvachadze §163):
 - ✅ `წვიმდა და ამიტომ დავრჩით`
 - ✅ `წავიდა და მალე დაბრუნდა`
+
+### In a Series, Often Only the Last Clause Takes a Conjunction
+More than two coordinated clauses can be linked with or without conjunctions. Often only the last clause takes one
+(`და` in most of the book's examples, `მაგრამ` in one) and the others stand without one, separated by a comma, or
+sometimes by a semicolon when they are more independent of each other. The book states no comma rule for `და`, but
+its printed examples have no comma before `და` between clauses and one before `მაგრამ`, which matches the comma rules
+in `syntax.md` §6 (Kvachadze §162, §163, §168):
+- ✅ `კარი გაიღო, ქარი შემოვარდა და სინათლე ჩაქრა`
+
+### ესე იგი (ე. ი.) Joins an Explaining Clause
+To join a clause that pins down or explains the whole earlier clause or one part of it, `ესე იგი` (short `ე. ი.`) is
+the usual link and `ანუ` is used rarely; after `ანუ` an inserted remark usually follows. The book's examples set the
+explaining clause off with a comma and write `ესე იგი` as two words. The clause may also carry a subordinating word
+after the link (Kvachadze §166):
+- ✅ `ის არ ჩანს, ესე იგი დაგვიანდა`
+- ✅ `..., ე. ი. როცა ...` · ✅ `..., ანუ, როგორც ამბობენ, ...`
 
 ---
 
@@ -120,6 +157,10 @@ then understood would be the demonstrative `ის`, which does not mean the sam
 - ✅ `ის, ვინც მოვიდა`
 - ✅ `ვინც მოვიდა, ...`
 
+To attach a subject or object clause, a relative pronoun (`ვინც`, `რაც`) and the conjunction `რომ` are sometimes used
+together. The pronoun alone is enough to make the link; the page gives no comment on style (Kvachadze §173):
+- found: `ვინც რომ შიშით გაინაბა` · `რაც რომ ... ჰყავდა`
+
 ### Case of the Relative Word and of the Pointer
 - A relative word is a member of the dependent clause as well as its link, so its case is set inside that clause, not
   by the word in the main clause. For `რომელიც` the case comes from the member of the dependent clause it is tied to,
@@ -139,6 +180,19 @@ then understood would be the demonstrative `ის`, which does not mean the sam
   with `თუ`, and this `თუ` is often left out (Kvachadze §173):
   - ✅ `თუ როგორ` · ✅ `თუ რისთვის` · ✅ `თუ რა` · ✅ `ვერ მიმხვდარიყო, რა მიზეზით ...`
 
+### Tense in an Object Clause: Same Time or Earlier
+In a sentence with an object (or subject) clause, the two verbs usually share a tense, mostly past and often the same
+screeve; the actions are then simultaneous. When the clause's action came first, it takes the pluperfect
+(II თურმეობითი) and the main verb the aorist. Citing Shanidze, the book limits this, for object and subject clauses,
+to a few main verbs: see, notice, become sure, turn out, and the like (Kvachadze §173). Quoting Shanidze again, it
+adds that tenses in a complex sentence can be relative to the main action: an event before it is expressed in the
+dependent clause by II თურმეობითი, one after it by the aorist. In a compound sentence the tenses normally keep their
+plain, absolute meaning (Kvachadze §192). This is about events before a past main verb; the no-back-shift rule for
+reported present states is in `syntax.md` §2:
+- ✅ `ვხედავდი, რომ თამაშობდნენ` (same time)
+- ✅ `დავინახე, რომ კარი გაეღოთ` · ✅ `აღმოჩნდა, რომ უკვე წასულიყო` (earlier action)
+- ✅ `ნახა, რომ ვიღაცას ფანჯარა გაეტეხა` (the breaking came first)
+
 ### The Particle -ც on a Relative Pronoun
 On a relative pronoun in the genitive, the particle `-ც` (`-ცა`) can be left out altogether or moved to the next word:
 the noun the pronoun modifies, a free-standing postposition, or an adverb used as a postposition. When the pronoun
@@ -147,6 +201,18 @@ not become question words (Kvachadze p. 363):
 - ✅ `რომლის ხევსაც` (`-ც` on the noun)
 - ✅ `რომლის იქით` (`-ც` dropped)
 - ✅ `რომელი წიგნიც` (non-genitive pronoun)
+
+### Defining Clauses: Position and Links
+A defining clause mostly follows the main clause or stands inside it, and only rarely comes before it. The joining
+word matters: with `რომელიც` or a relative adverb (`სადაც` and the like) the clause sits inside the main clause or,
+more often, after it; with `რომ`, `თითქოს`, `როგორც`, `ვითომ` it usually comes last; with `როგორიც`, first or last.
+A `ვინც` or `რაც` clause has no fixed place (Kvachadze §174):
+- ✅ `სახლი, რომელშიც ვცხოვრობ, ძველია` · ✅ `ვნახე ქუჩა, სადაც გავიზარდე`
+
+Besides `რომელიც`, the book lists links built from `რომელ` with the "without" frame `უ-...-ოდ`: `ურომლოდაც`,
+`ურომლისოდაც`, plural `ურომელთოდაც` ("without which"); its list also prints `ურომლისობაც`. In its examples the
+clause comes straight after the noun it describes, with a comma before the link (Kvachadze §174):
+- ✅ `გრძნობა, ურომლოდაც ცხოვრება ძნელია` · ✅ `წიგნი, ურომლისოდაც ვერ ვისწავლიდი`
 
 ### Do Not Let Another Noun Separate რომელიც From Its Head
 `რომელიც` mostly follows its head directly, though other main-clause words sometimes stand between them. With a final
@@ -218,6 +284,15 @@ same or different. The book lists as departures from the established literary ru
 - ✅ `რაც უფრო ... მით უფრო` · ✅ `რამდენჯერაც ... იმდენჯერ` · ✅ `რამდენადაც ... იმდენად`
 - ❌ `რამდენიც ... იმდენი`
 
+### Match the Pointer to the Kind of Relative Word
+In a comparison, `როგორიც` is a relative pronoun and `როგორც` a relative adverb. The book pairs the first with the
+pointer `ისეთი` (`ისეთივე`) and the second with `ისე` (`ისევე`). It remarks that fairly often either the pointer or
+the link is badly chosen, and it queries crossed pairs such as `ისე ... როგორიც` and `ისეთი` (`ისეთივე`)
+`... როგორც`, and `როგორც` where `რამდენიც` belongs after `იმდენი`. A rarer fault joins a manner or degree pointer to
+a relative pronoun: `ისე ... რომელიც`, `რამდენსაც ... იმდენად`, `რასაც ... ისე` (Kvachadze §178):
+- ✅ `ისეთი ... როგორიც` · ✅ `ისე ... როგორც`
+- ❌ `ისე ... როგორიც` · ❌ `ისე ... რომელიც` · ❌ `რამდენსაც ... იმდენად`
+
 ### Cause Clauses
 Cause clauses are joined by `რომ`, `იმიტომ რომ`, `რადგანაც`, `ვინაიდან`, `რაკი`, `რახან` and `რაღაი` (Kvachadze §179):
 - A `რომ` clause usually comes last, and the main clause almost always has `მიტომ`, `იმიტომ` or `იმის გამო`. When
@@ -253,6 +328,15 @@ different verb forms. Four patterns (Kvachadze §180):
 - ✅ `სცემენ, რომ გამოამტვრიონ` (present main clause, optative) · ✅ `მისთვის მინდა, რომ მსახურებდეს` (present
   subjunctive) · ✅ `მივხურე, რომ არ შეჰყოლოდნენ` (past goal)
 
+### Prefer რომ to Bookish რათა, and რადგანაც to Old რამეთუ
+For purpose, `რომ` is the common link; `რათა` is typical of bookish language and fairly rare in modern literary
+Georgian. `რამეთუ` belongs to Old Georgian: it fits old-style quotations, but the book calls using it freely in place
+of `რადგანაც` unjustified. `თუკი` and `უკეთუ` are rare today; `როს` and `ოდეს` ("when") turn up rarely, mostly in
+poetry (Kvachadze §177, §179, §180, §182):
+- ✅ `მოვედი, რომ გნახო` · ✅ `წავედი, რადგანაც გვიან იყო` (preferred to `რამეთუ` in modern copy)
+- needs-review: Peikrishvili §189 (`particles-adverbs.md`) accepts revived `რამეთუ` in the sense of `რადგან`, so the
+  two books differ. Until Louie decides, `რამეთუ` is advice, not an error.
+
 ### Result Clauses
 A result clause has a fixed place: normally the main clause comes first and the result clause second, and it can only
 very rarely sit inside the main clause. It is joined by `ასე რომ`, `რის გამოც` or `რის შედეგადაც`. A clause with
@@ -261,6 +345,20 @@ result clause than a manner clause. A clause joined with `რის შემდ
 gives what happens after the main action is completed, a sequence, not a result, and it always stands last
 (Kvachadze §181):
 - ✅ `რის გამოც` (result) · ✅ `რის შემდეგაც` (sequence)
+
+### Condition Clauses With თუ and რომ
+- A `თუ` clause mostly opens the sentence and otherwise closes it. `თუ` itself usually stands at the start of its
+  clause and only rarely further in, after another word of that clause; the book reports this as frequency and does
+  not call the second order wrong. The main clause may carry the pointer `მაშინ` (Kvachadze §182):
+  - ✅ `თუ ... , მაშინ ...` · ✅ `ვაჟკაცობა თუ ...` (`თუ` after the first word, the rarer order)
+- A `რომ` condition clause usually comes first, less often last. The main verb patterns (Kvachadze §182):
+  - pluperfect in the clause, conditional in the main clause, for a past event that did not happen;
+  - present or future subjunctive (`-დე` forms) in the clause, conditional or future in the main clause;
+  - optative in the clause, future in the main clause;
+  - rarely both verbs share a screeve (for example the future).
+  - With `რომ`, adding `თუ` is unnecessary.
+  - ✅ `ადრე რომ მოსულიყო, ვნახავდით` · ✅ `შენ რომ მეხმარებოდე, მოვასწრებდი` · ✅ `ხვალ რომ გაცივდეს, დავრჩები`
+- Future `თუ` plus aorist and the unreal past condition are also in `syntax.md` §1.
 
 ### თორემ Opens the Second Clause
 `თორემ` is a conditional-consequence link which the book, citing Shanidze, derives from `თუ` and the particle `არა`,
@@ -280,6 +378,17 @@ particle `-ც` in the dependent clause), `გინდ`, `თუნდ` (`თ�
 - ✅ `თუმცა დაიღალა, მაგრამ გააგრძელა`
 - ✅ `თუნდ დაიღალოს, გააგრძელებს`
 
+### თუმცა Clause First: მაგრამ Opens the Main Clause
+`თუმცა` (also `თუმც`, `თუმცაღა`) usually opens its clause. When the `თუმცა` clause comes first, the main clause as a
+rule starts with `მაგრამ`, with a comma before it; the main clause often adds `მაინც`, and `კი` may sharpen the
+contrast. The book also shows `მაგრამ` sometimes left out. When the `თუმცა` clause comes last, no contrasting
+conjunction is used, so `მაგრამ` falls out when the clauses swap. Swapping can also change word order, and the
+possible orders are not equal in syntax or style: in a given case one of them is the better choice
+(Kvachadze §171, §183):
+- ✅ `თუმცა დაიღალა, მაგრამ მაინც გააგრძელა` · ✅ `თუმცა დაიღალა, მაინც გააგრძელა`
+- ✅ `თუმცა გვიან იყო, მაგრამ ვმუშაობდით` · ✅ `ვმუშაობდით, თუმცა გვიან იყო`
+- ✅ `გააგრძელა, თუმცა დაიღალა`
+
 ### ოღონდ: "Provided That"
 `ოღონდ` (also `ოღონც`, `ოღონდაც`, `ოღონდ კი`) joins to the main clause a dependent clause of conditional-concessive
 meaning. This type approaches a compound sentence with a contrasting conjunction and can be called an intermediate
@@ -297,6 +406,13 @@ concessive conjunction while `მართალია` is only inserted (Kvacha
 - ✅ `მართალია, გვიანია, მაგრამ მოვასწრებთ`
 - ✅ `ის, მართალია, გვიან მოვიდა, მაგრამ მოასწრო`
 
+### No რომ After an Inserted Phrase Such as ვგონებ
+When a parenthetical that contains a verb form (`ვგონებ`, `რა თქმა უნდა`, `წარმოიდგინეთ`) is inserted in a sentence,
+the rest of the sentence follows it directly: a `რომ` after it is unacceptable in literary Georgian. A main verb such
+as `მგონია` that governs a `რომ` clause is a different construction, not covered by this rule (Kvachadze §156):
+- ✅ `შენ, ვგონებ, ვერ მოახერხებ` · ❌ `შენ, ვგონებ, რომ ვერ მოახერხებ`
+- ✅ `ის, რა თქმა უნდა, მოვა` · ❌ `ის, რა თქმა უნდა, რომ მოვა`
+
 ### რაც as a Comment on the Whole Main Clause
 A dependent clause introduced by the relative `რაც` (in various case forms) refers to the whole main clause and gives
 the speaker's conclusion, evaluation or remark about what the main clause says. It always follows the main clause.
@@ -308,8 +424,14 @@ replaced by the demonstrative `ეს` in the same case, the sentence becomes a 
 - ✅ `ის გვიან მოვიდა; ამან გაგვაბრაზა`
 - forms: `რამაც` / `რითაც`
 
-### Punctuation of Clauses With No Conjunction
-Several kinds of dependent clause are joined without a conjunction (Kvachadze §186):
+### Clauses With No Conjunction
+After a main clause, the joining `რომ` or `თუ` is often left out, and the comma stays. `თუ` is usually dropped when the
+clause has a question word. `რომ` is usually dropped when the clause verb is subjunctive (or II თურმეობითი with a
+subjunctive sense), and often also with an indicative verb. Both forms, with and without the conjunction, are correct;
+to restore one, use `თუ` before a question word, otherwise `რომ` (Kvachadze §186):
+- ✅ `ვთხოვე, წავიდეს` · ✅ `ვთხოვე, რომ წავიდეს` · ✅ `ვიცი, რას აკეთებს` · ✅ `მეგონა, სახლში იყო`
+
+Several kinds of dependent clause are joined without a conjunction, with this punctuation (Kvachadze §186):
 - An object or subject clause always follows the main clause. After the main clause a comma is usually written, rarely
   a colon or dash. This covers clauses with a question word (where `თუ` could be restored) and other clauses (where
   `რომ` could be restored).
@@ -432,13 +554,22 @@ the verb becomes a noun in `-ობა` formed from the negative participle, in 
 - ✅ `თუ მტერს ის გორაკი დაუთმეს, ...` → `მტრისათვის იმ გორაკის დათმობის შემთხვევაში ...`
 - ✅ `ჩხუბი რომ არ მოსვლოდათ, ...` → `ჩხუბის მოუსვლელობის შემთხვევაში ...`
 
+### Concessive Clause
+A `თუმცა` clause can be turned, roughly, into a phrase: the conjunction drops and the verb becomes a masdar in the
+genitive after `მიუხედავად`. With a compound predicate (a word plus `იყო`) the auxiliary drops and the word becomes an
+abstract noun; a negated verb becomes a privative noun in `-ობა`. In all the book's examples the final genitive takes
+the full ending `-ისა` (Kvachadze §191):
+- ✅ `თუმცა დაიღალა` → `მიუხედავად დაღლისა`
+- ✅ `თუმცა ავადმყოფი იყო` → `მიუხედავად ავადმყოფობისა`
+- ✅ `თუმცა არ მოვიდა` → `მიუხედავად მოუსვლელობისა`
+
 ---
 
 ## 4. Reported Speech (ირიბი ნათქვამი)
 
 The basic reported-speech rules (direct quotes, `-ო`, no tense back-shift) are in `syntax.md` §2.
 
-### Statements and Commands Become Indirect Speech With რომ
+### Indirect Speech: რომ for Statements and Commands, თუ for Questions
 Indirect speech gives the sense of someone's words from the author's own viewpoint, not word for word. When the direct
 speech is a statement or a command, the matching indirect speech is joined to the author's words (the main clause) by
 `რომ`, and the verb's person changes to fit the new viewpoint (`მე არა ვარ` → `ის არ არის`). No verb-form rule is set
@@ -447,6 +578,12 @@ optative (`გავიდეს`). Indirect speech is also sometimes given by a
 - ✅ `მე არა ვარ მტაცებელი ფრინველი` → `რომ ის არ არის მტაცებელი ფრინველი`
 - ✅ `გადი გარეთ` → `უბრძანა, რომ გარეთ გავიდეს`
 - ✅ `კამეჩები შერეკეთ` → `გვიბრძანა, რომ კამეჩები შეგვერეკა`
+
+A reported direct question loses its question character: it becomes a dependent object clause, joined to the
+author's words by `თუ`. In the book's one example the question word is kept after `თუ` and the verb's object person
+changes from second to third (`მოგეწონა` → `მოეწონა`). The page does not say whether `თუ` is required; for leaving
+it out before a question word, see §2, Clauses With No Conjunction (Kvachadze §193):
+- ✅ `ჰკითხა დას, თუ როგორ მოეწონა`
 
 ### Address Forms, Interjections, Modal Words and Particles
 Direct speech often contains forms of address, interjections, modal words and particles, which the matching indirect

@@ -31,7 +31,7 @@ Avoid defensive phrasing:
 
 ## 4. Book notes: formulas, requests and questions
 
-These are descriptions from the linguistics books (Khalvashi), not writing advice: the books do not call the forms fixed or polite and do not prefer them to other wording.
+These are mostly descriptions from the linguistics books (Khalvashi, Kvachadze), not writing advice: unless a note says so, the books do not call the forms fixed or polite and do not prefer them to other wording.
 
 ### First-person verbs for thanks, apology, congratulation, sympathy
 The books list first-person present forms that perform these acts.
@@ -42,11 +42,23 @@ The books list first-person present forms that perform these acts.
 
 (Khalvashi §2 pp. 307-308, §3 pp. 319-320, explicit versus unstated verb pp. 325-326)
 
+### In polite conversation, "yes" is დიახ
+The "yes" particles are `ჰო`, `კი` and `დიახ` (variant `დიალ`). In polite, reserved conversation the answer is `დიახ`, so support replies use it; the book gives no register label for `ჰო` or `კი`. The particle may be repeated, and a sentence that makes the answer clear often follows it after a comma.
+- ✅ `დიახ, ბატონო, მოვალ` · ✅ `კი, კი, ვნახე` · ✅ `ჰო, დედა`
+
+(Kvachadze §158)
+
 ### A შეგიძლიათ question can be a real question or a request
 A question with `შეგიძლიათ` or `შეგიძლია` plus a verb is interrogative in form; its force is either a real question or a request, and the situation decides. It is a real question when the speaker wants to know whether the listener can act. In the request use, on the author's analysis, the modal has a deontic sense and asks permission, so `შეგიძლიათ დამეხმაროთ?` = `შეიძლება, დამეხმაროთ?`. The request is used whether or not the speaker knows the listener can comply, but not when the speaker is sure the listener cannot. The modal can also be left out: `დამეხმარებით?`. The author calls this a full request that no one has found awkward; the pages do not call it polite.
 - Request: `შეგიძლიათ დამეხმაროთ?` · `დამეხმარებით?` · plain question about ability: `შეგიძლიათ ზღვაში ცურვა?`
 
 (Khalvashi pp. 349-352, also pp. 332-333)
+
+### A ხომ არ question can offer help or ask for something
+A negated `ხომ არ` question is one of the usual formulas for offering help, beside `რით შემიძლია დაგეხმაროთ?` and `მზად ვარ დაგეხმაროთ`. The book also renders indirect requests ("Would you kindly...?", "Aren't you going to...?") with `ხომ არ`. It shows the forms only and says nothing about how soft or polite they sound.
+- Offer: ✅ `ხომ არ დაგირეკოთ?` · ✅ `ხომ არ გინდათ ბმული გამოგიგზავნოთ?` · request: ✅ `ხომ არ გამომიგზავნით ფაილს?`
+
+(Khalvashi pp. 334, 354)
 
 ### უნდა forms are orders only when the speaker gives them that force
 `უნდა` plus a verb expresses obligation (deontic necessity), not an order in itself; a modal cannot express an imperative on its own. Each form is an order only if the speaker gives it that illocution, and otherwise it states necessity. The forms usable as orders are second and third person and `ჩვენ`, in present and future; `მე უნდა` and the past forms are outside that scheme. An order presupposes the speaker's right to give it, or the listener will not obey. Used as orders, these forms are natural and frequent and make the order more categorical and expressive. The same sentences can be used as plain statements. The page gives no writing advice and does not offer `საჭიროა` as a softer choice: it lists `საჭიროა` with `უნდა` among the words that express obligation.
