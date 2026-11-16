@@ -188,8 +188,14 @@ class Finding:
         return asdict(self)
 
 
-# Spans that are not prose: code (fenced, inline, <pre>/<code>) and HTML tags. Their content is never linted.
-NOT_PROSE = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>", re.DOTALL | re.IGNORECASE)
+# Spans that are not prose: code (fenced, inline, <pre>/<code>), HTML tags, URLs, Windows paths and the
+# alignment row of a markdown table. Their content is never linted: a link's "https://" is not a missing space
+# after a colon, and neither is "C:\Projects" or "|:---|" (measured 2026-11-16 on the adversarial fixtures).
+NOT_PROSE = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>"
+                       r"|\bhttps?://[^\s<>\"'»“”]+"
+                       r"|\b[A-Za-z]:\\\\?[^\s|]+"
+                       r"|^[ \t]*\|?[ \t:|-]*-[ \t:|-]*\|?[ \t]*$",
+                       re.DOTALL | re.IGNORECASE | re.MULTILINE)
 
 
 def strip_html(s: str) -> str:
