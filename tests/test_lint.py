@@ -85,6 +85,11 @@ def test_detects(text, check):
     "არცერთი მოვიდა.",
     "არავინ არ იცის.",
     "არავინ არ იცის პასუხი.",
+    # not prose: a URL's "//", a Windows path's "C:\" and a table's "|:---|" are not a missing space
+    "ბმული: https://github.com/sitechfromgeorgia/veasy/pull/3",
+    "ნახე https://example.com გვერდი",
+    "ასლი ინახება C:\\Projects\\App\\config.yaml გზაზე.",
+    "| სვეტი | ფასი |\n|:---|:---:|\n| ერთი | 2 |",
 ])
 def test_clean(text):
     assert lint.check_text(text) == []
