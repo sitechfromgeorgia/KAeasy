@@ -353,12 +353,38 @@ def test_a_demoted_lesson_is_not_promoted_again_automatically(clock, louie, monk
     assert out["promoted"] == [] and "needs a teacher" in out["waiting"][lid]
 
 
-def test_tick_does_not_fake_verification():
-    with pytest.raises(NotImplementedError):
-        lessons.tick(attest_path="/nope/words.tsv")
-    with pytest.raises(NotImplementedError):
-        lessons.stats(corpus_dir="/nope")
-    assert "stage 3" in lessons.tick()["verification"]
+def test_tick_without_an_index_verifies_nothing():
+    """No index is not an empty index: an unverified candidate must stay a candidate, not become a rule."""
+    lessons.propose("მოქცევარი", "მამაკაცი", "nonword", why="არ არსებობს",
+                    quote="80 წლის მოქცევარი ადგილზე", by="edo")
+    out = lessons.tick()
+    assert out["verification"]["unverified"], "a candidate with no index must be reported unverified"
+    assert not out["verification"]["coinage"], "nothing may be promoted without an index"
+    states = {l.wrong: l.state for l in lessons.fold().values()}
+    assert states["მოქცევარი"] == "candidate"
+
+
+def test_tick_rejects_a_form_the_newsroom_writes(tmp_path):
+    """Attestation is the guard against the რეფერანი class of false positive."""
+    lessons.propose("დერეფანი", "დერეფანა", "nonword", why="ეჭვი",
+                    quote="შუა დერეფანი გაფართოვდა", by="edo")
+    idx = tmp_path / "words.tsv"
+    idx.write_text("დერეფანი\t21\t21\nდერეფანა\t0\t0\n", encoding="utf-8")
+    out = lessons.tick(attest_path=str(idx))
+    assert out["verification"]["attested"], "a form in 21 articles must be rejected, not enforced"
+    lesson = [l for l in lessons.fold().values() if l.wrong == "დერეფანი"][0]
+    assert lesson.state == "rejected"
+
+
+def test_tick_promotes_a_coinage_to_shadow(tmp_path):
+    lessons.propose("მოქცევარი", "მამაკაცი", "nonword", why="არ არსებობს",
+                    quote="80 წლის მოქცევარი ადგილზე", by="edo")
+    idx = tmp_path / "words.tsv"
+    idx.write_text("მოქცევარი\t0\t0\nმამაკაცი\t28\t28\n", encoding="utf-8")
+    out = lessons.tick(attest_path=str(idx))
+    assert out["verification"]["coinage"]
+    lesson = [l for l in lessons.fold().values() if l.wrong == "მოქცევარი"][0]
+    assert lesson.state == "shadow", "a coinage whose correction is attested goes to shadow"
 
 
 # The compiled table and the linter -----------------------------------------------------------------------------

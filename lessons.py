@@ -58,6 +58,8 @@ except ImportError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent
 
+ATTEST_MIN_COUNT = 3  # occurrences in human-written articles
+ATTEST_MIN_OUTLETS = 3  # distinct outlets carrying them
 EVENTS = ("propose", "observe", "attest", "verify", "promote", "demote", "approve", "retire", "reject", "reopen",
           "judge", "graduate")
 STATES = ("candidate", "held", "shadow", "enforced", "canon", "retired", "rejected", "advisory")
@@ -793,19 +795,97 @@ def promote_due(now: datetime | None = None, dry: bool = False) -> dict:
     return out
 
 
-def tick(attest_path: str | None = None, dry: bool = False) -> dict:
-    """The daily job's deterministic step (stage 1 subset).
+def load_attest(path: str | os.PathLike | None) -> dict[str, tuple[int, int]] | None:
+    """Read the word index built by veasy's ops/attest_index.py: word -> (articles, outlets).
 
-    Built now: shadow -> enforced promotion under the circuit breaker, and the compile. Not built: verifying
-    candidates against the attestation index (candidate -> shadow, held or rejected). That needs the index from
-    veasy's `ops/attest_index.py` and arrives in stage 3; until then candidates wait for a teacher. Passing an
-    index path raises NotImplementedError rather than pretending to verify."""
-    if attest_path:
-        raise NotImplementedError("verification against the attestation index arrives in stage 3")
-    out = promote_due(dry=dry)
+    None means "there is no usable index", which is different from an empty one: with no index a lesson
+    cannot be verified and must wait for a teacher, never be promoted on a model's word alone.
+    """
+    if not path:
+        return None
+    p = Path(path)
+    if not p.exists():
+        return None
+    out: dict[str, tuple[int, int]] = {}
+    try:
+        with p.open(encoding="utf-8") as fh:
+            for line in fh:
+                parts = line.rstrip("\n").split("\t")
+                if len(parts) != 3:
+                    continue
+                try:
+                    out[parts[0]] = (int(parts[1]), int(parts[2]))
+                except ValueError:
+                    continue
+    except OSError:
+        return None
+    return out or None
+
+
+def verify_candidates(index: dict[str, tuple[int, int]] | None, dry: bool = False) -> dict:
+    """Move candidates by what the newsroom actually writes.
+
+    The rule the design turns on: a form human outlets use is not a defect, whatever a model says, and a
+    form nobody writes is the shape of a coinage. Thresholds come from the design: three occurrences in
+    three outlets means attested; zero occurrences with a right form that is attested means a coinage.
+
+    With no index, every candidate goes to `held` and says why. That is the honest state: unverified.
+    """
+    out = {"attested": [], "coinage": [], "held": [], "unverified": []}
+    if index is None:
+        out["unverified"] = [l.id for l in fold().values() if l.state == "candidate"]
+        return out
+
+    for lesson in sorted(fold().values(), key=lambda l: l.created):
+        if lesson.state != "candidate":
+            continue
+        wrong_n, wrong_outlets = index.get(lesson.wrong.lower(), (0, 0))
+        right_n, right_outlets = index.get(lesson.right.lower(), (0, 0))
+        record = {"id": lesson.id, "wrong": lesson.wrong, "right": lesson.right,
+                  "wrong_n": wrong_n, "wrong_outlets": wrong_outlets,
+                  "right_n": right_n, "right_outlets": right_outlets}
+
+        if wrong_n >= ATTEST_MIN_COUNT and wrong_outlets >= ATTEST_MIN_OUTLETS:
+            # the newsroom writes this form: the lesson is wrong, not the text
+            record["state"] = "rejected"
+            out["attested"].append(record)
+            if not dry:
+                _append({"ev": "reject", "id": lesson.id, "by": "auto",
+                        "reason": f"attested in human text: {wrong_n} articles, {wrong_outlets} outlets",
+                        "attest": {"wrong_n": wrong_n, "right_n": right_n, "outlets": wrong_outlets,
+                                   "index_tokens": sum(v[0] for v in index.values())}})
+            continue
+
+        if wrong_n == 0 and right_n >= ATTEST_MIN_COUNT and right_outlets >= ATTEST_MIN_OUTLETS:
+            record["state"] = "shadow" if lesson.kind in ("nonword", "form") else lesson.state
+            out["coinage"].append(record)
+            if not dry and lesson.kind in ("nonword", "form"):
+                _append({"ev": "attest", "id": lesson.id, "by": "auto",
+                        "wrong_n": 0, "right_n": right_n, "outlets": right_outlets,
+                        "index_tokens": sum(v[0] for v in index.values())})
+                _append({"ev": "promote", "id": lesson.id, "by": "auto", "to": "shadow",
+                        "why": f"not in {len(index)} indexed words; the correction is in {right_n} articles"})
+            continue
+
+        record["state"] = "held"
+        record["why"] = ("the wrong form is rare but not absent" if wrong_n else
+                         "the correction is not attested either")
+        out["held"].append(record)
+    return out
+
+
+def tick(attest_path: str | None = None, dry: bool = False) -> dict:
+    """The daily job's deterministic step: verify candidates, promote what is due, compile.
+
+    Verification is deterministic and needs no model: it reads the word index veasy builds from D1 and
+    applies the three thresholds. Promotion (shadow -> enforced) keeps its own conditions and the circuit
+    breaker. With no index, nothing is promoted from `candidate` and the report says `unverified`.
+    """
+    index = load_attest(attest_path)
+    out = {"verification": verify_candidates(index, dry=dry)}
+    out.update(promote_due(dry=dry))
     if not dry:
         out["table"] = str(compile())
-    out["verification"] = "not built: needs the attestation index (stage 3)"
     return out
 
 
