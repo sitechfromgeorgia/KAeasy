@@ -502,3 +502,8 @@ Each line: ❌ wrong, ✅ right, rule. Read them before writing; copy the right 
 - ❌ კომპანიამ კრიზისს არ გაუძლო და გაკოტრდა. ✅ კომპანიამ კრიზისს ვერ გაუძლო და გაკოტრდა. (inability to withstand: ვერ გაუძლო)
 - ❌ ვერცერთი არ შესრულდა. ✅ ვერცერთი შესრულდა. (ვერცერთი inherently contains negation, verb takes positive form)
 - ❌ არცერთი არ მოვიდა. ✅ არცერთი მოვიდა. (არცერთი inherently contains negation, verb takes positive form)
+
+## Verb forms that get mixed up (owner corrections)
+
+- ❌ პატარაძემ გზების რეაბილიტაციის სამუშაოებს **გაეცნა**. ✅ პატარაძემ გზების რეაბილიტაციის სამუშაოებს **გაეცნო**. (owner, 2026-11-16: "გაეცნო" is the one correct aorist form of გაცნობა; "გაეცნა" is a common error and must never be published)
+

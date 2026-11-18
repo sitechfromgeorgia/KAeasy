@@ -5,6 +5,11 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
+# Some test modules import the plugin's files as top-level modules ("import lint"), which only works
+# when the plugin directory itself is on sys.path. Without this the older suites fail to collect, which
+# hid a real count behind a collection error.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 
 def _load_plugin():
