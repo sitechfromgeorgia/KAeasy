@@ -7,6 +7,7 @@ provides_tools:
   - ka_speech
   - ka_learn
   - ka_mistakes
+  - ka_teach
 provides_hooks:
   - pre_llm_call
 requires_env: []

@@ -1,7 +1,7 @@
 """KAeasy Hermes plugin: Georgian writing skills, a zero-cost linter and a shared mistakes memory.
 
-Registers every skills/<name>/SKILL.md as `kaeasy:<name>`, five tools (ka_lint, ka_fix, ka_speech, ka_learn,
-ka_mistakes) and a
+Registers every skills/<name>/SKILL.md as `kaeasy:<name>`, six tools (ka_lint, ka_fix, ka_speech, ka_learn,
+ka_mistakes, ka_teach) and a
 pre_llm_call hook that tells the agent, once per session, that the skills exist (plugin skills are not listed in
 <available_skills>, so without the hint nobody loads them). No LLM calls, no network, no secrets.
 """
@@ -12,7 +12,7 @@ import logging
 import os
 from pathlib import Path
 
-from . import fix, lint, memory, speech
+from . import fix, lessons, lint, memory, speech
 
 logger = logging.getLogger(__name__)
 
@@ -105,6 +105,48 @@ KA_MISTAKES = {
     },
 }
 
+KA_TEACH = {
+    "name": "ka_teach",
+    "description": "Teach the Georgian gate one wrong word at a time (lessons). propose a wrong word with its "
+                   "correction and the sentence it was seen in; list/show lessons; approve, retire, reopen, judge "
+                   "a firing (ok|wrong), stats, graduate, import-memory. Anything that changes state needs `by`, "
+                   "a name in teachers.json. Only nonword/form lessons can ever block; usage stays advice.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "action": {"type": "string", "enum": list(lessons.TEACH_ACTIONS)},
+            "by": {"type": "string", "description": "The teacher's name (required to change anything)."},
+            "id": {"type": "string", "description": "Lesson id (L…) or the wrong word."},
+            "wrong": {"type": "string", "description": "propose: one wrong Georgian word."},
+            "right": {"type": "string", "description": "propose: the correct form."},
+            "kind": {"type": "string", "enum": list(lessons.KINDS),
+                     "description": "nonword: does not exist; form: a misspelling wrong in every context; "
+                                    "usage: a real word used wrongly here (never blocks)."},
+            "quote": {"type": "string", "description": "propose: the exact sentence containing the wrong word."},
+            "why": {"type": "string"},
+            "ref": {"type": "string", "description": "Story or post reference."},
+            "url": {"type": "string", "description": "Where the owner saw it."},
+            "reader": {"type": "string"},
+            "category": {"type": "string", "enum": list(memory.CATEGORIES)},
+            "state": {"type": "string", "enum": list(lessons.STATES), "description": "list: filter."},
+            "since": {"type": "string", "description": "list/stats: YYYY-MM-DD."},
+            "reason": {"type": "string", "description": "retire: false_positive|context|superseded|duplicate|test; "
+                                                        "reopen: why."},
+            "note": {"type": "string"},
+            "fid": {"type": "string", "description": "judge: the firing id (F…)."},
+            "verdict": {"type": "string", "enum": ["ok", "wrong"]},
+            "attested_ok": {"type": "string", "description": "approve: reason to enforce a form human text uses."},
+            "last": {"type": "integer", "default": 50},
+            "apply": {"type": "boolean", "description": "import-memory: write (default is a dry run)."},
+            "quotes": {"type": "object", "additionalProperties": {"type": "string"},
+                       "description": "import-memory: {word: quote}."},
+            "kinds": {"type": "object", "additionalProperties": {"type": "string"},
+                      "description": "import-memory: {word: kind}."},
+        },
+        "required": ["action"],
+    },
+}
+
 
 def _ka_lint(args: dict, **kwargs) -> str:
     try:
@@ -159,6 +201,15 @@ def _ka_mistakes(args: dict, **kwargs) -> str:
         return json.dumps({"error": f"ka_mistakes failed: {e}"}, ensure_ascii=False)
 
 
+def _ka_teach(args: dict, **kwargs) -> str:
+    try:
+        from . import teach  # imported here so `python -m kaeasy.teach` does not import it twice
+
+        return teach.handle(**dict(args or {}))
+    except Exception as e:
+        return json.dumps({"error": f"ka_teach failed: {e}"}, ensure_ascii=False)
+
+
 def _hint(is_first_turn: bool = False, **kwargs):
     if not is_first_turn or os.environ.get("KAEASY_HINT", "1") == "0":
         return None
@@ -175,4 +226,5 @@ def register(ctx):
     ctx.register_tool(name="ka_speech", toolset="kaeasy", schema=KA_SPEECH, handler=_ka_speech)
     ctx.register_tool(name="ka_learn", toolset="kaeasy", schema=KA_LEARN, handler=_ka_learn)
     ctx.register_tool(name="ka_mistakes", toolset="kaeasy", schema=KA_MISTAKES, handler=_ka_mistakes)
+    ctx.register_tool(name="ka_teach", toolset="kaeasy", schema=KA_TEACH, handler=_ka_teach)
     ctx.register_hook("pre_llm_call", _hint)

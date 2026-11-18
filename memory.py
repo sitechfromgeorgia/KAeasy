@@ -80,11 +80,56 @@ def _rows() -> list[dict]:
     return rows
 
 
+_EDGE = re.compile(r"^[\W_]+|[\W_]+$")
+
+
+def normalise(word: str) -> str:
+    """NFC, casefold (Mtavruli becomes Mkhedruli), inner whitespace collapsed, edge punctuation stripped. The
+    lessons log derives its ids from this form."""
+    s = unicodedata.normalize("NFC", word or "").casefold()
+    return _EDGE.sub("", " ".join(s.split()))
+
+
+def tombstoned_words() -> set[str]:
+    """Normalised wrong words whose lesson is retired or rejected in $KAEASY_DATA_DIR/lessons.jsonl.
+
+    A plain scan, so it also works when this file is loaded on its own (veasy loads it by path): a lesson is dead
+    after a retire or reject event and alive again after a reopen. lessons.py only writes those events where the
+    state machine allows them, so this agrees with lessons.fold() (a test keeps the two equal)."""
+    p = data_dir() / "lessons.jsonl"
+    if not p.exists():
+        return set()
+    words: dict[str, str] = {}
+    dead: dict[str, bool] = {}
+    for line in p.read_text(encoding="utf-8").splitlines():
+        try:
+            ev = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(ev, dict) or not ev.get("id"):
+            continue
+        lid, kind = ev["id"], ev.get("ev")
+        if kind == "propose" and lid not in words and ev.get("wrong"):
+            words[lid] = normalise(ev["wrong"])
+        elif kind in ("retire", "reject") and lid in words:
+            dead[lid] = True
+        elif kind == "reopen" and lid in words:
+            dead[lid] = False
+    return {words[lid] for lid, d in dead.items() if d}
+
+
 def top(limit: int = 20, category: str | None = None) -> list[dict]:
-    """Most frequent (wrong → right) pairs, newest first among equals."""
+    """Most frequent (wrong → right) pairs, newest first among equals. A pair whose wrong word is a retired or
+    rejected lesson is left out, so a tombstoned lesson stops reaching writers' prompts too."""
+    try:
+        dead = tombstoned_words()
+    except Exception:  # a broken lessons log must not take the prompt memory down with it
+        dead = set()
     groups: dict[tuple[str, str], dict] = {}
     for r in _rows():
         if category and r.get("category") != category:
+            continue
+        if dead and normalise(r.get("wrong", "")) in dead:
             continue
         key = (r["wrong"].casefold(), r["right"].casefold())
         g = groups.setdefault(key, {**r, "count": 0})

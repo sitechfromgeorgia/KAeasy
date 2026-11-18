@@ -7,7 +7,9 @@ Guide for anyone (human or agent) changing this repo.
 A Hermes Agent plugin. The repo root **is** the plugin directory: `plugin.yaml`, `__init__.py` (register),
 `lint.py` (deterministic linter), `fix.py` (mechanical fixer), `speech.py` (TTS text, a port of SiTech Shorts'
 `normalize_ka.py`: keep the two in sync), `data/lexicon_ka.json` (approved spoken forms), `memory.py` (mistakes
-memory), `skills/<name>/SKILL.md` with `references/` and `examples/`, `evals/`, `scripts/`. There is no build step.
+memory), `lessons.py` + `teach.py` (the gate's learned words: an append-only event log in `$KAEASY_DATA_DIR`,
+compiled to `learned_forms.json`; only a teacher in `teachers.json` changes state), `skills/<name>/SKILL.md` with
+`references/` and `examples/`, `evals/`, `scripts/`. There is no build step.
 
 ## Commands
 

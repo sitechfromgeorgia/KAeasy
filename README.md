@@ -36,6 +36,7 @@ mistakes memory feeds every correction back to all agents.
 | `ka_fix` tool | Fixes what strict lint flags and a machine can fix: quotes, brand hyphens, transliterated brands, decimal comma, dashes, spacing. Never grammar |
 | `ka_speech` tool | Written Georgian → TTS text: numbers with case, halves, times, ranges, money, units, phone numbers, versions, brands (`data/lexicon_ka.json`, endings by `data/latin_endings.json`), acronyms. Port of SiTech Shorts' `normalize_ka.py` |
 | `ka_learn` / `ka_mistakes` tools | Shared memory of corrections (JSONL), most frequent first |
+| `ka_teach` tool, `python -m kaeasy.teach` | Lessons for the gate (`lessons.py`): an append-only log of single wrong words. Enforced lessons fire as the strict check `learned_form`, shadow ones as the warning `learned_hint`; `usage` lessons never block. Teachers (`teachers.json`) approve, retire, reopen and judge firings |
 | `pre_llm_call` hook | One short hint per session so agents know the skills exist |
 
 Skills are registered as `kaeasy:<name>` (`skill_view("kaeasy:georgian-writing")`). Plugin skills are read-only

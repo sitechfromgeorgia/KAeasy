@@ -110,7 +110,7 @@ LATIN_OTHER = {("consonant", "თი"): "ით", ("vowel", "ის"): "ს", ("
 STRICT = {"translit", "ending_hyphen", "quotes", "decimal", "ellipsis", "percent", "number_plural",
           "cyrillic", "space_punct", "double_space", "title_period", "dash", "latin_in_speech", "russian_letter",
           "postposition_dative", "latin_ergative", "numeral_compound", "legal_citation", "date_ordinal",
-          "wrong_name", "negation", "wrong_form"}
+          "wrong_name", "negation", "wrong_form", "learned_form"}
 
 COMPANIES_PATH =Path(__file__).resolve().parent / "data" / "glossary" / "georgia-companies.json"
 # `wrong` lists spellings that are never right (ტიბისი, ტელასი). `avoid` is advice for the writer and stays out of
@@ -151,6 +151,77 @@ WRONG_FORMS_RE = _forms_re(WRONG_FORMS)
 DATED_FORMS_RE = _forms_re(DATED_FORMS)
 QUOTED = re.compile(r"„[^“\n]*“")
 
+# Learned forms: compiled by lessons.compile() into $KAEASY_DATA_DIR/learned_forms.json, the same shape as
+# wrong_forms.json. `error` (enforced lessons) is the strict check learned_form; `warn` (shadow lessons) is the
+# advisory learned_hint. Reloaded whenever the file changes, so a compile is picked up without a restart.
+_LEARNED: dict = {"key": None, "error": {}, "warn": {}, "ids": {}, "error_re": None, "warn_re": None}
+
+
+def _memory_module():
+    """kaeasy's memory.py, which knows the data directory. Inside the package it is a relative import. When this
+    file is run as a script or loaded by path on its own (veasy does), the sibling memory.py is loaded by path
+    too, never a `memory` module found elsewhere on sys.path."""
+    try:
+        from . import memory
+
+        return memory
+    except ImportError:
+        pass
+    name = "_kaeasy_lint_memory"
+    if name not in sys.modules:
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location(name, Path(__file__).resolve().parent / "memory.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        sys.modules[name] = mod
+    return sys.modules[name]
+
+
+def _learned_path() -> Path | None:
+    try:
+        return _memory_module().data_dir() / "learned_forms.json"
+    except Exception:
+        return None
+
+
+def learned_tables() -> dict:
+    """The compiled learned table, reloaded when its path, mtime, size or inode changes. Never raises."""
+    p = _learned_path()
+    try:
+        st = p.stat() if p else None
+        key = (str(p), st.st_mtime_ns, st.st_size, st.st_ino) if st else None
+    except OSError:
+        key = None
+    if key == _LEARNED["key"]:
+        return _LEARNED
+    error: dict[str, str] = {}
+    warn: dict[str, str] = {}
+    ids: dict[str, str] = {}
+    if key:
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+            # Only single Georgian words, and never a word the canon table already covers.
+            for name, out in (("error", error), ("warn", warn)):
+                for w, r in (data.get(name) or {}).items():
+                    if re.fullmatch(r"[ა-ჰ]+", w) and w not in WRONG_FORMS and isinstance(r, str):
+                        out[w] = r
+            ids = {k: v for k, v in (data.get("ids") or {}).items() if isinstance(v, str)}
+        except (OSError, ValueError, AttributeError):
+            error, warn, ids = {}, {}, {}
+    _LEARNED.update(key=key, error=error, warn=warn, ids=ids,
+                    error_re=_forms_re(error) if error else None, warn_re=_forms_re(warn) if warn else None)
+    return _LEARNED
+
+
+def _allowed(word: str, allow) -> bool:
+    """True when `allow` (a text, or a list of texts or words) contains `word` as a whole word."""
+    if not allow:
+        return False
+    texts = [allow] if isinstance(allow, str) else list(allow)
+    rx = _forms_re({word: word})
+    return any(isinstance(t, str) and rx.search(t) for t in texts)
+
 # A month in any case form, the same forms as speech.MONTHS (a test keeps them equal). Whole forms, not prefixes:
 # „მეორე მარტივი გზა“ and „მეორე მაისური“ are not dates.
 MONTH_FORM = (r"(?:(?:იანვარ|თებერვალ|სექტემბერ|ოქტომბერ|ნოემბერ|დეკემბერ)(?:ი|ია|ს|ში|ზე)"
@@ -188,6 +259,12 @@ class Finding:
         return asdict(self)
 
 
+@dataclass
+class LearnedFinding(Finding):
+    """A finding from a learned lesson; `lesson` is its id in lessons.jsonl."""
+    lesson: str = ""
+
+
 # Spans that are not prose: code (fenced, inline, <pre>/<code>) and HTML tags. Their content is never linted.
 NOT_PROSE = re.compile(r"```.*?```|`[^`\n]*`|<(pre|code)\b[^>]*>.*?</\1>|<[^>]+>", re.DOTALL | re.IGNORECASE)
 
@@ -203,7 +280,10 @@ def _ctx(text: str, start: int, end: int, pad: int = 45) -> str:
 
 
 def check_text(text: str, mode: str = "article", title: str | None = None,
-               strict: bool = False) -> list[Finding]:
+               strict: bool = False, allow=None) -> list[Finding]:
+    """Lint Georgian text. `allow` (optional): a text or a list of texts/words, such as a story's source articles.
+    An enforced learned form found in it is reported as the warning learned_hint instead of the error
+    learned_form, because human writers used it there."""
     if mode not in MODES:
         raise ValueError(f"mode must be one of {MODES}")
     skip = MODE_SKIP.get(mode, set())
@@ -422,6 +502,27 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
         if on("dated_form"):
             forms("dated_form", "warn", DATED_FORMS_RE, DATED_FORMS, "უმჯობესი ფორმა")
 
+    if on("learned_form") or on("learned_hint"):
+        learned = learned_tables()
+        if learned["error_re"] or learned["warn_re"]:
+            quoted = [q.span() for q in QUOTED.finditer(body)]
+            for rx, table, enforced in ((learned["error_re"], learned["error"], True),
+                                        (learned["warn_re"], learned["warn"], False)):
+                if rx is None:
+                    continue
+                for m in rx.finditer(body):
+                    if any(in_tag[m.start():m.end()]) or any(a <= m.start() < b for a, b in quoted):
+                        continue
+                    w = m.group(0)
+                    hint = not enforced or _allowed(w, allow)
+                    check = "learned_hint" if hint else "learned_form"
+                    if not on(check):
+                        continue
+                    label = "სავარაუდო შეცდომა" if hint else "ნასწავლი შეცდომა"
+                    out.append(LearnedFinding(check, "warn" if hint else "error",
+                                              f"{label}: „{w}“ → „{table[w]}“", _ctx(body, m.start(), m.end()),
+                                              m.start(), m.end(), lesson=learned["ids"].get(w, "")))
+
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()
         out.append(Finding("title_period", "warn", "სათაური წერტილით არ მთავრდება", t[:90], 0, len(t)))
@@ -430,7 +531,7 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
     return out
 
 
-def check_json(data, fields: dict[str, str], strict: bool = False) -> list[Finding]:
+def check_json(data, fields: dict[str, str], strict: bool = False, allow=None) -> list[Finding]:
     """Lint every Georgian string in a JSON document in the mode its key maps to (a video script has "say" for
     the voice next to on-screen text). fields: {key: mode or "skip"}, "*" is the default (article if missing).
     Each finding's snippet starts with the JSON path; offsets are within that string."""
@@ -447,7 +548,7 @@ def check_json(data, fields: dict[str, str], strict: bool = False) -> list[Findi
             mode = fields.get(key, fields.get("*", "article"))
             if mode == "skip":
                 return
-            for f in check_text(x, mode=mode, strict=strict):
+            for f in check_text(x, mode=mode, strict=strict, allow=allow):
                 f.snippet = f"{path}: {f.snippet}"
                 out.append(f)
 
