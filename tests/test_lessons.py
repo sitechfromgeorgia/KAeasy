@@ -467,6 +467,29 @@ def test_linter_reloads_the_table_without_a_restart():
     assert "learned_form" not in checks(QUOTE)
 
 
+def test_a_learned_phrase_fires_and_survives_extra_whitespace():
+    """A phrase lesson has to reach the linter, and not explode on a double space.
+
+    Two separate bugs, both measured 2026-11-20. `learned_tables()` kept only `[ა-ჰ]+`, so a phrase
+    build_table had compiled was dropped here without a word. And once that was fixed, `_forms_re`
+    matched "საქმე   დაიწყო" (three spaces) into a table keyed on one space, so the lookup raised
+    KeyError and the whole lint call died.
+    """
+    lid = lessons.propose("საქმე დაიწყო", "საქმე აღიძრა", "nonword", why="t",
+                          quote="პროკურატურამ საქმე დაიწყო გამოძიება",
+                          by="corpus-review", reader="agy")["id"]
+    lessons.approve(lid, "edo")
+    for text in ("პროკურატურამ საქმე დაიწყო გამოძიება",
+                 "პროკურატურამ  საქმე   დაიწყო გამოძიება"):
+        found = [f for f in lint.check_text(text) if f.check == "learned_form"]
+        assert found, text
+        assert found[0].lesson == lid
+        assert "საქმე აღიძრა" in found[0].message
+    assert not [f for f in lint.check_text("პროკურატურამ საქმე აღიძრა გამოძიება")
+                if f.check == "learned_form"]
+    lessons.retire(lid, "edo", "test")
+
+
 def test_whole_words_only_and_quotes_skipped():
     lessons.approve(propose()["id"], "edo")
     assert "learned_form" not in checks(f"{WORD}ებმა თქვეს.")

@@ -156,6 +156,9 @@ QUOTED = re.compile(r"„[^“\n]*“")
 # wrong_forms.json. `error` (enforced lessons) is the strict check learned_form; `warn` (shadow lessons) is the
 # advisory learned_hint. Reloaded whenever the file changes, so a compile is picked up without a restart.
 _LEARNED: dict = {"key": None, "error": {}, "warn": {}, "ids": {}, "error_re": None, "warn_re": None}
+# A learned fixed collocation: 2-4 Georgian words separated by whitespace. This mirrors
+# lessons._is_fixed_phrase's shape, and `_forms_re` compiles the spaces to \s+ at match time.
+_LEARNED_PHRASE = re.compile(r"[ა-ჰ]+(?:\s+[ა-ჰ]+){1,3}")
 
 
 def _memory_module():
@@ -202,12 +205,23 @@ def learned_tables() -> dict:
     if key:
         try:
             data = json.loads(p.read_text(encoding="utf-8"))
-            # Only single Georgian words, and never a word the canon table already covers.
+            ids = {k: v for k, v in (data.get("ids") or {}).items() if isinstance(v, str)}
+            # Only single Georgian words and fixed collocations (2-4 words joined by whitespace), and
+            # never a word the canon table already covers. A phrase has to survive here or the lesson
+            # path can learn it and lint will still never fire it (measured 2026-11-20: build_table
+            # compiled the phrase and this filter silently dropped it).
+            #
+            # A phrase additionally needs a lesson id. compile() writes both, so a genuine lesson always
+            # has one; a hand-edited learned_forms.json that invents a phrase does not, and stays inert.
+            # That is what keeps this from becoming a back door around the lesson state machine.
             for name, out in (("error", error), ("warn", warn)):
                 for w, r in (data.get(name) or {}).items():
-                    if re.fullmatch(r"[ა-ჰ]+", w) and w not in WRONG_FORMS and isinstance(r, str):
+                    if not isinstance(r, str) or w in WRONG_FORMS:
+                        continue
+                    if re.fullmatch(r"[ა-ჰ]+", w):
                         out[w] = r
-            ids = {k: v for k, v in (data.get("ids") or {}).items() if isinstance(v, str)}
+                    elif _LEARNED_PHRASE.fullmatch(w) and w in ids:
+                        out[w] = r
         except (OSError, ValueError, AttributeError):
             error, warn, ids = {}, {}, {}
     _LEARNED.update(key=key, error=error, warn=warn, ids=ids,
@@ -515,14 +529,21 @@ def check_text(text: str, mode: str = "article", title: str | None = None,
                     if any(in_tag[m.start():m.end()]) or any(a <= m.start() < b for a, b in quoted):
                         continue
                     w = m.group(0)
+                    # _forms_re turns every space into \s+, so a phrase matches with whatever run of
+                    # whitespace the text happened to have ("საქმე   დაიწყო"). The table is keyed on the
+                    # canonical single-space form, so collapsing is what makes the lookup hit.
+                    # Without this a learned phrase raised KeyError on any double space (2026-11-20).
+                    key = " ".join(w.split())
+                    if key not in table:
+                        continue
                     hint = not enforced or _allowed(w, allow)
                     check = "learned_hint" if hint else "learned_form"
                     if not on(check):
                         continue
                     label = "სავარაუდო შეცდომა" if hint else "ნასწავლი შეცდომა"
                     out.append(LearnedFinding(check, "warn" if hint else "error",
-                                              f"{label}: „{w}“ → „{table[w]}“", _ctx(body, m.start(), m.end()),
-                                              m.start(), m.end(), lesson=learned["ids"].get(w, "")))
+                                              f"{label}: „{w}“ → „{table[key]}“", _ctx(body, m.start(), m.end()),
+                                              m.start(), m.end(), lesson=learned["ids"].get(key, "")))
 
     if title is not None and on("title_period") and re.search(r"[.!]\s*$", title.strip()):
         t = title.strip()
