@@ -406,7 +406,11 @@ def _apply(lessons: dict[str, Lesson], ev: dict) -> None:
         if lesson.tombstoned:
             lesson.observed_dead += 1
     elif kind_of == "attest":
-        lesson.attest = {k: ev.get(k) for k in ("wrong_n", "right_n", "outlets", "index_tokens", "at")}
+        # `clean_replay_at` is the evidence stamp promote_due now requires. It is kept alongside the
+        # counters because it is what says "a full re-read of the corpus found no legitimate use of the
+        # wrong form", which is stronger than absence from an index.
+        lesson.attest = {k: ev.get(k) for k in ("wrong_n", "right_n", "outlets", "index_tokens",
+                                                "clean_replay_at", "at") if ev.get(k) is not None}
     elif kind_of == "verify":
         lesson.verification = {k: ev.get(k) for k in ("result", "rules", "ts")}
         if ev.get("result") == "impossible" and st == "candidate":
@@ -819,6 +823,17 @@ def promote_due(now: datetime | None = None, dry: bool = False) -> dict:
                  and verdicts.get(f["fid"]) != "ok"]
         if open_:
             out["waiting"][lesson.id] = f"{len(open_)} firing(s) not judged ok"
+            continue
+        # Silence is not consent. Nothing calls record_firings() yet, so `fired` is empty for every
+        # lesson and the loop above passed vacuously: a shadow lesson went enforced after SHADOW_DAYS
+        # with no evidence at all, and enforced is in STRICT, so it blocked videos (found 2026-11-20).
+        # A promotion now needs either one firing outside its own evidence that a human judged ok, or
+        # an explicit clean replay stamped by corpus_review. Absent both, it waits and says so.
+        outside = [f for f in fired if f.get("id") == lesson.id and f.get("ref") not in own]
+        judged_ok = [f for f in outside if verdicts.get(f["fid"]) == "ok"]
+        clean = (lesson.attest or {}).get("clean_replay_at") or ""
+        if not judged_ok and not clean:
+            out["waiting"][lesson.id] = "no evidence yet: no judged firing and no clean replay"
             continue
         if not dry:
             _append({"id": lesson.id, "ev": "promote", "actor": "tick", "from": "shadow", "to": "enforced"})

@@ -275,11 +275,24 @@ def test_a_proposer_may_judge_their_own_lesson_wrong():
 
 # Circuit breaker -----------------------------------------------------------------------------------------------
 
-def _shadow_lesson(clock):
+def _shadow_lesson(clock, evidence=True):
+    """A shadow lesson whose SHADOW_DAYS have passed.
+
+    Since 2026-11-20 promotion needs evidence: a firing outside the lesson's own sources that a human
+    judged ok, or a clean replay stamp. `evidence=False` gives the silent case, which must now wait.
+    """
     lid = propose()["id"]
     raw({"id": lid, "ev": "promote", "to": "shadow"})
+    if evidence:
+        clean_replay(lid)
     clock.advance(days=lessons.SHADOW_DAYS + 1)
     return lid
+
+
+def clean_replay(lid, when=None):
+    """Stamp the clean-replay evidence a promotion now requires."""
+    raw({"id": lid, "ev": "attest", "by": "auto", "wrong_n": 0, "right_n": 9, "outlets": 4,
+         "clean_replay_at": (when or lessons._now()).isoformat(timespec="seconds")})
 
 
 def _judged(n_ok, n_wrong, when):
@@ -298,6 +311,20 @@ def test_breaker_closed_promotes_shadow_to_enforced(clock):
     assert not out["breaker"]["open"] and out["promoted"] == [lid]
     assert lessons.get(lid).state == "enforced"
     assert json.loads(lessons.table_path().read_text(encoding="utf-8"))["error"] == {WORD: RIGHT}
+
+
+def test_silence_is_not_consent(clock):
+    """No firing ever happened, so a promotion must wait instead of promoting on an empty log.
+
+    Found 2026-11-20: record_firings() was never called, `fired` was always empty, the "every outside
+    firing judged ok" test passed vacuously, and a shadow lesson became enforced, which is in STRICT and
+    therefore blocked videos. This is the test that would have caught it.
+    """
+    lid = _shadow_lesson(clock, evidence=False)
+    out = lessons.promote_due()
+    assert out["promoted"] == []
+    assert "no evidence yet" in out["waiting"][lid]
+    assert lessons.get(lid).state == "shadow"
 
 
 def test_shadow_waits_its_days(clock):
