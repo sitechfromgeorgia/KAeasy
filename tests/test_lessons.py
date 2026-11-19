@@ -707,3 +707,21 @@ def test_memory_scan_agrees_with_the_fold(clock, louie):
         step()
         assert memory.tombstoned_words() == lessons.tombstoned()
     assert lessons.tombstoned() == {WORD, "მერები", "ფუფლუკი"}
+
+
+def test_one_wrong_form_gets_one_correction_in_the_prompt():
+    """Two learned corrections for the same wrong form must not both reach a writer.
+
+    Measured 2026-11-20: ახლოვებს was learned as "-> უახლოებს" and later as "-> აახლოებს". memory.top()
+    groups by the PAIR, so both survived and the prompt showed a writer two contradictory fixes for one
+    word. The official orthography reference settled it (აახლოებს), and the newest correction must win.
+    """
+    from kaeasy import memory
+    memory.learn("ტესტსიტყვა", "პირველი", reason="old", category="lexical", agent="corpus-review")
+    import time as _t
+    _t.sleep(0.01)
+    memory.learn("ტესტსიტყვა", "მეორე", reason="new", category="lexical", agent="corpus-review")
+    rows = [r for r in memory.top(100) if r["wrong"] == "ტესტსიტყვა"]
+    assert len(rows) == 1, [r["right"] for r in rows]
+    assert rows[0]["right"] == "მეორე"
+    assert rows[0]["count"] >= 2  # the earlier firings are not lost, only the stale correction

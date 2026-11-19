@@ -68,15 +68,23 @@ def learn(wrong: str, right: str, reason: str = "", category: str = "other", age
 
 
 def _rows() -> list[dict]:
+    """Every remembered row, in file order, each stamped with its position as `_seq`.
+
+    `_seq` is what breaks a tie when two learns land in the same whole second, which is common: the file
+    is append-only, so a later line is a later correction.
+    """
     p = _path()
     if not p.exists():
         return []
     rows = []
-    for line in p.read_text(encoding="utf-8").splitlines():
+    for seq, line in enumerate(p.read_text(encoding="utf-8").splitlines()):
         try:
-            rows.append(json.loads(line))
+            row = json.loads(line)
         except json.JSONDecodeError:
             continue
+        if isinstance(row, dict):
+            row["_seq"] = seq
+            rows.append(row)
     return rows
 
 
@@ -161,6 +169,29 @@ def top(limit: int = 20, category: str | None = None, agents: tuple[str, ...] | 
         if r["ts"] >= g["ts"]:
             g.update({k: r[k] for k in ("ts", "reason", "category") if k in r})
     ranked = sorted(groups.values(), key=lambda g: (-g["count"], -g["ts"]))
+    # One wrong form, one correction. A form can be learned twice with different right values, and then
+    # the prompt showed a writer two contradictory fixes for the same word ("ახლოვებს -> აახლოებს" next
+    # to "ახლოვებს -> უახლოებს", found 2026-11-20). That is worse than either alone: it teaches the
+    # reader that the rule is negotiable. The newest correction wins, because a later learn() is how a
+    # lane supersedes an earlier one, and the losing form never reaches a prompt.
+    by_wrong: dict[str, dict] = {}
+    for g in ranked:
+        key = g["wrong"].casefold()
+        seen = by_wrong.get(key)
+        # `ts` is whole seconds, so two learns in the same second tie and `ranked` cannot break it (it
+        # sorts by count first). `seq` is where the row sits in the file, which is the real "learned
+        # later", so it decides a tie and nothing else.
+        if seen is None:
+            by_wrong[key] = dict(g)
+        elif (g["ts"], g.get("_seq", 0)) > (seen["ts"], seen.get("_seq", 0)):
+            g = dict(g)
+            g["count"] += seen["count"]
+            by_wrong[key] = g
+        else:
+            seen["count"] += g["count"]  # the firings still happened; only the correction is stale
+    ranked = sorted(by_wrong.values(), key=lambda g: (-g["count"], -g["ts"]))
+    for g in ranked:
+        g.pop("_seq", None)
     return ranked[: max(1, min(limit, 100))]
 
 
