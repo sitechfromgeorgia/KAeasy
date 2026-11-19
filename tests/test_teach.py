@@ -43,7 +43,9 @@ def test_state_changes_need_a_teacher(capsys):
     with pytest.raises(SystemExit):  # argparse: --by is required
         teach.main(propose_args(by=None))
     capsys.readouterr()
-    code, out = cli(capsys, *propose_args(by="corpus-review"))
+    # corpus-review is a language-review seat since 2026-11-19: the daily lane must be able to record a
+    # fixed phrase, or the gate can never learn a legal collocation. An unknown name still cannot propose.
+    code, out = cli(capsys, *propose_args(by="stranger"))
     assert code == 1 and out["refused"] == "not_a_teacher"
     assert json.loads(teach.handle("propose", wrong=WORD, right=RIGHT, kind="nonword",
                                    quote=QUOTE))["refused"] == "no_actor"

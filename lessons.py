@@ -68,7 +68,12 @@ ENFORCEABLE = frozenset({"nonword", "form"})
 TOMBSTONES = frozenset({"retired", "rejected"})
 RETIRE_REASONS = ("false_positive", "context", "superseded", "duplicate", "test")
 LEARNED_CHECKS = ("learned_form", "learned_hint")
-DEFAULT_TEACHERS = {"edo": "owner"}
+# edo is the owner; corpus-review is the daily language review lane. It has to be able to record a
+# PHRASE, because the defects that matter are collocations: "მკვლელობა დაიწყო -> საქმე აღიძრა" is not a
+# coined word and no single-word rule can ever express it. Measured 2026-11-19: that lane found 13 correct
+# pairs on a day of the site's own articles and every phrase among them was refused here, so the gate
+# learned none of it and the writer kept making the same mistakes.
+DEFAULT_TEACHERS = {"edo": "owner", "corpus-review": "language-review"}
 TEACH_ACTIONS = ("propose", "list", "show", "approve", "retire", "reopen", "judge", "stats", "graduate",
                  "import-memory")
 
@@ -141,6 +146,29 @@ def word_re(word: str) -> re.Pattern:
 
 def is_single_word(word: str) -> bool:
     return bool(re.fullmatch(r"[ა-ჰ]+", word or ""))
+
+
+# A fixed phrase is what the gate may refuse as a unit: two to four Georgian words, at least two of them
+# four letters or longer, no digits or Latin. Short word pairs a reader would not notice as a unit
+# ("ეს არის") are excluded by the length floor on the RIGHT side too, because a rule that fires on a
+# common collocation is a false positive on every article.
+PHRASE_MIN_WORDS, PHRASE_MAX_WORDS = 2, 4
+
+
+def _is_fixed_phrase(phrase: str) -> bool:
+    """Is this a collocation the gate can refuse as a whole?
+
+    `wrong_forms.json` has always supported phrases (`_forms_re` turns a space into `\\s+`, and entries like
+    "1-ელი -> 1-ლი" and "მკვლელობა დაიწყო -> საქმე აღიძრა" live there). The lesson path refused them, which
+    is why the automated review could not teach a legal formula.
+    """
+    words = (phrase or "").split()
+    if not (PHRASE_MIN_WORDS <= len(words) <= PHRASE_MAX_WORDS):
+        return False
+    if not all(is_single_word(w) for w in words):
+        return False
+    # At least two content words, or the phrase is ordinary grammar and would fire constantly.
+    return sum(1 for w in words if len(w) >= 4) >= 2
 
 
 def _shape_refusal(word: str) -> str | None:
@@ -488,8 +516,10 @@ def propose(wrong: str, right: str, kind: str, why: str = "", quote: str = "", b
         return _refused("same", "wrong and right are the same word")
     teacher = is_teacher(actor)
     if " " in w:
-        if not (teacher and kind == "usage"):
-            return _refused("multi_word", "one word only; a teacher may record a phrase with --kind usage")
+        # A fixed collocation may be proposed with any enforceable kind; a loose phrase still needs a
+        # teacher and --kind usage, because only a human can say a wording is a matter of usage.
+        if not ((teacher and kind == "usage") or _is_fixed_phrase(w)):
+            return _refused("multi_word", "one word only, or a fixed phrase (2-4 Georgian words)")
         bad = next((x for x in (_shape_refusal(t) for t in w.split()) if x and x != "too_short"), None)
         if bad:
             return _refused(bad, "a phrase must be Georgian words")
@@ -560,8 +590,11 @@ def approve(id_or_wrong: str, by: str, attested_ok: str | None = None) -> dict:
         return lesson
     if lesson.kind not in ENFORCEABLE:
         return _refused("usage_is_advisory", "a usage lesson never reaches the gate")
-    if not is_single_word(lesson.wrong):
-        return _refused("multi_word", "only a single word can be enforced")
+    # A phrase is enforceable when it is a fixed collocation (wrong_forms.json already carries "1-ელი ->
+    # 1-ლი"). The single-word guard was what kept every legal formula out of the gate, so the automated
+    # promotion path could never learn "მკვლელობა დაიწყო -> საქმე აღიძრა" (2026-11-19).
+    if not is_single_word(lesson.wrong) and not _is_fixed_phrase(lesson.wrong):
+        return _refused("multi_word", "only a single word or a fixed phrase can be enforced")
     if (hit := allow_hit(lesson.wrong)):
         return _refused(f"allow_list:{hit}", "on an allow-list")
     if lesson.state in ("enforced", "canon") or lesson.tombstoned:
@@ -906,7 +939,7 @@ def build_table() -> tuple[dict, dict[str, str]]:
         if lesson.kind not in ENFORCEABLE:
             dropped[w] = "usage"
             continue
-        if not is_single_word(w):
+        if not is_single_word(w) and not _is_fixed_phrase(w):
             dropped[w] = "multi_word"
             continue
         hit = allow_hit(w)

@@ -76,10 +76,27 @@ def test_refuses_same():
 
 
 def test_refuses_multi_word():
-    assert propose(wrong="შუა დერეფანი", quote="შუა დერეფანი იყო")["refused"] == "multi_word"
-    # Only a teacher, and only as usage.
-    assert propose(wrong="შუა დერეფანი", quote="შუა დერეფანი იყო", kind="usage",
-                   by="corpus-review")["refused"] == "multi_word"
+    """A loose phrase is not a rule; a fixed collocation is.
+
+    "შუა დერეფანი" is a real trade term, and a rule that fires on it is a false positive on every
+    article. "მკვლელობა დაიწყო" is a legal formula that is never right. The difference is shape, not
+    who asks: the review lane found the second class and could record none of it before 2026-11-19.
+    """
+    assert propose(wrong="შუა დერეფანი", quote="შუა დერეფანი იყო", right="შუა კარი")["refused"] == "multi_word"
+    assert propose(wrong="ეს არის", quote="ეს არის ასე", right="ესაა")["refused"] == "multi_word"
+    assert propose(wrong="ერთი ორი სამი ოთხი ხუთი", quote="ერთი ორი სამი ოთხი ხუთი იყო",
+                   right="ხუთი")["refused"] == "multi_word"
+
+
+def test_a_fixed_phrase_is_proposable_and_enforceable():
+    # A phrase that is NOT already a canon rule, so this exercises the lesson path rather than the
+    # wrong_forms.json short-circuit. "მკვლელობა დაიწყო" is canon since 2026-11-19 and returns
+    # already_canon by design.
+    out = propose(wrong="საქმე დაიწყო", right="საქმე აღიძრა", kind="nonword",
+                  quote="პროკურატურამ საქმე დაიწყო გამოძიება", by="corpus-review", reader="agy")
+    assert out["state"] == "candidate", out
+    assert lessons._is_fixed_phrase("საქმე დაიწყო")
+    assert lessons._is_fixed_phrase("მკვლელობა დაიწყო")
 
 
 def test_teacher_may_record_a_usage_phrase():
@@ -193,7 +210,8 @@ def test_transitions(clock):
 
 def test_approve_and_its_refusals():
     lid = propose()["id"]
-    assert lessons.approve(lid, "corpus-review")["refused"] == "not_a_teacher"
+    # An unknown seat cannot approve; corpus-review is a language-review seat since 2026-11-19.
+    assert lessons.approve(lid, "stranger")["refused"] == "not_a_teacher"
     assert lessons.approve(lid, "edo") == {"id": lid, "state": "enforced", "from": "candidate"}
     assert lessons.get(lid).owner == "edo"
     assert lessons.approve(lid, "edo")["refused"] == "already_enforced"
