@@ -118,9 +118,28 @@ def tombstoned_words() -> set[str]:
     return {words[lid] for lid, d in dead.items() if d}
 
 
-def top(limit: int = 20, category: str | None = None) -> list[dict]:
+# Agents whose rows are context edits, not language lessons. tt-shorts records the diff of an editor pass
+# ("შემდეგ -> შედეგად", "ითვალისწინებს -> ითვალისწინებენ"), which are rewrites of correct words and cannot
+# be shown to a writer as "this is wrong". veasy already filters them out of its own prompt for that reason;
+# ka_mistakes must not hand them to every other agent either (442 such rows on 2026-11-19 against 4 real ones).
+CONTEXT_EDIT_AGENTS = ("tt-shorts",)
+
+
+def top(limit: int = 20, category: str | None = None, agents: tuple[str, ...] | None = None,
+        exclude_agents: tuple[str, ...] | None = None) -> list[dict]:
     """Most frequent (wrong → right) pairs, newest first among equals. A pair whose wrong word is a retired or
-    rejected lesson is left out, so a tombstoned lesson stops reaching writers' prompts too."""
+    rejected lesson is left out, so a tombstoned lesson stops reaching writers' prompts too.
+
+    `agents` keeps only those sources, and an explicit allowlist wins over the default exclusion. When neither is
+    given, the context-edit lanes are dropped: a lane that records whole-sentence rewrites must never masquerade
+    as a language rule.
+    """
+    if agents is not None:
+        exclude = tuple(exclude_agents or ())
+    elif exclude_agents is not None:
+        exclude = tuple(exclude_agents)
+    else:
+        exclude = CONTEXT_EDIT_AGENTS
     try:
         dead = tombstoned_words()
     except Exception:  # a broken lessons log must not take the prompt memory down with it
@@ -128,6 +147,11 @@ def top(limit: int = 20, category: str | None = None) -> list[dict]:
     groups: dict[tuple[str, str], dict] = {}
     for r in _rows():
         if category and r.get("category") != category:
+            continue
+        who = str(r.get("agent") or "")
+        if agents is not None and who not in agents:
+            continue
+        if exclude and who in exclude:
             continue
         if dead and normalise(r.get("wrong", "")) in dead:
             continue

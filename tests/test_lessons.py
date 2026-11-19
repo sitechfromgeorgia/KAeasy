@@ -561,6 +561,20 @@ def test_memory_top_leaves_out_tombstoned_words():
     assert [r["wrong"] for r in memory.top(10, "lexical")] == []
 
 
+def test_memory_top_leaves_out_context_edits():
+    """A lane that diffs an editor pass must not look like a language authority.
+
+    Measured 2026-11-19: the shared memory held 442 tt-shorts rows such as "შემდეგ -> შედეგად" and
+    "ითვალისწინებს -> ითვალისწინებენ" against 4 real lessons, so ka_mistakes told every writer that
+    correct Georgian was wrong. They stay in the file; they stop reaching prompts.
+    """
+    memory.learn("შემდეგ", "შედეგად", category="style", agent="tt-shorts")
+    memory.learn(WORD, RIGHT, category="lexical", agent="corpus-review")
+    assert [r["wrong"] for r in memory.top(10)] == [WORD]
+    assert {r["wrong"] for r in memory.top(10, exclude_agents=())} == {WORD, "შემდეგ"}
+    assert [r["wrong"] for r in memory.top(10, agents=("tt-shorts",))] == ["შემდეგ"]
+
+
 def test_stats_shape(clock, louie):
     lid = propose()["id"]
     lessons.approve(lid, "edo")
