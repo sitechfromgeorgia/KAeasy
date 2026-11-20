@@ -48,8 +48,19 @@ from datetime import datetime, timedelta
 from functools import lru_cache
 from pathlib import Path
 
-from . import lint
-from .memory import CATEGORIES, data_dir, normalise
+try:  # as part of the kaeasy package
+    from . import lint
+    from .memory import CATEGORIES, data_dir, normalise
+except ImportError:  # loaded standalone by file path (veasy's evidence log does this)
+    import importlib.util as _ilu
+    import sys as _sys
+    from pathlib import Path as _Path
+
+    _here = _Path(__file__).resolve().parent
+    if str(_here.parent) not in _sys.path:
+        _sys.path.insert(0, str(_here.parent))
+    from kaeasy import lint  # noqa: E402
+    from kaeasy.memory import CATEGORIES, data_dir, normalise  # noqa: E402
 
 try:  # POSIX only; on Windows the thread lock is all we have
     import fcntl
